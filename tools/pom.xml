@@ -19,6 +19,7 @@
 
     <modules>
         <module>tools-swagger2</module>
+        <module>tools-dozer</module>
     </modules>
 
 

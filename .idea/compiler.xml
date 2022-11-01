@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="tools-dozer" />
         <module name="tools-swagger2" />
       </profile>
     </annotationProcessing>
@@ -14,6 +15,7 @@
       <module name="authority" target="1.5" />
       <module name="parent" target="1.8" />
       <module name="tools" target="1.8" />
+      <module name="tools-dozer" target="1.8" />
       <module name="tools-swagger2" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -21,6 +23,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="authority" options="-parameters" />
       <module name="parent" options="-parameters" />
+      <module name="tools-dozer" options="-parameters" />
       <module name="tools-swagger2" options="-parameters" />
     </option>
   </component>
