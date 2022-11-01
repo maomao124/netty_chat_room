@@ -20,6 +20,7 @@
     <modules>
         <module>tools-swagger2</module>
         <module>tools-dozer</module>
+        <module>tools-validator</module>
     </modules>
 
 
