@@ -19,10 +19,6 @@
     <packaging>pom</packaging>
 
 
-    <modules>
-        <module>../tools</module>
-    </modules>
-
     <!-- 环境 -->
     <profiles>
         <!-- 开发 -->
@@ -69,8 +65,6 @@
     </profiles>
 
 
-
-
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -92,7 +86,6 @@
         <springfox.swagger2.version>2.9.2</springfox.swagger2.version>
         <swagger.version>1.5.21</swagger.version>
         <dozer.version>6.5.0</dozer.version>
-        <lombok.version>1.18.10</lombok.version>
         <easy-captcha.version>1.6.2</easy-captcha.version>
         <guava.version>20.0</guava.version>
         <tobato-fastdfs-client.version>1.26.6</tobato-fastdfs-client.version>
@@ -110,6 +103,7 @@
         <jjwt.version>0.7.0</jjwt.version>
         <qcloudsms.version>1.0.6</qcloudsms.version>
         <bce-java-sdk.version>0.10.21</bce-java-sdk.version>
+        <lombok.version>1.18.20</lombok.version>
 
 
         <hutool.version>5.1.0</hutool.version>
@@ -118,11 +112,11 @@
         <ip2region.version>1.7.2</ip2region.version>
         <bitwalker.version>1.21</bitwalker.version>
 
-<!--        <dockerfile-maven-plugin.version>1.4.12</dockerfile-maven-plugin.version>-->
-<!--        &lt;!&ndash;私有镜像仓库&ndash;&gt;-->
-<!--        <docker.registry>127.0.0.1:5000</docker.registry>-->
-<!--        &lt;!&ndash;镜像前缀&ndash;&gt;-->
-<!--        <docker.image.prefix></docker.image.prefix>-->
+        <!--        <dockerfile-maven-plugin.version>1.4.12</dockerfile-maven-plugin.version>-->
+        <!--        &lt;!&ndash;私有镜像仓库&ndash;&gt;-->
+        <!--        <docker.registry>127.0.0.1:5000</docker.registry>-->
+        <!--        &lt;!&ndash;镜像前缀&ndash;&gt;-->
+        <!--        <docker.image.prefix></docker.image.prefix>-->
 
     </properties>
 
@@ -377,11 +371,15 @@
                 <version>${hibernate.validator.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${hibernate.validator.version}</version>
+            </dependency>
+
         </dependencies>
+
     </dependencyManagement>
-
-
-
 
 
     <dependencies>
@@ -396,8 +394,10 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
+
 
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -420,72 +420,70 @@
     </dependencies>
 
 
+        <build>
+            <finalName>${project.artifactId}</finalName>
+            <resources>
+                <resource>
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*</include>
+                    </includes>
+                    <filtering>true</filtering>
+                </resource>
+            </resources>
+            <pluginManagement>
+                <plugins>
+                    <!--                <plugin>-->
+                    <!--                    <groupId>org.springframework.boot</groupId>-->
+                    <!--                    <artifactId>spring-boot-maven-plugin</artifactId>-->
+                    <!--                    <executions>-->
+                    <!--                        <execution>-->
+                    <!--                            <goals>-->
+                    <!--                                <goal>repackage</goal>-->
+                    <!--                                <goal>build-info</goal>-->
+                    <!--                            </goals>-->
+                    <!--                        </execution>-->
+                    <!--                    </executions>-->
+                    <!--                </plugin>-->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>${maven.compiler.plugin.version}</version>
+                        <configuration>
+                            <source>${java.version}</source>
+                            <target>${java.version}</target>
+                            <encoding>${project.build.sourceEncoding}</encoding>
+                        </configuration>
+                    </plugin>
 
+                </plugins>
+            </pluginManagement>
 
-    <build>
-        <finalName>${project.artifactId}</finalName>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <includes>
-                    <include>**/*</include>
-                </includes>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
-        <pluginManagement>
             <plugins>
-                <!--                <plugin>-->
-                <!--                    <groupId>org.springframework.boot</groupId>-->
-                <!--                    <artifactId>spring-boot-maven-plugin</artifactId>-->
-                <!--                    <executions>-->
-                <!--                        <execution>-->
-                <!--                            <goals>-->
-                <!--                                <goal>repackage</goal>-->
-                <!--                                <goal>build-info</goal>-->
-                <!--                            </goals>-->
-                <!--                        </execution>-->
-                <!--                    </executions>-->
-                <!--                </plugin>-->
+                <!-- resources资源插件 -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>${maven.compiler.plugin.version}</version>
+                    <artifactId>maven-resources-plugin</artifactId>
                     <configuration>
-                        <source>${java.version}</source>
-                        <target>${java.version}</target>
-                        <encoding>${project.build.sourceEncoding}</encoding>
+                        <encoding>UTF-8</encoding>
+                        <!-- 后缀为pem、pfx的证书文件 -->
+                        <nonFilteredFileExtensions>
+                            <nonFilteredFileExtension>pem</nonFilteredFileExtension>
+                            <nonFilteredFileExtension>pfx</nonFilteredFileExtension>
+                            <nonFilteredFileExtension>p12</nonFilteredFileExtension>
+                            <nonFilteredFileExtension>key</nonFilteredFileExtension>
+                        </nonFilteredFileExtensions>
                     </configuration>
                 </plugin>
 
+                <!-- java文档插件 -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>3.0.0</version>
+                </plugin>
             </plugins>
-        </pluginManagement>
-
-        <plugins>
-            <!-- resources资源插件 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <configuration>
-                    <encoding>UTF-8</encoding>
-                    <!-- 后缀为pem、pfx的证书文件 -->
-                    <nonFilteredFileExtensions>
-                        <nonFilteredFileExtension>pem</nonFilteredFileExtension>
-                        <nonFilteredFileExtension>pfx</nonFilteredFileExtension>
-                        <nonFilteredFileExtension>p12</nonFilteredFileExtension>
-                        <nonFilteredFileExtension>key</nonFilteredFileExtension>
-                    </nonFilteredFileExtensions>
-                </configuration>
-            </plugin>
-
-            <!-- java文档插件 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.0.0</version>
-            </plugin>
-        </plugins>
-    </build>
+        </build>
 
 
 </project>

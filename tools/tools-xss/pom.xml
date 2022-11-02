@@ -57,16 +57,17 @@
             <artifactId>commons-lang</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.fasterxml.jackson.datatype</groupId>
-            <artifactId>jackson-datatype-jsr310</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.fasterxml.jackson.datatype</groupId>-->
+<!--            <artifactId>jackson-datatype-jsr310</artifactId>-->
+<!--            <scope>compile</scope>-->
+<!--        </dependency>-->
 
         <!--阿里巴巴的FastJson json解析-->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba</groupId>-->
+<!--            <artifactId>fastjson</artifactId>-->
+<!--        </dependency>-->
 
 
     </dependencies>
