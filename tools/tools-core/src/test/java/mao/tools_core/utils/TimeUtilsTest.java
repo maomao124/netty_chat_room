@@ -18,10 +18,12 @@ import static org.junit.jupiter.api.Assertions.*;
  * Version(版本): 1.0
  * Description(描述)： 测试类
  */
-
 class TimeUtilsTest
 {
 
+    /**
+     * Gets password error lock time.
+     */
     @Test
     void getPasswordErrorLockTime()
     {
@@ -29,6 +31,9 @@ class TimeUtilsTest
         System.out.println(passwordErrorLockTime);
     }
 
+    /**
+     * Gets password error lock time 2.
+     */
     @Test
     void getPasswordErrorLockTime2()
     {
@@ -36,6 +41,9 @@ class TimeUtilsTest
         System.out.println(passwordErrorLockTime);
     }
 
+    /**
+     * Gets password error lock time 3.
+     */
     @Test
     void getPasswordErrorLockTime3()
     {
@@ -43,6 +51,9 @@ class TimeUtilsTest
         System.out.println(passwordErrorLockTime);
     }
 
+    /**
+     * Gets password error lock time 4.
+     */
     @Test
     void getPasswordErrorLockTime4()
     {
@@ -50,6 +61,9 @@ class TimeUtilsTest
         System.out.println(passwordErrorLockTime);
     }
 
+    /**
+     * Gets password error lock time 5.
+     */
     @Test
     void getPasswordErrorLockTime5()
     {
@@ -57,6 +71,9 @@ class TimeUtilsTest
         System.out.println(passwordErrorLockTime);
     }
 
+    /**
+     * Gets password error lock time 6.
+     */
     @Test
     void getPasswordErrorLockTime6()
     {
