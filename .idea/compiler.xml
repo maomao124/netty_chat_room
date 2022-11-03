@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="tools-xss" />
         <module name="tools-dozer" />
+        <module name="tools-core" />
         <module name="tools-swagger2" />
         <module name="tools-validator" />
       </profile>
@@ -17,6 +18,7 @@
       <module name="authority" target="1.5" />
       <module name="parent" target="1.8" />
       <module name="tools" target="1.8" />
+      <module name="tools-core" target="1.8" />
       <module name="tools-dozer" target="1.8" />
       <module name="tools-swagger2" target="1.8" />
       <module name="tools-validator" target="1.8" />
@@ -25,6 +27,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="tools-core" options="-parameters" />
       <module name="tools-dozer" options="-parameters" />
       <module name="tools-swagger2" options="-parameters" />
       <module name="tools-validator" options="-parameters" />

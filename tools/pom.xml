@@ -22,6 +22,7 @@
         <module>tools-swagger2</module>
         <module>tools-validator</module>
         <module>tools-xss</module>
+        <module>tools-core</module>
     </modules>
 
 

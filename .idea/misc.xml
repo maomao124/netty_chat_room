@@ -5,6 +5,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/tools/tools-validator/pom.xml" />
+        <option value="$PROJECT_DIR$/tools/tools-core/pom.xml" />
       </list>
     </option>
   </component>
