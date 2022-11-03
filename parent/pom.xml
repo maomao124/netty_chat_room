@@ -104,6 +104,7 @@
         <qcloudsms.version>1.0.6</qcloudsms.version>
         <bce-java-sdk.version>0.10.21</bce-java-sdk.version>
         <lombok.version>1.18.20</lombok.version>
+        <junit.version>RELEASE</junit.version>
 
 
         <hutool.version>5.1.0</hutool.version>
@@ -375,6 +376,15 @@
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-validator</artifactId>
                 <version>${hibernate.validator.version}</version>
+            </dependency>
+
+
+            <!-- 测试框架 -->
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
             </dependency>
 
         </dependencies>
