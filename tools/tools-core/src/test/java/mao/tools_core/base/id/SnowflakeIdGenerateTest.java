@@ -20,6 +20,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class SnowflakeIdGenerateTest
 {
 
+    /**
+     * Generate.
+     */
     @Test
     void generate()
     {

@@ -17,15 +17,22 @@ import static org.junit.jupiter.api.Assertions.*;
  * Description(描述)： 测试类
  */
 
+
 class BaseControllerTest
 {
 
+    /**
+     * Success.
+     */
     @Test
     void success()
     {
         System.out.println(new BaseController().success("hello"));
     }
 
+    /**
+     * Fail.
+     */
     @Test
     void fail()
     {

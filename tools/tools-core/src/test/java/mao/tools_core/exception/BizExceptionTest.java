@@ -20,6 +20,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class BizExceptionTest
 {
 
+    /**
+     * Wrap.
+     */
     @Test
     void wrap()
     {

@@ -20,6 +20,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class AntiSqlFilterTest
 {
 
+    /**
+     * Gets safe value.
+     */
     @Test
     void getSafeValue()
     {

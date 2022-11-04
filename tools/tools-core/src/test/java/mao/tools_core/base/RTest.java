@@ -17,9 +17,13 @@ import static org.junit.jupiter.api.Assertions.*;
  * Description(描述)： 测试类
  */
 
+
 class RTest
 {
 
+    /**
+     * Test to string.
+     */
     @Test
     void testToString()
     {
@@ -27,18 +31,27 @@ class RTest
         System.out.println(fail);
     }
 
+    /**
+     * Test to string 2.
+     */
     @Test
     void testToString2()
     {
         System.out.println(R.success());
     }
 
+    /**
+     * Test to string 3.
+     */
     @Test
     void testToString3()
     {
         System.out.println(R.success("测试"));
     }
 
+    /**
+     * Test to string 4.
+     */
     @Test
     void testToString4()
     {

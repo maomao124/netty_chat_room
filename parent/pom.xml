@@ -105,6 +105,7 @@
         <bce-java-sdk.version>0.10.21</bce-java-sdk.version>
         <lombok.version>1.18.20</lombok.version>
         <junit.version>RELEASE</junit.version>
+        <jackson.version>2.9.2</jackson.version>
 
 
         <hutool.version>5.1.0</hutool.version>
@@ -307,14 +308,14 @@
             <dependency>
                 <groupId>com.fasterxml.jackson.datatype</groupId>
                 <artifactId>jackson-datatype-jsr310</artifactId>
-<!--                <version>${jackson.version}</version>-->
+                <version>${jackson.version}</version>
                 <scope>compile</scope>
             </dependency>
 
             <dependency>
                 <groupId>com.fasterxml.jackson.module</groupId>
                 <artifactId>jackson-module-parameter-names</artifactId>
-<!--                <version>${jackson.version}</version>-->
+                <version>${jackson.version}</version>
                 <scope>compile</scope>
             </dependency>
 

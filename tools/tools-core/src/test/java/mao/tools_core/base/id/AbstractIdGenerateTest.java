@@ -20,14 +20,21 @@ import static org.junit.jupiter.api.Assertions.*;
  * Description(描述)： 测试类
  */
 
+
 class AbstractIdGenerateTest
 {
+    /**
+     * Test 1.
+     */
     @Test
     void test1()
     {
         System.out.println(Long.MAX_VALUE >>> 22);
     }
 
+    /**
+     * Test 2.
+     */
     @Test
     void test2()
     {
@@ -35,6 +42,9 @@ class AbstractIdGenerateTest
     }
 
 
+    /**
+     * Generate long.
+     */
     @Test
     void generateLong()
     {
@@ -55,6 +65,9 @@ class AbstractIdGenerateTest
         System.out.println(abstractIdGenerate.generateLong());
     }
 
+    /**
+     * Generate long 2.
+     */
     @Test
     void generateLong2()
     {
