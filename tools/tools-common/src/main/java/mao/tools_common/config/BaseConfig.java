@@ -13,7 +13,11 @@ import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalTimeSerializer;
 import io.undertow.Undertow;
+import mao.tools_common.converter.*;
+import mao.tools_common.undertow.UndertowServerFactoryCustomizer;
+import mao.tools_core.base.id.CodeGenerate;
 import mao.tools_core.utils.DateUtils;
+import mao.tools_core.utils.SpringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -104,7 +108,7 @@ public abstract class BaseConfig
      * serializerByType 解决json中返回的 LocalDateTime 格式问题
      * deserializerByType 解决string类型入参转为 LocalDateTime 格式问题
      *
-     * @return
+     * @return {@link Jackson2ObjectMapperBuilderCustomizer}
      */
     @Bean
     public Jackson2ObjectMapperBuilderCustomizer jackson2ObjectMapperBuilderCustomizer()
@@ -119,10 +123,11 @@ public abstract class BaseConfig
     }
 
     /**
+     * 日期转换
      * 解决 @RequestParam(value = "date") Date date
      * date 类型参数 格式问题
      *
-     * @return
+     * @return {@link Converter}<{@link String}, {@link Date}>
      */
     @Bean
     public Converter<String, Date> dateConvert()
@@ -131,9 +136,10 @@ public abstract class BaseConfig
     }
 
     /**
+     * 当地日期转换器
      * 解决 @RequestParam(value = "time") LocalDate time
      *
-     * @return
+     * @return {@link Converter}<{@link String}, {@link LocalDate}>
      */
     @Bean
     public Converter<String, LocalDate> localDateConverter()
@@ -142,9 +148,10 @@ public abstract class BaseConfig
     }
 
     /**
+     * 当地时间转换器
      * 解决 @RequestParam(value = "time") LocalTime time
      *
-     * @return
+     * @return {@link Converter}<{@link String}, {@link LocalTime}>
      */
     @Bean
     public Converter<String, LocalTime> localTimeConverter()
@@ -153,9 +160,10 @@ public abstract class BaseConfig
     }
 
     /**
+     * 当地日期时间转换器
      * 解决 @RequestParam(value = "time") LocalDateTime time
      *
-     * @return
+     * @return {@link Converter}<{@link String}, {@link LocalDateTime}>
      */
     @Bean
     public Converter<String, LocalDateTime> localDateTimeConverter()
@@ -166,10 +174,11 @@ public abstract class BaseConfig
     //---------------------------------------序列化配置end----------------------------------------------
 
     /**
+     * 代码生成
      * 长度都是8位的字符串
      *
-     * @param machineCode
-     * @return
+     * @param machineCode 机器代码
+     * @return {@link CodeGenerate}
      */
     @Bean("codeGenerate")
     public CodeGenerate codeGenerate(@Value("${id-generator.machine-code:1}") Long machineCode)
@@ -180,8 +189,8 @@ public abstract class BaseConfig
     /**
      * Spring 工具类
      *
-     * @param applicationContext
-     * @return
+     * @param applicationContext 应用程序上下文
+     * @return {@link SpringUtils}
      */
     @Bean
     public SpringUtils getSpringUtils(ApplicationContext applicationContext)
