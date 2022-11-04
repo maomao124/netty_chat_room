@@ -2,6 +2,7 @@ package mao.tools_core.base.id;
 
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -31,5 +32,53 @@ class AbstractIdGenerateTest
     void test2()
     {
         System.out.println(new Date(1420041600210L));
+    }
+
+
+    @Test
+    void generateLong()
+    {
+        AbstractIdGenerate<Long> abstractIdGenerate = new AbstractIdGenerate<Long>(1)
+        {
+            @Override
+            public Long generate()
+            {
+                return null;
+            }
+        };
+        System.out.println(abstractIdGenerate.generateLong());
+        System.out.println(abstractIdGenerate.generateLong());
+        System.out.println(abstractIdGenerate.generateLong());
+        System.out.println(abstractIdGenerate.generateLong());
+        System.out.println(abstractIdGenerate.generateLong());
+        System.out.println(abstractIdGenerate.generateLong());
+        System.out.println(abstractIdGenerate.generateLong());
+    }
+
+    @Test
+    void generateLong2()
+    {
+        AbstractIdGenerate<Long> abstractIdGenerate = new AbstractIdGenerate<Long>(1)
+        {
+            @Override
+            public Long generate()
+            {
+                return null;
+            }
+        };
+        for (int i = 0; i < 30; i++)
+        {
+            new Thread(new Runnable()
+            {
+                @Override
+                public void run()
+                {
+                    for (int j = 0; j < 100; j++)
+                    {
+                        System.out.println(abstractIdGenerate.generateLong());
+                    }
+                }
+            }).start();
+        }
     }
 }

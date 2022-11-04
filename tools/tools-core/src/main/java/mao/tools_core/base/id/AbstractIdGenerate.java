@@ -32,12 +32,12 @@ public abstract class AbstractIdGenerate<T extends Serializable> implements IdGe
     private final static long TIME_CODE = Long.MAX_VALUE >>> 22;
 
     /**
-     * 2015-01-01 00:00:00
-     * 1420041600210
+     * 2022-01-01 00:00:00
+     * 1643648461000L
      * 因为生成器可以使用69年，而我们想在这些时间里面，生成出来的id是逐渐自增的。
      * 所以这里指定了从什么时候开始使用id生成器。
      */
-    private final static long START_TIME = 1420041600210L;
+    private final static long START_TIME = 1643648461000L;
 
     /**
      * 机器码 （0-31）
