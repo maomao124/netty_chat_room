@@ -33,7 +33,6 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(callSuper = true)
-@Builder
 public class SuperEntity<T> implements Serializable, Cloneable
 {
     public static final String FIELD_ID = "id";

@@ -25,7 +25,6 @@ import java.time.LocalDateTime;
 @Setter
 @Accessors(chain = true)
 @ToString(callSuper = true)
-@Builder
 public class Entity<T> extends SuperEntity<T>
 {
     public static final String UPDATE_TIME = "updateTime";
