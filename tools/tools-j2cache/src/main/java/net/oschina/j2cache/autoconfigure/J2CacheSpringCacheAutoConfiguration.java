@@ -3,6 +3,8 @@ package net.oschina.j2cache.autoconfigure;
 import net.oschina.j2cache.CacheChannel;
 import net.oschina.j2cache.J2Cache;
 import net.oschina.j2cache.cache.support.J2CacheCacheManger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.cache.CacheProperties;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
@@ -12,6 +14,7 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 
 /**
@@ -24,6 +27,8 @@ import java.util.List;
 @EnableCaching
 public class J2CacheSpringCacheAutoConfiguration
 {
+
+    private static final Logger log = LoggerFactory.getLogger(J2CacheSpringCacheAutoConfiguration.class);
 
     private final CacheProperties cacheProperties;
 
@@ -47,4 +52,9 @@ public class J2CacheSpringCacheAutoConfiguration
     }
 
 
+    @PostConstruct
+    public void init()
+    {
+        log.info("初始化 J2CacheSpringCacheAutoConfiguration");
+    }
 }

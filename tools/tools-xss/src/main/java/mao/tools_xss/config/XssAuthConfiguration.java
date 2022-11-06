@@ -3,11 +3,14 @@ package mao.tools_xss.config;
 import mao.tools_xss.converter.XssStringJsonDeserializer;
 import mao.tools_xss.filter.XssFilter;
 import mao.tools_xss.service.XssFilterService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.jackson.Jackson2ObjectMapperBuilderCustomizer;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import javax.annotation.PostConstruct;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.StringJoiner;
@@ -28,6 +31,9 @@ import java.util.StringJoiner;
 @Configuration
 public class XssAuthConfiguration
 {
+
+    private static final Logger log = LoggerFactory.getLogger(XssAuthConfiguration.class);
+
     /**
      * 配置跨站攻击 反序列化处理器
      *
@@ -79,5 +85,11 @@ public class XssAuthConfiguration
     public XssFilterService xssFilterService()
     {
         return new XssFilterService();
+    }
+
+    @PostConstruct
+    public void init()
+    {
+        log.info("初始化 XssAuthConfiguration xss攻击配置");
     }
 }

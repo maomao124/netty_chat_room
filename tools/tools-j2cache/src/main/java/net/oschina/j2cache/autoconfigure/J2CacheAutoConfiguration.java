@@ -5,6 +5,8 @@ import net.oschina.j2cache.J2Cache;
 import net.oschina.j2cache.J2CacheBuilder;
 import net.oschina.j2cache.cache.support.util.SpringJ2CacheConfigUtil;
 import net.oschina.j2cache.cache.support.util.SpringUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -14,6 +16,7 @@ import org.springframework.context.annotation.DependsOn;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.StandardEnvironment;
 
+import javax.annotation.PostConstruct;
 import java.io.IOException;
 
 /**
@@ -25,6 +28,8 @@ import java.io.IOException;
 @PropertySource(value = "${j2cache.config-location}", encoding = "UTF-8", ignoreResourceNotFound = true)
 public class J2CacheAutoConfiguration
 {
+
+    private static final Logger log = LoggerFactory.getLogger(J2CacheAutoConfiguration.class);
 
     @Autowired
     private StandardEnvironment standardEnvironment;
@@ -50,4 +55,9 @@ public class J2CacheAutoConfiguration
         return new SpringUtil();
     }
 
+    @PostConstruct
+    public void init()
+    {
+        log.info("初始化 J2CacheAutoConfiguration");
+    }
 }

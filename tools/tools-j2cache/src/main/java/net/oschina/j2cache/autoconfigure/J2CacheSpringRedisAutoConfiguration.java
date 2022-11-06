@@ -43,6 +43,8 @@ import redis.clients.jedis.JedisPoolConfig;
 import redis.clients.jedis.JedisShardInfo;
 import redis.clients.jedis.exceptions.JedisConnectionException;
 
+import javax.annotation.PostConstruct;
+
 /**
  * 对spring redis支持的配置入口
  */
@@ -287,5 +289,11 @@ public class J2CacheSpringRedisAutoConfiguration
     private String key(String prefix, String key)
     {
         return (prefix == null) ? key : prefix + "." + key;
+    }
+
+    @PostConstruct
+    public void init()
+    {
+        log.info("初始化 J2CacheSpringRedisAutoConfiguration");
     }
 }
