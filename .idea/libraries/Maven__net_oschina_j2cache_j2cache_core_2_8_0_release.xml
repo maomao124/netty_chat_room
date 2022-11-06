@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: net.oschina.j2cache:j2cache-core:2.8.0-release">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/net/oschina/j2cache/j2cache-core/2.8.0-release/j2cache-core-2.8.0-release.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/net/oschina/j2cache/j2cache-core/2.8.0-release/j2cache-core-2.8.0-release-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/net/oschina/j2cache/j2cache-core/2.8.0-release/j2cache-core-2.8.0-release-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
