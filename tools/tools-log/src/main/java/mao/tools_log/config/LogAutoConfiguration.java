@@ -1,5 +1,6 @@
 package mao.tools_log.config;
 
+import lombok.extern.slf4j.Slf4j;
 import mao.tools_log.aspect.SysLogAspect;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -7,6 +8,8 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplicat
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;
+
+import javax.annotation.PostConstruct;
 
 /**
  * Project name(项目名称)：logback_spring_boot_starter_demo
@@ -26,6 +29,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
  * 3，配置文件中不存在：log.enabled 值
  */
 
+@Slf4j
 @EnableAsync
 @Configuration
 @ConditionalOnWebApplication
@@ -40,6 +44,12 @@ public class LogAutoConfiguration
         return new SysLogAspect();
     }
 
+
+    @PostConstruct
+    public void init()
+    {
+        log.info("初始化 LogAutoConfiguration");
+    }
 
 }
 

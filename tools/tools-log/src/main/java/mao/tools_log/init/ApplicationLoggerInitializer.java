@@ -1,8 +1,12 @@
 package mao.tools_log.init;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
+
+import javax.annotation.PostConstruct;
 
 /**
  * Project name(项目名称)：logback_spring_boot_starter_demo
@@ -22,6 +26,9 @@ import org.springframework.core.env.ConfigurableEnvironment;
 
 public class ApplicationLoggerInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext>
 {
+
+    private static final Logger log = LoggerFactory.getLogger(ApplicationLoggerInitializer.class);
+
     @Override
     public void initialize(ConfigurableApplicationContext applicationContext)
     {
@@ -39,4 +46,9 @@ public class ApplicationLoggerInitializer implements ApplicationContextInitializ
     }
 
 
+    @PostConstruct
+    public void init()
+    {
+        log.info("初始化 ApplicationLoggerInitializer");
+    }
 }
