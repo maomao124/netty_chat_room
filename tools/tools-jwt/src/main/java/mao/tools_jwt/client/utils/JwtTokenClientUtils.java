@@ -1,8 +1,8 @@
 package mao.tools_jwt.client.utils;
 
+import mao.tools_core.exception.BizException;
 import mao.tools_jwt.client.config.AuthClientConfigurationProperties;
 import mao.tools_jwt.entity.JwtUserInfo;
-import mao.tools_jwt.exception.BizException;
 import mao.tools_jwt.utils.JwtHelper;
 
 /**

@@ -1,9 +1,12 @@
 package mao.tools_jwt.server.config;
 
+import lombok.extern.slf4j.Slf4j;
 import mao.tools_jwt.server.utils.JwtTokenServerUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
+
+import javax.annotation.PostConstruct;
 
 /**
  * Project name(项目名称)：jwt_spring_boot_starter
@@ -18,6 +21,7 @@ import org.springframework.context.annotation.Bean;
  * Description(描述)： 无
  */
 
+@Slf4j
 @EnableConfigurationProperties(AuthServerConfigurationProperties.class)
 public class AuthServerConfiguration
 {
@@ -25,5 +29,11 @@ public class AuthServerConfiguration
     public JwtTokenServerUtils jwtTokenServerUtils(@Autowired AuthServerConfigurationProperties authServerConfigurationProperties)
     {
         return new JwtTokenServerUtils(authServerConfigurationProperties);
+    }
+
+    @PostConstruct
+    public void init()
+    {
+        log.info("初始化 AuthServerConfiguration");
     }
 }
