@@ -106,6 +106,8 @@
         <lombok.version>1.18.20</lombok.version>
         <junit.version>RELEASE</junit.version>
         <jackson.version>2.9.2</jackson.version>
+        <j2cache.version>2.8.0-release</j2cache.version>
+        <redisson.version>3.17.0</redisson.version>
 
 
         <hutool.version>5.1.0</hutool.version>
@@ -386,6 +388,20 @@
                 <artifactId>junit-jupiter</artifactId>
                 <version>${junit.version}</version>
                 <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>net.oschina.j2cache</groupId>
+                <artifactId>j2cache-spring-boot2-starter</artifactId>
+                <version>${j2cache.version}</version>
+            </dependency>
+
+            <!--spring boot redisson 依赖-->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson.version}</version>
+
             </dependency>
 
         </dependencies>

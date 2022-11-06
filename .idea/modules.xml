@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/tools/tools-common/tools-common.iml" filepath="$PROJECT_DIR$/tools/tools-common/tools-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/tools-core/tools-core.iml" filepath="$PROJECT_DIR$/tools/tools-core/tools-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/tools-dozer/tools-dozer.iml" filepath="$PROJECT_DIR$/tools/tools-dozer/tools-dozer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/tools-j2cache/tools-j2cache.iml" filepath="$PROJECT_DIR$/tools/tools-j2cache/tools-j2cache.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/tools-swagger2/tools-swagger2.iml" filepath="$PROJECT_DIR$/tools/tools-swagger2/tools-swagger2.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/tools-validator/tools-validator.iml" filepath="$PROJECT_DIR$/tools/tools-validator/tools-validator.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/tools-xss/tools-xss.iml" filepath="$PROJECT_DIR$/tools/tools-xss/tools-xss.iml" />

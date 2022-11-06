@@ -7,12 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="tools-common" />
+        <module name="tools-validator" />
         <module name="tools-xss" />
         <module name="tools-dozer" />
-        <module name="tools-common" />
         <module name="tools-core" />
+        <module name="tools-j2cache" />
         <module name="tools-swagger2" />
-        <module name="tools-validator" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +23,7 @@
       <module name="tools-common" target="1.8" />
       <module name="tools-core" target="1.8" />
       <module name="tools-dozer" target="1.8" />
+      <module name="tools-j2cache" target="1.8" />
       <module name="tools-swagger2" target="1.8" />
       <module name="tools-validator" target="1.8" />
       <module name="tools-xss" target="1.8" />
@@ -32,6 +34,7 @@
       <module name="tools-common" options="-parameters" />
       <module name="tools-core" options="-parameters" />
       <module name="tools-dozer" options="-parameters" />
+      <module name="tools-j2cache" options="-parameters" />
       <module name="tools-swagger2" options="-parameters" />
       <module name="tools-validator" options="-parameters" />
       <module name="tools-xss" options="-parameters" />
