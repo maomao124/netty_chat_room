@@ -26,6 +26,7 @@
         <module>tools-common</module>
         <module>tools-j2cache</module>
         <module>tools-log</module>
+        <module>tools-jwt</module>
     </modules>
 
 

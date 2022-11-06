@@ -11,6 +11,7 @@
         <module name="tools-validator" />
         <module name="tools-xss" />
         <module name="tools-dozer" />
+        <module name="tools-jwt" />
         <module name="tools-log" />
         <module name="tools-core" />
         <module name="tools-j2cache" />
@@ -25,6 +26,7 @@
       <module name="tools-core" target="1.8" />
       <module name="tools-dozer" target="1.8" />
       <module name="tools-j2cache" target="1.8" />
+      <module name="tools-jwt" target="1.8" />
       <module name="tools-log" target="1.8" />
       <module name="tools-swagger2" target="1.8" />
       <module name="tools-validator" target="1.8" />
@@ -37,6 +39,7 @@
       <module name="tools-core" options="-parameters" />
       <module name="tools-dozer" options="-parameters" />
       <module name="tools-j2cache" options="-parameters" />
+      <module name="tools-jwt" options="-parameters" />
       <module name="tools-log" options="-parameters" />
       <module name="tools-swagger2" options="-parameters" />
       <module name="tools-validator" options="-parameters" />
