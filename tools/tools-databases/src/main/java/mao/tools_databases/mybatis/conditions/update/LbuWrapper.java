@@ -8,6 +8,7 @@ import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.core.toolkit.support.SFunction;
+import mao.tools_databases.mybatis.typehandler.BaseLikeTypeHandler;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -25,7 +26,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * Date(创建日期)： 2022/11/8
  * Time(创建时间)： 13:43
  * Version(版本): 1.0
- * Description(描述)： 无
+ * Description(描述)： 修改构造器
  */
 
 public class LbuWrapper<T> extends AbstractLambdaWrapper<T, LbuWrapper<T>> implements Update<LbuWrapper<T>, SFunction<T, ?>>

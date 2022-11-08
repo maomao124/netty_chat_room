@@ -9,6 +9,9 @@ import com.baomidou.mybatisplus.core.metadata.TableInfoHelper;
 import com.baomidou.mybatisplus.core.toolkit.ArrayUtils;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.core.toolkit.support.SFunction;
+import mao.tools_core.base.entity.SuperEntity;
+import mao.tools_core.utils.StrPool;
+import mao.tools_databases.mybatis.typehandler.BaseLikeTypeHandler;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -414,14 +417,6 @@ public class LbqWrapper<T> extends AbstractLambdaWrapper<T, LbqWrapper<T>> imple
         return super.like(this.checkCondition(val), column, BaseLikeTypeHandler.likeConvert(val));
     }
 
-    /**
-     * 忽略实体中的某些字段，实体中的字段默认是会除了null以外的全部进行等值匹配
-     * 再次可以进行忽略
-     *
-     * @param <A>       这个是传入的待忽略字段的set方法
-     * @param setColumn
-     * @return
-     */
 
     @Override
     public LbqWrapper<T> notLike(SFunction<T, ?> column, Object val)
