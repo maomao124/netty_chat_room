@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/apps/apps.iml" filepath="$PROJECT_DIR$/apps/apps.iml" />
       <module fileurl="file://$PROJECT_DIR$/apps/auth/auth.iml" filepath="$PROJECT_DIR$/apps/auth/auth.iml" />
       <module fileurl="file://$PROJECT_DIR$/apps/auth/auth-entity/auth-entity.iml" filepath="$PROJECT_DIR$/apps/auth/auth-entity/auth-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apps/auth/auth-server/auth-server.iml" filepath="$PROJECT_DIR$/apps/auth/auth-server/auth-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/authority.iml" filepath="$PROJECT_DIR$/authority.iml" />
       <module fileurl="file://$PROJECT_DIR$/parent/parent.iml" filepath="$PROJECT_DIR$/parent/parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/tools.iml" filepath="$PROJECT_DIR$/tools/tools.iml" />

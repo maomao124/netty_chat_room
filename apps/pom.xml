@@ -22,11 +22,11 @@
 
     <dependencyManagement>
         <dependencies>
-            <!--        <dependency>-->
-            <!--            <groupId>mao</groupId>-->
-            <!--            <artifactId>auth-entity</artifactId>-->
-            <!--            <version>${project.version}</version>-->
-            <!--        </dependency>-->
+            <dependency>
+                <groupId>mao</groupId>
+                <artifactId>auth-entity</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>mao</groupId>

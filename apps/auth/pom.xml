@@ -15,6 +15,7 @@
 
     <modules>
         <module>auth-entity</module>
+        <module>auth-server</module>
     </modules>
 
     <dependencies>
