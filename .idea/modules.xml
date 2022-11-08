@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/tools/tools-jwt/tools-jwt.iml" filepath="$PROJECT_DIR$/tools/tools-jwt/tools-jwt.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/tools-log/tools-log.iml" filepath="$PROJECT_DIR$/tools/tools-log/tools-log.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/tools-swagger2/tools-swagger2.iml" filepath="$PROJECT_DIR$/tools/tools-swagger2/tools-swagger2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/tools-user/tools-user.iml" filepath="$PROJECT_DIR$/tools/tools-user/tools-user.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/tools-validator/tools-validator.iml" filepath="$PROJECT_DIR$/tools/tools-validator/tools-validator.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/tools-xss/tools-xss.iml" filepath="$PROJECT_DIR$/tools/tools-xss/tools-xss.iml" />
     </modules>

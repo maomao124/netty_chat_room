@@ -10,6 +10,7 @@
         <module name="tools-common" />
         <module name="tools-validator" />
         <module name="tools-xss" />
+        <module name="tools-user" />
         <module name="tools-dozer" />
         <module name="tools-jwt" />
         <module name="tools-log" />
@@ -29,6 +30,7 @@
       <module name="tools-jwt" target="1.8" />
       <module name="tools-log" target="1.8" />
       <module name="tools-swagger2" target="1.8" />
+      <module name="tools-user" target="1.8" />
       <module name="tools-validator" target="1.8" />
       <module name="tools-xss" target="1.8" />
     </bytecodeTargetLevel>
@@ -42,6 +44,7 @@
       <module name="tools-jwt" options="-parameters" />
       <module name="tools-log" options="-parameters" />
       <module name="tools-swagger2" options="-parameters" />
+      <module name="tools-user" options="-parameters" />
       <module name="tools-validator" options="-parameters" />
       <module name="tools-xss" options="-parameters" />
     </option>

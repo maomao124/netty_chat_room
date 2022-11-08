@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <parent>
-       <artifactId>parent</artifactId>
+        <artifactId>parent</artifactId>
         <groupId>mao</groupId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>./../parent/pom.xml</relativePath>
@@ -27,6 +27,7 @@
         <module>tools-j2cache</module>
         <module>tools-log</module>
         <module>tools-jwt</module>
+        <module>tools-user</module>
     </modules>
 
 

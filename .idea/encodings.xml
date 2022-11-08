@@ -15,6 +15,8 @@
     <file url="file://$PROJECT_DIR$/tools/tools-log/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tools/tools-swagger2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tools/tools-swagger2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-user/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-user/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tools/tools-validator/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tools/tools-validator/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tools/tools-xss/src/main/java" charset="UTF-8" />
