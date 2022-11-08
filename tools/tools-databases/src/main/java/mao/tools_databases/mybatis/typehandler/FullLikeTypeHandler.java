@@ -15,8 +15,6 @@ import org.apache.ibatis.type.Alias;
  * Version(版本): 1.0
  * Description(描述)： 无
  *
- * @author mao
- * @date 2022/11/08
  */
 
 @Alias("fullLike")

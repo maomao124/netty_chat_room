@@ -64,8 +64,8 @@ public abstract class BaseMybatisConfiguration
     /**
      * Mybatis Plus 注入器
      *
-     * @param idGenerate
-     * @return
+     * @param idGenerate id生成
+     * @return {@link MetaObjectHandler}
      */
     @Bean("myMetaObjectHandler")
     public MetaObjectHandler getMyMetaObjectHandler(@Qualifier("snowflakeIdGenerate") IdGenerate<Long> idGenerate)
@@ -76,8 +76,8 @@ public abstract class BaseMybatisConfiguration
     /**
      * id生成 机器码， 单机配置1即可。 集群部署，每个实例自增1即可。
      *
-     * @param machineCode
-     * @return
+     * @param machineCode 机器代码
+     * @return {@link IdGenerate}
      */
     @Bean("snowflakeIdGenerate")
     public IdGenerate getIdGenerate(@Value("${id-generator.machine-code:1}") Long machineCode)
