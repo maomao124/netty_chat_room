@@ -1,5 +1,6 @@
 package mao.tools_user.config;
 
+import lombok.extern.slf4j.Slf4j;
 import mao.tools_user.feign.UserResolveApi;
 import mao.tools_user.interceptor.ContextHandlerInterceptor;
 import mao.tools_user.resolver.ContextArgumentResolver;
@@ -11,6 +12,7 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 
 /**
@@ -26,6 +28,7 @@ import java.util.List;
  * Description(描述)： 公共配置类, 一些公共工具配置
  */
 
+@Slf4j
 @Configuration
 public class LoginArgResolverConfig implements WebMvcConfigurer
 {
@@ -96,5 +99,11 @@ public class LoginArgResolverConfig implements WebMvcConfigurer
                         "/doc.html**"
                 };
         return urls;
+    }
+
+    @PostConstruct
+    public void init()
+    {
+        log.info("初始化 LoginArgResolverConfig");
     }
 }

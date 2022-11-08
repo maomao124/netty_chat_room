@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestBody;
  * Version(版本): 1.0
  * Description(描述)： 无
  */
+
 @FeignClient(name = "${feign.authority-server:auth-server}", fallbackFactory = UserResolveApiFallback.class)
 public interface UserResolveApi
 {
