@@ -1,10 +1,10 @@
 package mao.auth_entity.dto.core;
 
-import com.itheima.pinda.base.entity.SuperEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
 import lombok.experimental.Accessors;
+import mao.tools_core.base.entity.SuperEntity;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.NotNull;
@@ -15,7 +15,6 @@ import java.io.Serializable;
  * 实体类
  * 岗位
  * </p>
- *
  */
 @Data
 @NoArgsConstructor
@@ -25,7 +24,8 @@ import java.io.Serializable;
 @EqualsAndHashCode(callSuper = false)
 @Builder
 @ApiModel(value = "StationUpdateDTO", description = "岗位")
-public class StationUpdateDTO implements Serializable {
+public class StationUpdateDTO implements Serializable
+{
 
     private static final long serialVersionUID = 1L;
 
@@ -41,7 +41,7 @@ public class StationUpdateDTO implements Serializable {
     private String name;
     /**
      * 组织ID
-     * #pd_core_org
+     * #core_org
      */
     @ApiModelProperty(value = "组织ID")
     private Long orgId;

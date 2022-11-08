@@ -1,10 +1,10 @@
 package mao.auth_entity.dto.core;
 
-import com.itheima.pinda.base.entity.SuperEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
 import lombok.experimental.Accessors;
+import mao.tools_core.base.entity.SuperEntity;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.NotNull;
@@ -24,7 +24,8 @@ import java.io.Serializable;
 @EqualsAndHashCode(callSuper = false)
 @Builder
 @ApiModel(value = "OrgUpdateDTO", description = "组织")
-public class OrgUpdateDTO implements Serializable {
+public class OrgUpdateDTO implements Serializable
+{
 
     private static final long serialVersionUID = 1L;
 
