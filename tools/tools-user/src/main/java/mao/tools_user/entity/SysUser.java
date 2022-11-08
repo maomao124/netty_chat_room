@@ -2,6 +2,8 @@ package mao.tools_user.entity;
 
 import lombok.*;
 
+import java.util.List;
+
 /**
  * Project name(项目名称)：authority
  * Package(包名): mao.tools_user.entity
@@ -20,6 +22,7 @@ import lombok.*;
 @AllArgsConstructor
 @ToString(callSuper = true)
 @EqualsAndHashCode
+@Builder
 public class SysUser
 {
     private static final long serialVersionUID = 1L;
@@ -29,7 +32,12 @@ public class SysUser
      */
     private Long id;
     /**
-     * 名称
+     * 账号
+     */
+    private String account;
+
+    /**
+     * 姓名
      */
     private String name;
 
@@ -40,17 +48,51 @@ public class SysUser
     private Long orgId;
 
     /**
-     * 排序
+     * 岗位ID
+     * #pd_core_station
      */
-    private Integer sortValue;
+    private Long stationId;
+
 
     /**
-     * 状态
+     * 手机
+     * 启用条件： LoginUser.isFull = true || LoginUser.isUser = true
      */
-    private Boolean status;
+    private String mobile;
 
     /**
-     * 描述
+     * 照片
+     * 启用条件： LoginUser.isFull = true || LoginUser.isUser = true
      */
-    private String describe;
+    private String photo;
+
+    /**
+     * 工作描述
+     * 比如：  市长、管理员、局长等等   用于登陆展示
+     * 启用条件： LoginUser.isFull = true || LoginUser.isUser = true
+     */
+    private String workDescribe;
+
+    /**
+     * 登录次数
+     * 一直累计，记录了此账号总共登录次数
+     * 启用条件： LoginUser.isFull = true || LoginUser.isUser = true
+     */
+    private Integer loginCount;
+
+    /**
+     * 当前登录用户的角色编码
+     * 启用条件： LoginUser.isFull = true || LoginUser.isRole = true
+     */
+    private List<SysRole> roles;
+    /**
+     * 当前登录用户的组织架构
+     * 启用条件： LoginUser.isFull = true || LoginUser.isOrg = true
+     */
+    private SysOrg org;
+    /**
+     * 当前登录用户的 岗位
+     * 启用条件： LoginUser.isFull = true || LoginUser.isStation = true
+     */
+    private SysStation station;
 }
