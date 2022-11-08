@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="tools-databases" />
         <module name="tools-common" />
         <module name="tools-validator" />
         <module name="tools-xss" />
@@ -25,6 +26,7 @@
       <module name="tools" target="1.8" />
       <module name="tools-common" target="1.8" />
       <module name="tools-core" target="1.8" />
+      <module name="tools-databases" target="1.8" />
       <module name="tools-dozer" target="1.8" />
       <module name="tools-j2cache" target="1.8" />
       <module name="tools-jwt" target="1.8" />
@@ -39,6 +41,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="tools-common" options="-parameters" />
       <module name="tools-core" options="-parameters" />
+      <module name="tools-databases" options="-parameters" />
       <module name="tools-dozer" options="-parameters" />
       <module name="tools-j2cache" options="-parameters" />
       <module name="tools-jwt" options="-parameters" />

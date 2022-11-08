@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/tools/tools.iml" filepath="$PROJECT_DIR$/tools/tools.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/tools-common/tools-common.iml" filepath="$PROJECT_DIR$/tools/tools-common/tools-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/tools-core/tools-core.iml" filepath="$PROJECT_DIR$/tools/tools-core/tools-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/tools-databases/tools-databases.iml" filepath="$PROJECT_DIR$/tools/tools-databases/tools-databases.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/tools-dozer/tools-dozer.iml" filepath="$PROJECT_DIR$/tools/tools-dozer/tools-dozer.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/tools-j2cache/tools-j2cache.iml" filepath="$PROJECT_DIR$/tools/tools-j2cache/tools-j2cache.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/tools-jwt/tools-jwt.iml" filepath="$PROJECT_DIR$/tools/tools-jwt/tools-jwt.iml" />

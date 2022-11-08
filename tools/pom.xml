@@ -28,6 +28,7 @@
         <module>tools-log</module>
         <module>tools-jwt</module>
         <module>tools-user</module>
+        <module>tools-databases</module>
     </modules>
 
 

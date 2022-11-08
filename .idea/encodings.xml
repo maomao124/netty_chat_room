@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/tools/tools-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tools/tools-core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tools/tools-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-databases/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-databases/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tools/tools-dozer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tools/tools-dozer/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tools/tools-j2cache/src/main/java" charset="UTF-8" />
