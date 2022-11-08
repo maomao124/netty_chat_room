@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="tools-databases" />
         <module name="tools-common" />
+        <module name="auth-entity" />
         <module name="tools-validator" />
         <module name="tools-xss" />
         <module name="tools-user" />
@@ -21,6 +22,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="apps" target="1.8" />
+      <module name="auth" target="1.8" />
+      <module name="auth-entity" target="1.8" />
       <module name="authority" target="1.5" />
       <module name="parent" target="1.8" />
       <module name="tools" target="1.8" />
@@ -39,6 +43,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="auth-entity" options="-parameters" />
       <module name="tools-common" options="-parameters" />
       <module name="tools-core" options="-parameters" />
       <module name="tools-databases" options="-parameters" />

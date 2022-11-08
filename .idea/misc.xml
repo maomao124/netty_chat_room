@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/tools/tools-common/pom.xml" />
         <option value="$PROJECT_DIR$/tools/tools-user/pom.xml" />
         <option value="$PROJECT_DIR$/tools/tools-databases/pom.xml" />
+        <option value="$PROJECT_DIR$/apps/auth/auth-entity/pom.xml" />
       </list>
     </option>
   </component>
