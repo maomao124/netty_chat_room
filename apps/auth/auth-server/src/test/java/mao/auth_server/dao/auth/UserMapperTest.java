@@ -1,8 +1,11 @@
 package mao.auth_server.dao.auth;
 
+import mao.auth_entity.entity.auth.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -19,6 +22,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * Description(描述)： 测试类
  */
 
+
 @SpringBootTest
 class UserMapperTest
 {
@@ -29,25 +33,48 @@ class UserMapperTest
     @Test
     void findUserByRoleId()
     {
+        List<User> userList = userMapper.findUserByRoleId(100L, null);
+        for (User user : userList)
+        {
+            System.out.println(user);
+            System.out.println();
+        }
     }
 
     @Test
     void incrPasswordErrorNumById()
     {
+        int i = userMapper.incrPasswordErrorNumById(3L);
+        System.out.println(i);
     }
 
     @Test
     void findPage()
     {
+
     }
 
     @Test
     void resetPassErrorNum()
     {
+        int i = userMapper.resetPassErrorNum(3L);
+        System.out.println(i);
     }
 
     @Test
     void updateLastLoginTime()
     {
+
+    }
+
+    @Test
+    void queryAll()
+    {
+        List<User> userList = userMapper.selectList(null);
+        for (User user : userList)
+        {
+            System.out.println(user);
+            System.out.println();
+        }
     }
 }

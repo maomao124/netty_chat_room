@@ -10413,3 +10413,760 @@ docket：{auth=DocketInfo{title='权限模块', group='', description='在线文
 2022-11-09 21:40:36.399  WARN 2728 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
 2022-11-09 21:40:36.431  INFO 2728 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
 2022-11-09 21:40:36.443  INFO 2728 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-11-09 22:10:33.083  WARN 6092 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-11-09 22:10:33.093  INFO 6092 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-auth-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2022-11-09 22:10:33.132  INFO 6092 --- [main] mao.auth_server.AuthServerApplication    : The following profiles are active: dev
+2022-11-09 22:10:33.727  INFO 6092 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [${j2cache.config-location}] not resolvable: Could not resolve placeholder 'j2cache.config-location' in value "${j2cache.config-location}"
+2022-11-09 22:10:34.513  INFO 6092 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-09 22:10:34.516  INFO 6092 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-09 22:10:34.538  INFO 6092 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2022-11-09 22:10:34.619  WARN 6092 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-11-09 22:10:34.870  INFO 6092 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9732be5e-4a31-30ed-91ea-103d79af806f
+2022-11-09 22:10:34.877  INFO 6092 --- [main] m.t.config.ValidatorConfig               : 开启hibernate-validator快速返回
+2022-11-09 22:10:34.877  INFO 6092 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_validator.config.ValidatorConfig' of type [mao.tools_validator.config.ValidatorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 22:10:35.151  INFO 6092 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 22:10:35.308  INFO 6092 --- [main] mao.tools_j2cache.config.CacheConfig     : 初始化 CacheConfig
+2022-11-09 22:10:35.309  INFO 6092 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_j2cache.config.CacheConfig' of type [mao.tools_j2cache.config.CacheConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 22:10:35.703  INFO 6092 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8764 (http)
+2022-11-09 22:10:35.716  INFO 6092 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-09 22:10:35.716  INFO 6092 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2022-11-09 22:10:35.890  INFO 6092 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-09 22:10:35.890  INFO 6092 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2728 ms
+2022-11-09 22:10:35.914  INFO 6092 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2022-11-09 22:10:36.047  WARN 6092 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-09 22:10:36.047  INFO 6092 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-09 22:10:36.061  INFO 6092 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@7c8874ef
+2022-11-09 22:10:36.499  INFO 6092 --- [main] m.t.config.LoginArgResolverConfig        : 初始化 LoginArgResolverConfig
+2022-11-09 22:10:36.659  INFO 6092 --- [main] .j.a.J2CacheSpringCacheAutoConfiguration : 初始化 J2CacheSpringCacheAutoConfiguration
+2022-11-09 22:10:36.661  INFO 6092 --- [main] n.o.j.a.J2CacheAutoConfiguration         : 初始化 J2CacheAutoConfiguration
+2022-11-09 22:10:36.725  INFO 6092 --- [main] n.o.j2cache.util.SerializationUtils      : Using Serializer -> [fst:net.oschina.j2cache.util.FSTSerializer]
+2022-11-09 22:10:36.728  INFO 6092 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L1 CacheProvider : net.oschina.j2cache.caffeine.CaffeineProvider
+2022-11-09 22:10:36.729  INFO 6092 --- [main] .j.a.J2CacheSpringRedisAutoConfiguration : 初始化 J2CacheSpringRedisAutoConfiguration
+2022-11-09 22:10:37.022  INFO 6092 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L2 CacheProvider : net.oschina.j2cache.cache.support.redis.SpringRedisProvider
+2022-11-09 22:10:37.034  INFO 6092 --- [main] net.oschina.j2cache.J2CacheBuilder       : Using cluster policy : net.oschina.j2cache.cache.support.redis.SpringRedisPubSubPolicy
+2022-11-09 22:10:38.352  INFO 6092 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 22:10:38.365  INFO 6092 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-09 22:10:38.366  INFO 6092 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-11-09 22:10:38.366  INFO 6092 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-09 22:10:38.402  INFO 6092 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-11-09 22:10:39.103  INFO 6092 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-11-09 22:10:39.187  INFO 6092 --- [main] mao.tools_j2cache.config.RedissonConfig  : 初始化 RedissonConfig
+2022-11-09 22:10:39.190  INFO 6092 --- [main] mao.tools_j2cache.config.RedissonConfig  : 单机模式redis:127.0.0.1:6379
+2022-11-09 22:10:39.336  INFO 6092 --- [main] org.redisson.Version                     : Redisson 3.17.0
+2022-11-09 22:10:40.177  INFO 6092 --- [redisson-netty-4-13] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-09 22:10:40.193  INFO 6092 --- [redisson-netty-4-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-09 22:10:40.442  INFO 6092 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2022-11-09 22:10:40.530  INFO 6092 --- [main] m.t.s.config.AuthServerConfiguration     : 初始化 AuthServerConfiguration
+2022-11-09 22:10:40.567  WARN 6092 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-09 22:10:40.567  INFO 6092 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-09 22:10:40.722  INFO 6092 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-09 22:10:40.901  INFO 6092 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-09 22:10:41.552  INFO 6092 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbConfig@687fd6e]
+2022-11-09 22:10:41.552  INFO 6092 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbSearcher@266a47fd]
+2022-11-09 22:10:42.269  INFO 6092 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2022-11-09 22:10:42.270  INFO 6092 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2022-11-09 22:10:42.275  INFO 6092 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2022-11-09 22:10:42.279  INFO 6092 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2022-11-09 22:10:42.284  INFO 6092 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2022-11-09 22:10:42.310  INFO 6092 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2022-11-09 22:10:42.574  INFO 6092 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 22:10:42.575  INFO 6092 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 22:10:42.623  INFO 6092 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-09 22:10:42.623  INFO 6092 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2022-11-09 22:10:42.626  INFO 6092 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 22:10:42.627  INFO 6092 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 22:10:42.635  INFO 6092 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-09 22:10:42.721  INFO 6092 --- [main] m.tools_j2cache.config.RedisUtilsConfig  : 初始化 RedisUtilsConfig
+2022-11-09 22:10:42.722  INFO 6092 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
+2022-11-09 22:10:42.739  INFO 6092 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2022-11-09 22:10:42.758  INFO 6092 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-09 22:10:42.772  INFO 6092 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2022-11-09 22:10:42.772  INFO 6092 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='mao', url='https://github.com/maomao124/', email='1234@qq.com'}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{auth=DocketInfo{title='权限模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.auth', basePath=[], excludePath=[]}, common=DocketInfo{title='公共模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.common', basePath=[], excludePath=[]}, core=DocketInfo{title='组织岗位模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.core', basePath=[], excludePath=[]}}
+
+2022-11-09 22:10:44.310  INFO 6092 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 22:10:44.597  INFO 6092 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-11-09 22:10:44.624  INFO 6092 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2022-11-09 22:10:44.684  INFO 6092 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 22:10:44.712  INFO 6092 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 22:10:44.723  INFO 6092 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 22:10:44.823  INFO 6092 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2022-11-09 22:10:44.824  INFO 6092 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2022-11-09 22:10:44.982  INFO 6092 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8764 (http) with context path ''
+2022-11-09 22:10:44.987  INFO 6092 --- [main] com.alibaba.nacos.client.naming          : [BEAT] adding beat: BeatInfo{port=8764, ip='192.168.202.1', weight=1.0, serviceName='DEFAULT_GROUP@@auth-server', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=/actuator}, scheduled=false, period=5000, stopped=false} to beat map.
+2022-11-09 22:10:44.988  INFO 6092 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] 27ce69b0-bff1-4c03-8f3e-0ea5559a5732 registering service DEFAULT_GROUP@@auth-server with instance: Instance{instanceId='null', ip='192.168.202.1', port=8764, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=/actuator}}
+2022-11-09 22:10:44.992  INFO 6092 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP auth-server 192.168.202.1:8764 register finished
+2022-11-09 22:10:45.628  INFO 6092 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@auth-server@@DEFAULT -> [{"instanceId":"192.168.202.1#8764#DEFAULT#DEFAULT_GROUP@@auth-server","ip":"192.168.202.1","port":8764,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@auth-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000}]
+2022-11-09 22:10:45.636  INFO 6092 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@auth-server@@DEFAULT -> [{"instanceId":"192.168.202.1#8764#DEFAULT#DEFAULT_GROUP@@auth-server","ip":"192.168.202.1","port":8764,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@auth-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000}]
+2022-11-09 22:10:45.999  INFO 6092 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.202.1\",\"port\":8764,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.202.1#8764#DEFAULT#DEFAULT_GROUP@@auth-server\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@auth-server\",\"ephemeral\":true}],\"dom\":\"DEFAULT_GROUP@@auth-server\",\"name\":\"DEFAULT_GROUP@@auth-server\",\"cacheMillis\":10000,\"lastRefTime\":1668003045998,\"checksum\":\"d706e8bc2779a32044465e588c1a9d58\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":5563784822800} from /113.221.234.195
+2022-11-09 22:10:46.234  INFO 6092 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 22:10:46.236  INFO 6092 --- [main] mao.auth_server.AuthServerApplication    : Started AuthServerApplication in 16.901 seconds (JVM running for 17.929)
+2022-11-09 22:10:46.246  INFO 6092 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server-dev.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 22:10:46.248  INFO 6092 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server-dev.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 22:10:46.248  INFO 6092 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 22:10:46.248  INFO 6092 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server, group=DEFAULT_GROUP, cnt=1
+2022-11-09 22:10:46.250  INFO 6092 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 22:10:46.250  INFO 6092 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 22:10:46.251  INFO 6092 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] common.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 22:10:46.251  INFO 6092 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 22:10:46.252  INFO 6092 --- [main] mao.auth_server.AuthServerApplication    : 应用auth-server启动成功!swagger地址：http://113.221.234.195:8764/doc.html
+2022-11-09 22:10:46.252  INFO 6092 --- [main] mao.auth_server.AuthServerApplication    : 启动耗时：17056ms
+2022-11-09 22:10:46.688  INFO 6092 --- [RMI TCP Connection(2)-113.221.234.195] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-09 22:10:46.688  INFO 6092 --- [RMI TCP Connection(2)-113.221.234.195] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-09 22:10:46.701  INFO 6092 --- [RMI TCP Connection(2)-113.221.234.195] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2022-11-09 22:13:55.040  INFO 6092 --- [j2CacheRedisMessageListenerContainer-2] n.o.j.c.s.r.SpringRedisMessageListener   : Node-1167305 quit to j2cache
+2022-11-09 22:17:09.467  WARN 6092 --- [Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-11-09 22:17:09.467  WARN 6092 --- [Thread-31] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-11-09 22:17:09.468  WARN 6092 --- [Thread-31] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-11-09 22:17:09.469  WARN 6092 --- [Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-11-09 22:17:09.474  INFO 6092 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-09 22:17:09.487  INFO 6092 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-11-09 22:17:09.488  INFO 6092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@auth-server:192.168.202.1:8764 from beat map.
+2022-11-09 22:17:09.489  INFO 6092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 27ce69b0-bff1-4c03-8f3e-0ea5559a5732 deregistering service DEFAULT_GROUP@@auth-server with instance: Instance{instanceId='null', ip='192.168.202.1', port=8764, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2022-11-09 22:17:09.491  INFO 6092 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-11-09 22:17:09.493  INFO 6092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-11-09 22:17:10.505  INFO 6092 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"dom\":\"DEFAULT_GROUP@@auth-server\",\"name\":\"DEFAULT_GROUP@@auth-server\",\"cacheMillis\":10000,\"lastRefTime\":1668003430504,\"checksum\":\"2b411b2bb30a914a240868f78fe4009a\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":5948290933300} from /113.221.234.195
+2022-11-09 22:17:10.506  INFO 6092 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : removed ips(1) service: DEFAULT_GROUP@@auth-server@@DEFAULT -> [{"instanceId":"192.168.202.1#8764#DEFAULT#DEFAULT_GROUP@@auth-server","ip":"192.168.202.1","port":8764,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@auth-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000}]
+2022-11-09 22:17:10.512  INFO 6092 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@auth-server@@DEFAULT -> []
+2022-11-09 22:17:10.803  INFO 6092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-11-09 22:17:10.803  INFO 6092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-11-09 22:17:13.826  INFO 6092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-11-09 22:17:16.853  INFO 6092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-11-09 22:17:16.853  INFO 6092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-11-09 22:17:16.853  INFO 6092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-11-09 22:17:16.853  INFO 6092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-11-09 22:17:16.854  INFO 6092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-11-09 22:17:16.854  WARN 6092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-11-09 22:17:16.854  WARN 6092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-11-09 22:17:16.854  INFO 6092 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-11-09 22:17:16.854  INFO 6092 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-11-09 22:17:16.854  INFO 6092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-11-09 22:17:16.856  INFO 6092 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-11-09 22:17:16.858  WARN 6092 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2022-11-09 22:17:16.886  INFO 6092 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-11-09 22:17:16.898  INFO 6092 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-11-09 22:17:25.250 DEBUG 16296 --- [main] .c.l.ClasspathLoggingApplicationListener : Application started with classpath: [file:/C:/Users/mao/.jdks/corretto-1.8.0_332/jre/lib/charsets.jar, file:/C:/Users/mao/.jdks/corretto-1.8.0_332/jre/lib/ext/access-bridge-64.jar, file:/C:/Users/mao/.jdks/corretto-1.8.0_332/jre/lib/ext/cldrdata.jar, file:/C:/Users/mao/.jdks/corretto-1.8.0_332/jre/lib/ext/dnsns.jar, file:/C:/Users/mao/.jdks/corretto-1.8.0_332/jre/lib/ext/jaccess.jar, file:/C:/Users/mao/.jdks/corretto-1.8.0_332/jre/lib/ext/jfxrt.jar, file:/C:/Users/mao/.jdks/corretto-1.8.0_332/jre/lib/ext/localedata.jar, file:/C:/Users/mao/.jdks/corretto-1.8.0_332/jre/lib/ext/nashorn.jar, file:/C:/Users/mao/.jdks/corretto-1.8.0_332/jre/lib/ext/sunec.jar, file:/C:/Users/mao/.jdks/corretto-1.8.0_332/jre/lib/ext/sunjce_provider.jar, file:/C:/Users/mao/.jdks/corretto-1.8.0_332/jre/lib/ext/sunmscapi.jar, file:/C:/Users/mao/.jdks/corretto-1.8.0_332/jre/lib/ext/sunpkcs11.jar, file:/C:/Users/mao/.jdks/corretto-1.8.0_332/jre/lib/ext/zipfs.jar, file:/C:/Users/mao/.jdks/corretto-1.8.0_332/jre/lib/jce.jar, file:/C:/Users/mao/.jdks/corretto-1.8.0_332/jre/lib/jfr.jar, file:/C:/Users/mao/.jdks/corretto-1.8.0_332/jre/lib/jfxswt.jar, file:/C:/Users/mao/.jdks/corretto-1.8.0_332/jre/lib/jsse.jar, file:/C:/Users/mao/.jdks/corretto-1.8.0_332/jre/lib/management-agent.jar, file:/C:/Users/mao/.jdks/corretto-1.8.0_332/jre/lib/resources.jar, file:/C:/Users/mao/.jdks/corretto-1.8.0_332/jre/lib/rt.jar, file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/, file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-entity/target/classes/, file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/tools/tools-common/target/classes/, file:/C:/Users/mao/.m2/repository/org/springframework/spring-tx/5.2.2.RELEASE/spring-tx-5.2.2.RELEASE.jar, file:/C:/Users/mao/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.2/jackson-module-parameter-names-2.9.2.jar, file:/C:/Users/mao/.m2/repository/org/springframework/boot/spring-boot-starter-undertow/2.2.9.RELEASE/spring-boot-starter-undertow-2.2.9.RELEASE.jar, file:/C:/Users/mao/.m2/repository/io/undertow/undertow-core/2.0.30.Final/undertow-core-2.0.30.Final.jar, file:/C:/Users/mao/.m2/repository/org/jboss/xnio/xnio-api/3.3.8.Final/xnio-api-3.3.8.Final.jar, file:/C:/Users/mao/.m2/repository/org/jboss/xnio/xnio-nio/3.3.8.Final/xnio-nio-3.3.8.Final.jar, file:/C:/Users/mao/.m2/repository/io/undertow/undertow-servlet/2.0.30.Final/undertow-servlet-2.0.30.Final.jar, file:/C:/Users/mao/.m2/repository/org/jboss/spec/javax/annotation/jboss-annotations-api_1.2_spec/1.0.2.Final/jboss-annotations-api_1.2_spec-1.0.2.Final.jar, file:/C:/Users/mao/.m2/repository/io/undertow/undertow-websockets-jsr/2.0.30.Final/undertow-websockets-jsr-2.0.30.Final.jar, file:/C:/Users/mao/.m2/repository/org/jboss/spec/javax/websocket/jboss-websocket-api_1.1_spec/1.1.4.Final/jboss-websocket-api_1.1_spec-1.1.4.Final.jar, file:/C:/Users/mao/.m2/repository/jakarta/servlet/jakarta.servlet-api/4.0.4/jakarta.servlet-api-4.0.4.jar, file:/C:/Users/mao/.m2/repository/org/glassfish/jakarta.el/3.0.3/jakarta.el-3.0.3.jar, file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/tools/tools-log/target/classes/, file:/C:/Users/mao/.m2/repository/org/lionsoul/ip2region/1.7.2/ip2region-1.7.2.jar, file:/C:/Users/mao/.m2/repository/eu/bitwalker/UserAgentUtils/1.21/UserAgentUtils-1.21.jar, file:/C:/Users/mao/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar, file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/tools/tools-jwt/target/classes/, file:/C:/Users/mao/.m2/repository/io/jsonwebtoken/jjwt/0.7.0/jjwt-0.7.0.jar, file:/C:/Users/mao/.m2/repository/com/baomidou/mybatis-plus/3.2.0/mybatis-plus-3.2.0.jar, file:/C:/Users/mao/.m2/repository/com/baomidou/mybatis-plus-extension/3.2.0/mybatis-plus-extension-3.2.0.jar, file:/C:/Users/mao/.m2/repository/com/baomidou/mybatis-plus-core/3.2.0/mybatis-plus-core-3.2.0.jar, file:/C:/Users/mao/.m2/repository/com/baomidou/mybatis-plus-annotation/3.2.0/mybatis-plus-annotation-3.2.0.jar, file:/C:/Users/mao/.m2/repository/com/github/jsqlparser/jsqlparser/2.1/jsqlparser-2.1.jar, file:/C:/Users/mao/.m2/repository/org/mybatis/mybatis/3.5.2/mybatis-3.5.2.jar, file:/C:/Users/mao/.m2/repository/org/mybatis/mybatis-spring/2.0.2/mybatis-spring-2.0.2.jar, file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/tools/tools-user/target/classes/, file:/C:/Users/mao/.m2/repository/io/springfox/springfox-core/2.9.2/springfox-core-2.9.2.jar, file:/C:/Users/mao/.m2/repository/net/bytebuddy/byte-buddy/1.10.13/byte-buddy-1.10.13.jar, file:/C:/Users/mao/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar, file:/C:/Users/mao/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/spring-beans/5.2.2.RELEASE/spring-beans-5.2.2.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/plugin/spring-plugin-metadata/1.2.0.RELEASE/spring-plugin-metadata-1.2.0.RELEASE.jar, file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/tools/tools-databases/target/classes/, file:/C:/Users/mao/.m2/repository/com/alibaba/druid-spring-boot-starter/1.2.8/druid-spring-boot-starter-1.2.8.jar, file:/C:/Users/mao/.m2/repository/com/alibaba/druid/1.2.8/druid-1.2.8.jar, file:/C:/Users/mao/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar, file:/C:/Users/mao/.m2/repository/mysql/mysql-connector-java/8.0.27/mysql-connector-java-8.0.27.jar, file:/C:/Users/mao/.m2/repository/com/google/protobuf/protobuf-java/3.13.0/protobuf-java-3.13.0.jar, file:/C:/Users/mao/.m2/repository/p6spy/p6spy/3.8.7/p6spy-3.8.7.jar, file:/C:/Users/mao/.m2/repository/org/mybatis/mybatis-typehandlers-jsr310/1.0.2/mybatis-typehandlers-jsr310-1.0.2.jar, file:/C:/Users/mao/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.2/jackson-datatype-jsr310-2.9.2.jar, file:/C:/Users/mao/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar, file:/C:/Users/mao/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.2/jackson-core-2.9.2.jar, file:/C:/Users/mao/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.2/jackson-databind-2.9.2.jar, file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/tools/tools-dozer/target/classes/, file:/C:/Users/mao/.m2/repository/com/github/dozermapper/dozer-spring-boot-starter/6.5.0/dozer-spring-boot-starter-6.5.0.jar, file:/C:/Users/mao/.m2/repository/com/github/dozermapper/dozer-core/6.5.0/dozer-core-6.5.0.jar, file:/C:/Users/mao/.m2/repository/commons-beanutils/commons-beanutils/1.9.3/commons-beanutils-1.9.3.jar, file:/C:/Users/mao/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar, file:/C:/Users/mao/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.3/jaxb-runtime-2.3.3.jar, file:/C:/Users/mao/.m2/repository/org/glassfish/jaxb/txw2/2.3.3/txw2-2.3.3.jar, file:/C:/Users/mao/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.11/istack-commons-runtime-3.0.11.jar, file:/C:/Users/mao/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar, file:/C:/Users/mao/.m2/repository/com/github/dozermapper/dozer-spring4/6.5.0/dozer-spring4-6.5.0.jar, file:/C:/Users/mao/.m2/repository/com/github/dozermapper/dozer-spring-boot-autoconfigure/6.5.0/dozer-spring-boot-autoconfigure-6.5.0.jar, file:/C:/Users/mao/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.2.9.RELEASE/spring-boot-autoconfigure-2.2.9.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/boot/spring-boot/2.2.9.RELEASE/spring-boot-2.2.9.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/boot/spring-boot-configuration-processor/2.2.9.RELEASE/spring-boot-configuration-processor-2.2.9.RELEASE.jar, file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/tools/tools-core/target/classes/, file:/C:/Users/mao/.m2/repository/io/swagger/swagger-models/1.5.21/swagger-models-1.5.21.jar, file:/C:/Users/mao/.m2/repository/io/swagger/swagger-annotations/1.5.21/swagger-annotations-1.5.21.jar, file:/C:/Users/mao/.m2/repository/org/hibernate/validator/hibernate-validator/6.1.0.Final/hibernate-validator-6.1.0.Final.jar, file:/C:/Users/mao/.m2/repository/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar, file:/C:/Users/mao/.m2/repository/org/jboss/logging/jboss-logging/3.4.1.Final/jboss-logging-3.4.1.Final.jar, file:/C:/Users/mao/.m2/repository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar, file:/C:/Users/mao/.m2/repository/com/alibaba/cloud/spring-cloud-starter-alibaba-nacos-config/2.2.6.RELEASE/spring-cloud-starter-alibaba-nacos-config-2.2.6.RELEASE.jar, file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/tools/tools-j2cache/target/classes/, file:/C:/Users/mao/.m2/repository/net/oschina/j2cache/j2cache-spring-boot2-starter/2.8.0-release/j2cache-spring-boot2-starter-2.8.0-release.jar, file:/C:/Users/mao/.m2/repository/net/oschina/j2cache/j2cache-core/2.8.0-release/j2cache-core-2.8.0-release.jar, file:/C:/Users/mao/.m2/repository/com/github/ben-manes/caffeine/caffeine/2.8.0/caffeine-2.8.0.jar, file:/C:/Users/mao/.m2/repository/org/checkerframework/checker-qual/2.10.0/checker-qual-2.10.0.jar, file:/C:/Users/mao/.m2/repository/com/google/errorprone/error_prone_annotations/2.3.3/error_prone_annotations-2.3.3.jar, file:/C:/Users/mao/.m2/repository/redis/clients/jedis/3.1.0/jedis-3.1.0.jar, file:/C:/Users/mao/.m2/repository/org/apache/commons/commons-pool2/2.7.0/commons-pool2-2.7.0.jar, file:/C:/Users/mao/.m2/repository/de/ruedigermoeller/fst/2.57/fst-2.57.jar, file:/C:/Users/mao/.m2/repository/jline/jline/2.14.2/jline-2.14.2.jar, file:/C:/Users/mao/.m2/repository/org/jgroups/jgroups/3.6.15.Final/jgroups-3.6.15.Final.jar, file:/C:/Users/mao/.m2/repository/org/javassist/javassist/3.25.0-GA/javassist-3.25.0-GA.jar, file:/C:/Users/mao/.m2/repository/org/objenesis/objenesis/2.6/objenesis-2.6.jar, file:/C:/Users/mao/.m2/repository/org/springframework/spring-context/5.2.2.RELEASE/spring-context-5.2.2.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/spring-expression/5.2.2.RELEASE/spring-expression-5.2.2.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/spring-context-support/5.2.2.RELEASE/spring-context-support-5.2.2.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/boot/spring-boot-starter-data-redis/2.2.9.RELEASE/spring-boot-starter-data-redis-2.2.9.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/data/spring-data-redis/2.2.9.RELEASE/spring-data-redis-2.2.9.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/data/spring-data-keyvalue/2.2.9.RELEASE/spring-data-keyvalue-2.2.9.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/data/spring-data-commons/2.2.9.RELEASE/spring-data-commons-2.2.9.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/spring-oxm/5.2.2.RELEASE/spring-oxm-5.2.2.RELEASE.jar, file:/C:/Users/mao/.m2/repository/io/lettuce/lettuce-core/5.2.2.RELEASE/lettuce-core-5.2.2.RELEASE.jar, file:/C:/Users/mao/.m2/repository/io/netty/netty-common/4.1.51.Final/netty-common-4.1.51.Final.jar, file:/C:/Users/mao/.m2/repository/io/netty/netty-handler/4.1.51.Final/netty-handler-4.1.51.Final.jar, file:/C:/Users/mao/.m2/repository/io/netty/netty-transport/4.1.51.Final/netty-transport-4.1.51.Final.jar, file:/C:/Users/mao/.m2/repository/io/projectreactor/reactor-core/3.3.8.RELEASE/reactor-core-3.3.8.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/spring-aspects/5.2.2.RELEASE/spring-aspects-5.2.2.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/spring-orm/5.2.2.RELEASE/spring-orm-5.2.2.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/aspectj/aspectjrt/1.9.6/aspectjrt-1.9.6.jar, file:/C:/Users/mao/.m2/repository/org/aspectj/aspectjweaver/1.9.6/aspectjweaver-1.9.6.jar, file:/C:/Users/mao/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar, file:/C:/Users/mao/.m2/repository/org/redisson/redisson-spring-boot-starter/3.17.0/redisson-spring-boot-starter-3.17.0.jar, file:/C:/Users/mao/.m2/repository/org/redisson/redisson/3.17.0/redisson-3.17.0.jar, file:/C:/Users/mao/.m2/repository/io/netty/netty-codec/4.1.51.Final/netty-codec-4.1.51.Final.jar, file:/C:/Users/mao/.m2/repository/io/netty/netty-buffer/4.1.51.Final/netty-buffer-4.1.51.Final.jar, file:/C:/Users/mao/.m2/repository/io/netty/netty-resolver/4.1.51.Final/netty-resolver-4.1.51.Final.jar, file:/C:/Users/mao/.m2/repository/io/netty/netty-resolver-dns/4.1.51.Final/netty-resolver-dns-4.1.51.Final.jar, file:/C:/Users/mao/.m2/repository/io/netty/netty-codec-dns/4.1.51.Final/netty-codec-dns-4.1.51.Final.jar, file:/C:/Users/mao/.m2/repository/javax/cache/cache-api/1.1.1/cache-api-1.1.1.jar, file:/C:/Users/mao/.m2/repository/io/reactivex/rxjava3/rxjava/3.0.12/rxjava-3.0.12.jar, file:/C:/Users/mao/.m2/repository/org/jboss/marshalling/jboss-marshalling/2.0.11.Final/jboss-marshalling-2.0.11.Final.jar, file:/C:/Users/mao/.m2/repository/org/jboss/marshalling/jboss-marshalling-river/2.0.11.Final/jboss-marshalling-river-2.0.11.Final.jar, file:/C:/Users/mao/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.9.2/jackson-dataformat-yaml-2.9.2.jar, file:/C:/Users/mao/.m2/repository/org/jodd/jodd-bean/5.1.6/jodd-bean-5.1.6.jar, file:/C:/Users/mao/.m2/repository/org/jodd/jodd-core/5.1.6/jodd-core-5.1.6.jar, file:/C:/Users/mao/.m2/repository/org/redisson/redisson-spring-data-26/3.17.0/redisson-spring-data-26-3.17.0.jar, file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/tools/tools-swagger2/target/classes/, file:/C:/Users/mao/.m2/repository/com/github/xiaoymin/knife4j-spring-boot-starter/2.0.1/knife4j-spring-boot-starter-2.0.1.jar, file:/C:/Users/mao/.m2/repository/com/github/xiaoymin/knife4j-spring-boot-autoconfigure/2.0.1/knife4j-spring-boot-autoconfigure-2.0.1.jar, file:/C:/Users/mao/.m2/repository/com/github/xiaoymin/knife4j-spring/2.0.1/knife4j-spring-2.0.1.jar, file:/C:/Users/mao/.m2/repository/com/github/xiaoymin/knife4j-annotations/2.0.1/knife4j-annotations-2.0.1.jar, file:/C:/Users/mao/.m2/repository/com/github/xiaoymin/knife4j-core/2.0.1/knife4j-core-2.0.1.jar, file:/C:/Users/mao/.m2/repository/com/github/xiaoymin/knife4j-spring-ui/2.0.1/knife4j-spring-ui-2.0.1.jar, file:/C:/Users/mao/.m2/repository/org/springframework/boot/spring-boot-starter/2.2.9.RELEASE/spring-boot-starter-2.2.9.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.2.9.RELEASE/spring-boot-starter-logging-2.2.9.RELEASE.jar, file:/C:/Users/mao/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar, file:/C:/Users/mao/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar, file:/C:/Users/mao/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.12.1/log4j-to-slf4j-2.12.1.jar, file:/C:/Users/mao/.m2/repository/org/apache/logging/log4j/log4j-api/2.12.1/log4j-api-2.12.1.jar, file:/C:/Users/mao/.m2/repository/org/slf4j/jul-to-slf4j/1.7.30/jul-to-slf4j-1.7.30.jar, file:/C:/Users/mao/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar, file:/C:/Users/mao/.m2/repository/org/yaml/snakeyaml/1.25/snakeyaml-1.25.jar, file:/C:/Users/mao/.m2/repository/io/springfox/springfox-bean-validators/2.9.2/springfox-bean-validators-2.9.2.jar, file:/C:/Users/mao/.m2/repository/io/springfox/springfox-spi/2.9.2/springfox-spi-2.9.2.jar, file:/C:/Users/mao/.m2/repository/io/springfox/springfox-swagger2/2.9.2/springfox-swagger2-2.9.2.jar, file:/C:/Users/mao/.m2/repository/io/springfox/springfox-schema/2.9.2/springfox-schema-2.9.2.jar, file:/C:/Users/mao/.m2/repository/io/springfox/springfox-swagger-common/2.9.2/springfox-swagger-common-2.9.2.jar, file:/C:/Users/mao/.m2/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar, file:/C:/Users/mao/.m2/repository/org/mapstruct/mapstruct/1.2.0.Final/mapstruct-1.2.0.Final.jar, file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/tools/tools-validator/target/classes/, file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/tools/tools-xss/target/classes/, file:/C:/Users/mao/.m2/repository/org/owasp/antisamy/antisamy/1.5.7/antisamy-1.5.7.jar, file:/C:/Users/mao/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar, file:/C:/Users/mao/.m2/repository/org/apache/xmlgraphics/batik-css/1.9.1/batik-css-1.9.1.jar, file:/C:/Users/mao/.m2/repository/org/apache/xmlgraphics/batik-util/1.9.1/batik-util-1.9.1.jar, file:/C:/Users/mao/.m2/repository/org/apache/xmlgraphics/batik-constants/1.9.1/batik-constants-1.9.1.jar, file:/C:/Users/mao/.m2/repository/org/apache/xmlgraphics/batik-i18n/1.9.1/batik-i18n-1.9.1.jar, file:/C:/Users/mao/.m2/repository/org/apache/xmlgraphics/xmlgraphics-commons/2.2/xmlgraphics-commons-2.2.jar, file:/C:/Users/mao/.m2/repository/xml-apis/xml-apis-ext/1.3.04/xml-apis-ext-1.3.04.jar, file:/C:/Users/mao/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.22/nekohtml-1.9.22.jar, file:/C:/Users/mao/.m2/repository/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.jar, file:/C:/Users/mao/.m2/repository/org/apache/httpcomponents/httpclient/4.5.12/httpclient-4.5.12.jar, file:/C:/Users/mao/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar, file:/C:/Users/mao/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar, file:/C:/Users/mao/.m2/repository/org/springframework/cloud/spring-cloud-starter-openfeign/2.2.7.RELEASE/spring-cloud-starter-openfeign-2.2.7.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/cloud/spring-cloud-starter/2.2.7.RELEASE/spring-cloud-starter-2.2.7.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/security/spring-security-rsa/1.0.9.RELEASE/spring-security-rsa-1.0.9.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.64/bcpkix-jdk15on-1.64.jar, file:/C:/Users/mao/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.64/bcprov-jdk15on-1.64.jar, file:/C:/Users/mao/.m2/repository/org/springframework/cloud/spring-cloud-openfeign-core/2.2.7.RELEASE/spring-cloud-openfeign-core-2.2.7.RELEASE.jar, file:/C:/Users/mao/.m2/repository/io/github/openfeign/form/feign-form-spring/3.8.0/feign-form-spring-3.8.0.jar, file:/C:/Users/mao/.m2/repository/io/github/openfeign/form/feign-form/3.8.0/feign-form-3.8.0.jar, file:/C:/Users/mao/.m2/repository/commons-fileupload/commons-fileupload/1.4/commons-fileupload-1.4.jar, file:/C:/Users/mao/.m2/repository/org/springframework/spring-web/5.2.2.RELEASE/spring-web-5.2.2.RELEASE.jar, file:/C:/Users/mao/.m2/repository/io/github/openfeign/feign-core/10.10.1/feign-core-10.10.1.jar, file:/C:/Users/mao/.m2/repository/io/github/openfeign/feign-slf4j/10.10.1/feign-slf4j-10.10.1.jar, file:/C:/Users/mao/.m2/repository/io/github/openfeign/feign-hystrix/10.10.1/feign-hystrix-10.10.1.jar, file:/C:/Users/mao/.m2/repository/com/netflix/archaius/archaius-core/0.7.7/archaius-core-0.7.7.jar, file:/C:/Users/mao/.m2/repository/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar, file:/C:/Users/mao/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar, file:/C:/Users/mao/.m2/repository/com/baomidou/mybatis-plus-boot-starter/3.2.0/mybatis-plus-boot-starter-3.2.0.jar, file:/C:/Users/mao/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/2.2.9.RELEASE/spring-boot-starter-jdbc-2.2.9.RELEASE.jar, file:/C:/Users/mao/.m2/repository/com/zaxxer/HikariCP/3.4.5/HikariCP-3.4.5.jar, file:/C:/Users/mao/.m2/repository/org/springframework/spring-jdbc/5.2.2.RELEASE/spring-jdbc-5.2.2.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/cloud/spring-cloud-commons/2.2.7.RELEASE/spring-cloud-commons-2.2.7.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/security/spring-security-crypto/5.2.5.RELEASE/spring-security-crypto-5.2.5.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/cloud/spring-cloud-context/2.2.7.RELEASE/spring-cloud-context-2.2.7.RELEASE.jar, file:/C:/Users/mao/.m2/repository/commons-codec/commons-codec/1.13/commons-codec-1.13.jar, file:/C:/Users/mao/.m2/repository/com/alibaba/cloud/spring-cloud-starter-alibaba-nacos-discovery/2.2.6.RELEASE/spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar, file:/C:/Users/mao/.m2/repository/com/alibaba/cloud/spring-cloud-alibaba-commons/2.2.6.RELEASE/spring-cloud-alibaba-commons-2.2.6.RELEASE.jar, file:/C:/Users/mao/.m2/repository/com/alibaba/nacos/nacos-client/1.4.2/nacos-client-1.4.2.jar, file:/C:/Users/mao/.m2/repository/com/alibaba/nacos/nacos-common/1.4.2/nacos-common-1.4.2.jar, file:/C:/Users/mao/.m2/repository/org/apache/httpcomponents/httpasyncclient/4.1.4/httpasyncclient-4.1.4.jar, file:/C:/Users/mao/.m2/repository/org/apache/httpcomponents/httpcore-nio/4.4.13/httpcore-nio-4.4.13.jar, file:/C:/Users/mao/.m2/repository/com/alibaba/nacos/nacos-api/1.4.2/nacos-api-1.4.2.jar, file:/C:/Users/mao/.m2/repository/io/prometheus/simpleclient/0.5.0/simpleclient-0.5.0.jar, file:/C:/Users/mao/.m2/repository/com/alibaba/spring/spring-context-support/1.0.10/spring-context-support-1.0.10.jar, file:/C:/Users/mao/.m2/repository/org/springframework/cloud/spring-cloud-starter-netflix-ribbon/2.2.7.RELEASE/spring-cloud-starter-netflix-ribbon-2.2.7.RELEASE.jar, file:/C:/Users/mao/.m2/repository/com/netflix/ribbon/ribbon/2.3.0/ribbon-2.3.0.jar, file:/C:/Users/mao/.m2/repository/com/netflix/ribbon/ribbon-transport/2.3.0/ribbon-transport-2.3.0.jar, file:/C:/Users/mao/.m2/repository/io/reactivex/rxnetty-contexts/0.4.9/rxnetty-contexts-0.4.9.jar, file:/C:/Users/mao/.m2/repository/io/reactivex/rxnetty-servo/0.4.9/rxnetty-servo-0.4.9.jar, file:/C:/Users/mao/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar, file:/C:/Users/mao/.m2/repository/io/reactivex/rxnetty/0.4.9/rxnetty-0.4.9.jar, file:/C:/Users/mao/.m2/repository/com/netflix/ribbon/ribbon-core/2.3.0/ribbon-core-2.3.0.jar, file:/C:/Users/mao/.m2/repository/com/netflix/ribbon/ribbon-httpclient/2.3.0/ribbon-httpclient-2.3.0.jar, file:/C:/Users/mao/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar, file:/C:/Users/mao/.m2/repository/com/sun/jersey/jersey-client/1.19.1/jersey-client-1.19.1.jar, file:/C:/Users/mao/.m2/repository/com/sun/jersey/jersey-core/1.19.1/jersey-core-1.19.1.jar, file:/C:/Users/mao/.m2/repository/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar, file:/C:/Users/mao/.m2/repository/com/sun/jersey/contribs/jersey-apache-client4/1.19.1/jersey-apache-client4-1.19.1.jar, file:/C:/Users/mao/.m2/repository/com/netflix/servo/servo-core/0.12.21/servo-core-0.12.21.jar, file:/C:/Users/mao/.m2/repository/com/netflix/netflix-commons/netflix-commons-util/0.3.0/netflix-commons-util-0.3.0.jar, file:/C:/Users/mao/.m2/repository/com/netflix/ribbon/ribbon-loadbalancer/2.3.0/ribbon-loadbalancer-2.3.0.jar, file:/C:/Users/mao/.m2/repository/com/netflix/netflix-commons/netflix-statistics/0.1.1/netflix-statistics-0.1.1.jar, file:/C:/Users/mao/.m2/repository/io/reactivex/rxjava/1.3.8/rxjava-1.3.8.jar, file:/C:/Users/mao/.m2/repository/com/github/whvcse/easy-captcha/1.6.2/easy-captcha-1.6.2.jar, file:/C:/Users/mao/.m2/repository/org/springframework/cloud/spring-cloud-starter-netflix-hystrix/2.2.7.RELEASE/spring-cloud-starter-netflix-hystrix-2.2.7.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/cloud/spring-cloud-netflix-hystrix/2.2.7.RELEASE/spring-cloud-netflix-hystrix-2.2.7.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/cloud/spring-cloud-netflix-ribbon/2.2.7.RELEASE/spring-cloud-netflix-ribbon-2.2.7.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/cloud/spring-cloud-netflix-archaius/2.2.7.RELEASE/spring-cloud-netflix-archaius-2.2.7.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/cloud/spring-cloud-starter-netflix-archaius/2.2.7.RELEASE/spring-cloud-starter-netflix-archaius-2.2.7.RELEASE.jar, file:/C:/Users/mao/.m2/repository/commons-configuration/commons-configuration/1.8/commons-configuration-1.8.jar, file:/C:/Users/mao/.m2/repository/com/netflix/hystrix/hystrix-core/1.5.18/hystrix-core-1.5.18.jar, file:/C:/Users/mao/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.9/HdrHistogram-2.1.9.jar, file:/C:/Users/mao/.m2/repository/com/netflix/hystrix/hystrix-serialization/1.5.18/hystrix-serialization-1.5.18.jar, file:/C:/Users/mao/.m2/repository/com/fasterxml/jackson/module/jackson-module-afterburner/2.9.2/jackson-module-afterburner-2.9.2.jar, file:/C:/Users/mao/.m2/repository/com/netflix/hystrix/hystrix-metrics-event-stream/1.5.18/hystrix-metrics-event-stream-1.5.18.jar, file:/C:/Users/mao/.m2/repository/com/netflix/hystrix/hystrix-javanica/1.5.18/hystrix-javanica-1.5.18.jar, file:/C:/Users/mao/.m2/repository/io/reactivex/rxjava-reactive-streams/1.2.1/rxjava-reactive-streams-1.2.1.jar, file:/C:/Users/mao/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar, file:/C:/Users/mao/.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar, file:/C:/Users/mao/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.2.9.RELEASE/spring-boot-starter-web-2.2.9.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.2.9.RELEASE/spring-boot-starter-json-2.2.9.RELEASE.jar, file:/C:/Users/mao/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.2/jackson-datatype-jdk8-2.9.2.jar, file:/C:/Users/mao/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.2.9.RELEASE/spring-boot-starter-tomcat-2.2.9.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.37/tomcat-embed-core-9.0.37.jar, file:/C:/Users/mao/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/9.0.37/tomcat-embed-el-9.0.37.jar, file:/C:/Users/mao/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.37/tomcat-embed-websocket-9.0.37.jar, file:/C:/Users/mao/.m2/repository/org/springframework/boot/spring-boot-starter-validation/2.2.9.RELEASE/spring-boot-starter-validation-2.2.9.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/spring-webmvc/5.2.2.RELEASE/spring-webmvc-5.2.2.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/boot/spring-boot-starter-aop/2.2.9.RELEASE/spring-boot-starter-aop-2.2.9.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/spring-aop/5.2.2.RELEASE/spring-aop-5.2.2.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/2.2.9.RELEASE/spring-boot-starter-actuator-2.2.9.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/2.2.9.RELEASE/spring-boot-actuator-autoconfigure-2.2.9.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/boot/spring-boot-actuator/2.2.9.RELEASE/spring-boot-actuator-2.2.9.RELEASE.jar, file:/C:/Users/mao/.m2/repository/io/micrometer/micrometer-core/1.3.11/micrometer-core-1.3.11.jar, file:/C:/Users/mao/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar, file:/C:/Users/mao/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar, file:/C:/Users/mao/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar, file:/C:/Users/mao/.m2/repository/org/springframework/spring-core/5.2.2.RELEASE/spring-core-5.2.2.RELEASE.jar, file:/C:/Users/mao/.m2/repository/org/springframework/spring-jcl/5.2.2.RELEASE/spring-jcl-5.2.2.RELEASE.jar, file:/C:/Users/mao/.m2/repository/cn/hutool/hutool-all/5.1.0/hutool-all-5.1.0.jar, file:/C:/Users/mao/.m2/repository/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar, file:/C:/Users/mao/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar, file:/C:/Users/mao/.m2/repository/com/alibaba/fastjson/1.2.79/fastjson-1.2.79.jar, file:/C:/Users/mao/.m2/repository/com/google/guava/guava/20.0/guava-20.0.jar, file:/C:/Program%20Files/JetBrains/IntelliJ%20IDEA%202021.2.2/lib/idea_rt.jar]
+2022-11-09 22:17:25.279 DEBUG 16296 --- [main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'spring.application.name' in PropertySource 'configurationProperties' with value of type String
+2022-11-09 22:17:25.355 DEBUG 16296 --- [main] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@56a4479a14 pairs: {GET /nacos/v1/cs/configs?dataId=common.yml&tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732&group=DEFAULT_GROUP HTTP/1.1: null}{Accept-Charset: UTF-8}{Accept-Encoding: gzip}{Client-AppName: unknown}{Client-RequestToken: 33d402cb88d6e4a014e2ddc27db0ff50}{Client-RequestTS: 1668003445299}{Client-Version: 1.4.2}{Content-Type: application/json;charset=UTF-8}{exConfigInfo: true}{RequestId: 2e47164d-78f1-44ef-9db9-5e1f0099c068}{User-Agent: Java/1.8.0_332}{Host: 127.0.0.1:8848}{Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2}{Connection: keep-alive}
+2022-11-09 22:17:25.358 DEBUG 16296 --- [main] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@62163b3912 pairs: {null: HTTP/1.1 200}{Config-Type: yaml}{Content-MD5: f33766c1ef74680c95b4bf4b107d0d52}{Pragma: no-cache}{Expires: Thu, 01 Jan 1970 00:00:00 GMT}{Cache-Control: no-cache,no-store}{Last-Modified: Tue, 08 Nov 2022 13:17:40 GMT}{Content-Type: text/plain;charset=UTF-8}{Transfer-Encoding: chunked}{Date: Wed, 09 Nov 2022 14:17:25 GMT}{Keep-Alive: timeout=60}{Connection: keep-alive}
+2022-11-09 22:17:25.365 DEBUG 16296 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Loading nacos data, dataId: 'common.yml', group: 'DEFAULT_GROUP', data: server:
+  undertow: # jetty  undertow
+    io-threads: 8 # 设置IO线程数, 它主要执行非阻塞的任务,它们会负责多个连接, 默认设置每个CPU核心一个线程
+    worker-threads: 120  # 阻塞任务线程池, 当执行类似servlet请求阻塞操作, undertow会从这个线程池中取得线程,它的值设置取决于系统的负载
+    buffer-size: 2048  # 以下的配置会影响buffer,这些buffer会用于服务器连接的IO操作,有点类似netty的池化内存管理 , 每块buffer的空间大小,越小的空间被利用越充分
+    direct-buffers: true  # 是否分配的直接内存
+
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+  servlet:
+    multipart:
+      max-file-size: 512MB      # Max file size，默认1M
+      max-request-size: 512MB   # Max request size，默认10M
+
+dozer:
+  mappingFiles:
+    - classpath:dozer/global.dozer.xml
+    - classpath:dozer/biz.dozer.xml
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+      enabled: true
+
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
+  hystrix:
+    enabled: true   # feign 熔断机制是否开启
+    #支持压缩的mime types
+  compression:  # 请求压缩
+    request:
+      enabled: true
+      mime-types: text/xml,application/xml,application/json
+      min-request-size: 2048
+    response:  # 响应压缩
+      enabled: true
+
+ribbon:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
+  eureka:
+    enabled: true
+  ReadTimeout: 30000     #
+  ConnectTimeout: 30000  # [ribbon超时时间]大于[熔断超时],那么会先走熔断，相当于你配的ribbon超时就不生效了  ribbon和hystrix是同时生效的，哪个值小哪个生效
+  MaxAutoRetries: 0             # 最大自动重试
+  MaxAutoRetriesNextServer: 1   # 最大自动像下一个服务重试
+  OkToRetryOnAllOperations: false  #无论是请求超时或者socket read timeout都进行重试，
+
+hystrix:
+  threadpool:
+    default:
+      coreSize: 1000 # #并发执行的最大线程数，默认10
+      maxQueueSize: 1000 # #BlockingQueue的最大队列数
+      queueSizeRejectionThreshold: 500 # #即使maxQueueSize没有达到，达到queueSizeRejectionThreshold该值后，请求也会被拒绝
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 120000  # 熔断超时 ribbon和hystrix是同时生效的，哪个值小哪个生效
+
+id-generator:
+  machine-code: 1  # id生成器机器掩码
+2022-11-09 22:17:25.367 DEBUG 16296 --- [main] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: Byte array resource [common.yml]
+2022-11-09 22:17:25.376 DEBUG 16296 --- [main] o.s.boot.env.OriginTrackedYamlLoader     : Merging document (no matchers set): {server={undertow={io-threads=8, worker-threads=120, buffer-size=2048, direct-buffers=true}}, spring={http={encoding={charset=UTF-8, force=true, enabled=true}}, servlet={multipart={max-file-size=512MB, max-request-size=512MB}}}, dozer={mappingFiles=[classpath:dozer/global.dozer.xml, classpath:dozer/biz.dozer.xml]}, management={endpoints={web={base-path=/actuator, exposure={include=*}}}, endpoint={health={show-details=ALWAYS, enabled=true}}}, feign={httpclient={enabled=false}, okhttp={enabled=true}, hystrix={enabled=true}, compression={request={enabled=true, mime-types=text/xml,application/xml,application/json, min-request-size=2048}, response={enabled=true}}}, ribbon={httpclient={enabled=false}, okhttp={enabled=true}, eureka={enabled=true}, ReadTimeout=30000, ConnectTimeout=30000, MaxAutoRetries=0, MaxAutoRetriesNextServer=1, OkToRetryOnAllOperations=false}, hystrix={threadpool={default={coreSize=1000, maxQueueSize=1000, queueSizeRejectionThreshold=500}}, command={default={execution={isolation={thread={timeoutInMilliseconds=120000}}}}}}, id-generator={machine-code=1}}
+2022-11-09 22:17:25.376 DEBUG 16296 --- [main] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 1 document from YAML resource: Byte array resource [common.yml]
+2022-11-09 22:17:25.378 DEBUG 16296 --- [main] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@1b06514514 pairs: {GET /nacos/v1/cs/configs?dataId=redis.yml&tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732&group=DEFAULT_GROUP HTTP/1.1: null}{Accept-Charset: UTF-8}{Accept-Encoding: gzip}{Client-AppName: unknown}{Client-RequestToken: 6446bd754b0032d2b8c56846d986b82d}{Client-RequestTS: 1668003445377}{Client-Version: 1.4.2}{Content-Type: application/json;charset=UTF-8}{exConfigInfo: true}{RequestId: 57934d46-676b-421a-920f-1962d89f9b2f}{User-Agent: Java/1.8.0_332}{Host: 127.0.0.1:8848}{Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2}{Connection: keep-alive}
+2022-11-09 22:17:25.380 DEBUG 16296 --- [main] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@45cff11c12 pairs: {null: HTTP/1.1 200}{Config-Type: yaml}{Content-MD5: f943cd3e4c42c26da8538c7248c2f017}{Pragma: no-cache}{Expires: Thu, 01 Jan 1970 00:00:00 GMT}{Cache-Control: no-cache,no-store}{Last-Modified: Tue, 08 Nov 2022 14:35:05 GMT}{Content-Type: text/plain;charset=UTF-8}{Transfer-Encoding: chunked}{Date: Wed, 09 Nov 2022 14:17:25 GMT}{Keep-Alive: timeout=60}{Connection: keep-alive}
+2022-11-09 22:17:25.382 DEBUG 16296 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Loading nacos data, dataId: 'redis.yml', group: 'DEFAULT_GROUP', data: # redis 通用配置， 不同的环境，需要配置不同的链接信息，
+# 只需要将这段信息复制到具体环境的配置文件中进行修改即可
+# 如：复制到auth-server-dev.yml中将数据库名和ip改掉
+
+redis:
+  hosts: 127.0.0.1:6379
+  password: 123456
+  database: 0
+
+spring:
+  cache:
+    type: GENERIC
+  redis:
+    hosts: ${redis.hosts}
+    password: ${redis.password}
+    database: ${redis.database}
+
+j2cache:
+  #  config-location: /j2cache.properties
+  open-spring-cache: true
+  cache-clean-mode: passive
+  allow-null-values: true
+  redis-client: lettuce
+  l2-cache-open: true
+  # l2-cache-open: false     # 关闭二级缓存
+  broadcast: net.oschina.j2cache.cache.support.redis.SpringRedisPubSubPolicy
+  #  broadcast: jgroups       # 关闭二级缓存
+  L1:
+    provider_class: caffeine
+  L2:
+    provider_class: net.oschina.j2cache.cache.support.redis.SpringRedisProvider
+    config_section: lettuce
+  sync_ttl_to_redis: true
+  default_cache_null_object: false
+  serialization: fst
+caffeine:
+  properties: /j2cache/caffeine.properties   # 这个配置文件需要放在项目中
+lettuce:
+  mode: single
+  namespace:
+  storage: generic
+  channel: j2cache
+  scheme: redis
+  hosts: ${redis.hosts}
+  password: ${redis.password}
+  database: ${redis.database}
+  sentinelMasterId:
+  maxTotal: 100
+  maxIdle: 10
+  minIdle: 10
+  timeout: 10000
+2022-11-09 22:17:25.382 DEBUG 16296 --- [main] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: Byte array resource [redis.yml]
+2022-11-09 22:17:25.384 DEBUG 16296 --- [main] o.s.boot.env.OriginTrackedYamlLoader     : Merging document (no matchers set): {redis={hosts=127.0.0.1:6379, password=123456, database=0}, spring={cache={type=GENERIC}, redis={hosts=${redis.hosts}, password=${redis.password}, database=${redis.database}}}, j2cache={open-spring-cache=true, cache-clean-mode=passive, allow-null-values=true, redis-client=lettuce, l2-cache-open=true, broadcast=net.oschina.j2cache.cache.support.redis.SpringRedisPubSubPolicy, L1={provider_class=caffeine}, L2={provider_class=net.oschina.j2cache.cache.support.redis.SpringRedisProvider, config_section=lettuce}, sync_ttl_to_redis=true, default_cache_null_object=false, serialization=fst}, caffeine={properties=/j2cache/caffeine.properties}, lettuce={mode=single, namespace=, storage=generic, channel=j2cache, scheme=redis, hosts=${redis.hosts}, password=${redis.password}, database=${redis.database}, sentinelMasterId=, maxTotal=100, maxIdle=10, minIdle=10, timeout=10000}}
+2022-11-09 22:17:25.385 DEBUG 16296 --- [main] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 1 document from YAML resource: Byte array resource [redis.yml]
+2022-11-09 22:17:25.386 DEBUG 16296 --- [main] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@7e38a7fe14 pairs: {GET /nacos/v1/cs/configs?dataId=mysql.yml&tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732&group=DEFAULT_GROUP HTTP/1.1: null}{Accept-Charset: UTF-8}{Accept-Encoding: gzip}{Client-AppName: unknown}{Client-RequestToken: ebd6c8b7493463858359fd749e42fd94}{Client-RequestTS: 1668003445385}{Client-Version: 1.4.2}{Content-Type: application/json;charset=UTF-8}{exConfigInfo: true}{RequestId: 1236556b-6f41-45df-a818-0f1bfe19f569}{User-Agent: Java/1.8.0_332}{Host: 127.0.0.1:8848}{Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2}{Connection: keep-alive}
+2022-11-09 22:17:25.388 DEBUG 16296 --- [main] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@366ef90e12 pairs: {null: HTTP/1.1 200}{Config-Type: yaml}{Content-MD5: c00749766396471ce6f53b8b7e2f25be}{Pragma: no-cache}{Expires: Thu, 01 Jan 1970 00:00:00 GMT}{Cache-Control: no-cache,no-store}{Last-Modified: Wed, 09 Nov 2022 05:25:13 GMT}{Content-Type: text/plain;charset=UTF-8}{Transfer-Encoding: chunked}{Date: Wed, 09 Nov 2022 14:17:25 GMT}{Keep-Alive: timeout=60}{Connection: keep-alive}
+2022-11-09 22:17:25.389 DEBUG 16296 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Loading nacos data, dataId: 'mysql.yml', group: 'DEFAULT_GROUP', data: # mysql 个性化配置， 不同的环境，需要配置不同的链接信息，只需要将这段信息复制
+# 到具体环境的配置文件中进行修改即可
+# 如：复制到auth-server-dev.yml中将数据库名和ip改掉
+
+mysql:
+  ip: 127.0.0.1
+  port: 3306
+  driverClassName: com.mysql.cj.jdbc.Driver
+  database: authority
+  username: root
+  password: 20010713
+database:
+  isBlockAttack: false  # 是否启用 攻击 SQL 阻断解析器
+
+
+# mysql 通用配置
+spring:
+  datasource:
+    druid:
+      username: ${mysql.username}
+      password: ${mysql.password}
+      driver-class-name: ${mysql.driverClassName}
+      url: jdbc:mysql://${mysql.ip}:${mysql.port}/${mysql.database}?serverTimezone=GMT&characterEncoding=utf8
+      # &useUnicode=true&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+      db-type: mysql
+      initialSize: 10
+      minIdle: 10
+      maxActive: 500
+      max-wait: 60000
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      validation-query: SELECT 'x'
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      time-between-eviction-runs-millis: 60000  #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      min-evictable-idle-time-millis: 300000    #配置一个连接在池中最小生存的时间，单位是毫秒
+      filters: stat,wall
+      filter:
+        wall:
+          enabled: true
+          config:
+            commentAllow: true
+            multiStatementAllow: true
+            noneBaseStatementAllow: true
+      web-stat-filter:  # WebStatFilter配置，说明请参考Druid Wiki，配置_配置WebStatFilter
+        enabled: true
+        url-pattern: /*
+        exclusions: "*.js , *.gif ,*.jpg ,*.png ,*.css ,*.ico , /druid/*"
+        session-stat-max-count: 1000
+        profile-enable: true
+        session-stat-enable: false
+      stat-view-servlet:  #展示Druid的统计信息,StatViewServlet的用途包括：1.提供监控信息展示的html页面 2.提供监控信息的JSON API
+        enabled: true
+        url-pattern: /druid/*   #根据配置中的url-pattern来访问内置监控页面，如果是上面的配置，内置监控页面的首页是/druid/index.html例如：http://127.0.0.1:9000/druid/index.html
+        reset-enable: true    #允许清空统计数据
+        login-username: root
+        login-password: 123456
+
+mybatis-plus:
+  mapper-locations:
+    - classpath*:mapper_**/**/*Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: mao
+  global-config:
+    db-config:
+      id-type: INPUT
+      insert-strategy: NOT_NULL
+      update-strategy: NOT_NULL
+      select-strategy: NOT_EMPTY
+  configuration:
+    #配置返回数据库(column下划线命名&&返回java实体是驼峰命名)，
+    #自动匹配无需as（没开启这个，SQL需要写as： select user_id as userId）
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    #配置JdbcTypeForNull, oracle数据库必须配置
+    jdbc-type-for-null: 'null'
+
+2022-11-09 22:17:25.389 DEBUG 16296 --- [main] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: Byte array resource [mysql.yml]
+2022-11-09 22:17:25.392 DEBUG 16296 --- [main] o.s.boot.env.OriginTrackedYamlLoader     : Merging document (no matchers set): {mysql={ip=127.0.0.1, port=3306, driverClassName=com.mysql.cj.jdbc.Driver, database=authority, username=root, password=20010713}, database={isBlockAttack=false}, spring={datasource={druid={username=${mysql.username}, password=${mysql.password}, driver-class-name=${mysql.driverClassName}, url=jdbc:mysql://${mysql.ip}:${mysql.port}/${mysql.database}?serverTimezone=GMT&characterEncoding=utf8, db-type=mysql, initialSize=10, minIdle=10, maxActive=500, max-wait=60000, pool-prepared-statements=true, max-pool-prepared-statement-per-connection-size=20, validation-query=SELECT 'x', test-on-borrow=false, test-on-return=false, test-while-idle=true, time-between-eviction-runs-millis=60000, min-evictable-idle-time-millis=300000, filters=stat,wall, filter={wall={enabled=true, config={commentAllow=true, multiStatementAllow=true, noneBaseStatementAllow=true}}}, web-stat-filter={enabled=true, url-pattern=/*, exclusions=*.js , *.gif ,*.jpg ,*.png ,*.css ,*.ico , /druid/*, session-stat-max-count=1000, profile-enable=true, session-stat-enable=false}, stat-view-servlet={enabled=true, url-pattern=/druid/*, reset-enable=true, login-username=root, login-password=123456}}}}, mybatis-plus={mapper-locations=[classpath*:mapper_**/**/*Mapper.xml], typeAliasesPackage=mao, global-config={db-config={id-type=INPUT, insert-strategy=NOT_NULL, update-strategy=NOT_NULL, select-strategy=NOT_EMPTY}}, configuration={map-underscore-to-camel-case=true, cache-enabled=false, jdbc-type-for-null=null}}}
+2022-11-09 22:17:25.392 DEBUG 16296 --- [main] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 1 document from YAML resource: Byte array resource [mysql.yml]
+2022-11-09 22:17:25.393 DEBUG 16296 --- [main] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@5867013014 pairs: {GET /nacos/v1/cs/configs?dataId=auth-server&tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732&group=DEFAULT_GROUP HTTP/1.1: null}{Accept-Charset: UTF-8}{Accept-Encoding: gzip}{Client-AppName: unknown}{Client-RequestToken: ff77deea8beb2230cadb331e548503d2}{Client-RequestTS: 1668003445393}{Client-Version: 1.4.2}{Content-Type: application/json;charset=UTF-8}{exConfigInfo: true}{RequestId: 8ea27b8d-f057-4e4c-bf55-97129cebcd41}{User-Agent: Java/1.8.0_332}{Host: 127.0.0.1:8848}{Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2}{Connection: keep-alive}
+2022-11-09 22:17:25.395 DEBUG 16296 --- [main] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@74e474446 pairs: {null: HTTP/1.1 404}{Content-Type: application/json;charset=UTF-8}{Content-Length: 23}{Date: Wed, 09 Nov 2022 14:17:25 GMT}{Keep-Alive: timeout=60}{Connection: keep-alive}
+2022-11-09 22:17:25.396  WARN 16296 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-11-09 22:17:25.397 DEBUG 16296 --- [main] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@9bd0fa614 pairs: {GET /nacos/v1/cs/configs?dataId=auth-server.yml&tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732&group=DEFAULT_GROUP HTTP/1.1: null}{Accept-Charset: UTF-8}{Accept-Encoding: gzip}{Client-AppName: unknown}{Client-RequestToken: 614f12aa0c60eda005ee64b2d3b0cae3}{Client-RequestTS: 1668003445396}{Client-Version: 1.4.2}{Content-Type: application/json;charset=UTF-8}{exConfigInfo: true}{RequestId: 91830c4d-4217-48eb-ae5e-40e64531385e}{User-Agent: Java/1.8.0_332}{Host: 127.0.0.1:8848}{Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2}{Connection: keep-alive}
+2022-11-09 22:17:25.398 DEBUG 16296 --- [main] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@59d2103b12 pairs: {null: HTTP/1.1 200}{Config-Type: yaml}{Content-MD5: 66ff470201f1d7651d432b0f27d54e39}{Pragma: no-cache}{Expires: Thu, 01 Jan 1970 00:00:00 GMT}{Cache-Control: no-cache,no-store}{Last-Modified: Wed, 09 Nov 2022 07:21:43 GMT}{Content-Type: text/plain;charset=UTF-8}{Transfer-Encoding: chunked}{Date: Wed, 09 Nov 2022 14:17:25 GMT}{Keep-Alive: timeout=60}{Connection: keep-alive}
+2022-11-09 22:17:25.399 DEBUG 16296 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Loading nacos data, dataId: 'auth-server.yml', group: 'DEFAULT_GROUP', data: # 在这里配置 权限服务 所有环境都能使用的配置
+def:
+  mysql:
+    database: authority
+    
+swagger:
+  enabled: true
+  contact:
+    name: mao
+    url: https://github.com/maomao124/
+    email: 1234@qq.com
+  docket:
+    auth:
+      title: 权限模块
+      base-package: mao.auth_server.controller.auth
+    common:
+      title: 公共模块
+      base-package: mao.auth_server.controller.common
+    core:
+      title: 组织岗位模块
+      base-package: mao.auth_server.controller.core
+
+authentication:
+  user:
+    header-name: token
+    expire: 43200               # 外部token有效期为12小时
+    pri-key: client/pri.key    # 加密
+    pub-key: client/pub.key    # 解密
+
+server:
+  port: 8764
+
+2022-11-09 22:17:25.400 DEBUG 16296 --- [main] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: Byte array resource [auth-server.yml]
+2022-11-09 22:17:25.401 DEBUG 16296 --- [main] o.s.boot.env.OriginTrackedYamlLoader     : Merging document (no matchers set): {def={mysql={database=authority}}, swagger={enabled=true, contact={name=mao, url=https://github.com/maomao124/, email=1234@qq.com}, docket={auth={title=权限模块, base-package=mao.auth_server.controller.auth}, common={title=公共模块, base-package=mao.auth_server.controller.common}, core={title=组织岗位模块, base-package=mao.auth_server.controller.core}}}, authentication={user={header-name=token, expire=43200, pri-key=client/pri.key, pub-key=client/pub.key}}, server={port=8764}}
+2022-11-09 22:17:25.401 DEBUG 16296 --- [main] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 1 document from YAML resource: Byte array resource [auth-server.yml]
+2022-11-09 22:17:25.401 DEBUG 16296 --- [main] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@3efe708614 pairs: {GET /nacos/v1/cs/configs?dataId=auth-server-dev.yml&tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732&group=DEFAULT_GROUP HTTP/1.1: null}{Accept-Charset: UTF-8}{Accept-Encoding: gzip}{Client-AppName: unknown}{Client-RequestToken: d4711212fb8c16485a4839d0385560ab}{Client-RequestTS: 1668003445401}{Client-Version: 1.4.2}{Content-Type: application/json;charset=UTF-8}{exConfigInfo: true}{RequestId: ca2ee577-1d1c-4c86-a776-0a6d12da1119}{User-Agent: Java/1.8.0_332}{Host: 127.0.0.1:8848}{Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2}{Connection: keep-alive}
+2022-11-09 22:17:25.403 DEBUG 16296 --- [main] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@675d8c9612 pairs: {null: HTTP/1.1 200}{Config-Type: yaml}{Content-MD5: 552e8bf7fb809e063f9664f873f77292}{Pragma: no-cache}{Expires: Thu, 01 Jan 1970 00:00:00 GMT}{Cache-Control: no-cache,no-store}{Last-Modified: Wed, 09 Nov 2022 14:05:39 GMT}{Content-Type: text/plain;charset=UTF-8}{Transfer-Encoding: chunked}{Date: Wed, 09 Nov 2022 14:17:25 GMT}{Keep-Alive: timeout=60}{Connection: keep-alive}
+2022-11-09 22:17:25.404 DEBUG 16296 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Loading nacos data, dataId: 'auth-server-dev.yml', group: 'DEFAULT_GROUP', data: # p6spy是一个开源项目，通常使用它来跟踪数据库操作，查看程序运行过程中执行的sql语句
+# 开发环境需要使用p6spy进行sql语句输出
+# 但p6spy会有性能损耗，不适合在生产线使用，故其他环境无需配置
+spring:
+  datasource:
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    url: jdbc:p6spy:mysql://${mysql.ip}:${mysql.port}/${mysql.database}?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    db-type: mysql
+
+
+# 设置日志级别，root表示根节点，即整体应用日志级别
+logging:
+  # 设置日志组
+  group:
+  # 自定义组名，设置当前组中所包含的包
+    mao_pro: mao
+  level:
+    root: info
+    # 为对应组设置日志级别
+    mao_pro: debug
+2022-11-09 22:17:25.404 DEBUG 16296 --- [main] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: Byte array resource [auth-server-dev.yml]
+2022-11-09 22:17:25.405 DEBUG 16296 --- [main] o.s.boot.env.OriginTrackedYamlLoader     : Merging document (no matchers set): {spring={datasource={driver-class-name=com.p6spy.engine.spy.P6SpyDriver, url=jdbc:p6spy:mysql://${mysql.ip}:${mysql.port}/${mysql.database}?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true, db-type=mysql}}, logging={group={mao_pro=mao}, level={root=info, mao_pro=debug}}}
+2022-11-09 22:17:25.405 DEBUG 16296 --- [main] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 1 document from YAML resource: Byte array resource [auth-server-dev.yml]
+2022-11-09 22:17:25.406  INFO 16296 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource@2083854344 {name='bootstrapProperties-auth-server-dev.yml,DEFAULT_GROUP', properties={spring.datasource.driver-class-name=com.p6spy.engine.spy.P6SpyDriver, spring.datasource.url=jdbc:p6spy:mysql://${mysql.ip}:${mysql.port}/${mysql.database}?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true, spring.datasource.db-type=mysql, logging.group.mao_pro=mao, logging.level.root=info, logging.level.mao_pro=debug}}, BootstrapPropertySource@403598020 {name='bootstrapProperties-auth-server.yml,DEFAULT_GROUP', properties={def.mysql.database=authority, swagger.enabled=true, swagger.contact.name=mao, swagger.contact.url=https://github.com/maomao124/, swagger.contact.email=1234@qq.com, swagger.docket.auth.title=权限模块, swagger.docket.auth.base-package=mao.auth_server.controller.auth, swagger.docket.common.title=公共模块, swagger.docket.common.base-package=mao.auth_server.controller.common, swagger.docket.core.title=组织岗位模块, swagger.docket.core.base-package=mao.auth_server.controller.core, authentication.user.header-name=token, authentication.user.expire=43200, authentication.user.pri-key=client/pri.key, authentication.user.pub-key=client/pub.key, server.port=8764}}, BootstrapPropertySource@1119242936 {name='bootstrapProperties-auth-server,DEFAULT_GROUP', properties={}}, BootstrapPropertySource@2123914473 {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP', properties={mysql.ip=127.0.0.1, mysql.port=3306, mysql.driverClassName=com.mysql.cj.jdbc.Driver, mysql.database=authority, mysql.username=root, mysql.password=20010713, database.isBlockAttack=false, spring.datasource.druid.username=${mysql.username}, spring.datasource.druid.password=${mysql.password}, spring.datasource.druid.driver-class-name=${mysql.driverClassName}, spring.datasource.druid.url=jdbc:mysql://${mysql.ip}:${mysql.port}/${mysql.database}?serverTimezone=GMT&characterEncoding=utf8, spring.datasource.druid.db-type=mysql, spring.datasource.druid.initialSize=10, spring.datasource.druid.minIdle=10, spring.datasource.druid.maxActive=500, spring.datasource.druid.max-wait=60000, spring.datasource.druid.pool-prepared-statements=true, spring.datasource.druid.max-pool-prepared-statement-per-connection-size=20, spring.datasource.druid.validation-query=SELECT 'x', spring.datasource.druid.test-on-borrow=false, spring.datasource.druid.test-on-return=false, spring.datasource.druid.test-while-idle=true, spring.datasource.druid.time-between-eviction-runs-millis=60000, spring.datasource.druid.min-evictable-idle-time-millis=300000, spring.datasource.druid.filters=stat,wall, spring.datasource.druid.filter.wall.enabled=true, spring.datasource.druid.filter.wall.config.commentAllow=true, spring.datasource.druid.filter.wall.config.multiStatementAllow=true, spring.datasource.druid.filter.wall.config.noneBaseStatementAllow=true, spring.datasource.druid.web-stat-filter.enabled=true, spring.datasource.druid.web-stat-filter.url-pattern=/*, spring.datasource.druid.web-stat-filter.exclusions=*.js , *.gif ,*.jpg ,*.png ,*.css ,*.ico , /druid/*, spring.datasource.druid.web-stat-filter.session-stat-max-count=1000, spring.datasource.druid.web-stat-filter.profile-enable=true, spring.datasource.druid.web-stat-filter.session-stat-enable=false, spring.datasource.druid.stat-view-servlet.enabled=true, spring.datasource.druid.stat-view-servlet.url-pattern=/druid/*, spring.datasource.druid.stat-view-servlet.reset-enable=true, spring.datasource.druid.stat-view-servlet.login-username=root, spring.datasource.druid.stat-view-servlet.login-password=123456, mybatis-plus.mapper-locations[0]=classpath*:mapper_**/**/*Mapper.xml, mybatis-plus.typeAliasesPackage=mao, mybatis-plus.global-config.db-config.id-type=INPUT, mybatis-plus.global-config.db-config.insert-strategy=NOT_NULL, mybatis-plus.global-config.db-config.update-strategy=NOT_NULL, mybatis-plus.global-config.db-config.select-strategy=NOT_EMPTY, mybatis-plus.configuration.map-underscore-to-camel-case=true, mybatis-plus.configuration.cache-enabled=false, mybatis-plus.configuration.jdbc-type-for-null=null}}, BootstrapPropertySource@708443754 {name='bootstrapProperties-redis.yml,DEFAULT_GROUP', properties={redis.hosts=127.0.0.1:6379, redis.password=123456, redis.database=0, spring.cache.type=GENERIC, spring.redis.hosts=${redis.hosts}, spring.redis.password=${redis.password}, spring.redis.database=${redis.database}, j2cache.open-spring-cache=true, j2cache.cache-clean-mode=passive, j2cache.allow-null-values=true, j2cache.redis-client=lettuce, j2cache.l2-cache-open=true, j2cache.broadcast=net.oschina.j2cache.cache.support.redis.SpringRedisPubSubPolicy, j2cache.L1.provider_class=caffeine, j2cache.L2.provider_class=net.oschina.j2cache.cache.support.redis.SpringRedisProvider, j2cache.L2.config_section=lettuce, j2cache.sync_ttl_to_redis=true, j2cache.default_cache_null_object=false, j2cache.serialization=fst, caffeine.properties=/j2cache/caffeine.properties, lettuce.mode=single, lettuce.namespace=, lettuce.storage=generic, lettuce.channel=j2cache, lettuce.scheme=redis, lettuce.hosts=${redis.hosts}, lettuce.password=${redis.password}, lettuce.database=${redis.database}, lettuce.sentinelMasterId=, lettuce.maxTotal=100, lettuce.maxIdle=10, lettuce.minIdle=10, lettuce.timeout=10000}}, BootstrapPropertySource@1091234211 {name='bootstrapProperties-common.yml,DEFAULT_GROUP', properties={server.undertow.io-threads=8, server.undertow.worker-threads=120, server.undertow.buffer-size=2048, server.undertow.direct-buffers=true, spring.http.encoding.charset=UTF-8, spring.http.encoding.force=true, spring.http.encoding.enabled=true, spring.servlet.multipart.max-file-size=512MB, spring.servlet.multipart.max-request-size=512MB, dozer.mappingFiles[0]=classpath:dozer/global.dozer.xml, dozer.mappingFiles[1]=classpath:dozer/biz.dozer.xml, management.endpoints.web.base-path=/actuator, management.endpoints.web.exposure.include=*, management.endpoint.health.show-details=ALWAYS, management.endpoint.health.enabled=true, feign.httpclient.enabled=false, feign.okhttp.enabled=true, feign.hystrix.enabled=true, feign.compression.request.enabled=true, feign.compression.request.mime-types=text/xml,application/xml,application/json, feign.compression.request.min-request-size=2048, feign.compression.response.enabled=true, ribbon.httpclient.enabled=false, ribbon.okhttp.enabled=true, ribbon.eureka.enabled=true, ribbon.ReadTimeout=30000, ribbon.ConnectTimeout=30000, ribbon.MaxAutoRetries=0, ribbon.MaxAutoRetriesNextServer=1, ribbon.OkToRetryOnAllOperations=false, hystrix.threadpool.default.coreSize=1000, hystrix.threadpool.default.maxQueueSize=1000, hystrix.threadpool.default.queueSizeRejectionThreshold=500, hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=120000, id-generator.machine-code=1}}]
+2022-11-09 22:17:25.407 DEBUG 16296 --- [main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'logging.file.path' in PropertySource 'configurationProperties' with value of type String
+2022-11-09 22:17:25.407 DEBUG 16296 --- [main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'spring.application.name' in PropertySource 'configurationProperties' with value of type String
+2022-11-09 22:17:25.407 DEBUG 16296 --- [main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'logging.file.name' in PropertySource 'configurationProperties' with value of type String
+2022-11-09 22:17:25.407 DEBUG 16296 --- [main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'logging.file.path' in PropertySource 'configurationProperties' with value of type String
+2022-11-09 22:17:25.410 DEBUG 16296 --- [main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'logging.file.path' in PropertySource 'configurationProperties' with value of type String
+2022-11-09 22:17:25.411 DEBUG 16296 --- [main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'spring.application.name' in PropertySource 'configurationProperties' with value of type String
+2022-11-09 22:17:25.411 DEBUG 16296 --- [main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'logging.file.name' in PropertySource 'configurationProperties' with value of type String
+2022-11-09 22:17:25.411 DEBUG 16296 --- [main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'logging.file.path' in PropertySource 'configurationProperties' with value of type String
+2022-11-09 22:17:25.450  INFO 16296 --- [main] mao.auth_server.AuthServerApplication    : The following profiles are active: dev
+2022-11-09 22:17:26.008  INFO 16296 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [${j2cache.config-location}] not resolvable: Could not resolve placeholder 'j2cache.config-location' in value "${j2cache.config-location}"
+2022-11-09 22:17:26.778  INFO 16296 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-09 22:17:26.781  INFO 16296 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-09 22:17:26.805  INFO 16296 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 Redis repository interfaces.
+2022-11-09 22:17:26.887  WARN 16296 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-11-09 22:17:27.108  INFO 16296 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9732be5e-4a31-30ed-91ea-103d79af806f
+2022-11-09 22:17:27.116  INFO 16296 --- [main] m.t.config.ValidatorConfig               : 开启hibernate-validator快速返回
+2022-11-09 22:17:27.116  INFO 16296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_validator.config.ValidatorConfig' of type [mao.tools_validator.config.ValidatorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 22:17:27.363  INFO 16296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 22:17:27.509  INFO 16296 --- [main] mao.tools_j2cache.config.CacheConfig     : 初始化 CacheConfig
+2022-11-09 22:17:27.509  INFO 16296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_j2cache.config.CacheConfig' of type [mao.tools_j2cache.config.CacheConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 22:17:27.898  INFO 16296 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8764 (http)
+2022-11-09 22:17:27.912  INFO 16296 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-09 22:17:27.912  INFO 16296 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2022-11-09 22:17:28.086  INFO 16296 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-09 22:17:28.086  INFO 16296 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2610 ms
+2022-11-09 22:17:28.109  INFO 16296 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2022-11-09 22:17:28.227  WARN 16296 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-09 22:17:28.227  INFO 16296 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-09 22:17:28.240  INFO 16296 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@de77146
+2022-11-09 22:17:28.670  INFO 16296 --- [main] m.t.config.LoginArgResolverConfig        : 初始化 LoginArgResolverConfig
+2022-11-09 22:17:28.831  INFO 16296 --- [main] .j.a.J2CacheSpringCacheAutoConfiguration : 初始化 J2CacheSpringCacheAutoConfiguration
+2022-11-09 22:17:28.834  INFO 16296 --- [main] n.o.j.a.J2CacheAutoConfiguration         : 初始化 J2CacheAutoConfiguration
+2022-11-09 22:17:28.901  INFO 16296 --- [main] n.o.j2cache.util.SerializationUtils      : Using Serializer -> [fst:net.oschina.j2cache.util.FSTSerializer]
+2022-11-09 22:17:28.904  INFO 16296 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L1 CacheProvider : net.oschina.j2cache.caffeine.CaffeineProvider
+2022-11-09 22:17:28.906  INFO 16296 --- [main] .j.a.J2CacheSpringRedisAutoConfiguration : 初始化 J2CacheSpringRedisAutoConfiguration
+2022-11-09 22:17:29.216  INFO 16296 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L2 CacheProvider : net.oschina.j2cache.cache.support.redis.SpringRedisProvider
+2022-11-09 22:17:29.229  INFO 16296 --- [main] net.oschina.j2cache.J2CacheBuilder       : Using cluster policy : net.oschina.j2cache.cache.support.redis.SpringRedisPubSubPolicy
+2022-11-09 22:17:30.560  INFO 16296 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 22:17:30.567  INFO 16296 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-09 22:17:30.567  INFO 16296 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-11-09 22:17:30.568  INFO 16296 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-09 22:17:30.605  INFO 16296 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-11-09 22:17:31.289  INFO 16296 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-11-09 22:17:31.379  INFO 16296 --- [main] mao.tools_j2cache.config.RedissonConfig  : 初始化 RedissonConfig
+2022-11-09 22:17:31.381  INFO 16296 --- [main] mao.tools_j2cache.config.RedissonConfig  : 单机模式redis:127.0.0.1:6379
+2022-11-09 22:17:31.521  INFO 16296 --- [main] org.redisson.Version                     : Redisson 3.17.0
+2022-11-09 22:17:32.360  INFO 16296 --- [redisson-netty-4-14] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-09 22:17:32.375  INFO 16296 --- [redisson-netty-4-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-09 22:17:32.621  INFO 16296 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2022-11-09 22:17:32.709  INFO 16296 --- [main] m.t.s.config.AuthServerConfiguration     : 初始化 AuthServerConfiguration
+2022-11-09 22:17:32.746  WARN 16296 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-09 22:17:32.746  INFO 16296 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-09 22:17:32.898  INFO 16296 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-09 22:17:33.081  INFO 16296 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-09 22:17:33.715  INFO 16296 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbConfig@10b3ea72]
+2022-11-09 22:17:33.715  INFO 16296 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbSearcher@44587c44]
+2022-11-09 22:17:34.455  INFO 16296 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2022-11-09 22:17:34.456  INFO 16296 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2022-11-09 22:17:34.460  INFO 16296 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2022-11-09 22:17:34.464  INFO 16296 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2022-11-09 22:17:34.470  INFO 16296 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2022-11-09 22:17:34.494  INFO 16296 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2022-11-09 22:17:34.763  INFO 16296 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 22:17:34.764  INFO 16296 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 22:17:34.814  INFO 16296 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-09 22:17:34.815  INFO 16296 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2022-11-09 22:17:34.818  INFO 16296 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 22:17:34.818  INFO 16296 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 22:17:34.826  INFO 16296 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-09 22:17:34.910  INFO 16296 --- [main] m.tools_j2cache.config.RedisUtilsConfig  : 初始化 RedisUtilsConfig
+2022-11-09 22:17:34.911  INFO 16296 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
+2022-11-09 22:17:34.916  INFO 16296 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2022-11-09 22:17:34.936  INFO 16296 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-09 22:17:34.954  INFO 16296 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2022-11-09 22:17:34.955  INFO 16296 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='mao', url='https://github.com/maomao124/', email='1234@qq.com'}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{auth=DocketInfo{title='权限模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.auth', basePath=[], excludePath=[]}, common=DocketInfo{title='公共模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.common', basePath=[], excludePath=[]}, core=DocketInfo{title='组织岗位模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.core', basePath=[], excludePath=[]}}
+
+2022-11-09 22:17:36.499  INFO 16296 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 22:17:36.784  INFO 16296 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-11-09 22:17:36.811  INFO 16296 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2022-11-09 22:17:36.870  INFO 16296 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 22:17:36.895  INFO 16296 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 22:17:36.903  INFO 16296 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 22:17:37.004  INFO 16296 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2022-11-09 22:17:37.005  INFO 16296 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2022-11-09 22:17:37.161  INFO 16296 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8764 (http) with context path ''
+2022-11-09 22:17:37.166  INFO 16296 --- [main] com.alibaba.nacos.client.naming          : [BEAT] adding beat: BeatInfo{port=8764, ip='192.168.202.1', weight=1.0, serviceName='DEFAULT_GROUP@@auth-server', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=/actuator}, scheduled=false, period=5000, stopped=false} to beat map.
+2022-11-09 22:17:37.167  INFO 16296 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] 27ce69b0-bff1-4c03-8f3e-0ea5559a5732 registering service DEFAULT_GROUP@@auth-server with instance: Instance{instanceId='null', ip='192.168.202.1', port=8764, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=/actuator}}
+2022-11-09 22:17:37.171  INFO 16296 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP auth-server 192.168.202.1:8764 register finished
+2022-11-09 22:17:37.810  INFO 16296 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@auth-server@@DEFAULT -> [{"instanceId":"192.168.202.1#8764#DEFAULT#DEFAULT_GROUP@@auth-server","ip":"192.168.202.1","port":8764,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@auth-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-11-09 22:17:37.823  INFO 16296 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@auth-server@@DEFAULT -> [{"instanceId":"192.168.202.1#8764#DEFAULT#DEFAULT_GROUP@@auth-server","ip":"192.168.202.1","port":8764,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@auth-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-11-09 22:17:38.172  INFO 16296 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.202.1\",\"port\":8764,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.202.1#8764#DEFAULT#DEFAULT_GROUP@@auth-server\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@auth-server\",\"ephemeral\":true}],\"dom\":\"DEFAULT_GROUP@@auth-server\",\"name\":\"DEFAULT_GROUP@@auth-server\",\"cacheMillis\":10000,\"lastRefTime\":1668003458171,\"checksum\":\"d706e8bc2779a32044465e588c1a9d58\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":5975958528600} from /113.221.234.195
+2022-11-09 22:17:38.407  INFO 16296 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 22:17:38.409  INFO 16296 --- [main] mao.auth_server.AuthServerApplication    : Started AuthServerApplication in 16.735 seconds (JVM running for 17.748)
+2022-11-09 22:17:38.418  INFO 16296 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server-dev.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 22:17:38.419  INFO 16296 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server-dev.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 22:17:38.420  INFO 16296 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 22:17:38.420  INFO 16296 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server, group=DEFAULT_GROUP, cnt=1
+2022-11-09 22:17:38.421  INFO 16296 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 22:17:38.421  INFO 16296 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 22:17:38.422  INFO 16296 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] common.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 22:17:38.422  INFO 16296 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 22:17:38.424  INFO 16296 --- [main] mao.auth_server.AuthServerApplication    : 应用auth-server启动成功!swagger地址：http://113.221.234.195:8764/doc.html
+2022-11-09 22:17:38.424  INFO 16296 --- [main] mao.auth_server.AuthServerApplication    : 启动耗时：16884ms
+2022-11-09 22:17:38.918  INFO 16296 --- [RMI TCP Connection(1)-113.221.234.195] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-09 22:17:38.918  INFO 16296 --- [RMI TCP Connection(1)-113.221.234.195] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-09 22:17:38.931  INFO 16296 --- [RMI TCP Connection(1)-113.221.234.195] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2022-11-09 22:18:21.711  WARN 16296 --- [Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-11-09 22:18:21.711  WARN 16296 --- [Thread-30] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-11-09 22:18:21.712  WARN 16296 --- [Thread-30] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-11-09 22:18:21.713  WARN 16296 --- [Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-11-09 22:18:21.716  INFO 16296 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-09 22:18:21.728  INFO 16296 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-11-09 22:18:21.729  INFO 16296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@auth-server:192.168.202.1:8764 from beat map.
+2022-11-09 22:18:21.729  INFO 16296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 27ce69b0-bff1-4c03-8f3e-0ea5559a5732 deregistering service DEFAULT_GROUP@@auth-server with instance: Instance{instanceId='null', ip='192.168.202.1', port=8764, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2022-11-09 22:18:21.731  INFO 16296 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-11-09 22:18:21.733  INFO 16296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-11-09 22:18:22.276  INFO 16296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-11-09 22:18:22.276  INFO 16296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-11-09 22:18:22.745  INFO 16296 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"dom\":\"DEFAULT_GROUP@@auth-server\",\"name\":\"DEFAULT_GROUP@@auth-server\",\"cacheMillis\":10000,\"lastRefTime\":1668003502745,\"checksum\":\"2b411b2bb30a914a240868f78fe4009a\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":6020532355600} from /113.221.234.195
+2022-11-09 22:18:22.746  INFO 16296 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : removed ips(1) service: DEFAULT_GROUP@@auth-server@@DEFAULT -> [{"instanceId":"192.168.202.1#8764#DEFAULT#DEFAULT_GROUP@@auth-server","ip":"192.168.202.1","port":8764,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@auth-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-11-09 22:18:22.755  INFO 16296 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@auth-server@@DEFAULT -> []
+2022-11-09 22:18:25.283  INFO 16296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-11-09 22:18:28.312  INFO 16296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-11-09 22:18:28.312  INFO 16296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-11-09 22:18:28.313  INFO 16296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-11-09 22:18:28.313  INFO 16296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-11-09 22:18:28.313  INFO 16296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-11-09 22:18:28.313  WARN 16296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-11-09 22:18:28.313  WARN 16296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-11-09 22:18:28.313  INFO 16296 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-11-09 22:18:28.314  INFO 16296 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-11-09 22:18:28.314  INFO 16296 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-11-09 22:18:28.315  INFO 16296 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-11-09 22:18:28.317  WARN 16296 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2022-11-09 22:18:28.352 ERROR 16296 --- [redisson-netty-4-11] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0x4c588401, L:/127.0.0.1:62113 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379) ~[na:1.8.0_332]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253) ~[netty-buffer-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133) ~[netty-buffer-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-common-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.51.Final.jar:4.1.51.Final]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2022-11-09 22:18:28.361  INFO 16296 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-11-09 22:18:28.373  INFO 16296 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-11-09 22:18:36.303  WARN 8460 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-11-09 22:18:36.312  INFO 8460 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-auth-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2022-11-09 22:18:36.355  INFO 8460 --- [main] mao.auth_server.AuthServerApplication    : The following profiles are active: dev
+2022-11-09 22:18:36.932  INFO 8460 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [${j2cache.config-location}] not resolvable: Could not resolve placeholder 'j2cache.config-location' in value "${j2cache.config-location}"
+2022-11-09 22:18:37.733  INFO 8460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-09 22:18:37.736  INFO 8460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-09 22:18:37.758  INFO 8460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 Redis repository interfaces.
+2022-11-09 22:18:37.838  WARN 8460 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-11-09 22:18:38.067  INFO 8460 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9732be5e-4a31-30ed-91ea-103d79af806f
+2022-11-09 22:18:38.073  INFO 8460 --- [main] m.t.config.ValidatorConfig               : 开启hibernate-validator快速返回
+2022-11-09 22:18:38.074  INFO 8460 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_validator.config.ValidatorConfig' of type [mao.tools_validator.config.ValidatorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 22:18:38.334  INFO 8460 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 22:18:38.484  INFO 8460 --- [main] mao.tools_j2cache.config.CacheConfig     : 初始化 CacheConfig
+2022-11-09 22:18:38.484  INFO 8460 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_j2cache.config.CacheConfig' of type [mao.tools_j2cache.config.CacheConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 22:18:38.878  INFO 8460 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8764 (http)
+2022-11-09 22:18:38.893  INFO 8460 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-09 22:18:38.894  INFO 8460 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2022-11-09 22:18:39.066  INFO 8460 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-09 22:18:39.066  INFO 8460 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2679 ms
+2022-11-09 22:18:39.089  INFO 8460 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2022-11-09 22:18:39.208  WARN 8460 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-09 22:18:39.208  INFO 8460 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-09 22:18:39.220  INFO 8460 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@8b13d91
+2022-11-09 22:18:39.661  INFO 8460 --- [main] m.t.config.LoginArgResolverConfig        : 初始化 LoginArgResolverConfig
+2022-11-09 22:18:39.826  INFO 8460 --- [main] .j.a.J2CacheSpringCacheAutoConfiguration : 初始化 J2CacheSpringCacheAutoConfiguration
+2022-11-09 22:18:39.830  INFO 8460 --- [main] n.o.j.a.J2CacheAutoConfiguration         : 初始化 J2CacheAutoConfiguration
+2022-11-09 22:18:39.898  INFO 8460 --- [main] n.o.j2cache.util.SerializationUtils      : Using Serializer -> [fst:net.oschina.j2cache.util.FSTSerializer]
+2022-11-09 22:18:39.901  INFO 8460 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L1 CacheProvider : net.oschina.j2cache.caffeine.CaffeineProvider
+2022-11-09 22:18:39.902  INFO 8460 --- [main] .j.a.J2CacheSpringRedisAutoConfiguration : 初始化 J2CacheSpringRedisAutoConfiguration
+2022-11-09 22:18:40.214  INFO 8460 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L2 CacheProvider : net.oschina.j2cache.cache.support.redis.SpringRedisProvider
+2022-11-09 22:18:40.227  INFO 8460 --- [main] net.oschina.j2cache.J2CacheBuilder       : Using cluster policy : net.oschina.j2cache.cache.support.redis.SpringRedisPubSubPolicy
+2022-11-09 22:18:41.542  INFO 8460 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 22:18:41.551  INFO 8460 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-09 22:18:41.552  INFO 8460 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-11-09 22:18:41.552  INFO 8460 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-09 22:18:41.592  INFO 8460 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-11-09 22:18:42.256  INFO 8460 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-11-09 22:18:42.343  INFO 8460 --- [main] mao.tools_j2cache.config.RedissonConfig  : 初始化 RedissonConfig
+2022-11-09 22:18:42.349  INFO 8460 --- [main] mao.tools_j2cache.config.RedissonConfig  : 单机模式redis:127.0.0.1:6379
+2022-11-09 22:18:42.499  INFO 8460 --- [main] org.redisson.Version                     : Redisson 3.17.0
+2022-11-09 22:18:43.347  INFO 8460 --- [redisson-netty-4-13] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-09 22:18:43.364  INFO 8460 --- [redisson-netty-4-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-09 22:18:43.612  INFO 8460 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2022-11-09 22:18:43.703  INFO 8460 --- [main] m.t.s.config.AuthServerConfiguration     : 初始化 AuthServerConfiguration
+2022-11-09 22:18:43.740  WARN 8460 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-09 22:18:43.740  INFO 8460 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-09 22:18:43.897  INFO 8460 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-09 22:18:44.073  INFO 8460 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-09 22:18:44.704  INFO 8460 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbConfig@2a60981c]
+2022-11-09 22:18:44.704  INFO 8460 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbSearcher@3f1fb139]
+2022-11-09 22:18:45.455  INFO 8460 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2022-11-09 22:18:45.456  INFO 8460 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2022-11-09 22:18:45.461  INFO 8460 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2022-11-09 22:18:45.465  INFO 8460 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2022-11-09 22:18:45.470  INFO 8460 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2022-11-09 22:18:45.494  INFO 8460 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2022-11-09 22:18:45.754  INFO 8460 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 22:18:45.755  INFO 8460 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 22:18:45.801  INFO 8460 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-09 22:18:45.802  INFO 8460 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2022-11-09 22:18:45.804  INFO 8460 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 22:18:45.805  INFO 8460 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 22:18:45.814  INFO 8460 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-09 22:18:45.898  INFO 8460 --- [main] m.tools_j2cache.config.RedisUtilsConfig  : 初始化 RedisUtilsConfig
+2022-11-09 22:18:45.898  INFO 8460 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
+2022-11-09 22:18:45.904  INFO 8460 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2022-11-09 22:18:45.923  INFO 8460 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-09 22:18:45.937  INFO 8460 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2022-11-09 22:18:45.937  INFO 8460 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='mao', url='https://github.com/maomao124/', email='1234@qq.com'}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{auth=DocketInfo{title='权限模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.auth', basePath=[], excludePath=[]}, common=DocketInfo{title='公共模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.common', basePath=[], excludePath=[]}, core=DocketInfo{title='组织岗位模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.core', basePath=[], excludePath=[]}}
+
+2022-11-09 22:18:47.469  INFO 8460 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 22:18:47.753  INFO 8460 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-11-09 22:18:47.782  INFO 8460 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2022-11-09 22:18:47.839  INFO 8460 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 22:18:47.864  INFO 8460 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 22:18:47.872  INFO 8460 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 22:18:47.974  INFO 8460 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2022-11-09 22:18:47.976  INFO 8460 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2022-11-09 22:18:48.147  INFO 8460 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8764 (http) with context path ''
+2022-11-09 22:18:48.153  INFO 8460 --- [main] com.alibaba.nacos.client.naming          : [BEAT] adding beat: BeatInfo{port=8764, ip='192.168.202.1', weight=1.0, serviceName='DEFAULT_GROUP@@auth-server', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=/actuator}, scheduled=false, period=5000, stopped=false} to beat map.
+2022-11-09 22:18:48.154  INFO 8460 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] 27ce69b0-bff1-4c03-8f3e-0ea5559a5732 registering service DEFAULT_GROUP@@auth-server with instance: Instance{instanceId='null', ip='192.168.202.1', port=8764, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=/actuator}}
+2022-11-09 22:18:48.157  INFO 8460 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP auth-server 192.168.202.1:8764 register finished
+2022-11-09 22:18:48.776  INFO 8460 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@auth-server@@DEFAULT -> [{"instanceId":"192.168.202.1#8764#DEFAULT#DEFAULT_GROUP@@auth-server","ip":"192.168.202.1","port":8764,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@auth-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-11-09 22:18:48.785  INFO 8460 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@auth-server@@DEFAULT -> [{"instanceId":"192.168.202.1#8764#DEFAULT#DEFAULT_GROUP@@auth-server","ip":"192.168.202.1","port":8764,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@auth-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-11-09 22:18:49.170  INFO 8460 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.202.1\",\"port\":8764,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.202.1#8764#DEFAULT#DEFAULT_GROUP@@auth-server\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@auth-server\",\"ephemeral\":true}],\"dom\":\"DEFAULT_GROUP@@auth-server\",\"name\":\"DEFAULT_GROUP@@auth-server\",\"cacheMillis\":10000,\"lastRefTime\":1668003529169,\"checksum\":\"d706e8bc2779a32044465e588c1a9d58\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":6046955715600} from /113.221.234.195
+2022-11-09 22:18:49.401  INFO 8460 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 22:18:49.404  INFO 8460 --- [main] mao.auth_server.AuthServerApplication    : Started AuthServerApplication in 16.87 seconds (JVM running for 17.922)
+2022-11-09 22:18:49.414  INFO 8460 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server-dev.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 22:18:49.417  INFO 8460 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server-dev.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 22:18:49.417  INFO 8460 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 22:18:49.417  INFO 8460 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server, group=DEFAULT_GROUP, cnt=1
+2022-11-09 22:18:49.419  INFO 8460 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 22:18:49.419  INFO 8460 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 22:18:49.420  INFO 8460 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] common.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 22:18:49.420  INFO 8460 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 22:18:49.421  INFO 8460 --- [main] mao.auth_server.AuthServerApplication    : 应用auth-server启动成功!swagger地址：http://113.221.234.195:8764/doc.html
+2022-11-09 22:18:49.421  INFO 8460 --- [main] mao.auth_server.AuthServerApplication    : 启动耗时：17040ms
+2022-11-09 22:18:49.763  INFO 8460 --- [RMI TCP Connection(1)-113.221.234.195] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-09 22:18:49.763  INFO 8460 --- [RMI TCP Connection(1)-113.221.234.195] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-09 22:18:49.777  INFO 8460 --- [RMI TCP Connection(1)-113.221.234.195] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2022-11-09 22:19:35.375  INFO 8460 --- [j2CacheRedisMessageListenerContainer-2] n.o.j.c.s.r.SpringRedisMessageListener   : Node-4716918 quit to j2cache
+2022-11-09 22:20:31.325  INFO 8460 --- [j2CacheRedisMessageListenerContainer-3] n.o.j.c.s.r.SpringRedisMessageListener   : Node-7342603 quit to j2cache
+2022-11-09 22:23:37.652  INFO 8460 --- [j2CacheRedisMessageListenerContainer-4] n.o.j.c.s.r.SpringRedisMessageListener   : Node-6984011 quit to j2cache
+2022-11-09 22:25:16.860  INFO 8460 --- [j2CacheRedisMessageListenerContainer-5] n.o.j.c.s.r.SpringRedisMessageListener   : Node-1587379 quit to j2cache
+2022-11-09 22:32:45.918  INFO 8460 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [polling-resp] config changed. dataId=auth-server-dev.yml, group=DEFAULT_GROUP, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 22:32:45.919  INFO 8460 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] c.a.n.client.config.impl.ClientWorker    : get changedGroupKeys:[auth-server-dev.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732]
+2022-11-09 22:32:45.928  INFO 8460 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [data-received] dataId=auth-server-dev.yml, group=DEFAULT_GROUP, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, md5=98a040226f88031aca48d82b6bbb412b, content=# p6spy是一个开源项目，通常使用它来跟踪数据库操作，查看程序运行过程中执行的sql语句
+# 开发环境需要使用p6spy进行sql语句输出
+# 但p6spy会有性能损耗，不适合在生产线使用，故其他..., type=yaml
+2022-11-09 22:32:45.930  INFO 8460 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [notify-context] dataId=auth-server-dev.yml, group=DEFAULT_GROUP, md5=98a040226f88031aca48d82b6bbb412b
+2022-11-09 22:32:47.229  INFO 8460 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 22:32:48.590  INFO 8460 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 22:32:48.634  WARN 8460 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-11-09 22:32:48.641  INFO 8460 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-auth-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2022-11-09 22:32:48.652  INFO 8460 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] o.s.boot.SpringApplication               : The following profiles are active: dev
+2022-11-09 22:32:48.667  INFO 8460 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] o.s.boot.SpringApplication               : Started application in 2.73 seconds (JVM running for 857.186)
+2022-11-09 22:32:48.899  INFO 8460 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] o.s.c.e.event.RefreshEventListener       : Refresh keys changed: [logging.group.mao_pro, logging.level.mao_pro, logging.level.mao]
+2022-11-09 22:32:48.899  INFO 8460 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [notify-ok] dataId=auth-server-dev.yml, group=DEFAULT_GROUP, md5=98a040226f88031aca48d82b6bbb412b, listener=com.alibaba.cloud.nacos.refresh.NacosContextRefresher$1@7f6519b4 
+2022-11-09 22:32:48.899  INFO 8460 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [notify-listener] time cost=2970ms in ClientWorker, dataId=auth-server-dev.yml, group=DEFAULT_GROUP, md5=98a040226f88031aca48d82b6bbb412b, listener=com.alibaba.cloud.nacos.refresh.NacosContextRefresher$1@7f6519b4 
+2022-11-09 22:32:55.299  INFO 8460 --- [j2CacheRedisMessageListenerContainer-6] n.o.j.c.s.r.SpringRedisMessageListener   : Node-9415394 quit to j2cache
+2022-11-09 22:33:32.916  INFO 8460 --- [j2CacheRedisMessageListenerContainer-7] n.o.j.c.s.r.SpringRedisMessageListener   : Node-887426 quit to j2cache
+2022-11-09 22:35:55.154  INFO 8460 --- [j2CacheRedisMessageListenerContainer-8] n.o.j.c.s.r.SpringRedisMessageListener   : Node-8282046 quit to j2cache
+2022-11-09 22:37:11.665  WARN 8460 --- [Thread-31] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-11-09 22:37:11.666  WARN 8460 --- [Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-11-09 22:37:11.667  WARN 8460 --- [Thread-31] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-11-09 22:37:11.667  WARN 8460 --- [Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-11-09 22:37:11.671  INFO 8460 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-09 22:37:11.685  INFO 8460 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-11-09 22:37:11.686  INFO 8460 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@auth-server:192.168.202.1:8764 from beat map.
+2022-11-09 22:37:11.687  INFO 8460 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 27ce69b0-bff1-4c03-8f3e-0ea5559a5732 deregistering service DEFAULT_GROUP@@auth-server with instance: Instance{instanceId='null', ip='192.168.202.1', port=8764, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2022-11-09 22:37:11.689  INFO 8460 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-11-09 22:37:11.691  INFO 8460 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-11-09 22:37:12.705  INFO 8460 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"dom\":\"DEFAULT_GROUP@@auth-server\",\"name\":\"DEFAULT_GROUP@@auth-server\",\"cacheMillis\":10000,\"lastRefTime\":1668004632704,\"checksum\":\"2b411b2bb30a914a240868f78fe4009a\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":7150490776200} from /113.221.234.195
+2022-11-09 22:37:12.705  INFO 8460 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : removed ips(1) service: DEFAULT_GROUP@@auth-server@@DEFAULT -> [{"instanceId":"192.168.202.1#8764#DEFAULT#DEFAULT_GROUP@@auth-server","ip":"192.168.202.1","port":8764,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@auth-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-11-09 22:37:12.711  INFO 8460 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@auth-server@@DEFAULT -> []
+2022-11-09 22:37:14.730  INFO 8460 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-11-09 22:37:14.732  INFO 8460 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-11-09 22:37:17.764  INFO 8460 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-11-09 22:37:20.804  INFO 8460 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-11-09 22:37:20.804  INFO 8460 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-11-09 22:37:20.804  INFO 8460 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-11-09 22:37:20.804  INFO 8460 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-11-09 22:37:20.804  INFO 8460 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-11-09 22:37:20.805  WARN 8460 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-11-09 22:37:20.805  WARN 8460 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-11-09 22:37:20.805  INFO 8460 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-11-09 22:37:20.805  INFO 8460 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-11-09 22:37:20.805  INFO 8460 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-11-09 22:37:20.806  INFO 8460 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-11-09 22:37:20.808  WARN 8460 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2022-11-09 22:37:20.832  INFO 8460 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-11-09 22:37:20.845  INFO 8460 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-11-09 22:37:21.169 DEBUG 8460 --- [SpringContextShutdownHook] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] destroy
