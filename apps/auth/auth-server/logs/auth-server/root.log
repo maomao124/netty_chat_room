@@ -1,0 +1,967 @@
+2022-11-09 21:42:53.802  WARN 14144 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-11-09 21:42:53.812  INFO 14144 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-auth-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2022-11-09 21:42:53.872  INFO 14144 --- [main] mao.auth_server.dao.auth.MenuMapperTest  : The following profiles are active: dev
+2022-11-09 21:42:54.447  INFO 14144 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [${j2cache.config-location}] not resolvable: Could not resolve placeholder 'j2cache.config-location' in value "${j2cache.config-location}"
+2022-11-09 21:42:55.389  INFO 14144 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-09 21:42:55.393  INFO 14144 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-09 21:42:55.418  INFO 14144 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2022-11-09 21:42:55.498  WARN 14144 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-11-09 21:42:55.785  INFO 14144 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0b06d148-4635-3ec7-a22a-c9adb55261a5
+2022-11-09 21:42:55.884  INFO 14144 --- [main] m.t.config.ValidatorConfig               : 开启hibernate-validator快速返回
+2022-11-09 21:42:55.884  INFO 14144 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_validator.config.ValidatorConfig' of type [mao.tools_validator.config.ValidatorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:42:56.156  INFO 14144 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:42:56.585  INFO 14144 --- [main] mao.tools_j2cache.config.CacheConfig     : 初始化 CacheConfig
+2022-11-09 21:42:56.585  INFO 14144 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_j2cache.config.CacheConfig' of type [mao.tools_j2cache.config.CacheConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:42:57.381  INFO 14144 --- [main] m.t.config.LoginArgResolverConfig        : 初始化 LoginArgResolverConfig
+2022-11-09 21:42:57.663  WARN 14144 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-09 21:42:57.664  INFO 14144 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-09 21:42:57.685  INFO 14144 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@774f2992
+2022-11-09 21:42:58.076  INFO 14144 --- [main] .j.a.J2CacheSpringCacheAutoConfiguration : 初始化 J2CacheSpringCacheAutoConfiguration
+2022-11-09 21:42:58.091  INFO 14144 --- [main] n.o.j.a.J2CacheAutoConfiguration         : 初始化 J2CacheAutoConfiguration
+2022-11-09 21:42:58.235  INFO 14144 --- [main] n.o.j2cache.util.SerializationUtils      : Using Serializer -> [fst:net.oschina.j2cache.util.FSTSerializer]
+2022-11-09 21:42:58.241  INFO 14144 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L1 CacheProvider : net.oschina.j2cache.caffeine.CaffeineProvider
+2022-11-09 21:42:58.249  INFO 14144 --- [main] .j.a.J2CacheSpringRedisAutoConfiguration : 初始化 J2CacheSpringRedisAutoConfiguration
+2022-11-09 21:42:58.714  INFO 14144 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L2 CacheProvider : net.oschina.j2cache.cache.support.redis.SpringRedisProvider
+2022-11-09 21:42:58.737  INFO 14144 --- [main] net.oschina.j2cache.J2CacheBuilder       : Using cluster policy : net.oschina.j2cache.cache.support.redis.SpringRedisPubSubPolicy
+2022-11-09 21:43:00.123  INFO 14144 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 21:43:00.132  INFO 14144 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-09 21:43:00.133  INFO 14144 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-11-09 21:43:00.134  INFO 14144 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-09 21:43:00.203  INFO 14144 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-11-09 21:43:01.204  INFO 14144 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-11-09 21:43:01.416  INFO 14144 --- [main] mao.tools_j2cache.config.RedissonConfig  : 初始化 RedissonConfig
+2022-11-09 21:43:01.422  INFO 14144 --- [main] mao.tools_j2cache.config.RedissonConfig  : 单机模式redis:127.0.0.1:6379
+2022-11-09 21:43:01.651  INFO 14144 --- [main] org.redisson.Version                     : Redisson 3.17.0
+2022-11-09 21:43:02.408  INFO 14144 --- [redisson-netty-4-23] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-09 21:43:02.427  INFO 14144 --- [redisson-netty-4-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-09 21:43:02.832  INFO 14144 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2022-11-09 21:43:03.142  INFO 14144 --- [main] m.t.s.config.AuthServerConfiguration     : 初始化 AuthServerConfiguration
+2022-11-09 21:43:03.408  WARN 14144 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-09 21:43:03.408  INFO 14144 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-09 21:43:03.521  INFO 14144 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2022-11-09 21:43:03.739  INFO 14144 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-09 21:43:04.161  INFO 14144 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-09 21:43:04.969  INFO 14144 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbConfig@37d8562f]
+2022-11-09 21:43:04.969  INFO 14144 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbSearcher@19656e21]
+2022-11-09 21:43:05.927  INFO 14144 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2022-11-09 21:43:05.929  INFO 14144 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2022-11-09 21:43:05.934  INFO 14144 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2022-11-09 21:43:05.940  INFO 14144 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2022-11-09 21:43:05.946  INFO 14144 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2022-11-09 21:43:05.974  INFO 14144 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2022-11-09 21:43:06.335  INFO 14144 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:43:06.336  INFO 14144 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:43:06.399  INFO 14144 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-09 21:43:06.400  INFO 14144 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2022-11-09 21:43:06.403  INFO 14144 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:43:06.404  INFO 14144 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:43:06.413  INFO 14144 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-09 21:43:06.530  INFO 14144 --- [main] m.tools_j2cache.config.RedisUtilsConfig  : 初始化 RedisUtilsConfig
+2022-11-09 21:43:06.538  INFO 14144 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
+2022-11-09 21:43:06.564  INFO 14144 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2022-11-09 21:43:06.664  INFO 14144 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-09 21:43:06.695  INFO 14144 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2022-11-09 21:43:06.695  INFO 14144 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='mao', url='https://github.com/maomao124/', email='1234@qq.com'}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{auth=DocketInfo{title='权限模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.auth', basePath=[], excludePath=[]}, common=DocketInfo{title='公共模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.common', basePath=[], excludePath=[]}, core=DocketInfo{title='组织岗位模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.core', basePath=[], excludePath=[]}}
+
+2022-11-09 21:43:08.446  INFO 14144 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 21:43:08.756  INFO 14144 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-11-09 21:43:08.795  INFO 14144 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2022-11-09 21:43:08.862  INFO 14144 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:43:08.890  INFO 14144 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:43:08.899  INFO 14144 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:43:09.035  INFO 14144 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2022-11-09 21:43:09.037  INFO 14144 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2022-11-09 21:43:09.184  INFO 14144 --- [main] mao.auth_server.dao.auth.MenuMapperTest  : Started MenuMapperTest in 19.279 seconds (JVM running for 20.923)
+2022-11-09 21:43:09.196  INFO 14144 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server-dev.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:43:09.198  INFO 14144 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server-dev.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:43:09.198  INFO 14144 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:43:09.198  INFO 14144 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:43:09.200  INFO 14144 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:43:09.200  INFO 14144 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:43:09.201  INFO 14144 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] common.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:43:09.201  INFO 14144 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:43:09.818  WARN 14144 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-11-09 21:43:09.818  WARN 14144 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-11-09 21:43:09.819  WARN 14144 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-11-09 21:43:09.820  WARN 14144 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-11-09 21:43:09.822  INFO 14144 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-09 21:43:09.837  INFO 14144 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-11-09 21:43:09.840  INFO 14144 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-11-09 21:43:09.840  INFO 14144 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-11-09 21:43:09.840  INFO 14144 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-11-09 21:43:11.778  INFO 14144 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-11-09 21:43:14.800  INFO 14144 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-11-09 21:43:14.800  INFO 14144 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-11-09 21:43:14.801  INFO 14144 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-11-09 21:43:14.801  INFO 14144 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-11-09 21:43:14.801  INFO 14144 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-11-09 21:43:14.801  WARN 14144 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-11-09 21:43:14.801  WARN 14144 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-11-09 21:43:14.801  INFO 14144 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-11-09 21:43:14.802  INFO 14144 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-11-09 21:43:14.802  INFO 14144 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-11-09 21:43:14.835  INFO 14144 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-11-09 21:43:14.844  INFO 14144 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-11-09 21:45:21.698  WARN 5092 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-11-09 21:45:21.709  INFO 5092 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-auth-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2022-11-09 21:45:21.769  INFO 5092 --- [main] m.a.dao.auth.ResourceMapperTest          : The following profiles are active: dev
+2022-11-09 21:45:22.376  INFO 5092 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [${j2cache.config-location}] not resolvable: Could not resolve placeholder 'j2cache.config-location' in value "${j2cache.config-location}"
+2022-11-09 21:45:23.266  INFO 5092 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-09 21:45:23.270  INFO 5092 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-09 21:45:23.294  INFO 5092 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2022-11-09 21:45:23.375  WARN 5092 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-11-09 21:45:23.677  INFO 5092 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0b06d148-4635-3ec7-a22a-c9adb55261a5
+2022-11-09 21:45:23.771  INFO 5092 --- [main] m.t.config.ValidatorConfig               : 开启hibernate-validator快速返回
+2022-11-09 21:45:23.771  INFO 5092 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_validator.config.ValidatorConfig' of type [mao.tools_validator.config.ValidatorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:45:24.017  INFO 5092 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:45:24.449  INFO 5092 --- [main] mao.tools_j2cache.config.CacheConfig     : 初始化 CacheConfig
+2022-11-09 21:45:24.449  INFO 5092 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_j2cache.config.CacheConfig' of type [mao.tools_j2cache.config.CacheConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:45:25.372  INFO 5092 --- [main] m.t.config.LoginArgResolverConfig        : 初始化 LoginArgResolverConfig
+2022-11-09 21:45:25.674  WARN 5092 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-09 21:45:25.675  INFO 5092 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-09 21:45:25.697  INFO 5092 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@671d97bc
+2022-11-09 21:45:26.168  INFO 5092 --- [main] .j.a.J2CacheSpringCacheAutoConfiguration : 初始化 J2CacheSpringCacheAutoConfiguration
+2022-11-09 21:45:26.177  INFO 5092 --- [main] n.o.j.a.J2CacheAutoConfiguration         : 初始化 J2CacheAutoConfiguration
+2022-11-09 21:45:26.284  INFO 5092 --- [main] n.o.j2cache.util.SerializationUtils      : Using Serializer -> [fst:net.oschina.j2cache.util.FSTSerializer]
+2022-11-09 21:45:26.288  INFO 5092 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L1 CacheProvider : net.oschina.j2cache.caffeine.CaffeineProvider
+2022-11-09 21:45:26.296  INFO 5092 --- [main] .j.a.J2CacheSpringRedisAutoConfiguration : 初始化 J2CacheSpringRedisAutoConfiguration
+2022-11-09 21:45:26.773  INFO 5092 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L2 CacheProvider : net.oschina.j2cache.cache.support.redis.SpringRedisProvider
+2022-11-09 21:45:26.795  INFO 5092 --- [main] net.oschina.j2cache.J2CacheBuilder       : Using cluster policy : net.oschina.j2cache.cache.support.redis.SpringRedisPubSubPolicy
+2022-11-09 21:45:28.223  INFO 5092 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 21:45:28.229  INFO 5092 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-09 21:45:28.230  INFO 5092 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-11-09 21:45:28.231  INFO 5092 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-09 21:45:28.296  INFO 5092 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-11-09 21:45:29.240  INFO 5092 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-11-09 21:45:29.454  INFO 5092 --- [main] mao.tools_j2cache.config.RedissonConfig  : 初始化 RedissonConfig
+2022-11-09 21:45:29.458  INFO 5092 --- [main] mao.tools_j2cache.config.RedissonConfig  : 单机模式redis:127.0.0.1:6379
+2022-11-09 21:45:29.698  INFO 5092 --- [main] org.redisson.Version                     : Redisson 3.17.0
+2022-11-09 21:45:30.493  INFO 5092 --- [redisson-netty-4-13] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-09 21:45:30.513  INFO 5092 --- [redisson-netty-4-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-09 21:45:30.969  INFO 5092 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2022-11-09 21:45:31.266  INFO 5092 --- [main] m.t.s.config.AuthServerConfiguration     : 初始化 AuthServerConfiguration
+2022-11-09 21:45:31.588  WARN 5092 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-09 21:45:31.588  INFO 5092 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-09 21:45:31.700  INFO 5092 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2022-11-09 21:45:31.933  INFO 5092 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-09 21:45:32.427  INFO 5092 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-09 21:45:33.469  INFO 5092 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbConfig@37d8562f]
+2022-11-09 21:45:33.469  INFO 5092 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbSearcher@19656e21]
+2022-11-09 21:45:34.471  INFO 5092 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2022-11-09 21:45:34.472  INFO 5092 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2022-11-09 21:45:34.478  INFO 5092 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2022-11-09 21:45:34.484  INFO 5092 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2022-11-09 21:45:34.491  INFO 5092 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2022-11-09 21:45:34.546  INFO 5092 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2022-11-09 21:45:34.940  INFO 5092 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:45:34.942  INFO 5092 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:45:35.000  INFO 5092 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-09 21:45:35.001  INFO 5092 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2022-11-09 21:45:35.004  INFO 5092 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:45:35.005  INFO 5092 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:45:35.012  INFO 5092 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-09 21:45:35.162  INFO 5092 --- [main] m.tools_j2cache.config.RedisUtilsConfig  : 初始化 RedisUtilsConfig
+2022-11-09 21:45:35.176  INFO 5092 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
+2022-11-09 21:45:35.203  INFO 5092 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2022-11-09 21:45:35.322  INFO 5092 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-09 21:45:35.350  INFO 5092 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2022-11-09 21:45:35.351  INFO 5092 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='mao', url='https://github.com/maomao124/', email='1234@qq.com'}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{auth=DocketInfo{title='权限模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.auth', basePath=[], excludePath=[]}, common=DocketInfo{title='公共模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.common', basePath=[], excludePath=[]}, core=DocketInfo{title='组织岗位模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.core', basePath=[], excludePath=[]}}
+
+2022-11-09 21:45:37.302  INFO 5092 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 21:45:37.623  INFO 5092 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-11-09 21:45:37.660  INFO 5092 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2022-11-09 21:45:37.715  INFO 5092 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:45:37.746  INFO 5092 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:45:37.756  INFO 5092 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:45:37.882  INFO 5092 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2022-11-09 21:45:37.884  INFO 5092 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2022-11-09 21:45:38.045  INFO 5092 --- [main] m.a.dao.auth.ResourceMapperTest          : Started ResourceMapperTest in 20.183 seconds (JVM running for 21.698)
+2022-11-09 21:45:38.058  INFO 5092 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server-dev.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:45:38.060  INFO 5092 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server-dev.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:45:38.060  INFO 5092 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:45:38.060  INFO 5092 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:45:38.062  INFO 5092 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:45:38.062  INFO 5092 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:45:38.063  INFO 5092 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] common.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:45:38.064  INFO 5092 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:45:38.692  WARN 5092 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-11-09 21:45:38.692  WARN 5092 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-11-09 21:45:38.693  WARN 5092 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-11-09 21:45:38.694  WARN 5092 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-11-09 21:45:38.700  INFO 5092 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-09 21:45:38.720  INFO 5092 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-11-09 21:45:38.722  INFO 5092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-11-09 21:45:38.722  INFO 5092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-11-09 21:45:38.722  INFO 5092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-11-09 21:45:40.657  INFO 5092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-11-09 21:45:43.671  INFO 5092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-11-09 21:45:43.671  INFO 5092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-11-09 21:45:43.672  INFO 5092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-11-09 21:45:43.672  INFO 5092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-11-09 21:45:43.672  INFO 5092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-11-09 21:45:43.673  WARN 5092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-11-09 21:45:43.673  WARN 5092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-11-09 21:45:43.673  INFO 5092 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-11-09 21:45:43.673  INFO 5092 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-11-09 21:45:43.673  INFO 5092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-11-09 21:45:43.706  INFO 5092 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-11-09 21:45:43.716  INFO 5092 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-11-09 21:49:11.515  WARN 1980 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-11-09 21:49:11.526  INFO 1980 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-auth-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2022-11-09 21:49:11.582  INFO 1980 --- [main] m.a.dao.auth.ResourceMapperTest          : The following profiles are active: dev
+2022-11-09 21:49:12.166  INFO 1980 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [${j2cache.config-location}] not resolvable: Could not resolve placeholder 'j2cache.config-location' in value "${j2cache.config-location}"
+2022-11-09 21:49:13.075  INFO 1980 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-09 21:49:13.079  INFO 1980 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-09 21:49:13.104  INFO 1980 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2022-11-09 21:49:13.185  WARN 1980 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-11-09 21:49:13.474  INFO 1980 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0b06d148-4635-3ec7-a22a-c9adb55261a5
+2022-11-09 21:49:13.588  INFO 1980 --- [main] m.t.config.ValidatorConfig               : 开启hibernate-validator快速返回
+2022-11-09 21:49:13.588  INFO 1980 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_validator.config.ValidatorConfig' of type [mao.tools_validator.config.ValidatorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:49:13.871  INFO 1980 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:49:14.367  INFO 1980 --- [main] mao.tools_j2cache.config.CacheConfig     : 初始化 CacheConfig
+2022-11-09 21:49:14.367  INFO 1980 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_j2cache.config.CacheConfig' of type [mao.tools_j2cache.config.CacheConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:49:15.126  INFO 1980 --- [main] m.t.config.LoginArgResolverConfig        : 初始化 LoginArgResolverConfig
+2022-11-09 21:49:15.414  WARN 1980 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-09 21:49:15.414  INFO 1980 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-09 21:49:15.439  INFO 1980 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@d49e8c6
+2022-11-09 21:49:15.927  INFO 1980 --- [main] .j.a.J2CacheSpringCacheAutoConfiguration : 初始化 J2CacheSpringCacheAutoConfiguration
+2022-11-09 21:49:15.939  INFO 1980 --- [main] n.o.j.a.J2CacheAutoConfiguration         : 初始化 J2CacheAutoConfiguration
+2022-11-09 21:49:16.078  INFO 1980 --- [main] n.o.j2cache.util.SerializationUtils      : Using Serializer -> [fst:net.oschina.j2cache.util.FSTSerializer]
+2022-11-09 21:49:16.086  INFO 1980 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L1 CacheProvider : net.oschina.j2cache.caffeine.CaffeineProvider
+2022-11-09 21:49:16.106  INFO 1980 --- [main] .j.a.J2CacheSpringRedisAutoConfiguration : 初始化 J2CacheSpringRedisAutoConfiguration
+2022-11-09 21:49:16.668  INFO 1980 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L2 CacheProvider : net.oschina.j2cache.cache.support.redis.SpringRedisProvider
+2022-11-09 21:49:16.699  INFO 1980 --- [main] net.oschina.j2cache.J2CacheBuilder       : Using cluster policy : net.oschina.j2cache.cache.support.redis.SpringRedisPubSubPolicy
+2022-11-09 21:49:18.113  INFO 1980 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 21:49:18.128  INFO 1980 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-09 21:49:18.129  INFO 1980 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-11-09 21:49:18.129  INFO 1980 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-09 21:49:18.190  INFO 1980 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-11-09 21:49:19.140  INFO 1980 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-11-09 21:49:19.337  INFO 1980 --- [main] mao.tools_j2cache.config.RedissonConfig  : 初始化 RedissonConfig
+2022-11-09 21:49:19.341  INFO 1980 --- [main] mao.tools_j2cache.config.RedissonConfig  : 单机模式redis:127.0.0.1:6379
+2022-11-09 21:49:19.618  INFO 1980 --- [main] org.redisson.Version                     : Redisson 3.17.0
+2022-11-09 21:49:20.380  INFO 1980 --- [redisson-netty-4-13] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-09 21:49:20.398  INFO 1980 --- [redisson-netty-4-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-09 21:49:20.824  INFO 1980 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2022-11-09 21:49:21.138  INFO 1980 --- [main] m.t.s.config.AuthServerConfiguration     : 初始化 AuthServerConfiguration
+2022-11-09 21:49:21.402  WARN 1980 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-09 21:49:21.402  INFO 1980 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-09 21:49:21.511  INFO 1980 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2022-11-09 21:49:21.745  INFO 1980 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-09 21:49:22.238  INFO 1980 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-09 21:49:23.116  INFO 1980 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbConfig@5d32f5db]
+2022-11-09 21:49:23.116  INFO 1980 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbSearcher@69c51fdb]
+2022-11-09 21:49:24.083  INFO 1980 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2022-11-09 21:49:24.084  INFO 1980 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2022-11-09 21:49:24.090  INFO 1980 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2022-11-09 21:49:24.096  INFO 1980 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2022-11-09 21:49:24.102  INFO 1980 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2022-11-09 21:49:24.137  INFO 1980 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2022-11-09 21:49:24.501  INFO 1980 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:49:24.502  INFO 1980 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:49:24.562  INFO 1980 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-09 21:49:24.563  INFO 1980 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2022-11-09 21:49:24.566  INFO 1980 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:49:24.567  INFO 1980 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:49:24.575  INFO 1980 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-09 21:49:24.692  INFO 1980 --- [main] m.tools_j2cache.config.RedisUtilsConfig  : 初始化 RedisUtilsConfig
+2022-11-09 21:49:24.699  INFO 1980 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
+2022-11-09 21:49:24.719  INFO 1980 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2022-11-09 21:49:24.796  INFO 1980 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-09 21:49:24.827  INFO 1980 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2022-11-09 21:49:24.827  INFO 1980 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='mao', url='https://github.com/maomao124/', email='1234@qq.com'}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{auth=DocketInfo{title='权限模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.auth', basePath=[], excludePath=[]}, common=DocketInfo{title='公共模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.common', basePath=[], excludePath=[]}, core=DocketInfo{title='组织岗位模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.core', basePath=[], excludePath=[]}}
+
+2022-11-09 21:49:26.581  INFO 1980 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 21:49:26.935  INFO 1980 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-11-09 21:49:26.973  INFO 1980 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2022-11-09 21:49:27.031  INFO 1980 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:49:27.059  INFO 1980 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:49:27.071  INFO 1980 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:49:27.202  INFO 1980 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2022-11-09 21:49:27.222  INFO 1980 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2022-11-09 21:49:27.377  INFO 1980 --- [main] m.a.dao.auth.ResourceMapperTest          : Started ResourceMapperTest in 19.713 seconds (JVM running for 21.257)
+2022-11-09 21:49:27.390  INFO 1980 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server-dev.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:49:27.393  INFO 1980 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server-dev.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:49:27.393  INFO 1980 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:49:27.393  INFO 1980 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:49:27.395  INFO 1980 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:49:27.395  INFO 1980 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:49:27.396  INFO 1980 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] common.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:49:27.396  INFO 1980 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:49:28.050  WARN 1980 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-11-09 21:49:28.050  WARN 1980 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-11-09 21:49:28.051  WARN 1980 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-11-09 21:49:28.052  WARN 1980 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-11-09 21:49:28.054  INFO 1980 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-09 21:49:28.067  INFO 1980 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-11-09 21:49:28.069  INFO 1980 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-11-09 21:49:28.070  INFO 1980 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-11-09 21:49:28.070  INFO 1980 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-11-09 21:49:29.965  INFO 1980 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-11-09 21:49:32.994  INFO 1980 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-11-09 21:49:32.994  INFO 1980 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-11-09 21:49:32.994  INFO 1980 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-11-09 21:49:32.995  INFO 1980 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-11-09 21:49:32.995  INFO 1980 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-11-09 21:49:32.996  WARN 1980 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-11-09 21:49:32.996  WARN 1980 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-11-09 21:49:32.996  INFO 1980 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-11-09 21:49:32.996  INFO 1980 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-11-09 21:49:32.996  INFO 1980 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-11-09 21:49:33.036  INFO 1980 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-11-09 21:49:33.046  INFO 1980 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-11-09 21:51:40.955  WARN 11004 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-11-09 21:51:40.969  INFO 11004 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-auth-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2022-11-09 21:51:41.050  INFO 11004 --- [main] m.a.dao.auth.ResourceMapperTest          : The following profiles are active: dev
+2022-11-09 21:51:41.702  INFO 11004 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [${j2cache.config-location}] not resolvable: Could not resolve placeholder 'j2cache.config-location' in value "${j2cache.config-location}"
+2022-11-09 21:51:42.652  INFO 11004 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-09 21:51:42.656  INFO 11004 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-09 21:51:42.681  INFO 11004 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 Redis repository interfaces.
+2022-11-09 21:51:42.769  WARN 11004 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-11-09 21:51:43.079  INFO 11004 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0b06d148-4635-3ec7-a22a-c9adb55261a5
+2022-11-09 21:51:43.175  INFO 11004 --- [main] m.t.config.ValidatorConfig               : 开启hibernate-validator快速返回
+2022-11-09 21:51:43.175  INFO 11004 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_validator.config.ValidatorConfig' of type [mao.tools_validator.config.ValidatorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:51:43.437  INFO 11004 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:51:43.916  INFO 11004 --- [main] mao.tools_j2cache.config.CacheConfig     : 初始化 CacheConfig
+2022-11-09 21:51:43.916  INFO 11004 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_j2cache.config.CacheConfig' of type [mao.tools_j2cache.config.CacheConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:51:44.778  INFO 11004 --- [main] m.t.config.LoginArgResolverConfig        : 初始化 LoginArgResolverConfig
+2022-11-09 21:51:45.100  WARN 11004 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-09 21:51:45.101  INFO 11004 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-09 21:51:45.124  INFO 11004 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@d49e8c6
+2022-11-09 21:51:45.554  INFO 11004 --- [main] .j.a.J2CacheSpringCacheAutoConfiguration : 初始化 J2CacheSpringCacheAutoConfiguration
+2022-11-09 21:51:45.570  INFO 11004 --- [main] n.o.j.a.J2CacheAutoConfiguration         : 初始化 J2CacheAutoConfiguration
+2022-11-09 21:51:45.710  INFO 11004 --- [main] n.o.j2cache.util.SerializationUtils      : Using Serializer -> [fst:net.oschina.j2cache.util.FSTSerializer]
+2022-11-09 21:51:45.715  INFO 11004 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L1 CacheProvider : net.oschina.j2cache.caffeine.CaffeineProvider
+2022-11-09 21:51:45.723  INFO 11004 --- [main] .j.a.J2CacheSpringRedisAutoConfiguration : 初始化 J2CacheSpringRedisAutoConfiguration
+2022-11-09 21:51:46.251  INFO 11004 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L2 CacheProvider : net.oschina.j2cache.cache.support.redis.SpringRedisProvider
+2022-11-09 21:51:46.287  INFO 11004 --- [main] net.oschina.j2cache.J2CacheBuilder       : Using cluster policy : net.oschina.j2cache.cache.support.redis.SpringRedisPubSubPolicy
+2022-11-09 21:51:47.697  INFO 11004 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 21:51:47.706  INFO 11004 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-09 21:51:47.707  INFO 11004 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-11-09 21:51:47.708  INFO 11004 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-09 21:51:47.808  INFO 11004 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-11-09 21:51:49.233  INFO 11004 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-11-09 21:51:49.531  INFO 11004 --- [main] mao.tools_j2cache.config.RedissonConfig  : 初始化 RedissonConfig
+2022-11-09 21:51:49.536  INFO 11004 --- [main] mao.tools_j2cache.config.RedissonConfig  : 单机模式redis:127.0.0.1:6379
+2022-11-09 21:51:49.799  INFO 11004 --- [main] org.redisson.Version                     : Redisson 3.17.0
+2022-11-09 21:51:50.617  INFO 11004 --- [redisson-netty-4-13] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-09 21:51:50.636  INFO 11004 --- [redisson-netty-4-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-09 21:51:51.078  INFO 11004 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2022-11-09 21:51:51.401  INFO 11004 --- [main] m.t.s.config.AuthServerConfiguration     : 初始化 AuthServerConfiguration
+2022-11-09 21:51:51.690  WARN 11004 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-09 21:51:51.690  INFO 11004 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-09 21:51:51.804  INFO 11004 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2022-11-09 21:51:52.076  INFO 11004 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-09 21:51:52.704  INFO 11004 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-09 21:51:53.746  INFO 11004 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbConfig@5d32f5db]
+2022-11-09 21:51:53.746  INFO 11004 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbSearcher@69c51fdb]
+2022-11-09 21:51:54.783  INFO 11004 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2022-11-09 21:51:54.785  INFO 11004 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2022-11-09 21:51:54.790  INFO 11004 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2022-11-09 21:51:54.798  INFO 11004 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2022-11-09 21:51:54.822  INFO 11004 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2022-11-09 21:51:54.858  INFO 11004 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2022-11-09 21:51:55.251  INFO 11004 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:51:55.253  INFO 11004 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:51:55.313  INFO 11004 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-09 21:51:55.314  INFO 11004 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2022-11-09 21:51:55.317  INFO 11004 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:51:55.317  INFO 11004 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:51:55.327  INFO 11004 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-09 21:51:55.461  INFO 11004 --- [main] m.tools_j2cache.config.RedisUtilsConfig  : 初始化 RedisUtilsConfig
+2022-11-09 21:51:55.468  INFO 11004 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
+2022-11-09 21:51:55.490  INFO 11004 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2022-11-09 21:51:55.607  INFO 11004 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-09 21:51:55.645  INFO 11004 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2022-11-09 21:51:55.645  INFO 11004 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='mao', url='https://github.com/maomao124/', email='1234@qq.com'}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{auth=DocketInfo{title='权限模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.auth', basePath=[], excludePath=[]}, common=DocketInfo{title='公共模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.common', basePath=[], excludePath=[]}, core=DocketInfo{title='组织岗位模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.core', basePath=[], excludePath=[]}}
+
+2022-11-09 21:51:57.441  INFO 11004 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 21:51:57.773  INFO 11004 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-11-09 21:51:57.811  INFO 11004 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2022-11-09 21:51:57.867  INFO 11004 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:51:57.897  INFO 11004 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:51:57.908  INFO 11004 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:51:58.053  INFO 11004 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2022-11-09 21:51:58.055  INFO 11004 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2022-11-09 21:51:58.272  INFO 11004 --- [main] m.a.dao.auth.ResourceMapperTest          : Started ResourceMapperTest in 21.199 seconds (JVM running for 22.963)
+2022-11-09 21:51:58.287  INFO 11004 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server-dev.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:51:58.289  INFO 11004 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server-dev.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:51:58.290  INFO 11004 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:51:58.290  INFO 11004 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:51:58.292  INFO 11004 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:51:58.292  INFO 11004 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:51:58.294  INFO 11004 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] common.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:51:58.294  INFO 11004 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:51:58.947  WARN 11004 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-11-09 21:51:58.947  WARN 11004 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-11-09 21:51:58.947  WARN 11004 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-11-09 21:51:58.948  WARN 11004 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-11-09 21:51:58.952  INFO 11004 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-09 21:51:58.967  INFO 11004 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-11-09 21:51:58.970  INFO 11004 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-11-09 21:51:58.970  INFO 11004 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-11-09 21:51:58.970  INFO 11004 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-11-09 21:52:00.798  INFO 11004 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-11-09 21:52:03.833  INFO 11004 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-11-09 21:52:03.833  INFO 11004 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-11-09 21:52:03.833  INFO 11004 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-11-09 21:52:03.834  INFO 11004 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-11-09 21:52:03.834  INFO 11004 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-11-09 21:52:03.834  WARN 11004 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-11-09 21:52:03.834  WARN 11004 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-11-09 21:52:03.834  INFO 11004 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-11-09 21:52:03.835  INFO 11004 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-11-09 21:52:03.835  INFO 11004 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-11-09 21:52:03.867  INFO 11004 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-11-09 21:52:03.878  INFO 11004 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-11-09 21:53:04.450  WARN 15000 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-11-09 21:53:04.461  INFO 15000 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-auth-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2022-11-09 21:53:04.521  INFO 15000 --- [main] m.a.dao.auth.RoleAuthorityMapperTest     : The following profiles are active: dev
+2022-11-09 21:53:05.120  INFO 15000 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [${j2cache.config-location}] not resolvable: Could not resolve placeholder 'j2cache.config-location' in value "${j2cache.config-location}"
+2022-11-09 21:53:06.050  INFO 15000 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-09 21:53:06.054  INFO 15000 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-09 21:53:06.079  INFO 15000 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 Redis repository interfaces.
+2022-11-09 21:53:06.166  WARN 15000 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-11-09 21:53:06.447  INFO 15000 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0b06d148-4635-3ec7-a22a-c9adb55261a5
+2022-11-09 21:53:06.554  INFO 15000 --- [main] m.t.config.ValidatorConfig               : 开启hibernate-validator快速返回
+2022-11-09 21:53:06.554  INFO 15000 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_validator.config.ValidatorConfig' of type [mao.tools_validator.config.ValidatorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:53:06.803  INFO 15000 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:53:07.252  INFO 15000 --- [main] mao.tools_j2cache.config.CacheConfig     : 初始化 CacheConfig
+2022-11-09 21:53:07.252  INFO 15000 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_j2cache.config.CacheConfig' of type [mao.tools_j2cache.config.CacheConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:53:08.119  INFO 15000 --- [main] m.t.config.LoginArgResolverConfig        : 初始化 LoginArgResolverConfig
+2022-11-09 21:53:08.389  WARN 15000 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-09 21:53:08.389  INFO 15000 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-09 21:53:08.414  INFO 15000 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@d49e8c6
+2022-11-09 21:53:08.879  INFO 15000 --- [main] .j.a.J2CacheSpringCacheAutoConfiguration : 初始化 J2CacheSpringCacheAutoConfiguration
+2022-11-09 21:53:08.898  INFO 15000 --- [main] n.o.j.a.J2CacheAutoConfiguration         : 初始化 J2CacheAutoConfiguration
+2022-11-09 21:53:09.050  INFO 15000 --- [main] n.o.j2cache.util.SerializationUtils      : Using Serializer -> [fst:net.oschina.j2cache.util.FSTSerializer]
+2022-11-09 21:53:09.057  INFO 15000 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L1 CacheProvider : net.oschina.j2cache.caffeine.CaffeineProvider
+2022-11-09 21:53:09.074  INFO 15000 --- [main] .j.a.J2CacheSpringRedisAutoConfiguration : 初始化 J2CacheSpringRedisAutoConfiguration
+2022-11-09 21:53:09.743  INFO 15000 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L2 CacheProvider : net.oschina.j2cache.cache.support.redis.SpringRedisProvider
+2022-11-09 21:53:09.790  INFO 15000 --- [main] net.oschina.j2cache.J2CacheBuilder       : Using cluster policy : net.oschina.j2cache.cache.support.redis.SpringRedisPubSubPolicy
+2022-11-09 21:53:11.350  INFO 15000 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 21:53:11.358  INFO 15000 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-09 21:53:11.359  INFO 15000 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-11-09 21:53:11.359  INFO 15000 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-09 21:53:11.428  INFO 15000 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-11-09 21:53:12.474  INFO 15000 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-11-09 21:53:12.699  INFO 15000 --- [main] mao.tools_j2cache.config.RedissonConfig  : 初始化 RedissonConfig
+2022-11-09 21:53:12.704  INFO 15000 --- [main] mao.tools_j2cache.config.RedissonConfig  : 单机模式redis:127.0.0.1:6379
+2022-11-09 21:53:12.946  INFO 15000 --- [main] org.redisson.Version                     : Redisson 3.17.0
+2022-11-09 21:53:13.723  INFO 15000 --- [redisson-netty-4-16] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-09 21:53:13.742  INFO 15000 --- [redisson-netty-4-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-09 21:53:14.137  INFO 15000 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2022-11-09 21:53:14.417  INFO 15000 --- [main] m.t.s.config.AuthServerConfiguration     : 初始化 AuthServerConfiguration
+2022-11-09 21:53:14.704  WARN 15000 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-09 21:53:14.704  INFO 15000 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-09 21:53:14.823  INFO 15000 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2022-11-09 21:53:15.094  INFO 15000 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-09 21:53:15.588  INFO 15000 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-09 21:53:16.422  INFO 15000 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbConfig@5d32f5db]
+2022-11-09 21:53:16.422  INFO 15000 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbSearcher@69c51fdb]
+2022-11-09 21:53:17.450  INFO 15000 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2022-11-09 21:53:17.451  INFO 15000 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2022-11-09 21:53:17.457  INFO 15000 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2022-11-09 21:53:17.463  INFO 15000 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2022-11-09 21:53:17.469  INFO 15000 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2022-11-09 21:53:17.498  INFO 15000 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2022-11-09 21:53:17.870  INFO 15000 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:53:17.872  INFO 15000 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:53:17.930  INFO 15000 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-09 21:53:17.931  INFO 15000 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2022-11-09 21:53:17.934  INFO 15000 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:53:17.935  INFO 15000 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:53:17.943  INFO 15000 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-09 21:53:18.057  INFO 15000 --- [main] m.tools_j2cache.config.RedisUtilsConfig  : 初始化 RedisUtilsConfig
+2022-11-09 21:53:18.064  INFO 15000 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
+2022-11-09 21:53:18.083  INFO 15000 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2022-11-09 21:53:18.171  INFO 15000 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-09 21:53:18.205  INFO 15000 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2022-11-09 21:53:18.206  INFO 15000 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='mao', url='https://github.com/maomao124/', email='1234@qq.com'}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{auth=DocketInfo{title='权限模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.auth', basePath=[], excludePath=[]}, common=DocketInfo{title='公共模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.common', basePath=[], excludePath=[]}, core=DocketInfo{title='组织岗位模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.core', basePath=[], excludePath=[]}}
+
+2022-11-09 21:53:20.008  INFO 15000 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 21:53:20.331  INFO 15000 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-11-09 21:53:20.373  INFO 15000 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2022-11-09 21:53:20.439  INFO 15000 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:53:20.472  INFO 15000 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:53:20.488  INFO 15000 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:53:20.635  INFO 15000 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2022-11-09 21:53:20.638  INFO 15000 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2022-11-09 21:53:20.833  INFO 15000 --- [main] m.a.dao.auth.RoleAuthorityMapperTest     : Started RoleAuthorityMapperTest in 20.254 seconds (JVM running for 21.872)
+2022-11-09 21:53:20.846  INFO 15000 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server-dev.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:53:20.849  INFO 15000 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server-dev.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:53:20.849  INFO 15000 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:53:20.849  INFO 15000 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:53:20.851  INFO 15000 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:53:20.851  INFO 15000 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:53:20.853  INFO 15000 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] common.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:53:20.853  INFO 15000 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:53:21.580  WARN 15000 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-11-09 21:53:21.580  WARN 15000 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-11-09 21:53:21.581  WARN 15000 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-11-09 21:53:21.582  WARN 15000 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-11-09 21:53:21.585  INFO 15000 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-09 21:53:21.599  INFO 15000 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-11-09 21:53:21.601  INFO 15000 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-11-09 21:53:21.601  INFO 15000 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-11-09 21:53:21.601  INFO 15000 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-11-09 21:53:23.355  INFO 15000 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-11-09 21:53:26.397  INFO 15000 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-11-09 21:53:26.397  INFO 15000 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-11-09 21:53:26.397  INFO 15000 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-11-09 21:53:26.397  INFO 15000 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-11-09 21:53:26.398  INFO 15000 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-11-09 21:53:26.398  WARN 15000 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-11-09 21:53:26.398  WARN 15000 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-11-09 21:53:26.398  INFO 15000 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-11-09 21:53:26.398  INFO 15000 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-11-09 21:53:26.398  INFO 15000 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-11-09 21:53:26.436 ERROR 15000 --- [redisson-netty-4-28] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0xaadbfa98, L:/127.0.0.1:58431 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379) ~[na:1.8.0_332]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253) ~[netty-buffer-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133) ~[netty-buffer-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-common-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.51.Final.jar:4.1.51.Final]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2022-11-09 21:53:26.436 ERROR 15000 --- [redisson-netty-4-7] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0x5ab2b595, L:/127.0.0.1:58428 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379) ~[na:1.8.0_332]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253) ~[netty-buffer-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133) ~[netty-buffer-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-common-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.51.Final.jar:4.1.51.Final]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2022-11-09 21:53:26.443  INFO 15000 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-11-09 21:53:26.451  INFO 15000 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-11-09 21:53:57.056  WARN 16944 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-11-09 21:53:57.069  INFO 16944 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-auth-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2022-11-09 21:53:57.143  INFO 16944 --- [main] m.a.dao.auth.RoleAuthorityMapperTest     : The following profiles are active: dev
+2022-11-09 21:53:57.787  INFO 16944 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [${j2cache.config-location}] not resolvable: Could not resolve placeholder 'j2cache.config-location' in value "${j2cache.config-location}"
+2022-11-09 21:53:58.766  INFO 16944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-09 21:53:58.769  INFO 16944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-09 21:53:58.794  INFO 16944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2022-11-09 21:53:58.879  WARN 16944 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-11-09 21:53:59.168  INFO 16944 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0b06d148-4635-3ec7-a22a-c9adb55261a5
+2022-11-09 21:53:59.279  INFO 16944 --- [main] m.t.config.ValidatorConfig               : 开启hibernate-validator快速返回
+2022-11-09 21:53:59.279  INFO 16944 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_validator.config.ValidatorConfig' of type [mao.tools_validator.config.ValidatorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:53:59.557  INFO 16944 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:53:59.992  INFO 16944 --- [main] mao.tools_j2cache.config.CacheConfig     : 初始化 CacheConfig
+2022-11-09 21:53:59.992  INFO 16944 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_j2cache.config.CacheConfig' of type [mao.tools_j2cache.config.CacheConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:54:01.093  INFO 16944 --- [main] m.t.config.LoginArgResolverConfig        : 初始化 LoginArgResolverConfig
+2022-11-09 21:54:01.520  WARN 16944 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-09 21:54:01.520  INFO 16944 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-09 21:54:01.549  INFO 16944 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@5896cb9c
+2022-11-09 21:54:02.102  INFO 16944 --- [main] .j.a.J2CacheSpringCacheAutoConfiguration : 初始化 J2CacheSpringCacheAutoConfiguration
+2022-11-09 21:54:02.115  INFO 16944 --- [main] n.o.j.a.J2CacheAutoConfiguration         : 初始化 J2CacheAutoConfiguration
+2022-11-09 21:54:02.256  INFO 16944 --- [main] n.o.j2cache.util.SerializationUtils      : Using Serializer -> [fst:net.oschina.j2cache.util.FSTSerializer]
+2022-11-09 21:54:02.262  INFO 16944 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L1 CacheProvider : net.oschina.j2cache.caffeine.CaffeineProvider
+2022-11-09 21:54:02.273  INFO 16944 --- [main] .j.a.J2CacheSpringRedisAutoConfiguration : 初始化 J2CacheSpringRedisAutoConfiguration
+2022-11-09 21:54:02.860  INFO 16944 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L2 CacheProvider : net.oschina.j2cache.cache.support.redis.SpringRedisProvider
+2022-11-09 21:54:02.898  INFO 16944 --- [main] net.oschina.j2cache.J2CacheBuilder       : Using cluster policy : net.oschina.j2cache.cache.support.redis.SpringRedisPubSubPolicy
+2022-11-09 21:54:04.376  INFO 16944 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 21:54:04.386  INFO 16944 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-09 21:54:04.386  INFO 16944 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-11-09 21:54:04.387  INFO 16944 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-09 21:54:04.452  INFO 16944 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-11-09 21:54:05.509  INFO 16944 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-11-09 21:54:05.708  INFO 16944 --- [main] mao.tools_j2cache.config.RedissonConfig  : 初始化 RedissonConfig
+2022-11-09 21:54:05.711  INFO 16944 --- [main] mao.tools_j2cache.config.RedissonConfig  : 单机模式redis:127.0.0.1:6379
+2022-11-09 21:54:05.942  INFO 16944 --- [main] org.redisson.Version                     : Redisson 3.17.0
+2022-11-09 21:54:06.715  INFO 16944 --- [redisson-netty-4-13] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-09 21:54:06.733  INFO 16944 --- [redisson-netty-4-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-09 21:54:07.177  INFO 16944 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2022-11-09 21:54:07.532  INFO 16944 --- [main] m.t.s.config.AuthServerConfiguration     : 初始化 AuthServerConfiguration
+2022-11-09 21:54:07.866  WARN 16944 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-09 21:54:07.866  INFO 16944 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-09 21:54:08.007  INFO 16944 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2022-11-09 21:54:08.308  INFO 16944 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-09 21:54:08.763  INFO 16944 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-09 21:54:09.608  INFO 16944 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbConfig@4aadf144]
+2022-11-09 21:54:09.608  INFO 16944 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbSearcher@68a97fc1]
+2022-11-09 21:54:10.582  INFO 16944 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2022-11-09 21:54:10.584  INFO 16944 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2022-11-09 21:54:10.592  INFO 16944 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2022-11-09 21:54:10.602  INFO 16944 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2022-11-09 21:54:10.609  INFO 16944 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2022-11-09 21:54:10.661  INFO 16944 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2022-11-09 21:54:11.048  INFO 16944 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:54:11.050  INFO 16944 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:54:11.109  INFO 16944 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-09 21:54:11.110  INFO 16944 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2022-11-09 21:54:11.113  INFO 16944 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:54:11.114  INFO 16944 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:54:11.121  INFO 16944 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-09 21:54:11.248  INFO 16944 --- [main] m.tools_j2cache.config.RedisUtilsConfig  : 初始化 RedisUtilsConfig
+2022-11-09 21:54:11.261  INFO 16944 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
+2022-11-09 21:54:11.288  INFO 16944 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2022-11-09 21:54:11.390  INFO 16944 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-09 21:54:11.422  INFO 16944 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2022-11-09 21:54:11.422  INFO 16944 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='mao', url='https://github.com/maomao124/', email='1234@qq.com'}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{auth=DocketInfo{title='权限模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.auth', basePath=[], excludePath=[]}, common=DocketInfo{title='公共模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.common', basePath=[], excludePath=[]}, core=DocketInfo{title='组织岗位模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.core', basePath=[], excludePath=[]}}
+
+2022-11-09 21:54:13.286  INFO 16944 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 21:54:13.669  INFO 16944 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-11-09 21:54:13.713  INFO 16944 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2022-11-09 21:54:13.782  INFO 16944 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:54:13.828  INFO 16944 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:54:13.841  INFO 16944 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:54:13.992  INFO 16944 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2022-11-09 21:54:13.995  INFO 16944 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2022-11-09 21:54:14.164  INFO 16944 --- [main] m.a.dao.auth.RoleAuthorityMapperTest     : Started RoleAuthorityMapperTest in 21.003 seconds (JVM running for 22.66)
+2022-11-09 21:54:14.192  INFO 16944 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server-dev.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:54:14.197  INFO 16944 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server-dev.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:54:14.197  INFO 16944 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:54:14.214  INFO 16944 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:54:14.217  INFO 16944 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:54:14.218  INFO 16944 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:54:14.220  INFO 16944 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] common.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:54:14.220  INFO 16944 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:54:14.825  WARN 16944 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-11-09 21:54:14.825  WARN 16944 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-11-09 21:54:14.826  WARN 16944 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-11-09 21:54:14.827  WARN 16944 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-11-09 21:54:14.830  INFO 16944 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-09 21:54:14.845  INFO 16944 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-11-09 21:54:14.847  INFO 16944 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-11-09 21:54:14.847  INFO 16944 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-11-09 21:54:14.847  INFO 16944 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-11-09 21:54:16.683  INFO 16944 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-11-09 21:54:19.693  INFO 16944 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-11-09 21:54:19.693  INFO 16944 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-11-09 21:54:19.694  INFO 16944 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-11-09 21:54:19.695  INFO 16944 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-11-09 21:54:19.695  INFO 16944 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-11-09 21:54:19.696  WARN 16944 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-11-09 21:54:19.696  WARN 16944 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-11-09 21:54:19.696  INFO 16944 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-11-09 21:54:19.696  INFO 16944 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-11-09 21:54:19.696  INFO 16944 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-11-09 21:54:19.731  INFO 16944 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-11-09 21:54:19.742  INFO 16944 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-11-09 21:56:36.585  WARN 17716 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-11-09 21:56:36.598  INFO 17716 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-auth-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2022-11-09 21:56:36.676  INFO 17716 --- [main] mao.auth_server.dao.auth.RoleMapperTest  : The following profiles are active: dev
+2022-11-09 21:56:37.351  INFO 17716 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [${j2cache.config-location}] not resolvable: Could not resolve placeholder 'j2cache.config-location' in value "${j2cache.config-location}"
+2022-11-09 21:56:38.290  INFO 17716 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-09 21:56:38.294  INFO 17716 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-09 21:56:38.318  INFO 17716 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2022-11-09 21:56:38.405  WARN 17716 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-11-09 21:56:38.716  INFO 17716 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0b06d148-4635-3ec7-a22a-c9adb55261a5
+2022-11-09 21:56:38.836  INFO 17716 --- [main] m.t.config.ValidatorConfig               : 开启hibernate-validator快速返回
+2022-11-09 21:56:38.836  INFO 17716 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_validator.config.ValidatorConfig' of type [mao.tools_validator.config.ValidatorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:56:39.134  INFO 17716 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:56:39.669  INFO 17716 --- [main] mao.tools_j2cache.config.CacheConfig     : 初始化 CacheConfig
+2022-11-09 21:56:39.669  INFO 17716 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_j2cache.config.CacheConfig' of type [mao.tools_j2cache.config.CacheConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:56:40.753  INFO 17716 --- [main] m.t.config.LoginArgResolverConfig        : 初始化 LoginArgResolverConfig
+2022-11-09 21:56:41.102  WARN 17716 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-09 21:56:41.103  INFO 17716 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-09 21:56:41.125  INFO 17716 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@44b9c7c4
+2022-11-09 21:56:41.624  INFO 17716 --- [main] .j.a.J2CacheSpringCacheAutoConfiguration : 初始化 J2CacheSpringCacheAutoConfiguration
+2022-11-09 21:56:41.645  INFO 17716 --- [main] n.o.j.a.J2CacheAutoConfiguration         : 初始化 J2CacheAutoConfiguration
+2022-11-09 21:56:41.826  INFO 17716 --- [main] n.o.j2cache.util.SerializationUtils      : Using Serializer -> [fst:net.oschina.j2cache.util.FSTSerializer]
+2022-11-09 21:56:41.834  INFO 17716 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L1 CacheProvider : net.oschina.j2cache.caffeine.CaffeineProvider
+2022-11-09 21:56:41.846  INFO 17716 --- [main] .j.a.J2CacheSpringRedisAutoConfiguration : 初始化 J2CacheSpringRedisAutoConfiguration
+2022-11-09 21:56:42.317  INFO 17716 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L2 CacheProvider : net.oschina.j2cache.cache.support.redis.SpringRedisProvider
+2022-11-09 21:56:42.344  INFO 17716 --- [main] net.oschina.j2cache.J2CacheBuilder       : Using cluster policy : net.oschina.j2cache.cache.support.redis.SpringRedisPubSubPolicy
+2022-11-09 21:56:43.777  INFO 17716 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 21:56:43.786  INFO 17716 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-09 21:56:43.787  INFO 17716 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-11-09 21:56:43.788  INFO 17716 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-09 21:56:43.872  INFO 17716 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-11-09 21:56:45.041  INFO 17716 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-11-09 21:56:45.256  INFO 17716 --- [main] mao.tools_j2cache.config.RedissonConfig  : 初始化 RedissonConfig
+2022-11-09 21:56:45.259  INFO 17716 --- [main] mao.tools_j2cache.config.RedissonConfig  : 单机模式redis:127.0.0.1:6379
+2022-11-09 21:56:45.569  INFO 17716 --- [main] org.redisson.Version                     : Redisson 3.17.0
+2022-11-09 21:56:46.443  INFO 17716 --- [redisson-netty-4-13] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-09 21:56:46.462  INFO 17716 --- [redisson-netty-4-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-09 21:56:46.937  INFO 17716 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2022-11-09 21:56:47.330  INFO 17716 --- [main] m.t.s.config.AuthServerConfiguration     : 初始化 AuthServerConfiguration
+2022-11-09 21:56:47.646  WARN 17716 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-09 21:56:47.646  INFO 17716 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-09 21:56:47.771  INFO 17716 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2022-11-09 21:56:48.024  INFO 17716 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-09 21:56:48.473  INFO 17716 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-09 21:56:49.333  INFO 17716 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbConfig@63053b71]
+2022-11-09 21:56:49.333  INFO 17716 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbSearcher@4687c184]
+2022-11-09 21:56:50.351  INFO 17716 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2022-11-09 21:56:50.352  INFO 17716 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2022-11-09 21:56:50.360  INFO 17716 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2022-11-09 21:56:50.368  INFO 17716 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2022-11-09 21:56:50.374  INFO 17716 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2022-11-09 21:56:50.406  INFO 17716 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2022-11-09 21:56:50.779  INFO 17716 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:56:50.780  INFO 17716 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:56:50.844  INFO 17716 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-09 21:56:50.846  INFO 17716 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2022-11-09 21:56:50.851  INFO 17716 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:56:50.852  INFO 17716 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:56:50.863  INFO 17716 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-09 21:56:50.999  INFO 17716 --- [main] m.tools_j2cache.config.RedisUtilsConfig  : 初始化 RedisUtilsConfig
+2022-11-09 21:56:51.014  INFO 17716 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
+2022-11-09 21:56:51.045  INFO 17716 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2022-11-09 21:56:51.159  INFO 17716 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-09 21:56:51.193  INFO 17716 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2022-11-09 21:56:51.194  INFO 17716 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='mao', url='https://github.com/maomao124/', email='1234@qq.com'}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{auth=DocketInfo{title='权限模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.auth', basePath=[], excludePath=[]}, common=DocketInfo{title='公共模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.common', basePath=[], excludePath=[]}, core=DocketInfo{title='组织岗位模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.core', basePath=[], excludePath=[]}}
+
+2022-11-09 21:56:53.015  INFO 17716 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 21:56:53.426  INFO 17716 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-11-09 21:56:53.471  INFO 17716 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2022-11-09 21:56:53.548  INFO 17716 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:56:53.608  INFO 17716 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:56:53.624  INFO 17716 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:56:53.772  INFO 17716 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2022-11-09 21:56:53.774  INFO 17716 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2022-11-09 21:56:53.973  INFO 17716 --- [main] mao.auth_server.dao.auth.RoleMapperTest  : Started RoleMapperTest in 21.384 seconds (JVM running for 22.941)
+2022-11-09 21:56:53.988  INFO 17716 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server-dev.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:56:53.991  INFO 17716 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server-dev.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:56:53.991  INFO 17716 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:56:53.991  INFO 17716 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:56:53.994  INFO 17716 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:56:53.995  INFO 17716 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:56:53.997  INFO 17716 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] common.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:56:53.998  INFO 17716 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:56:54.682  WARN 17716 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-11-09 21:56:54.682  WARN 17716 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-11-09 21:56:54.682  WARN 17716 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-11-09 21:56:54.683  WARN 17716 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-11-09 21:56:54.687  INFO 17716 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-09 21:56:54.703  INFO 17716 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-11-09 21:56:54.706  INFO 17716 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-11-09 21:56:54.706  INFO 17716 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-11-09 21:56:54.706  INFO 17716 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-11-09 21:56:56.444  INFO 17716 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-11-09 21:56:59.472  INFO 17716 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-11-09 21:56:59.472  INFO 17716 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-11-09 21:56:59.473  INFO 17716 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-11-09 21:56:59.473  INFO 17716 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-11-09 21:56:59.473  INFO 17716 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-11-09 21:56:59.473  WARN 17716 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-11-09 21:56:59.473  WARN 17716 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-11-09 21:56:59.474  INFO 17716 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-11-09 21:56:59.474  INFO 17716 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-11-09 21:56:59.474  INFO 17716 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-11-09 21:56:59.512 ERROR 17716 --- [redisson-netty-4-5] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0x49a201b7, L:/127.0.0.1:59036 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379) ~[na:1.8.0_332]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253) ~[netty-buffer-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133) ~[netty-buffer-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-common-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.51.Final.jar:4.1.51.Final]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2022-11-09 21:56:59.519  INFO 17716 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-11-09 21:56:59.528  INFO 17716 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-11-09 21:58:24.619  WARN 1536 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-11-09 21:58:24.632  INFO 1536 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-auth-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2022-11-09 21:58:24.692  INFO 1536 --- [main] m.a.dao.auth.RoleOrgMapperTest           : The following profiles are active: dev
+2022-11-09 21:58:25.287  INFO 1536 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [${j2cache.config-location}] not resolvable: Could not resolve placeholder 'j2cache.config-location' in value "${j2cache.config-location}"
+2022-11-09 21:58:26.199  INFO 1536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-09 21:58:26.203  INFO 1536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-09 21:58:26.230  INFO 1536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 Redis repository interfaces.
+2022-11-09 21:58:26.318  WARN 1536 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-11-09 21:58:26.601  INFO 1536 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0b06d148-4635-3ec7-a22a-c9adb55261a5
+2022-11-09 21:58:26.702  INFO 1536 --- [main] m.t.config.ValidatorConfig               : 开启hibernate-validator快速返回
+2022-11-09 21:58:26.703  INFO 1536 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_validator.config.ValidatorConfig' of type [mao.tools_validator.config.ValidatorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:58:26.978  INFO 1536 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:58:27.436  INFO 1536 --- [main] mao.tools_j2cache.config.CacheConfig     : 初始化 CacheConfig
+2022-11-09 21:58:27.436  INFO 1536 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_j2cache.config.CacheConfig' of type [mao.tools_j2cache.config.CacheConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-09 21:58:28.260  INFO 1536 --- [main] m.t.config.LoginArgResolverConfig        : 初始化 LoginArgResolverConfig
+2022-11-09 21:58:28.539  WARN 1536 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-09 21:58:28.539  INFO 1536 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-09 21:58:28.561  INFO 1536 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@2712e8f4
+2022-11-09 21:58:28.972  INFO 1536 --- [main] .j.a.J2CacheSpringCacheAutoConfiguration : 初始化 J2CacheSpringCacheAutoConfiguration
+2022-11-09 21:58:28.987  INFO 1536 --- [main] n.o.j.a.J2CacheAutoConfiguration         : 初始化 J2CacheAutoConfiguration
+2022-11-09 21:58:29.105  INFO 1536 --- [main] n.o.j2cache.util.SerializationUtils      : Using Serializer -> [fst:net.oschina.j2cache.util.FSTSerializer]
+2022-11-09 21:58:29.111  INFO 1536 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L1 CacheProvider : net.oschina.j2cache.caffeine.CaffeineProvider
+2022-11-09 21:58:29.119  INFO 1536 --- [main] .j.a.J2CacheSpringRedisAutoConfiguration : 初始化 J2CacheSpringRedisAutoConfiguration
+2022-11-09 21:58:29.610  INFO 1536 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L2 CacheProvider : net.oschina.j2cache.cache.support.redis.SpringRedisProvider
+2022-11-09 21:58:29.637  INFO 1536 --- [main] net.oschina.j2cache.J2CacheBuilder       : Using cluster policy : net.oschina.j2cache.cache.support.redis.SpringRedisPubSubPolicy
+2022-11-09 21:58:31.045  INFO 1536 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 21:58:31.055  INFO 1536 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-09 21:58:31.056  INFO 1536 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-11-09 21:58:31.056  INFO 1536 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-09 21:58:31.118  INFO 1536 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-11-09 21:58:32.179  INFO 1536 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-11-09 21:58:32.525  INFO 1536 --- [main] mao.tools_j2cache.config.RedissonConfig  : 初始化 RedissonConfig
+2022-11-09 21:58:32.528  INFO 1536 --- [main] mao.tools_j2cache.config.RedissonConfig  : 单机模式redis:127.0.0.1:6379
+2022-11-09 21:58:32.792  INFO 1536 --- [main] org.redisson.Version                     : Redisson 3.17.0
+2022-11-09 21:58:33.680  INFO 1536 --- [redisson-netty-4-17] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-09 21:58:33.704  INFO 1536 --- [redisson-netty-4-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-09 21:58:34.163  INFO 1536 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2022-11-09 21:58:34.472  INFO 1536 --- [main] m.t.s.config.AuthServerConfiguration     : 初始化 AuthServerConfiguration
+2022-11-09 21:58:34.759  WARN 1536 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-09 21:58:34.759  INFO 1536 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-09 21:58:34.868  INFO 1536 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2022-11-09 21:58:35.096  INFO 1536 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-09 21:58:35.581  INFO 1536 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-09 21:58:36.599  INFO 1536 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbConfig@227fc322]
+2022-11-09 21:58:36.600  INFO 1536 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbSearcher@63053b71]
+2022-11-09 21:58:37.620  INFO 1536 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2022-11-09 21:58:37.622  INFO 1536 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2022-11-09 21:58:37.641  INFO 1536 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2022-11-09 21:58:37.652  INFO 1536 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2022-11-09 21:58:37.658  INFO 1536 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2022-11-09 21:58:37.690  INFO 1536 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2022-11-09 21:58:38.077  INFO 1536 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:58:38.079  INFO 1536 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:58:38.147  INFO 1536 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-09 21:58:38.148  INFO 1536 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2022-11-09 21:58:38.151  INFO 1536 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:58:38.152  INFO 1536 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-09 21:58:38.161  INFO 1536 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-09 21:58:38.285  INFO 1536 --- [main] m.tools_j2cache.config.RedisUtilsConfig  : 初始化 RedisUtilsConfig
+2022-11-09 21:58:38.295  INFO 1536 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
+2022-11-09 21:58:38.316  INFO 1536 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2022-11-09 21:58:38.428  INFO 1536 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-09 21:58:38.473  INFO 1536 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2022-11-09 21:58:38.473  INFO 1536 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='mao', url='https://github.com/maomao124/', email='1234@qq.com'}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{auth=DocketInfo{title='权限模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.auth', basePath=[], excludePath=[]}, common=DocketInfo{title='公共模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.common', basePath=[], excludePath=[]}, core=DocketInfo{title='组织岗位模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.core', basePath=[], excludePath=[]}}
+
+2022-11-09 21:58:40.382  INFO 1536 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-09 21:58:40.698  INFO 1536 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-11-09 21:58:40.737  INFO 1536 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2022-11-09 21:58:40.803  INFO 1536 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:58:40.835  INFO 1536 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:58:40.849  INFO 1536 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 21:58:40.986  INFO 1536 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2022-11-09 21:58:40.988  INFO 1536 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2022-11-09 21:58:41.165  INFO 1536 --- [main] m.a.dao.auth.RoleOrgMapperTest           : Started RoleOrgMapperTest in 20.429 seconds (JVM running for 22.186)
+2022-11-09 21:58:41.178  INFO 1536 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server-dev.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:58:41.180  INFO 1536 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server-dev.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:58:41.180  INFO 1536 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:58:41.180  INFO 1536 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:58:41.182  INFO 1536 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:58:41.183  INFO 1536 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:58:41.184  INFO 1536 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] common.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-09 21:58:41.184  INFO 1536 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-09 21:58:41.812  WARN 1536 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-11-09 21:58:41.813  WARN 1536 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-11-09 21:58:41.813  WARN 1536 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-11-09 21:58:41.814  WARN 1536 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-11-09 21:58:41.816  INFO 1536 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-09 21:58:41.829  INFO 1536 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-11-09 21:58:41.832  INFO 1536 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-11-09 21:58:41.832  INFO 1536 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-11-09 21:58:41.832  INFO 1536 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-11-09 21:58:43.715  INFO 1536 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-11-09 21:58:46.732  INFO 1536 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-11-09 21:58:46.732  INFO 1536 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-11-09 21:58:46.733  INFO 1536 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-11-09 21:58:46.733  INFO 1536 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-11-09 21:58:46.733  INFO 1536 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-11-09 21:58:46.733  WARN 1536 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-11-09 21:58:46.733  WARN 1536 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-11-09 21:58:46.734  INFO 1536 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-11-09 21:58:46.734  INFO 1536 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-11-09 21:58:46.734  INFO 1536 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-11-09 21:58:46.769  INFO 1536 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-11-09 21:58:46.779  INFO 1536 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
