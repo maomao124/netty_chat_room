@@ -528,6 +528,22 @@ public class SwaggerConfigurationProperties
         {
             this.excludePath = excludePath;
         }
+
+        @Override
+        public String toString()
+        {
+            final StringBuffer sb = new StringBuffer("DocketInfo{");
+            sb.append("title='").append(title).append('\'');
+            sb.append(", group='").append(group).append('\'');
+            sb.append(", description='").append(description).append('\'');
+            sb.append(", version='").append(version).append('\'');
+            sb.append(", contact=").append(contact);
+            sb.append(", basePackage='").append(basePackage).append('\'');
+            sb.append(", basePath=").append(basePath);
+            sb.append(", excludePath=").append(excludePath);
+            sb.append('}');
+            return sb.toString();
+        }
     }
 
     public static class Contact
@@ -625,6 +641,17 @@ public class SwaggerConfigurationProperties
         public void setEmail(String email)
         {
             this.email = email;
+        }
+
+        @Override
+        public String toString()
+        {
+            final StringBuffer sb = new StringBuffer("Contact{");
+            sb.append("name='").append(name).append('\'');
+            sb.append(", url='").append(url).append('\'');
+            sb.append(", email='").append(email).append('\'');
+            sb.append('}');
+            return sb.toString();
         }
     }
 

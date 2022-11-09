@@ -247,6 +247,7 @@ http://localhost:8080/doc.html
     public void init()
     {
         log.info("初始化swagger接口文档");
+        log.info("\n" + swaggerConfigurationProperties.toString());
     }
 
 }

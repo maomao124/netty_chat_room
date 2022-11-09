@@ -43,6 +43,24 @@
             <groupId>mao</groupId>
             <artifactId>tools-core</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-j2cache</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-swagger2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-validator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-xss</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
@@ -53,14 +71,16 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-        </dependency>
+
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework</groupId>-->
+        <!--            <artifactId>spring-web</artifactId>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>com.baomidou</groupId>
@@ -84,22 +104,7 @@
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
         </dependency>
-        <dependency>
-            <groupId>mao</groupId>
-            <artifactId>tools-j2cache</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>mao</groupId>
-            <artifactId>tools-swagger2</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>mao</groupId>
-            <artifactId>tools-validator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>mao</groupId>
-            <artifactId>tools-xss</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
@@ -119,6 +124,7 @@
             <groupId>com.github.whvcse</groupId>
             <artifactId>easy-captcha</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
@@ -129,6 +135,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
         <dependency>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm</artifactId>
@@ -139,27 +146,46 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <exclusions>
-                <exclusion>
-                    <groupId>org.apache.tomcat.embed</groupId>
-                    <artifactId>tomcat-embed-websocket</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
-                </exclusion>
+                <!--                <exclusion>-->
+                <!--                    <groupId>org.apache.tomcat.embed</groupId>-->
+                <!--                    <artifactId>tomcat-embed-websocket</artifactId>-->
+                <!--                </exclusion>-->
+                <!--                <exclusion>-->
+                <!--                    <groupId>org.springframework.boot</groupId>-->
+                <!--                    <artifactId>spring-boot-starter-tomcat</artifactId>-->
+                <!--                </exclusion>-->
+                <!--                <exclusion>-->
+                <!--                    <groupId>org.springframework</groupId>-->
+                <!--                    <artifactId>spring-web</artifactId>-->
+                <!--                </exclusion>-->
             </exclusions>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-undertow</artifactId>
-        </dependency>
+
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-undertow</artifactId>-->
+        <!--            <exclusions>-->
+        <!--                <exclusion>-->
+        <!--                    <artifactId>wildfly-common</artifactId>-->
+        <!--                    <groupId>org.wildfly.common</groupId>-->
+        <!--                </exclusion>-->
+        <!--            </exclusions>-->
+        <!--        </dependency>-->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>HdrHistogram</artifactId>
+                    <groupId>org.hdrhistogram</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
@@ -167,6 +193,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!--                <dependency>-->
+        <!--                    <groupId>org.springframework</groupId>-->
+        <!--                    <artifactId>spring-context</artifactId>-->
+        <!--                </dependency>-->
+
 
     </dependencies>
 

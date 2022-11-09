@@ -2,18 +2,22 @@
 def:
   mysql:
     database: authority
-  swagger:
-    enabled: true
-    docket:
-      auth:
-        title: 权限模块
-        base-package: mao.auth_server.controller.auth
-      common:
-        title: 公共模块
-        base-package: mao.auth_server.controller.common
-      core:
-        title: 组织岗位模块
-        base-package: mao.auth_server.controller.core
+swagger:
+  enabled: true
+  contact:
+    name: mao
+    url: https://github.com/maomao124/
+    email: 1234@qq.com
+  docket:
+    auth:
+      title: 权限模块
+      base-package: mao.auth_server.controller.auth
+    common:
+      title: 公共模块
+      base-package: mao.auth_server.controller.common
+    core:
+      title: 组织岗位模块
+      base-package: mao.auth_server.controller.core
 
 authentication:
   user:

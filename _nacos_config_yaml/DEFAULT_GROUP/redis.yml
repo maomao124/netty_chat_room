@@ -1,11 +1,11 @@
 # redis 通用配置， 不同的环境，需要配置不同的链接信息，
 # 只需要将这段信息复制到具体环境的配置文件中进行修改即可
 # 如：复制到auth-server-dev.yml中将数据库名和ip改掉
-def:
-  redis:
-    hosts: 127.0.0.1:6379
-    password: 123456
-    database: 0
+
+redis:
+  hosts: 127.0.0.1:6379
+  password: 123456
+  database: 0
 
 spring:
   cache:

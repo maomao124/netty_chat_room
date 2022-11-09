@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <!--引入其他配置文件-->
-    <include resource="logback-base.xml"/>
+    <!--<include resource="logback-base.xml"/>-->
     <!--
     <logger>用来设置某一个包或者具体的某一个类的日志打印级别、
     以及指定<appender>。<logger>仅有一个name属性，
@@ -15,13 +15,13 @@
     <!--开发环境-->
     <springProfile name="dev">
         <logger name="mao" additivity="false" level="debug">
-            <appender-ref ref="LOG_CONSOLE"/>
+<!--            <appender-ref ref="LOG_CONSOLE"/>-->
         </logger>
     </springProfile>
     <!--生产环境-->
     <springProfile name="pro">
         <logger name="mao" additivity="false" level="info">
-            <appender-ref ref="LOG_FILE"/>
+<!--            <appender-ref ref="LOG_FILE"/>-->
         </logger>
     </springProfile>
 
@@ -31,7 +31,7 @@
     可以包含零个或多个元素，标识这个appender将会添加到这个logger。
     -->
     <root level="info">
-        <appender-ref ref="LOG_CONSOLE"/>
-        <appender-ref ref="LOG_FILE"/>
+<!--        <appender-ref ref="LOG_CONSOLE"/>-->
+<!--        <appender-ref ref="LOG_FILE"/>-->
     </root>
 </configuration>
