@@ -1,15 +1,27 @@
 package mao.auth_server;
 
 import lombok.extern.slf4j.Slf4j;
+import mao.tools_jwt.server.EnableAuthServer;
+import mao.tools_user.annotation.EnableLoginArgResolver;
+import mao.tools_validator.config.EnableFormValidator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.core.env.ConfigurableEnvironment;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 @Slf4j
+@EnableDiscoveryClient
+@EnableAuthServer
+@EnableFeignClients
+@EnableAspectJAutoProxy(proxyTargetClass = true, exposeProxy = true)
+@EnableLoginArgResolver
+@EnableFormValidator
 @SpringBootApplication
 public class AuthServerApplication
 {
