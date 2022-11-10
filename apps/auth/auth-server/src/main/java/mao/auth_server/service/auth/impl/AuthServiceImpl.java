@@ -3,8 +3,14 @@ package mao.auth_server.service.auth.impl;
 import lombok.extern.slf4j.Slf4j;
 import mao.auth_entity.dto.auth.LoginDTO;
 import mao.auth_server.service.auth.AuthService;
+import mao.auth_server.service.auth.UserService;
 import mao.tools_core.base.R;
+import mao.tools_jwt.server.utils.JwtTokenServerUtils;
+import mao.toolsdozer.utils.DozerUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * Project name(项目名称)：authority
@@ -23,6 +29,18 @@ import org.springframework.stereotype.Service;
 @Service
 public class AuthServiceImpl implements AuthService
 {
+
+    @Resource
+    private JwtTokenServerUtils jwtTokenServerUtils;
+
+    @Resource
+    private UserService userService;
+
+    //@Resource
+    //private ResourceService resourceService;
+
+    @Resource
+    private DozerUtils dozer;
 
     @Override
     public R<LoginDTO> login(String account, String password)

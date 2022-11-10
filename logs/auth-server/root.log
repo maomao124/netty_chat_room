@@ -3497,3 +3497,9 @@ docket：{auth=DocketInfo{title='权限模块', group='', description='在线文
 2022-11-10 20:27:18.263 DEBUG 10636 --- [http-nio-8764-exec-4] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: captcha:10001
 2022-11-10 20:27:18.264 DEBUG 10636 --- [http-nio-8764-exec-4] m.a.s.auth.impl.ValidateCodeServiceImpl  : key：captcha:10001  的验证码：水帮晚呀雪五
 2022-11-10 20:27:18.288 DEBUG 10636 --- [http-nio-8764-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-10 20:33:21.527 DEBUG 10636 --- [http-nio-8764-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-10 20:33:21.528 DEBUG 10636 --- [http-nio-8764-exec-6] mao.tools_xss.filter.XssFilter           : has xssfiter path[/anno/captcha] need XssFilter, go to XssRequestWrapper
+2022-11-10 20:33:21.529 DEBUG 10636 --- [http-nio-8764-exec-6] mao.tools_xss.utils.XssUtils             : raw value before xssClean: captcha:10001
+2022-11-10 20:33:21.529 DEBUG 10636 --- [http-nio-8764-exec-6] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: captcha:10001
+2022-11-10 20:33:21.529 DEBUG 10636 --- [http-nio-8764-exec-6] m.a.s.auth.impl.ValidateCodeServiceImpl  : key：captcha:10001  的验证码：村十房如古什
+2022-11-10 20:33:21.546 DEBUG 10636 --- [http-nio-8764-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
