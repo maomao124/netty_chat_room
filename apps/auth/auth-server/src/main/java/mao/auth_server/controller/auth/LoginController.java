@@ -33,6 +33,7 @@ public class LoginController
     @Resource
     private ValidateCodeService validateCodeService;
 
+
     @ApiOperation(value = "验证码", notes = "验证码")
     @GetMapping(value = "/captcha", produces = "image/png")
     public void captcha(@RequestParam(value = "key") String key,

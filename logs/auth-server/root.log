@@ -3475,3 +3475,25 @@ docket：{auth=DocketInfo{title='权限模块', group='', description='在线文
 2022-11-10 20:25:01.830  INFO 10636 --- [RMI TCP Connection(3)-192.168.202.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2022-11-10 20:25:01.846  INFO 10636 --- [RMI TCP Connection(3)-192.168.202.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
 2022-11-10 20:25:02.365  INFO 10636 --- [RMI TCP Connection(4)-192.168.202.1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-11-10 20:26:46.839 DEBUG 10636 --- [http-nio-8764-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-10 20:26:46.840 DEBUG 10636 --- [http-nio-8764-exec-1] mao.tools_xss.filter.XssFilter           : has xssfiter path[/v2/api-docs] need XssFilter, go to XssRequestWrapper
+2022-11-10 20:26:46.857 DEBUG 10636 --- [http-nio-8764-exec-1] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 公共模块
+2022-11-10 20:26:46.902 DEBUG 10636 --- [http-nio-8764-exec-1] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 公共模块
+2022-11-10 20:26:46.970 DEBUG 10636 --- [http-nio-8764-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-10 20:26:51.144 DEBUG 10636 --- [http-nio-8764-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-10 20:26:51.145 DEBUG 10636 --- [http-nio-8764-exec-2] mao.tools_xss.filter.XssFilter           : has xssfiter path[/v2/api-docs] need XssFilter, go to XssRequestWrapper
+2022-11-10 20:26:51.145 DEBUG 10636 --- [http-nio-8764-exec-2] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 组织岗位模块
+2022-11-10 20:26:51.146 DEBUG 10636 --- [http-nio-8764-exec-2] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 组织岗位模块
+2022-11-10 20:26:51.148 DEBUG 10636 --- [http-nio-8764-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-10 20:27:15.894 DEBUG 10636 --- [http-nio-8764-exec-3] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-10 20:27:15.894 DEBUG 10636 --- [http-nio-8764-exec-3] mao.tools_xss.filter.XssFilter           : has xssfiter path[/anno/captcha] need XssFilter, go to XssRequestWrapper
+2022-11-10 20:27:15.903 DEBUG 10636 --- [http-nio-8764-exec-3] mao.tools_xss.utils.XssUtils             : raw value before xssClean: captcha:10001
+2022-11-10 20:27:15.903 DEBUG 10636 --- [http-nio-8764-exec-3] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: captcha:10001
+2022-11-10 20:27:15.928 DEBUG 10636 --- [http-nio-8764-exec-3] m.a.s.auth.impl.ValidateCodeServiceImpl  : key：captcha:10001  的验证码：造动代工成建
+2022-11-10 20:27:16.277 DEBUG 10636 --- [http-nio-8764-exec-3] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-10 20:27:18.262 DEBUG 10636 --- [http-nio-8764-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-10 20:27:18.262 DEBUG 10636 --- [http-nio-8764-exec-4] mao.tools_xss.filter.XssFilter           : has xssfiter path[/anno/captcha] need XssFilter, go to XssRequestWrapper
+2022-11-10 20:27:18.263 DEBUG 10636 --- [http-nio-8764-exec-4] mao.tools_xss.utils.XssUtils             : raw value before xssClean: captcha:10001
+2022-11-10 20:27:18.263 DEBUG 10636 --- [http-nio-8764-exec-4] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: captcha:10001
+2022-11-10 20:27:18.264 DEBUG 10636 --- [http-nio-8764-exec-4] m.a.s.auth.impl.ValidateCodeServiceImpl  : key：captcha:10001  的验证码：水帮晚呀雪五
+2022-11-10 20:27:18.288 DEBUG 10636 --- [http-nio-8764-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
