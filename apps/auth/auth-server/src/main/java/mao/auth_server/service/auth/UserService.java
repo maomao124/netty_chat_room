@@ -34,7 +34,6 @@ public interface UserService extends IService<User>
     List<User> findUserByRoleId(Long roleId, String keyword);
 
     /**
-     *
      * 修改输错密码的次数
      *
      * @param id id
@@ -42,7 +41,6 @@ public interface UserService extends IService<User>
     void updatePasswordErrorNumById(Long id);
 
     /**
-     *
      * 根据账号查询用户
      *
      * @param account 账户
@@ -51,7 +49,6 @@ public interface UserService extends IService<User>
     User getByAccount(String account);
 
     /**
-     *
      * 修改用户最后一次登录 时间
      *
      * @param account 账户
@@ -61,14 +58,12 @@ public interface UserService extends IService<User>
     /**
      * 保存用户
      *
-     *
      * @param user 用户
      * @return {@link User}
      */
     User saveUser(User user);
 
     /**
-     *
      * 重置密码
      *
      * @param ids id
@@ -79,14 +74,13 @@ public interface UserService extends IService<User>
     /**
      * 更新用户
      *
-     *
      * @param user 用户
      * @return {@link User}
      */
     User updateUser(User user);
 
     /**
-     * 删除
+     * 删除，删除的是用户角色表的数据
      *
      * @param ids id
      * @return boolean
@@ -94,7 +88,6 @@ public interface UserService extends IService<User>
     boolean removeUser(List<Long> ids);
 
     /**
-     *
      * 分页
      *
      * @param page    页面
@@ -105,7 +98,6 @@ public interface UserService extends IService<User>
 
     /**
      * 更新密码
-     *
      *
      * @param data UserUpdatePasswordDTO
      * @return {@link Boolean}
