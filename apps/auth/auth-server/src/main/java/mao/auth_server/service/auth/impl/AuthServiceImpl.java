@@ -3,6 +3,8 @@ package mao.auth_server.service.auth.impl;
 import lombok.extern.slf4j.Slf4j;
 import mao.auth_entity.dto.auth.LoginDTO;
 import mao.auth_server.service.auth.AuthService;
+import mao.auth_server.service.auth.PasswordEncoderService;
+import mao.auth_server.service.auth.ResourceService;
 import mao.auth_server.service.auth.UserService;
 import mao.tools_core.base.R;
 import mao.tools_jwt.server.utils.JwtTokenServerUtils;
@@ -36,15 +38,20 @@ public class AuthServiceImpl implements AuthService
     @Resource
     private UserService userService;
 
-    //@Resource
-    //private ResourceService resourceService;
+    @Resource
+    private ResourceService resourceService;
 
     @Resource
     private DozerUtils dozer;
+
+    @Resource
+    private PasswordEncoderService passwordEncoderService;
 
     @Override
     public R<LoginDTO> login(String account, String password)
     {
         return null;
     }
+
+
 }
