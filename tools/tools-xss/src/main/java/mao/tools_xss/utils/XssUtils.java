@@ -91,7 +91,7 @@ public class XssUtils
 
                 str = str.replaceAll("&lt;", "<");
                 str = str.replaceAll("&gt;", ">");*/
-                log.debug("xssfilter value after xssClean" + str);
+                log.debug("xssfilter value after xssClean: " + str);
 
                 return str;
             }
