@@ -1139,3 +1139,35 @@ docket：{auth=DocketInfo{title='权限模块', group='', description='在线文
 2022-11-10 12:59:14.362 DEBUG 19972 --- [http-nio-8764-exec-8] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 公共模块
 2022-11-10 12:59:14.452 DEBUG 19972 --- [http-nio-8764-exec-8] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean公共模块
 2022-11-10 12:59:14.493 DEBUG 19972 --- [http-nio-8764-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-10 13:01:55.810  INFO 19972 --- [j2CacheRedisMessageListenerContainer-2] n.o.j.c.s.r.SpringRedisMessageListener   : Node-7921688 quit to j2cache
+2022-11-10 13:06:52.173  WARN 19972 --- [Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-11-10 13:06:52.174  WARN 19972 --- [Thread-32] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-11-10 13:06:52.174  WARN 19972 --- [Thread-32] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-11-10 13:06:52.175  WARN 19972 --- [Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-11-10 13:06:52.183  INFO 19972 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-10 13:06:52.200  INFO 19972 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-11-10 13:06:52.201  INFO 19972 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@auth-server:192.168.202.1:8764 from beat map.
+2022-11-10 13:06:52.201  INFO 19972 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 27ce69b0-bff1-4c03-8f3e-0ea5559a5732 deregistering service DEFAULT_GROUP@@auth-server with instance: Instance{instanceId='null', ip='192.168.202.1', port=8764, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2022-11-10 13:06:52.205  INFO 19972 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-11-10 13:06:52.206  INFO 19972 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-11-10 13:06:53.208  INFO 19972 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"dom\":\"DEFAULT_GROUP@@auth-server\",\"name\":\"DEFAULT_GROUP@@auth-server\",\"cacheMillis\":10000,\"lastRefTime\":1668056813207,\"checksum\":\"2b411b2bb30a914a240868f78fe4009a\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":2736996366500} from /113.221.152.33
+2022-11-10 13:06:53.208  INFO 19972 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : removed ips(1) service: DEFAULT_GROUP@@auth-server@@DEFAULT -> [{"instanceId":"192.168.202.1#8764#DEFAULT#DEFAULT_GROUP@@auth-server","ip":"192.168.202.1","port":8764,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@auth-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-11-10 13:06:53.213  INFO 19972 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@auth-server@@DEFAULT -> []
+2022-11-10 13:06:54.878  INFO 19972 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-11-10 13:06:54.878  INFO 19972 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-11-10 13:06:55.005  INFO 19972 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-11-10 13:06:58.032  INFO 19972 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-11-10 13:06:58.032  INFO 19972 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-11-10 13:06:58.032  INFO 19972 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-11-10 13:06:58.032  INFO 19972 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-11-10 13:06:58.033  INFO 19972 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-11-10 13:06:58.033  WARN 19972 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-11-10 13:06:58.033  WARN 19972 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-11-10 13:06:58.033  INFO 19972 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-11-10 13:06:58.033  INFO 19972 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-11-10 13:06:58.033  INFO 19972 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-11-10 13:06:58.035  INFO 19972 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-11-10 13:06:58.037  WARN 19972 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2022-11-10 13:06:58.226  INFO 19972 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-11-10 13:06:58.240  INFO 19972 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-11-10 13:06:58.404 DEBUG 19972 --- [SpringContextShutdownHook] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] destroy

@@ -18,7 +18,7 @@ import java.net.UnknownHostException;
 @Slf4j
 @EnableDiscoveryClient
 @EnableAuthServer
-@EnableFeignClients
+@EnableFeignClients(value = {"mao"})
 @EnableAspectJAutoProxy(proxyTargetClass = true, exposeProxy = true)
 @EnableLoginArgResolver
 @EnableFormValidator
