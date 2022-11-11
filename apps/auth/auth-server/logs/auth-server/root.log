@@ -349,3 +349,876 @@ java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
 
 2022-11-11 13:51:21.355  INFO 25456 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2022-11-11 19:42:37.587  WARN 3480 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-11-11 19:42:43.678  INFO 3480 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-auth-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2022-11-11 19:42:43.740  INFO 3480 --- [main] m.a.s.common.impl.OptLogServiceImplTest  : The following profiles are active: dev
+2022-11-11 19:42:44.655  INFO 3480 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [${j2cache.config-location}] not resolvable: Could not resolve placeholder 'j2cache.config-location' in value "${j2cache.config-location}"
+2022-11-11 19:42:45.797  INFO 3480 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-11 19:42:45.801  INFO 3480 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-11 19:42:45.840  INFO 3480 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
+2022-11-11 19:42:45.921  WARN 3480 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-11-11 19:42:46.258  INFO 3480 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=bb6d5b35-0795-3823-83ef-28e49446989d
+2022-11-11 19:42:46.458  INFO 3480 --- [main] m.t.config.ValidatorConfig               : 开启hibernate-validator快速返回
+2022-11-11 19:42:46.458  INFO 3480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_validator.config.ValidatorConfig' of type [mao.tools_validator.config.ValidatorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:42:46.656  INFO 3480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:42:47.100  INFO 3480 --- [main] mao.tools_j2cache.config.CacheConfig     : 初始化 CacheConfig
+2022-11-11 19:42:47.101  INFO 3480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_j2cache.config.CacheConfig' of type [mao.tools_j2cache.config.CacheConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:42:47.319  INFO 3480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:42:47.331  INFO 3480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'database-mao.tools_databases.properties.DatabaseProperties' of type [mao.tools_databases.properties.DatabaseProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:42:47.346  INFO 3480 --- [main] m.a.config.MybatisConfiguration          : 初始化 MybatisConfiguration
+2022-11-11 19:42:47.347  INFO 3480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatisConfiguration' of type [mao.auth_server.config.MybatisConfiguration$$EnhancerBySpringCGLIB$$e8391191] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:42:47.365  INFO 3480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'paginationInterceptor' of type [com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:42:47.382  INFO 3480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getLeftLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.LeftLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:42:47.392  INFO 3480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getRightLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.RightLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:42:47.401  INFO 3480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getFullLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.FullLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:42:47.420  INFO 3480 --- [main] m.a.config.DatabaseConfiguration         : 初始化 DatabaseConfiguration
+2022-11-11 19:42:47.420  INFO 3480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'databaseConfiguration' of type [mao.auth_server.config.DatabaseConfiguration$$EnhancerBySpringCGLIB$$b883f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:42:47.520  INFO 3480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:42:47.531  INFO 3480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:42:47.556  INFO 3480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallConfig' of type [com.alibaba.druid.wall.WallConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:42:47.633  INFO 3480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallFilter' of type [com.alibaba.druid.wall.WallFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:42:47.771  INFO 3480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDruidDataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:42:47.840  INFO 3480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:42:47.876  INFO 3480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDataSource' of type [com.p6spy.engine.spy.P6DataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:42:47.904  INFO 3480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:42:47.917  INFO 3480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionInterceptor' of type [org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:42:47.933  INFO 3480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:42:48.033  INFO 3480 --- [main] m.a.config.ExceptionConfiguration        : 初始化 ExceptionConfiguration
+2022-11-11 19:42:48.173  INFO 3480 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2022-11-11 19:42:48.175  INFO 3480 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2022-11-11 19:42:48.185  INFO 3480 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2022-11-11 19:42:48.192  INFO 3480 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2022-11-11 19:42:48.201  INFO 3480 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2022-11-11 19:42:48.246  INFO 3480 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2022-11-11 19:42:48.714  INFO 3480 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-11 19:42:48.716  INFO 3480 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-11 19:42:48.782  INFO 3480 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-11 19:42:48.784  INFO 3480 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2022-11-11 19:42:48.820  INFO 3480 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-11 19:42:48.820  INFO 3480 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-11 19:42:48.834  INFO 3480 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-11 19:42:48.949  INFO 3480 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2022-11-11 19:42:49.776  INFO 3480 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbConfig@25823192]
+2022-11-11 19:42:49.777  INFO 3480 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbSearcher@3df04fa1]
+2022-11-11 19:42:49.885 DEBUG 3480 --- [main] mao.tools_xss.utils.XssUtils             :  start read XSS configfile [antisamy-slashdot-1.4.4.xml]
+2022-11-11 19:42:49.893 DEBUG 3480 --- [main] mao.tools_xss.utils.XssUtils             : read XSS configfile [antisamy-slashdot-1.4.4.xml] success
+2022-11-11 19:42:50.854  INFO 3480 --- [main] m.a.config.SysLogConfiguration           : 初始化 SysLogConfiguration
+2022-11-11 19:42:50.863  INFO 3480 --- [main] mao.auth_server.config.WebConfiguration  : 初始化 WebConfiguration
+2022-11-11 19:42:50.889  INFO 3480 --- [main] n.o.j.a.J2CacheAutoConfiguration         : 初始化 J2CacheAutoConfiguration
+2022-11-11 19:42:51.005  INFO 3480 --- [main] n.o.j2cache.util.SerializationUtils      : Using Serializer -> [fst:net.oschina.j2cache.util.FSTSerializer]
+2022-11-11 19:42:51.009  INFO 3480 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L1 CacheProvider : net.oschina.j2cache.caffeine.CaffeineProvider
+2022-11-11 19:42:51.047  INFO 3480 --- [main] .j.a.J2CacheSpringRedisAutoConfiguration : 初始化 J2CacheSpringRedisAutoConfiguration
+2022-11-11 19:42:51.613  INFO 3480 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L2 CacheProvider : net.oschina.j2cache.cache.support.redis.SpringRedisProvider
+2022-11-11 19:42:51.645  INFO 3480 --- [main] net.oschina.j2cache.J2CacheBuilder       : Using cluster policy : net.oschina.j2cache.cache.support.redis.SpringRedisPubSubPolicy
+2022-11-11 19:42:51.666  INFO 3480 --- [main] m.t.s.config.AuthServerConfiguration     : 初始化 AuthServerConfiguration
+2022-11-11 19:42:51.717  INFO 3480 --- [main] m.a.s.a.i.BCryptPasswordEncoderService   : 密码加密和验证使用的是: BCrypt 算法
+2022-11-11 19:42:51.798 DEBUG 3480 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.auth.LoginController
+2022-11-11 19:42:51.800 DEBUG 3480 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.auth.LoginController
+2022-11-11 19:42:51.801 DEBUG 3480 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.auth.LoginController
+2022-11-11 19:42:51.801 DEBUG 3480 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.auth.LoginController
+2022-11-11 19:42:51.801 DEBUG 3480 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.auth.LoginController
+2022-11-11 19:42:51.801 DEBUG 3480 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.auth.LoginController
+2022-11-11 19:42:52.425  INFO 3480 --- [main] m.t.config.LoginArgResolverConfig        : 初始化 LoginArgResolverConfig
+2022-11-11 19:42:52.648  WARN 3480 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-11 19:42:52.648  INFO 3480 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-11 19:42:52.670  INFO 3480 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@2f29e630
+2022-11-11 19:42:53.045  INFO 3480 --- [main] .j.a.J2CacheSpringCacheAutoConfiguration : 初始化 J2CacheSpringCacheAutoConfiguration
+2022-11-11 19:42:54.399  INFO 3480 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-11 19:42:54.406  INFO 3480 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-11 19:42:54.406  INFO 3480 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-11-11 19:42:54.407  INFO 3480 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-11 19:42:54.568  INFO 3480 --- [main] mao.tools_j2cache.config.RedissonConfig  : 初始化 RedissonConfig
+2022-11-11 19:42:54.571  INFO 3480 --- [main] mao.tools_j2cache.config.RedissonConfig  : 单机模式redis:127.0.0.1:6379
+2022-11-11 19:42:54.801  INFO 3480 --- [main] org.redisson.Version                     : Redisson 3.17.0
+2022-11-11 19:42:55.597  INFO 3480 --- [redisson-netty-4-20] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-11 19:42:55.623  INFO 3480 --- [redisson-netty-4-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-11 19:42:56.081  INFO 3480 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2022-11-11 19:42:56.406  INFO 3480 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2022-11-11 19:42:56.778  WARN 3480 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-11 19:42:56.778  INFO 3480 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-11 19:42:57.055  INFO 3480 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-11 19:42:57.506  INFO 3480 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-11 19:42:57.686  INFO 3480 --- [main] m.tools_j2cache.config.RedisUtilsConfig  : 初始化 RedisUtilsConfig
+2022-11-11 19:42:57.693  INFO 3480 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
+2022-11-11 19:42:57.765  INFO 3480 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-11 19:42:57.788  INFO 3480 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2022-11-11 19:42:57.788  INFO 3480 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='mao', url='https://github.com/maomao124/', email='1234@qq.com'}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{auth=DocketInfo{title='权限模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.auth', basePath=[], excludePath=[]}, common=DocketInfo{title='公共模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.common', basePath=[], excludePath=[]}, core=DocketInfo{title='组织岗位模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.core', basePath=[], excludePath=[]}}
+
+2022-11-11 19:42:59.529  INFO 3480 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-11 19:43:01.860 ERROR 3480 --- [main] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateServiceNow(HostReactor.java:345) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.getServiceInfo(HostReactor.java:320) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.subscribe(HostReactor.java:139) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.subscribe(NacosNamingService.java:457) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.discovery.NacosWatch.start(NacosWatch.java:131) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:894) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:124) [spring-boot-test-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[na:1.8.0_332]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[na:1.8.0_332]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384) ~[na:1.8.0_332]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482) ~[na:1.8.0_332]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[na:1.8.0_332]
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:313) ~[na:1.8.0_332]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743) ~[na:1.8.0_332]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742) ~[na:1.8.0_332]
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:647) ~[na:1.8.0_332]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_332]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) ~[junit5-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+
+2022-11-11 19:43:03.894 ERROR 3480 --- [main] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateServiceNow(HostReactor.java:345) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.getServiceInfo(HostReactor.java:320) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.subscribe(HostReactor.java:139) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.subscribe(NacosNamingService.java:457) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.discovery.NacosWatch.start(NacosWatch.java:131) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:894) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:124) [spring-boot-test-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[na:1.8.0_332]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[na:1.8.0_332]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384) ~[na:1.8.0_332]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482) ~[na:1.8.0_332]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[na:1.8.0_332]
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:313) ~[na:1.8.0_332]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743) ~[na:1.8.0_332]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742) ~[na:1.8.0_332]
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:647) ~[na:1.8.0_332]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_332]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) ~[junit5-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+
+2022-11-11 19:43:05.945 ERROR 3480 --- [main] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateServiceNow(HostReactor.java:345) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.getServiceInfo(HostReactor.java:320) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.subscribe(HostReactor.java:139) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.subscribe(NacosNamingService.java:457) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.discovery.NacosWatch.start(NacosWatch.java:131) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:894) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:124) [spring-boot-test-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[na:1.8.0_332]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[na:1.8.0_332]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384) ~[na:1.8.0_332]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482) ~[na:1.8.0_332]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[na:1.8.0_332]
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:313) ~[na:1.8.0_332]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743) ~[na:1.8.0_332]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742) ~[na:1.8.0_332]
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:647) ~[na:1.8.0_332]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_332]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) ~[junit5-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+
+2022-11-11 19:43:05.951 ERROR 3480 --- [main] com.alibaba.nacos.client.naming          : request: /nacos/v1/ns/instance/list failed, servers: [127.0.0.1:8848], code: 500, msg: Connection refused: connect
+2022-11-11 19:43:05.952 ERROR 3480 --- [main] com.alibaba.nacos.client.naming          : [NA] failed to update serviceName: DEFAULT_GROUP@@auth-server
+
+com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/instance/list after all servers([127.0.0.1:8848]) tried: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:556) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateServiceNow(HostReactor.java:345) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.getServiceInfo(HostReactor.java:320) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.subscribe(HostReactor.java:139) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.subscribe(NacosNamingService.java:457) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.discovery.NacosWatch.start(NacosWatch.java:131) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:894) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:124) [spring-boot-test-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[na:1.8.0_332]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[na:1.8.0_332]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384) ~[na:1.8.0_332]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482) ~[na:1.8.0_332]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[na:1.8.0_332]
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:313) ~[na:1.8.0_332]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743) ~[na:1.8.0_332]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742) ~[na:1.8.0_332]
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:647) ~[na:1.8.0_332]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_332]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) ~[junit5-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+
+2022-11-11 19:43:05.961  INFO 3480 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-11-11 19:43:06.002  INFO 3480 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2022-11-11 19:43:06.057  INFO 3480 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-11 19:43:06.084  INFO 3480 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-11 19:43:06.269  INFO 3480 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-11 19:43:06.419  INFO 3480 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2022-11-11 19:43:06.421  INFO 3480 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2022-11-11 19:43:06.565  INFO 3480 --- [main] m.a.s.common.impl.OptLogServiceImplTest  : Started OptLogServiceImplTest in 45.042 seconds (JVM running for 46.738)
+2022-11-11 19:43:06.573  INFO 3480 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server-dev.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-11 19:43:06.576  INFO 3480 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server-dev.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-11 19:43:06.576  INFO 3480 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-11 19:43:06.576  INFO 3480 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server, group=DEFAULT_GROUP, cnt=1
+2022-11-11 19:43:06.577  INFO 3480 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-11 19:43:06.577  INFO 3480 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-11 19:43:06.578  INFO 3480 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] common.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-11 19:43:06.578  INFO 3480 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-11 19:43:07.314  INFO 3480 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-11-11 19:43:07.327  INFO 3480 --- [main] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@1b1cfb87 testClass = OptLogServiceImplTest, testInstance = mao.auth_server.service.common.impl.OptLogServiceImplTest@38816a6c, testMethod = queryAll@OptLogServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@821330f testClass = OptLogServiceImplTest, locations = '{}', classes = '{class mao.auth_server.AuthServerApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1d296da, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@557caf28, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@44c03695, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4116aac9, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@74727e41]; rollback [true]
+2022-11-11 19:43:07.635 DEBUG 3480 --- [main] m.a.dao.common.OptLogMapper.selectList   : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,create_time,class_path,start_time,create_user FROM common_opt_log 
+2022-11-11 19:43:08.020 DEBUG 3480 --- [main] m.a.dao.common.OptLogMapper.selectList   : ==> Parameters: 
+2022-11-11 19:43:08.055 DEBUG 3480 --- [main] m.a.dao.common.OptLogMapper.selectList   : <==      Total: 0
+2022-11-11 19:43:08.067  INFO 3480 --- [main] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@1b1cfb87 testClass = OptLogServiceImplTest, testInstance = mao.auth_server.service.common.impl.OptLogServiceImplTest@38816a6c, testMethod = queryAll@OptLogServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@821330f testClass = OptLogServiceImplTest, locations = '{}', classes = '{class mao.auth_server.AuthServerApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1d296da, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@557caf28, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@44c03695, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4116aac9, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2022-11-11 19:43:08.074  INFO 3480 --- [main] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@1b1cfb87 testClass = OptLogServiceImplTest, testInstance = mao.auth_server.service.common.impl.OptLogServiceImplTest@70c68e4e, testMethod = save@OptLogServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@821330f testClass = OptLogServiceImplTest, locations = '{}', classes = '{class mao.auth_server.AuthServerApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1d296da, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@557caf28, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@44c03695, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4116aac9, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@74727e41]; rollback [true]
+2022-11-11 19:43:08.086 DEBUG 3480 --- [main] m.a.dao.common.OptLogMapper.insert       : ==>  Preparing: INSERT INTO common_opt_log ( id, create_time, create_user ) VALUES ( ?, ?, ? ) 
+2022-11-11 19:43:08.203 DEBUG 3480 --- [main] m.a.dao.common.OptLogMapper.insert       : ==> Parameters: 102838156226723873(Long), 2022-11-11T19:43:08.085(LocalDateTime), 0(Long)
+2022-11-11 19:43:08.206 DEBUG 3480 --- [main] m.a.dao.common.OptLogMapper.insert       : <==    Updates: 1
+2022-11-11 19:43:08.210  INFO 3480 --- [main] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@1b1cfb87 testClass = OptLogServiceImplTest, testInstance = mao.auth_server.service.common.impl.OptLogServiceImplTest@70c68e4e, testMethod = save@OptLogServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@821330f testClass = OptLogServiceImplTest, locations = '{}', classes = '{class mao.auth_server.AuthServerApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1d296da, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@557caf28, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@44c03695, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4116aac9, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2022-11-11 19:43:08.216  WARN 3480 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-11-11 19:43:08.216  WARN 3480 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-11-11 19:43:08.216  WARN 3480 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-11-11 19:43:08.217  WARN 3480 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-11-11 19:43:08.220  INFO 3480 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-11 19:43:08.232  INFO 3480 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-11-11 19:43:08.234  INFO 3480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-11-11 19:43:08.234  INFO 3480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-11-11 19:43:08.234  INFO 3480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-11-11 19:43:08.628 ERROR 3480 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2022-11-11 19:43:08.989 ERROR 3480 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:464) [nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2022-11-11 19:43:10.683 ERROR 3480 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2022-11-11 19:43:11.013 ERROR 3480 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:464) [nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2022-11-11 19:43:11.249  INFO 3480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-11-11 19:43:12.722 ERROR 3480 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2022-11-11 19:43:13.047 ERROR 3480 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:464) [nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2022-11-11 19:43:13.047 ERROR 3480 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : request: /nacos/v1/ns/instance/list failed, servers: [127.0.0.1:8848], code: 500, msg: Connection refused: connect
+2022-11-11 19:43:13.048  WARN 3480 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : [NA] failed to update serviceName: DEFAULT_GROUP@@auth-server
+
+com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/instance/list after all servers([127.0.0.1:8848]) tried: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:556) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:464) ~[nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2022-11-11 19:43:14.279  INFO 3480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-11-11 19:43:14.279  INFO 3480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-11-11 19:43:14.280  INFO 3480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-11-11 19:43:14.280  INFO 3480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-11-11 19:43:14.280  INFO 3480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-11-11 19:43:14.280  WARN 3480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-11-11 19:43:14.281  WARN 3480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-11-11 19:43:14.281  INFO 3480 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-11-11 19:43:14.281  INFO 3480 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-11-11 19:43:14.281  INFO 3480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-11-11 19:43:14.580  INFO 3480 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-11-11 19:43:14.591  INFO 3480 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-11-11 19:51:49.734  WARN 12620 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-11-11 19:51:49.751  INFO 12620 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-auth-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2022-11-11 19:51:49.809  INFO 12620 --- [main] m.a.s.common.impl.OptLogServiceImplTest  : The following profiles are active: dev
+2022-11-11 19:51:50.509  INFO 12620 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [${j2cache.config-location}] not resolvable: Could not resolve placeholder 'j2cache.config-location' in value "${j2cache.config-location}"
+2022-11-11 19:51:51.498  INFO 12620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-11 19:51:51.502  INFO 12620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-11 19:51:51.538  INFO 12620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
+2022-11-11 19:51:51.616  WARN 12620 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-11-11 19:51:51.942  INFO 12620 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=bb6d5b35-0795-3823-83ef-28e49446989d
+2022-11-11 19:51:52.112  INFO 12620 --- [main] m.t.config.ValidatorConfig               : 开启hibernate-validator快速返回
+2022-11-11 19:51:52.112  INFO 12620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_validator.config.ValidatorConfig' of type [mao.tools_validator.config.ValidatorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:51:52.279  INFO 12620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:51:52.683  INFO 12620 --- [main] mao.tools_j2cache.config.CacheConfig     : 初始化 CacheConfig
+2022-11-11 19:51:52.683  INFO 12620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_j2cache.config.CacheConfig' of type [mao.tools_j2cache.config.CacheConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:51:52.903  INFO 12620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:51:52.918  INFO 12620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'database-mao.tools_databases.properties.DatabaseProperties' of type [mao.tools_databases.properties.DatabaseProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:51:52.935  INFO 12620 --- [main] m.a.config.MybatisConfiguration          : 初始化 MybatisConfiguration
+2022-11-11 19:51:52.935  INFO 12620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatisConfiguration' of type [mao.auth_server.config.MybatisConfiguration$$EnhancerBySpringCGLIB$$a93b35f9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:51:52.954  INFO 12620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'paginationInterceptor' of type [com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:51:52.973  INFO 12620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getLeftLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.LeftLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:51:52.984  INFO 12620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getRightLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.RightLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:51:52.998  INFO 12620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getFullLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.FullLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:51:53.024  INFO 12620 --- [main] m.a.config.DatabaseConfiguration         : 初始化 DatabaseConfiguration
+2022-11-11 19:51:53.024  INFO 12620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'databaseConfiguration' of type [mao.auth_server.config.DatabaseConfiguration$$EnhancerBySpringCGLIB$$c10daca7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:51:53.122  INFO 12620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:51:53.131  INFO 12620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:51:53.154  INFO 12620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallConfig' of type [com.alibaba.druid.wall.WallConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:51:53.210  INFO 12620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallFilter' of type [com.alibaba.druid.wall.WallFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:51:53.321  INFO 12620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDruidDataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:51:53.372  INFO 12620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:51:53.407  INFO 12620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDataSource' of type [com.p6spy.engine.spy.P6DataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:51:53.435  INFO 12620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:51:53.446  INFO 12620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionInterceptor' of type [org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:51:53.457  INFO 12620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-11 19:51:53.529  INFO 12620 --- [main] m.a.config.ExceptionConfiguration        : 初始化 ExceptionConfiguration
+2022-11-11 19:51:53.637  INFO 12620 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2022-11-11 19:51:53.640  INFO 12620 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2022-11-11 19:51:53.647  INFO 12620 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2022-11-11 19:51:53.654  INFO 12620 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2022-11-11 19:51:53.662  INFO 12620 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2022-11-11 19:51:53.706  INFO 12620 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2022-11-11 19:51:54.107  INFO 12620 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-11 19:51:54.109  INFO 12620 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-11 19:51:54.172  INFO 12620 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-11 19:51:54.174  INFO 12620 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2022-11-11 19:51:54.179  INFO 12620 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-11 19:51:54.179  INFO 12620 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-11 19:51:54.188  INFO 12620 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-11 19:51:54.289  INFO 12620 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2022-11-11 19:51:54.995  INFO 12620 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbConfig@6143b2b1]
+2022-11-11 19:51:54.995  INFO 12620 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbSearcher@a63643e]
+2022-11-11 19:51:55.101 DEBUG 12620 --- [main] mao.tools_xss.utils.XssUtils             :  start read XSS configfile [antisamy-slashdot-1.4.4.xml]
+2022-11-11 19:51:55.108 DEBUG 12620 --- [main] mao.tools_xss.utils.XssUtils             : read XSS configfile [antisamy-slashdot-1.4.4.xml] success
+2022-11-11 19:51:56.020  INFO 12620 --- [main] m.a.config.SysLogConfiguration           : 初始化 SysLogConfiguration
+2022-11-11 19:51:56.030  INFO 12620 --- [main] mao.auth_server.config.WebConfiguration  : 初始化 WebConfiguration
+2022-11-11 19:51:56.056  INFO 12620 --- [main] n.o.j.a.J2CacheAutoConfiguration         : 初始化 J2CacheAutoConfiguration
+2022-11-11 19:51:56.169  INFO 12620 --- [main] n.o.j2cache.util.SerializationUtils      : Using Serializer -> [fst:net.oschina.j2cache.util.FSTSerializer]
+2022-11-11 19:51:56.173  INFO 12620 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L1 CacheProvider : net.oschina.j2cache.caffeine.CaffeineProvider
+2022-11-11 19:51:56.190  INFO 12620 --- [main] .j.a.J2CacheSpringRedisAutoConfiguration : 初始化 J2CacheSpringRedisAutoConfiguration
+2022-11-11 19:51:56.658  INFO 12620 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L2 CacheProvider : net.oschina.j2cache.cache.support.redis.SpringRedisProvider
+2022-11-11 19:51:56.698  INFO 12620 --- [main] net.oschina.j2cache.J2CacheBuilder       : Using cluster policy : net.oschina.j2cache.cache.support.redis.SpringRedisPubSubPolicy
+2022-11-11 19:51:56.722  INFO 12620 --- [main] m.t.s.config.AuthServerConfiguration     : 初始化 AuthServerConfiguration
+2022-11-11 19:51:56.790  INFO 12620 --- [main] m.a.s.a.i.BCryptPasswordEncoderService   : 密码加密和验证使用的是: BCrypt 算法
+2022-11-11 19:51:56.867 DEBUG 12620 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.auth.LoginController
+2022-11-11 19:51:56.877 DEBUG 12620 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.auth.LoginController
+2022-11-11 19:51:56.877 DEBUG 12620 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.auth.LoginController
+2022-11-11 19:51:56.878 DEBUG 12620 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.auth.LoginController
+2022-11-11 19:51:56.883 DEBUG 12620 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.auth.LoginController
+2022-11-11 19:51:56.883 DEBUG 12620 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.auth.LoginController
+2022-11-11 19:51:57.458  INFO 12620 --- [main] m.t.config.LoginArgResolverConfig        : 初始化 LoginArgResolverConfig
+2022-11-11 19:51:57.677  WARN 12620 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-11 19:51:57.677  INFO 12620 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-11 19:51:57.703  INFO 12620 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@9976b27
+2022-11-11 19:51:58.033  INFO 12620 --- [main] .j.a.J2CacheSpringCacheAutoConfiguration : 初始化 J2CacheSpringCacheAutoConfiguration
+2022-11-11 19:51:59.410  INFO 12620 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-11 19:51:59.423  INFO 12620 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-11 19:51:59.425  INFO 12620 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-11-11 19:51:59.426  INFO 12620 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-11 19:51:59.606  INFO 12620 --- [main] mao.tools_j2cache.config.RedissonConfig  : 初始化 RedissonConfig
+2022-11-11 19:51:59.610  INFO 12620 --- [main] mao.tools_j2cache.config.RedissonConfig  : 单机模式redis:127.0.0.1:6379
+2022-11-11 19:51:59.825  INFO 12620 --- [main] org.redisson.Version                     : Redisson 3.17.0
+2022-11-11 19:52:00.604  INFO 12620 --- [redisson-netty-4-13] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-11 19:52:00.624  INFO 12620 --- [redisson-netty-4-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-11 19:52:01.058  INFO 12620 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2022-11-11 19:52:01.406  INFO 12620 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2022-11-11 19:52:01.806  WARN 12620 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-11 19:52:01.806  INFO 12620 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-11 19:52:02.053  INFO 12620 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-11 19:52:02.497  INFO 12620 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-11 19:52:02.686  INFO 12620 --- [main] m.tools_j2cache.config.RedisUtilsConfig  : 初始化 RedisUtilsConfig
+2022-11-11 19:52:02.696  INFO 12620 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
+2022-11-11 19:52:02.789  INFO 12620 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-11 19:52:02.809  INFO 12620 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2022-11-11 19:52:02.810  INFO 12620 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='mao', url='https://github.com/maomao124/', email='1234@qq.com'}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{auth=DocketInfo{title='权限模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.auth', basePath=[], excludePath=[]}, common=DocketInfo{title='公共模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.common', basePath=[], excludePath=[]}, core=DocketInfo{title='组织岗位模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.core', basePath=[], excludePath=[]}}
+
+2022-11-11 19:52:04.550  INFO 12620 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-11 19:52:04.897  INFO 12620 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-11-11 19:52:04.938  INFO 12620 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2022-11-11 19:52:04.989  INFO 12620 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-11 19:52:05.014  INFO 12620 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-11 19:52:05.170  INFO 12620 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-11 19:52:05.323  INFO 12620 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2022-11-11 19:52:05.325  INFO 12620 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2022-11-11 19:52:05.476  INFO 12620 --- [main] m.a.s.common.impl.OptLogServiceImplTest  : Started OptLogServiceImplTest in 19.794 seconds (JVM running for 21.359)
+2022-11-11 19:52:05.487  INFO 12620 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server-dev.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-11 19:52:05.489  INFO 12620 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server-dev.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-11 19:52:05.489  INFO 12620 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-11 19:52:05.489  INFO 12620 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server, group=DEFAULT_GROUP, cnt=1
+2022-11-11 19:52:05.494  INFO 12620 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-11 19:52:05.494  INFO 12620 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-11 19:52:05.495  INFO 12620 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] common.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-11 19:52:05.495  INFO 12620 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-11 19:52:06.146  INFO 12620 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-11-11 19:52:06.160  INFO 12620 --- [main] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@1b1cfb87 testClass = OptLogServiceImplTest, testInstance = mao.auth_server.service.common.impl.OptLogServiceImplTest@6812708d, testMethod = queryAll@OptLogServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@821330f testClass = OptLogServiceImplTest, locations = '{}', classes = '{class mao.auth_server.AuthServerApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1d296da, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@557caf28, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@44c03695, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4116aac9, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@7a4c1a6c]; rollback [true]
+2022-11-11 19:52:06.467 DEBUG 12620 --- [main] m.a.dao.common.OptLogMapper.selectList   : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,create_time,class_path,start_time,create_user FROM common_opt_log 
+2022-11-11 19:52:06.846 DEBUG 12620 --- [main] m.a.dao.common.OptLogMapper.selectList   : ==> Parameters: 
+2022-11-11 19:52:06.882 DEBUG 12620 --- [main] m.a.dao.common.OptLogMapper.selectList   : <==      Total: 0
+2022-11-11 19:52:06.897  INFO 12620 --- [main] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@1b1cfb87 testClass = OptLogServiceImplTest, testInstance = mao.auth_server.service.common.impl.OptLogServiceImplTest@6812708d, testMethod = queryAll@OptLogServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@821330f testClass = OptLogServiceImplTest, locations = '{}', classes = '{class mao.auth_server.AuthServerApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1d296da, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@557caf28, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@44c03695, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4116aac9, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2022-11-11 19:52:06.905  INFO 12620 --- [main] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@1b1cfb87 testClass = OptLogServiceImplTest, testInstance = mao.auth_server.service.common.impl.OptLogServiceImplTest@7719b257, testMethod = save@OptLogServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@821330f testClass = OptLogServiceImplTest, locations = '{}', classes = '{class mao.auth_server.AuthServerApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1d296da, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@557caf28, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@44c03695, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4116aac9, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@7a4c1a6c]; rollback [true]
+2022-11-11 19:52:06.918 DEBUG 12620 --- [main] m.a.dao.common.OptLogMapper.insert       : ==>  Preparing: INSERT INTO common_opt_log ( id, create_time, create_user ) VALUES ( ?, ?, ? ) 
+2022-11-11 19:52:07.037 DEBUG 12620 --- [main] m.a.dao.common.OptLogMapper.insert       : ==> Parameters: 102840416251936801(Long), 2022-11-11T19:52:06.917(LocalDateTime), 0(Long)
+2022-11-11 19:52:07.040 DEBUG 12620 --- [main] m.a.dao.common.OptLogMapper.insert       : <==    Updates: 1
+2022-11-11 19:52:07.044  INFO 12620 --- [main] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@1b1cfb87 testClass = OptLogServiceImplTest, testInstance = mao.auth_server.service.common.impl.OptLogServiceImplTest@7719b257, testMethod = save@OptLogServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@821330f testClass = OptLogServiceImplTest, locations = '{}', classes = '{class mao.auth_server.AuthServerApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1d296da, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@557caf28, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@44c03695, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4116aac9, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2022-11-11 19:52:07.049  WARN 12620 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-11-11 19:52:07.049  WARN 12620 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-11-11 19:52:07.049  WARN 12620 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-11-11 19:52:07.050  WARN 12620 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-11-11 19:52:07.053  INFO 12620 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-11 19:52:07.065  INFO 12620 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-11-11 19:52:07.067  INFO 12620 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-11-11 19:52:07.067  INFO 12620 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-11-11 19:52:07.067  INFO 12620 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-11-11 19:52:07.914  INFO 12620 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-11-11 19:52:10.925  INFO 12620 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-11-11 19:52:10.926  INFO 12620 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-11-11 19:52:10.926  INFO 12620 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-11-11 19:52:10.926  INFO 12620 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-11-11 19:52:10.926  INFO 12620 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-11-11 19:52:10.927  WARN 12620 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-11-11 19:52:10.927  WARN 12620 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-11-11 19:52:10.927  INFO 12620 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-11-11 19:52:10.927  INFO 12620 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-11-11 19:52:10.928  INFO 12620 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-11-11 19:52:11.259  INFO 12620 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-11-11 19:52:11.272  INFO 12620 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

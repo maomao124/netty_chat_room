@@ -9,6 +9,7 @@ import mao.auth_entity.dto.auth.LoginParamDTO;
 import mao.auth_server.service.auth.AuthService;
 import mao.auth_server.service.auth.ValidateCodeService;
 import mao.tools_core.base.R;
+import mao.tools_log.annotation.SysLog;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -57,13 +58,9 @@ public class LoginController
      * @param loginParamDTO 登录参数dto
      * @return {@link R}<{@link LoginDTO}>
      */
-    @PostMapping("login")
+    @SysLog("登录")
+    @PostMapping("/login")
     @ApiOperation(notes = "登录", value = "登录")
-    @ApiImplicitParams(
-            {
-                    @ApiImplicitParam(name = "LoginParamDTO", value = "LoginParamDTO")
-            }
-    )
     public R<LoginDTO> login(@Validated @RequestBody LoginParamDTO loginParamDTO)
     {
         //登录认证

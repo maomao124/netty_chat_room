@@ -1,6 +1,7 @@
 package mao.auth_server.config;
 
 import lombok.extern.slf4j.Slf4j;
+import mao.auth_server.service.common.OptLogService;
 import mao.tools_log.entity.OptLogDTO;
 import mao.tools_log.event.SysLogListener;
 import org.springframework.context.annotation.Bean;
@@ -8,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
 import java.util.function.Consumer;
 
 /**
@@ -28,6 +30,9 @@ import java.util.function.Consumer;
 @EnableAsync
 public class SysLogConfiguration
 {
+    @Resource
+    private OptLogService optLogService;
+
     @Bean
     public SysLogListener sysLogListener()
     {
@@ -36,7 +41,11 @@ public class SysLogConfiguration
             @Override
             public void accept(OptLogDTO optLogDTO)
             {
-
+                boolean save = optLogService.save(optLogDTO);
+                if (!save)
+                {
+                    log.warn("日志保存失败：" + optLogDTO);
+                }
             }
         });
     }
