@@ -25,8 +25,10 @@ public interface AuthService
      *
      * @param account  账户
      * @param password 密码
+     * @param key      验证码的key
+     * @param value    用户输入的验证码
      * @return {@link R}<{@link LoginDTO}>
      */
-    R<LoginDTO> login(String account, String password);
+    R<LoginDTO> login(String account, String password, String key, String value);
 
 }

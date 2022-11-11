@@ -7,6 +7,7 @@ import mao.auth_server.service.auth.ValidateCodeService;
 import mao.tools_common.constant.CacheKey;
 import mao.tools_core.exception.BizException;
 import net.oschina.j2cache.CacheChannel;
+import net.oschina.j2cache.CacheObject;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -62,5 +63,42 @@ public class ValidateCodeServiceImpl implements ValidateCodeService
         cache.set(CacheKey.CAPTCHA, key, text);
         //输出
         captcha.out(response.getOutputStream());
+    }
+
+    @Override
+    public boolean check(String key, String value)
+    {
+        //判断用户是否输入了验证码
+        if (value.isEmpty())
+        {
+            //没有输入
+            throw BizException.validFail("请输入验证码");
+        }
+        //判断key是否为空
+        if (key.isEmpty())
+        {
+            throw BizException.validFail("验证码key为空");
+        }
+        //从缓存获取
+        CacheObject cacheObject = cache.get(CacheKey.CAPTCHA, key);
+        //判断是否为空
+        if (cacheObject.getValue() == null)
+        {
+            //为空，未获取验证码或者验证码已过期
+            throw BizException.validFail("未获取验证码或者验证码已过期");
+        }
+        //不为空
+        //验证验证码输入是否正确
+        String cacheObjectValue = (String) cacheObject.getValue();
+        log.debug("缓存里的验证码：" + cacheObjectValue + ",用户输入的验证码：" + value);
+        if (!value.equals(cacheObjectValue))
+        {
+            //验证码输入不正确
+            throw BizException.validFail("验证码不正确");
+        }
+        //验证码正确，验证通过
+        //清除缓存
+        cache.evict(CacheKey.CAPTCHA, key);
+        return true;
     }
 }

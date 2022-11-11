@@ -26,4 +26,14 @@ public interface ValidateCodeService
      * @throws IOException IOException
      */
     void create(String key, HttpServletResponse response) throws IOException;
+
+
+    /**
+     * 校验验证码是否正确
+     *
+     * @param key   这个key为缓存的key
+     * @param value 前端传过来的值
+     * @return boolean
+     */
+    boolean check(String key, String value);
 }
