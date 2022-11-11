@@ -27,12 +27,18 @@ class BCryptPasswordEncoderServiceTest
     @Resource
     private PasswordEncoderService passwordEncoderService;
 
+    /**
+     * 编码器
+     */
     @Test
     void encoder()
     {
         System.out.println(passwordEncoderService.encoder("123456"));
     }
 
+    /**
+     * 验证
+     */
     @Test
     void verification()
     {
@@ -45,6 +51,9 @@ class BCryptPasswordEncoderServiceTest
         }
     }
 
+    /**
+     * verification2
+     */
     @Test
     void verification2()
     {

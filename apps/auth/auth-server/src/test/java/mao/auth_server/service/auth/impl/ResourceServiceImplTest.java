@@ -35,6 +35,9 @@ class ResourceServiceImplTest
     @Autowired
     private ResourceService resourceService;
 
+    /**
+     * 查询所有
+     */
     @Test
     void queryAll()
     {
@@ -46,6 +49,9 @@ class ResourceServiceImplTest
         }
     }
 
+    /**
+     * 发现明显资源
+     */
     @Test
     void findVisibleResource()
     {
@@ -58,6 +64,9 @@ class ResourceServiceImplTest
         }
     }
 
+    /**
+     * 删除菜单id
+     */
     @Test
     void removeByMenuId()
     {
@@ -66,6 +75,9 @@ class ResourceServiceImplTest
         resourceService.removeByMenuId(list);
     }
 
+    /**
+     * 通过资源id找到菜单id
+     */
     @Test
     void findMenuIdByResourceId()
     {

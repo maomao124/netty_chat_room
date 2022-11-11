@@ -31,18 +31,27 @@ class LoginLogMapperTest
     private LoginLogMapper loginLogMapper;
 
 
+    /**
+     * 发现总访问数
+     */
     @Test
     void findTotalVisitCount()
     {
         System.out.println(loginLogMapper.findTotalVisitCount());
     }
 
+    /**
+     * 发现今天访问数
+     */
     @Test
     void findTodayVisitCount()
     {
         loginLogMapper.findTodayVisitCount(LocalDate.now());
     }
 
+    /**
+     * 今天找到ip
+     */
     @Test
     void findTodayIp()
     {
@@ -50,12 +59,18 @@ class LoginLogMapperTest
         System.out.println(ip);
     }
 
+    /**
+     * 找到最后一个十天访问
+     */
     @Test
     void findLastTenDaysVisitCount()
     {
 
     }
 
+    /**
+     * 发现通过浏览器
+     */
     @Test
     void findByBrowser()
     {
@@ -63,6 +78,9 @@ class LoginLogMapperTest
         System.out.println(byBrowser);
     }
 
+    /**
+     * 发现由操作系统
+     */
     @Test
     void findByOperatingSystem()
     {

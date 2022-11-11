@@ -28,6 +28,9 @@ class RoleMapperTest
     @Autowired
     private RoleMapper roleMapper;
 
+    /**
+     * 通过用户id找到角色
+     */
     @Test
     void findRoleByUserId()
     {
@@ -39,6 +42,9 @@ class RoleMapperTest
         }
     }
 
+    /**
+     * 查询所有
+     */
     @Test
     void queryAll()
     {

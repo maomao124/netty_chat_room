@@ -29,6 +29,9 @@ class OrgMapperTest
     @Autowired
     private OrgMapper orgMapper;
 
+    /**
+     * 查询所有
+     */
     @Test
     void queryAll()
     {

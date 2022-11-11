@@ -20,12 +20,18 @@ import static org.junit.jupiter.api.Assertions.*;
 class SHA256PasswordEncoderServiceTest
 {
 
+    /**
+     * 编码器
+     */
     @Test
     void encoder()
     {
         System.out.println(new SHA256PasswordEncoderService().encoder("123"));
     }
 
+    /**
+     * 验证
+     */
     @Test
     void verification()
     {
@@ -34,6 +40,9 @@ class SHA256PasswordEncoderServiceTest
 
     }
 
+    /**
+     * verification2
+     */
     @Test
     void verification2()
     {

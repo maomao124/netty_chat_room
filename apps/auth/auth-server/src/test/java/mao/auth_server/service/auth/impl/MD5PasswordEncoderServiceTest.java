@@ -20,12 +20,18 @@ import static org.junit.jupiter.api.Assertions.*;
 class MD5PasswordEncoderServiceTest
 {
 
+    /**
+     * 编码器
+     */
     @Test
     void encoder()
     {
         System.out.println(new MD5PasswordEncoderService().encoder("123"));
     }
 
+    /**
+     * 验证
+     */
     @Test
     void verification()
     {
@@ -33,6 +39,9 @@ class MD5PasswordEncoderServiceTest
                 "202cb962ac59075b964b07152d234b70"));
     }
 
+    /**
+     * verification2
+     */
     @Test
     void verification2()
     {

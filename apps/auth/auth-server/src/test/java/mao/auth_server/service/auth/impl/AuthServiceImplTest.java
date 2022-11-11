@@ -28,6 +28,9 @@ class AuthServiceImplTest
     @Autowired
     private AuthService authService;
 
+    /**
+     * 登录
+     */
     @Test
     void login()
     {

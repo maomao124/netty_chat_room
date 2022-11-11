@@ -31,12 +31,18 @@ class OptLogServiceImplTest
     @Autowired
     private OptLogService optLogService;
 
+    /**
+     * 保存
+     */
     @Test
     void save()
     {
         optLogService.save(OptLog.builder().build());
     }
 
+    /**
+     * 查询所有
+     */
     @Test
     void queryAll()
     {

@@ -29,12 +29,18 @@ class MenuMapperTest
     @Autowired
     private MenuMapper menuMapper;
 
+    /**
+     * 找到可见菜单
+     */
     @Test
     void findVisibleMenu()
     {
 
     }
 
+    /**
+     * 查询列表
+     */
     @Test
     void queryList()
     {

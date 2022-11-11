@@ -30,6 +30,9 @@ class UserRoleMapperTest
     @Autowired
     private UserRoleMapper userRoleMapper;
 
+    /**
+     * 查询所有
+     */
     @Test
     void QueryAll()
     {

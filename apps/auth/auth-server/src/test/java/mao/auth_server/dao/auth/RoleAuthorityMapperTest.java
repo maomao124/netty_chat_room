@@ -29,6 +29,9 @@ class RoleAuthorityMapperTest
     @Autowired
     private RoleAuthorityMapper roleAuthorityMapper;
 
+    /**
+     * 查询所有
+     */
     @Test
     void queryAll()
     {

@@ -29,6 +29,9 @@ class OptLogMapperTest
     @Autowired
     private OptLogMapper optLogMapper;
 
+    /**
+     * 查询所有
+     */
     @Test
     void queryAll()
     {

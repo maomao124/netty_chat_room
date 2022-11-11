@@ -29,6 +29,9 @@ class RoleOrgMapperTest
     @Autowired
     private RoleOrgMapper roleOrgMapper;
 
+    /**
+     * 查询所有
+     */
     @Test
     void queryAll()
     {

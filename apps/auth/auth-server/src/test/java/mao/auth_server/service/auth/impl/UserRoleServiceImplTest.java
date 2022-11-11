@@ -28,6 +28,9 @@ class UserRoleServiceImplTest
     @Autowired
     private UserRoleService userRoleService;
 
+    /**
+     * 查询所有
+     */
     @Test
     void queryAll()
     {

@@ -29,12 +29,18 @@ class StationMapperTest
     @Autowired
     private StationMapper stationMapper;
 
+    /**
+     * 找到站页面
+     */
     @Test
     void findStationPage()
     {
 
     }
 
+    /**
+     * 查询所有
+     */
     @Test
     void queryAll()
     {

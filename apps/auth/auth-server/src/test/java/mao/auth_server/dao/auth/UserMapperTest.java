@@ -30,6 +30,9 @@ class UserMapperTest
     @Autowired
     private UserMapper userMapper;
 
+    /**
+     * 找到用户角色id
+     */
     @Test
     void findUserByRoleId()
     {
@@ -41,6 +44,9 @@ class UserMapperTest
         }
     }
 
+    /**
+     * 增加num通过id密码错误
+     */
     @Test
     void incrPasswordErrorNumById()
     {
@@ -48,12 +54,18 @@ class UserMapperTest
         System.out.println(i);
     }
 
+    /**
+     * 找到页面
+     */
     @Test
     void findPage()
     {
 
     }
 
+    /**
+     * 重置通过错误num
+     */
     @Test
     void resetPassErrorNum()
     {
@@ -61,12 +73,18 @@ class UserMapperTest
         System.out.println(i);
     }
 
+    /**
+     * 更新最后登录时间
+     */
     @Test
     void updateLastLoginTime()
     {
 
     }
 
+    /**
+     * 查询所有
+     */
     @Test
     void queryAll()
     {

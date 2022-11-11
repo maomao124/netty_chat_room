@@ -31,6 +31,9 @@ class ResourceMapperTest
     @Autowired
     private ResourceMapper resourceMapper;
 
+    /**
+     * 发现明显资源
+     */
     @Test
     void findVisibleResource()
     {
@@ -45,6 +48,9 @@ class ResourceMapperTest
         }
     }
 
+    /**
+     * 通过资源id找到菜单id
+     */
     @Test
     void findMenuIdByResourceId()
     {
@@ -58,6 +64,9 @@ class ResourceMapperTest
         }
     }
 
+    /**
+     * 查询所有
+     */
     @Test
     void queryAll()
     {
