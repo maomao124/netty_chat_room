@@ -34,6 +34,9 @@ class RoleAuthorityServiceImplTest
     @Autowired
     private RoleAuthorityService roleAuthorityService;
 
+    /**
+     * 查询所有
+     */
     @Test
     void queryAll()
     {
@@ -44,6 +47,9 @@ class RoleAuthorityServiceImplTest
         }
     }
 
+    /**
+     * 保存用户角色
+     */
     @Test
     void saveUserRole()
     {
@@ -51,6 +57,9 @@ class RoleAuthorityServiceImplTest
         System.out.println(b);
     }
 
+    /**
+     * 保存角色权限
+     */
     @Test
     void saveRoleAuthority()
     {

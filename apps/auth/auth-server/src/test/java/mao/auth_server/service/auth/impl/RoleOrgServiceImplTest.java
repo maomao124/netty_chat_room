@@ -34,6 +34,9 @@ class RoleOrgServiceImplTest
     @Autowired
     private RoleOrgService roleOrgService;
 
+    /**
+     * 查询所有
+     */
     @Test
     void queryAll()
     {
@@ -44,6 +47,9 @@ class RoleOrgServiceImplTest
         }
     }
 
+    /**
+     * 组织通过角色id列表
+     */
     @Test
     void listOrgByRoleId()
     {
