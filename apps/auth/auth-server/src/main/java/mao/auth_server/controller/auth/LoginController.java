@@ -1,12 +1,16 @@
 package mao.auth_server.controller.auth;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import mao.auth_entity.dto.auth.LoginDTO;
+import mao.auth_entity.dto.auth.LoginParamDTO;
+import mao.auth_server.service.auth.AuthService;
 import mao.auth_server.service.auth.ValidateCodeService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import mao.tools_core.base.R;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
@@ -25,6 +29,7 @@ import java.io.IOException;
  * Description(描述)： 登录Controller
  */
 
+
 @RestController
 @RequestMapping("/anno")
 @Api(value = "LoginController", tags = "登录控制器")
@@ -33,6 +38,9 @@ public class LoginController
     @Resource
     private ValidateCodeService validateCodeService;
 
+    @Resource
+    private AuthService authService;
+
 
     @ApiOperation(value = "验证码", notes = "验证码")
     @GetMapping(value = "/captcha", produces = "image/png")
@@ -40,5 +48,40 @@ public class LoginController
                         HttpServletResponse response) throws IOException
     {
         this.validateCodeService.create(key, response);
+    }
+
+
+    /**
+     * 登录认证
+     *
+     * @param loginParamDTO 登录参数dto
+     * @return {@link R}<{@link LoginDTO}>
+     */
+    @PostMapping("login")
+    @ApiOperation(notes = "登录", value = "登录")
+    @ApiImplicitParams(
+            {
+                    @ApiImplicitParam(name = "LoginParamDTO", value = "LoginParamDTO")
+            }
+    )
+    public R<LoginDTO> login(@Validated @RequestBody LoginParamDTO loginParamDTO)
+    {
+        //登录认证
+        return authService.login(loginParamDTO.getAccount(), loginParamDTO.getPassword(),
+                loginParamDTO.getKey(), loginParamDTO.getCode());
+    }
+
+    /**
+     * 校验验证码是否正确
+     *
+     * @param loginParamDTO 登录参数dto
+     * @return boolean
+     */
+    @PostMapping("/check")
+    @ApiOperation(notes = "校验验证码", value = "校验验证码")
+    public boolean check(@RequestBody LoginParamDTO loginParamDTO)
+    {
+        //校验验证码是否正确
+        return validateCodeService.check(loginParamDTO.getKey(), loginParamDTO.getCode());
     }
 }
