@@ -16,7 +16,7 @@ package mao.auth_server.service.auth;
 public interface PasswordEncoderService
 {
     /**
-     * 将原生密码加密
+     * 将原始密码加密
      *
      * @param rawPassword 未进行加密的原始密码
      * @return {@link String} 加密后的密码

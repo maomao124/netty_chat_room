@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import javax.annotation.PostConstruct;
 
@@ -24,7 +25,7 @@ import javax.annotation.PostConstruct;
 
 @Slf4j
 @Configuration
-@ControllerAdvice(annotations = {RestController.class, Controller.class})
+@RestControllerAdvice(annotations = {RestController.class, Controller.class})
 public class ExceptionConfiguration extends DefaultGlobalExceptionHandler
 {
     @PostConstruct
