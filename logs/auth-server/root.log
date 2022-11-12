@@ -5161,3 +5161,397 @@ Caused by: com.alibaba.nacos.api.exception.NacosException: failed to req API:/na
 2022-11-12 19:52:40.404  WARN 3100 --- [Thread-72] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
 2022-11-12 19:52:40.404  WARN 3100 --- [Thread-72] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
 2022-11-12 19:52:40.405  WARN 3100 --- [Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-11-12 20:13:53.428  WARN 10632 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[auth-server] & group[DEFAULT_GROUP]
+2022-11-12 20:13:53.459  INFO 10632 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-auth-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-auth-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2022-11-12 20:13:53.503  INFO 10632 --- [main] mao.auth_server.AuthServerApplication    : The following profiles are active: dev
+2022-11-12 20:13:54.437  INFO 10632 --- [main] o.s.c.a.ConfigurationClassParser         : Properties location [${j2cache.config-location}] not resolvable: Could not resolve placeholder 'j2cache.config-location' in value "${j2cache.config-location}"
+2022-11-12 20:13:55.434  INFO 10632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-12 20:13:55.438  INFO 10632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-12 20:13:55.476  INFO 10632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 Redis repository interfaces.
+2022-11-12 20:13:55.566  WARN 10632 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-11-12 20:13:55.876  INFO 10632 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9e9fed09-7db4-332c-b36d-61398af3d571
+2022-11-12 20:13:56.015  INFO 10632 --- [main] m.t.config.ValidatorConfig               : 开启hibernate-validator快速返回
+2022-11-12 20:13:56.016  INFO 10632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_validator.config.ValidatorConfig' of type [mao.tools_validator.config.ValidatorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 20:13:56.166  INFO 10632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 20:13:56.352  INFO 10632 --- [main] mao.tools_j2cache.config.CacheConfig     : 初始化 CacheConfig
+2022-11-12 20:13:56.352  INFO 10632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_j2cache.config.CacheConfig' of type [mao.tools_j2cache.config.CacheConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 20:13:56.484  INFO 10632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 20:13:56.494  INFO 10632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'database-mao.tools_databases.properties.DatabaseProperties' of type [mao.tools_databases.properties.DatabaseProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 20:13:56.501  INFO 10632 --- [main] m.a.config.MybatisConfiguration          : 初始化 MybatisConfiguration
+2022-11-12 20:13:56.501  INFO 10632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatisConfiguration' of type [mao.auth_server.config.MybatisConfiguration$$EnhancerBySpringCGLIB$$31a5816a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 20:13:56.507  INFO 10632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'paginationInterceptor' of type [com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 20:13:56.515  INFO 10632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getLeftLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.LeftLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 20:13:56.518  INFO 10632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getRightLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.RightLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 20:13:56.521  INFO 10632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getFullLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.FullLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 20:13:56.529  INFO 10632 --- [main] m.a.config.DatabaseConfiguration         : 初始化 DatabaseConfiguration
+2022-11-12 20:13:56.530  INFO 10632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'databaseConfiguration' of type [mao.auth_server.config.DatabaseConfiguration$$EnhancerBySpringCGLIB$$4977f818] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 20:13:56.598  INFO 10632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 20:13:56.603  INFO 10632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 20:13:56.615  INFO 10632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallConfig' of type [com.alibaba.druid.wall.WallConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 20:13:56.647  INFO 10632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallFilter' of type [com.alibaba.druid.wall.WallFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 20:13:56.746  INFO 10632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDruidDataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 20:13:56.784  INFO 10632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 20:13:56.802  INFO 10632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDataSource' of type [com.p6spy.engine.spy.P6DataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 20:13:56.808  INFO 10632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 20:13:56.816  INFO 10632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionInterceptor' of type [org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 20:13:56.817  INFO 10632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 20:13:56.881  INFO 10632 --- [main] mao.auth_server.config.WebConfiguration  : 初始化 WebConfiguration
+2022-11-12 20:13:57.187  INFO 10632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8764 (http)
+2022-11-12 20:13:57.203  INFO 10632 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 20:13:57.203  INFO 10632 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2022-11-12 20:13:57.377  INFO 10632 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-12 20:13:57.377  INFO 10632 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3826 ms
+2022-11-12 20:13:57.401  INFO 10632 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2022-11-12 20:13:57.531  WARN 10632 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-12 20:13:57.531  INFO 10632 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-12 20:13:57.544  INFO 10632 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@4e8598d9
+2022-11-12 20:13:57.661 DEBUG 10632 --- [main] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] init start ...
+2022-11-12 20:13:57.723 DEBUG 10632 --- [main] mao.tools_xss.filter.XssFilter           : ignorePathList=null
+2022-11-12 20:13:57.726 DEBUG 10632 --- [main] mao.tools_xss.filter.XssFilter           : ignoreParamValueList=["samlp:LogoutRequest"]
+2022-11-12 20:13:57.726 DEBUG 10632 --- [main] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] init end
+2022-11-12 20:13:57.748  INFO 10632 --- [main] m.a.config.ExceptionConfiguration        : 初始化 ExceptionConfiguration
+2022-11-12 20:13:57.780  INFO 10632 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2022-11-12 20:13:57.782  INFO 10632 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2022-11-12 20:13:57.788  INFO 10632 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2022-11-12 20:13:57.791  INFO 10632 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2022-11-12 20:13:57.800  INFO 10632 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2022-11-12 20:13:57.829  INFO 10632 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2022-11-12 20:13:58.123  INFO 10632 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-12 20:13:58.124  INFO 10632 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-12 20:13:58.170  INFO 10632 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-12 20:13:58.171  INFO 10632 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/authority/apps/auth/auth-server/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2022-11-12 20:13:58.181  INFO 10632 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-12 20:13:58.182  INFO 10632 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-11-12 20:13:58.189  INFO 10632 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-11-12 20:13:58.267  INFO 10632 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2022-11-12 20:13:58.974  INFO 10632 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbConfig@629cbb1]
+2022-11-12 20:13:58.974  INFO 10632 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbSearcher@165aa43a]
+2022-11-12 20:13:59.048 DEBUG 10632 --- [main] mao.tools_xss.utils.XssUtils             :  start read XSS configfile [antisamy-slashdot-1.4.4.xml]
+2022-11-12 20:13:59.055 DEBUG 10632 --- [main] mao.tools_xss.utils.XssUtils             : read XSS configfile [antisamy-slashdot-1.4.4.xml] success
+2022-11-12 20:13:59.786  INFO 10632 --- [main] m.a.config.SysLogConfiguration           : 初始化 SysLogConfiguration
+2022-11-12 20:13:59.793  INFO 10632 --- [main] n.o.j.a.J2CacheAutoConfiguration         : 初始化 J2CacheAutoConfiguration
+2022-11-12 20:13:59.865  INFO 10632 --- [main] n.o.j2cache.util.SerializationUtils      : Using Serializer -> [fst:net.oschina.j2cache.util.FSTSerializer]
+2022-11-12 20:13:59.868  INFO 10632 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L1 CacheProvider : net.oschina.j2cache.caffeine.CaffeineProvider
+2022-11-12 20:13:59.890  INFO 10632 --- [main] .j.a.J2CacheSpringRedisAutoConfiguration : 初始化 J2CacheSpringRedisAutoConfiguration
+2022-11-12 20:14:00.327  INFO 10632 --- [main] net.oschina.j2cache.CacheProviderHolder  : Using L2 CacheProvider : net.oschina.j2cache.cache.support.redis.SpringRedisProvider
+2022-11-12 20:14:00.342  INFO 10632 --- [main] net.oschina.j2cache.J2CacheBuilder       : Using cluster policy : net.oschina.j2cache.cache.support.redis.SpringRedisPubSubPolicy
+2022-11-12 20:14:00.348  INFO 10632 --- [main] m.t.s.config.AuthServerConfiguration     : 初始化 AuthServerConfiguration
+2022-11-12 20:14:00.371  INFO 10632 --- [main] m.a.s.a.i.BCryptPasswordEncoderService   : 密码加密和验证使用的是: BCrypt 算法
+2022-11-12 20:14:00.414 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.auth.LoginController
+2022-11-12 20:14:00.421 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.auth.LoginController
+2022-11-12 20:14:00.421 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.auth.LoginController
+2022-11-12 20:14:00.425 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.auth.LoginController
+2022-11-12 20:14:00.425 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.auth.LoginController
+2022-11-12 20:14:00.425 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.auth.LoginController
+2022-11-12 20:14:00.453 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.454 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.454 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.454 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.454 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.454 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.454 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.454 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.455 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.455 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.455 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.455 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.455 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.455 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.455 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.455 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.455 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.455 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.455 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.455 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.455 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.455 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.455 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.455 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.455 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.DashboardController
+2022-11-12 20:14:00.461 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.463 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.463 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.463 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.464 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.464 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.464 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.464 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.464 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.464 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.464 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.465 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.465 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.465 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.465 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.465 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.465 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.465 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.465 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.465 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.465 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.465 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.465 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.465 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.465 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.466 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.466 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.LoginLogController
+2022-11-12 20:14:00.470 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.471 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.471 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.471 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.471 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.471 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.471 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.471 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.471 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.471 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.471 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.471 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.472 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.472 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.472 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.472 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.472 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.472 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.472 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.472 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.472 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.472 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.472 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.472 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.472 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.472 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.OptLogController
+2022-11-12 20:14:00.476 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.TestController
+2022-11-12 20:14:00.477 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.TestController
+2022-11-12 20:14:00.477 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.TestController
+2022-11-12 20:14:00.477 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.TestController
+2022-11-12 20:14:00.477 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.common.TestController
+2022-11-12 20:14:00.498 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.499 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.499 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.499 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.500 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.500 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.500 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.500 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.500 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.500 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.500 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.500 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.500 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.500 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.500 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.500 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.501 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.501 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.501 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.501 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.501 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.501 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.501 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.501 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.501 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.501 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.501 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.501 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.501 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.OrgController
+2022-11-12 20:14:00.523 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.525 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.525 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.525 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.525 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.525 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.526 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.526 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.526 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.526 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.526 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.526 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.526 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.526 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.526 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.526 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.526 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.526 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.526 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.526 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.527 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.527 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.527 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.527 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.527 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.527 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.527 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.527 DEBUG 10632 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.auth_server.controller.core.StationController
+2022-11-12 20:14:00.836  INFO 10632 --- [main] m.t.config.LoginArgResolverConfig        : 初始化 LoginArgResolverConfig
+2022-11-12 20:14:01.021  INFO 10632 --- [main] .j.a.J2CacheSpringCacheAutoConfiguration : 初始化 J2CacheSpringCacheAutoConfiguration
+2022-11-12 20:14:02.329  INFO 10632 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-12 20:14:02.340  INFO 10632 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-12 20:14:02.341  INFO 10632 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-11-12 20:14:02.342  INFO 10632 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-11-12 20:14:02.419  INFO 10632 --- [main] mao.tools_j2cache.config.RedissonConfig  : 初始化 RedissonConfig
+2022-11-12 20:14:02.421  INFO 10632 --- [main] mao.tools_j2cache.config.RedissonConfig  : 单机模式redis:127.0.0.1:6379
+2022-11-12 20:14:02.578  INFO 10632 --- [main] org.redisson.Version                     : Redisson 3.17.0
+2022-11-12 20:14:03.324  INFO 10632 --- [redisson-netty-4-23] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-12 20:14:03.342  INFO 10632 --- [redisson-netty-4-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-11-12 20:14:03.617  INFO 10632 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2022-11-12 20:14:03.861  WARN 10632 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-12 20:14:03.861  INFO 10632 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-12 20:14:03.955  INFO 10632 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-12 20:14:04.171  INFO 10632 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-11-12 20:14:04.210  INFO 10632 --- [main] m.tools_j2cache.config.RedisUtilsConfig  : 初始化 RedisUtilsConfig
+2022-11-12 20:14:04.210  INFO 10632 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
+2022-11-12 20:14:04.230  INFO 10632 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-12 20:14:04.244  INFO 10632 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2022-11-12 20:14:04.244  INFO 10632 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='mao', url='https://github.com/maomao124/', email='1234@qq.com'}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{auth=DocketInfo{title='权限模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.auth', basePath=[], excludePath=[]}, common=DocketInfo{title='公共模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.common', basePath=[], excludePath=[]}, core=DocketInfo{title='组织岗位模块', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.auth_server.controller.core', basePath=[], excludePath=[]}}
+
+2022-11-12 20:14:05.752  INFO 10632 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-12 20:14:06.131  INFO 10632 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-11-12 20:14:06.160  INFO 10632 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2022-11-12 20:14:06.226  INFO 10632 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-12 20:14:06.402  INFO 10632 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2022-11-12 20:14:06.418  INFO 10632 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_1
+2022-11-12 20:14:06.437  INFO 10632 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageUsingGET_1
+2022-11-12 20:14:06.464  INFO 10632 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-12 20:14:06.487  INFO 10632 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-12 20:14:06.492  INFO 10632 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2022-11-12 20:14:06.497  INFO 10632 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_2
+2022-11-12 20:14:06.506  INFO 10632 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageUsingGET_2
+2022-11-12 20:14:06.522  INFO 10632 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_3
+2022-11-12 20:14:06.528  INFO 10632 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_3
+2022-11-12 20:14:06.535  INFO 10632 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageUsingGET_3
+2022-11-12 20:14:06.538  INFO 10632 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_1
+2022-11-12 20:14:06.541  INFO 10632 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2022-11-12 20:14:06.657  INFO 10632 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2022-11-12 20:14:06.658  INFO 10632 --- [j2CacheRedisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2022-11-12 20:14:06.815  INFO 10632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8764 (http) with context path ''
+2022-11-12 20:14:06.821  INFO 10632 --- [main] com.alibaba.nacos.client.naming          : [BEAT] adding beat: BeatInfo{port=8764, ip='192.168.202.1', weight=1.0, serviceName='DEFAULT_GROUP@@auth-server', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=/actuator}, scheduled=false, period=5000, stopped=false} to beat map.
+2022-11-12 20:14:06.822  INFO 10632 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] 27ce69b0-bff1-4c03-8f3e-0ea5559a5732 registering service DEFAULT_GROUP@@auth-server with instance: Instance{instanceId='null', ip='192.168.202.1', port=8764, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=/actuator}}
+2022-11-12 20:14:06.950  INFO 10632 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP auth-server 192.168.202.1:8764 register finished
+2022-11-12 20:14:07.166  INFO 10632 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@auth-server@@DEFAULT -> [{"instanceId":"192.168.202.1#8764#DEFAULT#DEFAULT_GROUP@@auth-server","ip":"192.168.202.1","port":8764,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@auth-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-11-12 20:14:07.175  INFO 10632 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@auth-server@@DEFAULT -> [{"instanceId":"192.168.202.1#8764#DEFAULT#DEFAULT_GROUP@@auth-server","ip":"192.168.202.1","port":8764,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@auth-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-11-12 20:14:07.980  INFO 10632 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.202.1\",\"port\":8764,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.202.1#8764#DEFAULT#DEFAULT_GROUP@@auth-server\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@auth-server\",\"ephemeral\":true}],\"dom\":\"DEFAULT_GROUP@@auth-server\",\"name\":\"DEFAULT_GROUP@@auth-server\",\"cacheMillis\":10000,\"lastRefTime\":1668255247960,\"checksum\":\"d706e8bc2779a32044465e588c1a9d58\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":196763341200} from /58.45.138.238
+2022-11-12 20:14:08.196  INFO 10632 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-11-12 20:14:08.199  INFO 10632 --- [main] mao.auth_server.AuthServerApplication    : Started AuthServerApplication in 19.192 seconds (JVM running for 21.411)
+2022-11-12 20:14:08.214  INFO 10632 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server-dev.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-12 20:14:08.216  INFO 10632 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server-dev.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-12 20:14:08.217  INFO 10632 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-12 20:14:08.217  INFO 10632 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server, group=DEFAULT_GROUP, cnt=1
+2022-11-12 20:14:08.221  INFO 10632 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] auth-server.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-12 20:14:08.221  INFO 10632 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=auth-server.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-12 20:14:08.225  INFO 10632 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [subscribe] common.yml+DEFAULT_GROUP+27ce69b0-bff1-4c03-8f3e-0ea5559a5732
+2022-11-12 20:14:08.226  INFO 10632 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [add-listener] ok, tenant=27ce69b0-bff1-4c03-8f3e-0ea5559a5732, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2022-11-12 20:14:08.226  INFO 10632 --- [main] mao.auth_server.AuthServerApplication    : 应用auth-server启动成功!swagger地址：http://58.45.138.238:8764/doc.html
+2022-11-12 20:14:08.226  INFO 10632 --- [main] mao.auth_server.AuthServerApplication    : 启动耗时：19440ms
+2022-11-12 20:14:08.748  INFO 10632 --- [RMI TCP Connection(4)-58.45.138.238] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-12 20:14:08.748  INFO 10632 --- [RMI TCP Connection(4)-58.45.138.238] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-12 20:14:08.767  INFO 10632 --- [RMI TCP Connection(4)-58.45.138.238] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2022-11-12 20:14:10.396  INFO 10632 --- [RMI TCP Connection(7)-58.45.138.238] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-11-12 20:14:17.991 DEBUG 10632 --- [http-nio-8764-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-12 20:14:17.991 DEBUG 10632 --- [http-nio-8764-exec-1] mao.tools_xss.filter.XssFilter           : has xssfiter path[/doc.html] need XssFilter, go to XssRequestWrapper
+2022-11-12 20:14:18.046 DEBUG 10632 --- [http-nio-8764-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-12 20:14:18.148 DEBUG 10632 --- [http-nio-8764-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-12 20:14:18.148 DEBUG 10632 --- [http-nio-8764-exec-2] mao.tools_xss.filter.XssFilter           : has xssfiter path[/webjars/css/app.67f90c95.css] need XssFilter, go to XssRequestWrapper
+2022-11-12 20:14:18.154 DEBUG 10632 --- [http-nio-8764-exec-3] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-12 20:14:18.154 DEBUG 10632 --- [http-nio-8764-exec-3] mao.tools_xss.filter.XssFilter           : has xssfiter path[/webjars/js/app.b1be8429.js] need XssFilter, go to XssRequestWrapper
+2022-11-12 20:14:18.156 DEBUG 10632 --- [http-nio-8764-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-12 20:14:18.157 DEBUG 10632 --- [http-nio-8764-exec-4] mao.tools_xss.filter.XssFilter           : has xssfiter path[/webjars/js/chunk-vendors.1e55988e.js] need XssFilter, go to XssRequestWrapper
+2022-11-12 20:14:18.169 DEBUG 10632 --- [http-nio-8764-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-12 20:14:18.170 DEBUG 10632 --- [http-nio-8764-exec-3] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-12 20:14:18.216 DEBUG 10632 --- [http-nio-8764-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-12 20:14:18.632 DEBUG 10632 --- [http-nio-8764-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-12 20:14:18.632 DEBUG 10632 --- [http-nio-8764-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-12 20:14:18.633 DEBUG 10632 --- [http-nio-8764-exec-6] mao.tools_xss.filter.XssFilter           : has xssfiter path[/swagger-resources] need XssFilter, go to XssRequestWrapper
+2022-11-12 20:14:18.633 DEBUG 10632 --- [http-nio-8764-exec-5] mao.tools_xss.filter.XssFilter           : has xssfiter path[/swagger-resources/configuration/ui] need XssFilter, go to XssRequestWrapper
+2022-11-12 20:14:18.633 DEBUG 10632 --- [http-nio-8764-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-12 20:14:18.633 DEBUG 10632 --- [http-nio-8764-exec-7] mao.tools_xss.filter.XssFilter           : has xssfiter path[/favicon.ico] need XssFilter, go to XssRequestWrapper
+2022-11-12 20:14:18.636  INFO 10632 --- [http-nio-8764-exec-7] m.t.p.TenantContextHandlerInterceptor    : not exec!!! url=http://58.45.138.238:8764/favicon.ico
+2022-11-12 20:14:18.636  INFO 10632 --- [http-nio-8764-exec-7] m.t.i.ContextHandlerInterceptor          : not exec!!! url=http://58.45.138.238:8764/favicon.ico
+2022-11-12 20:14:18.658 DEBUG 10632 --- [http-nio-8764-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-12 20:14:18.687 DEBUG 10632 --- [http-nio-8764-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-12 20:14:18.687 DEBUG 10632 --- [http-nio-8764-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-12 20:14:18.709 DEBUG 10632 --- [http-nio-8764-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-12 20:14:18.709 DEBUG 10632 --- [http-nio-8764-exec-8] mao.tools_xss.filter.XssFilter           : has xssfiter path[/v2/api-docs] need XssFilter, go to XssRequestWrapper
+2022-11-12 20:14:18.715 DEBUG 10632 --- [http-nio-8764-exec-8] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 公共模块
+2022-11-12 20:14:18.804 DEBUG 10632 --- [http-nio-8764-exec-8] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 公共模块
+2022-11-12 20:14:18.931 DEBUG 10632 --- [http-nio-8764-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-12 20:16:17.250 DEBUG 10632 --- [http-nio-8764-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-12 20:16:17.250 DEBUG 10632 --- [http-nio-8764-exec-2] mao.tools_xss.filter.XssFilter           : has xssfiter path[/common/generateId] need XssFilter, go to XssRequestWrapper
+2022-11-12 20:16:17.269  WARN 10632 --- [http-nio-8764-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/authority?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 126868
+2022-11-12 20:16:17.271  WARN 10632 --- [http-nio-8764-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/authority?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 126897
+2022-11-12 20:16:17.272  WARN 10632 --- [http-nio-8764-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/authority?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 126919
+2022-11-12 20:16:17.273  WARN 10632 --- [http-nio-8764-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/authority?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 126940
+2022-11-12 20:16:17.275  WARN 10632 --- [http-nio-8764-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/authority?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 126962
+2022-11-12 20:16:17.277  WARN 10632 --- [http-nio-8764-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/authority?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 126985
+2022-11-12 20:16:17.278  WARN 10632 --- [http-nio-8764-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/authority?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 127008
+2022-11-12 20:16:17.280  WARN 10632 --- [http-nio-8764-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/authority?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 127031
+2022-11-12 20:16:17.282  WARN 10632 --- [http-nio-8764-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/authority?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 127055
+2022-11-12 20:16:17.283  WARN 10632 --- [http-nio-8764-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/authority?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 127086
+2022-11-12 20:16:17.343 DEBUG 10632 --- [http-nio-8764-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-12 20:16:33.542 DEBUG 10632 --- [http-nio-8764-exec-3] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-12 20:16:33.542 DEBUG 10632 --- [http-nio-8764-exec-3] mao.tools_xss.filter.XssFilter           : has xssfiter path[/common/generateId] need XssFilter, go to XssRequestWrapper
+2022-11-12 20:16:33.545 DEBUG 10632 --- [http-nio-8764-exec-3] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-12 20:16:34.225 DEBUG 10632 --- [http-nio-8764-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-12 20:16:34.225 DEBUG 10632 --- [http-nio-8764-exec-4] mao.tools_xss.filter.XssFilter           : has xssfiter path[/common/generateId] need XssFilter, go to XssRequestWrapper
+2022-11-12 20:16:34.228 DEBUG 10632 --- [http-nio-8764-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-12 20:16:34.767 DEBUG 10632 --- [http-nio-8764-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-12 20:16:34.767 DEBUG 10632 --- [http-nio-8764-exec-7] mao.tools_xss.filter.XssFilter           : has xssfiter path[/common/generateId] need XssFilter, go to XssRequestWrapper
+2022-11-12 20:16:34.770 DEBUG 10632 --- [http-nio-8764-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-12 20:16:35.516 DEBUG 10632 --- [http-nio-8764-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-12 20:16:35.516 DEBUG 10632 --- [http-nio-8764-exec-6] mao.tools_xss.filter.XssFilter           : has xssfiter path[/common/generateId] need XssFilter, go to XssRequestWrapper
+2022-11-12 20:16:35.519 DEBUG 10632 --- [http-nio-8764-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-12 20:16:36.156 DEBUG 10632 --- [http-nio-8764-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-12 20:16:36.156 DEBUG 10632 --- [http-nio-8764-exec-5] mao.tools_xss.filter.XssFilter           : has xssfiter path[/common/generateId] need XssFilter, go to XssRequestWrapper
+2022-11-12 20:16:36.158 DEBUG 10632 --- [http-nio-8764-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-12 20:16:36.652 DEBUG 10632 --- [http-nio-8764-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-12 20:16:36.652 DEBUG 10632 --- [http-nio-8764-exec-8] mao.tools_xss.filter.XssFilter           : has xssfiter path[/common/generateId] need XssFilter, go to XssRequestWrapper
+2022-11-12 20:16:36.654 DEBUG 10632 --- [http-nio-8764-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-12 20:16:37.299 DEBUG 10632 --- [http-nio-8764-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-12 20:16:37.299 DEBUG 10632 --- [http-nio-8764-exec-10] mao.tools_xss.filter.XssFilter           : has xssfiter path[/common/generateId] need XssFilter, go to XssRequestWrapper
+2022-11-12 20:16:37.302 DEBUG 10632 --- [http-nio-8764-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-12 20:16:39.625 DEBUG 10632 --- [http-nio-8764-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-12 20:16:39.625 DEBUG 10632 --- [http-nio-8764-exec-9] mao.tools_xss.filter.XssFilter           : has xssfiter path[/common/generateId] need XssFilter, go to XssRequestWrapper
+2022-11-12 20:16:39.627 DEBUG 10632 --- [http-nio-8764-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-12 20:16:47.789 DEBUG 10632 --- [http-nio-8764-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-12 20:16:47.789 DEBUG 10632 --- [http-nio-8764-exec-1] mao.tools_xss.filter.XssFilter           : has xssfiter path[/dashboard/visit] need XssFilter, go to XssRequestWrapper
+2022-11-12 20:16:47.823 DEBUG 10632 --- [http-nio-8764-exec-1] m.a.d.c.L.findTotalVisitCount            : ==>  Preparing: select count(*) from common_login_log 
+2022-11-12 20:16:47.856 DEBUG 10632 --- [http-nio-8764-exec-1] m.a.d.c.L.findTotalVisitCount            : ==> Parameters: 
+2022-11-12 20:16:47.885 DEBUG 10632 --- [http-nio-8764-exec-1] m.a.d.c.L.findTotalVisitCount            : <==      Total: 1
+2022-11-12 20:16:47.891 DEBUG 10632 --- [http-nio-8764-exec-1] m.a.d.c.L.findTodayVisitCount            : ==>  Preparing: select count(*) from common_login_log where login_date = ? 
+2022-11-12 20:16:47.938 DEBUG 10632 --- [http-nio-8764-exec-1] m.a.d.c.L.findTodayVisitCount            : ==> Parameters: 2022-11-12(LocalDate)
+2022-11-12 20:16:47.942 DEBUG 10632 --- [http-nio-8764-exec-1] m.a.d.c.L.findTodayVisitCount            : <==      Total: 1
+2022-11-12 20:16:47.943 DEBUG 10632 --- [http-nio-8764-exec-1] m.a.d.common.LoginLogMapper.findTodayIp  : ==>  Preparing: select count(distinct (request_ip)) from common_login_log where login_date = ? 
+2022-11-12 20:16:47.944 DEBUG 10632 --- [http-nio-8764-exec-1] m.a.d.common.LoginLogMapper.findTodayIp  : ==> Parameters: 2022-11-12(LocalDate)
+2022-11-12 20:16:47.946 DEBUG 10632 --- [http-nio-8764-exec-1] m.a.d.common.LoginLogMapper.findTodayIp  : <==      Total: 1
+2022-11-12 20:16:47.962 DEBUG 10632 --- [http-nio-8764-exec-1] m.a.d.c.L.findLastTenDaysVisitCount      : ==>  Preparing: select login_date , count(*) `count` from ( select id, login_date from common_login_log where login_date >= ? ) as l group by login_date 
+2022-11-12 20:16:47.967 DEBUG 10632 --- [http-nio-8764-exec-1] m.a.d.c.L.findLastTenDaysVisitCount      : ==> Parameters: 2022-11-03(LocalDate)
+2022-11-12 20:16:47.968 DEBUG 10632 --- [http-nio-8764-exec-1] m.a.d.c.L.findLastTenDaysVisitCount      : <==      Total: 0
+2022-11-12 20:16:47.970 DEBUG 10632 --- [http-nio-8764-exec-1] m.a.d.c.LoginLogMapper.findByBrowser     : ==>  Preparing: select browser, count(id) `count` from common_login_log group by browser 
+2022-11-12 20:16:47.970 DEBUG 10632 --- [http-nio-8764-exec-1] m.a.d.c.LoginLogMapper.findByBrowser     : ==> Parameters: 
+2022-11-12 20:16:47.972 DEBUG 10632 --- [http-nio-8764-exec-1] m.a.d.c.LoginLogMapper.findByBrowser     : <==      Total: 0
+2022-11-12 20:16:47.972 DEBUG 10632 --- [http-nio-8764-exec-1] m.a.d.c.L.findByOperatingSystem          : ==>  Preparing: select operating_system, count(id) `count` from common_login_log group by operating_system 
+2022-11-12 20:16:47.973 DEBUG 10632 --- [http-nio-8764-exec-1] m.a.d.c.L.findByOperatingSystem          : ==> Parameters: 
+2022-11-12 20:16:47.974 DEBUG 10632 --- [http-nio-8764-exec-1] m.a.d.c.L.findByOperatingSystem          : <==      Total: 0
+2022-11-12 20:16:47.976 DEBUG 10632 --- [http-nio-8764-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-12 20:17:18.322 DEBUG 10632 --- [http-nio-8764-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-12 20:17:18.322 DEBUG 10632 --- [http-nio-8764-exec-2] mao.tools_xss.filter.XssFilter           : has xssfiter path[/v2/api-docs] need XssFilter, go to XssRequestWrapper
+2022-11-12 20:17:18.323 DEBUG 10632 --- [http-nio-8764-exec-2] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 权限模块
+2022-11-12 20:17:18.323 DEBUG 10632 --- [http-nio-8764-exec-2] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 权限模块
+2022-11-12 20:17:18.331 DEBUG 10632 --- [http-nio-8764-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-12 20:17:41.233 DEBUG 10632 --- [http-nio-8764-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-12 20:17:41.233 DEBUG 10632 --- [http-nio-8764-exec-4] mao.tools_xss.filter.XssFilter           : has xssfiter path[/v2/api-docs] need XssFilter, go to XssRequestWrapper
+2022-11-12 20:17:41.233 DEBUG 10632 --- [http-nio-8764-exec-4] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 组织岗位模块
+2022-11-12 20:17:41.233 DEBUG 10632 --- [http-nio-8764-exec-4] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 组织岗位模块
+2022-11-12 20:17:41.242 DEBUG 10632 --- [http-nio-8764-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-12 20:20:04.062 DEBUG 10632 --- [http-nio-8764-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-12 20:20:04.062 DEBUG 10632 --- [http-nio-8764-exec-6] mao.tools_xss.filter.XssFilter           : has xssfiter path[/webjars/img/logo.d03f7d43.png] need XssFilter, go to XssRequestWrapper
+2022-11-12 20:20:04.069 DEBUG 10632 --- [http-nio-8764-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop

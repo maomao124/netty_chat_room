@@ -2,6 +2,7 @@ package mao.auth_server.controller.core;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
@@ -16,6 +17,7 @@ import mao.tools_core.base.R;
 import mao.tools_core.base.entity.SuperEntity;
 import mao.tools_log.annotation.SysLog;
 import mao.toolsdozer.utils.DozerUtils;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -37,6 +39,7 @@ import java.util.List;
 
 @Slf4j
 @RestController
+@Api(value = "StationController", tags = "岗位")
 @RequestMapping("/station")
 public class StationController extends BaseController
 {
@@ -78,6 +81,7 @@ public class StationController extends BaseController
     /**
      * 新增岗位
      */
+    @Transactional
     @ApiOperation(value = "新增岗位", notes = "新增岗位不为空的字段")
     @PostMapping
     @SysLog("新增岗位")
@@ -91,6 +95,7 @@ public class StationController extends BaseController
     /**
      * 修改岗位
      */
+    @Transactional
     @ApiOperation(value = "修改岗位", notes = "修改岗位不为空的字段")
     @PutMapping
     @SysLog("修改岗位")
@@ -104,6 +109,7 @@ public class StationController extends BaseController
     /**
      * 删除岗位
      */
+    @Transactional
     @ApiOperation(value = "删除岗位", notes = "根据id物理删除岗位")
     @SysLog("删除岗位")
     @DeleteMapping

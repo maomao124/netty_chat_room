@@ -26,7 +26,7 @@ import javax.annotation.Resource;
  * Description(描述)： 无
  */
 
-@Api(value = "测试")
+@Api(value = "TestController" ,tags = "测试")
 @RestController
 @RequestMapping("/test")
 public class TestController

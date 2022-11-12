@@ -21,6 +21,7 @@ import mao.tools_databases.mybatis.conditions.query.LbqWrapper;
 import mao.tools_log.annotation.SysLog;
 import mao.toolsdozer.utils.DozerUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -46,7 +47,7 @@ import static mao.tools_core.utils.StrPool.DEF_ROOT_PATH;
 @Slf4j
 @RestController
 @RequestMapping("/org")
-@Api(value = "Org", tags = "组织")
+@Api(value = "OrgController", tags = "组织")
 public class OrgController extends BaseController
 {
     @Resource
@@ -87,6 +88,7 @@ public class OrgController extends BaseController
     /**
      * 新增组织
      */
+    @Transactional
     @ApiOperation(value = "新增组织", notes = "新增组织不为空的字段")
     @PostMapping
     @SysLog("新增组织")
@@ -112,6 +114,7 @@ public class OrgController extends BaseController
     /**
      * 修改组织
      */
+    @Transactional
     @ApiOperation(value = "修改组织", notes = "修改组织不为空的字段")
     @PutMapping
     @SysLog("修改组织")
@@ -125,6 +128,7 @@ public class OrgController extends BaseController
     /**
      * 删除组织
      */
+    @Transactional
     @ApiOperation(value = "删除组织", notes = "根据id物理删除组织")
     @SysLog("删除组织")
     @DeleteMapping
