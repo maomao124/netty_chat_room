@@ -125,8 +125,8 @@ class UserServiceImplTest
     @Test
     void updateUser()
     {
-        User user = User.builder().id(4L).email("1234@qq.com")
-                .password("123").sex(Sex.M).account("4")
+        User user = User.builder().id(3L).email("1234@qq.com")
+                .password("123").sex(Sex.M).account("3")
                 .name("测试用户").build();
         user.setEmail("123@qq.com");
         User updateUser = userService.updateUser(user);
@@ -201,7 +201,7 @@ class UserServiceImplTest
     void updatePassword3()
     {
         Boolean aBoolean = userService.updatePassword(UserUpdatePasswordDTO.builder()
-                .id(4L).oldPassword("123").password("123456")
+                .id(3L).oldPassword("123").password("123456")
                 .confirmPassword("123456").build());
         System.out.println(aBoolean);
     }

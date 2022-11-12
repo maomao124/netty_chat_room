@@ -25,7 +25,6 @@ import javax.annotation.PostConstruct;
 
 @Slf4j
 @Configuration
-@EnableConfigurationProperties({DatabaseProperties.class, MybatisPlusProperties.class})
 public class MybatisConfiguration extends BaseMybatisConfiguration
 {
 
