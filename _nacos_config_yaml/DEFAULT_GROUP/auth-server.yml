@@ -2,6 +2,7 @@
 def:
   mysql:
     database: authority
+    
 swagger:
   enabled: true
   contact:
@@ -26,5 +27,5 @@ authentication:
     pri-key: client/pri.key    # 加密
     pub-key: client/pub.key    # 解密
 
-server:
-  port: 8764
+#server:
+#  port: 8764

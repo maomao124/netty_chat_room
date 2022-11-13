@@ -20,7 +20,8 @@ spring:
       username: ${mysql.username}
       password: ${mysql.password}
       driver-class-name: ${mysql.driverClassName}
-      url: jdbc:mysql://${mysql.ip}:${mysql.port}/${mysql.database}?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+      url: jdbc:mysql://${mysql.ip}:${mysql.port}/${mysql.database}?serverTimezone=GMT&characterEncoding=utf8
+      # &useUnicode=true&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
       db-type: mysql
       initialSize: 10
       minIdle: 10

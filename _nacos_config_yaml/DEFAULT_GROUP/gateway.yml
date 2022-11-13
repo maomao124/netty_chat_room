@@ -1,6 +1,5 @@
-pinda:
-  log:
-    enabled: false
+log:
+  enabled: false
 
 spring:
   mvc:
@@ -8,7 +7,6 @@ spring:
       path: /gate
 
 server:
-  port: 8760
   servlet:
     context-path: /api  # = server.servlet.context-path
 
