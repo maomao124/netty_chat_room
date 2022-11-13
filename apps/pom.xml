@@ -18,6 +18,7 @@
 
     <modules>
         <module>auth</module>
+        <module>gateway</module>
     </modules>
 
     <dependencyManagement>

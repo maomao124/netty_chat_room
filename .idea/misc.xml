@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/tools/tools-databases/pom.xml" />
         <option value="$PROJECT_DIR$/apps/auth/auth-entity/pom.xml" />
         <option value="$PROJECT_DIR$/apps/auth/auth-server/pom.xml" />
+        <option value="$PROJECT_DIR$/apps/gateway/pom.xml" />
       </list>
     </option>
   </component>
