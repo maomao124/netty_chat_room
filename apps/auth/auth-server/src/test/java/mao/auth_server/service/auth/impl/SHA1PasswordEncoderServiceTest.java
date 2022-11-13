@@ -48,4 +48,11 @@ class SHA1PasswordEncoderServiceTest
         System.out.println(new SHA1PasswordEncoderService().verification("113",
                 "40bd001563085fc35165329ea1ff5c5ecbdbbeef"));
     }
+
+    @Test
+    void verification3()
+    {
+        System.out.println(new SHA1PasswordEncoderService().verification("123",
+                "40bd001562085fc35165329ea1ff5c5ecbdbbeef"));
+    }
 }

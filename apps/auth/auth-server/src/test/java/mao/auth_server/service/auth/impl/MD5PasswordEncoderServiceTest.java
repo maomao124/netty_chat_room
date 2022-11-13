@@ -48,4 +48,14 @@ class MD5PasswordEncoderServiceTest
         System.out.println(new MD5PasswordEncoderService().verification("124",
                 "202cb962ac59075b964b07152d234b70"));
     }
+
+    /**
+     * verification3
+     */
+    @Test
+    void verification3()
+    {
+        System.out.println(new MD5PasswordEncoderService().verification("123",
+                "202cb962ac59075b964b07152d234b71"));
+    }
 }
