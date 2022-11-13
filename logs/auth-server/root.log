@@ -484,3 +484,239 @@ docket：{auth=DocketInfo{title='权限模块', group='', description='在线文
 2022-11-13 13:54:05.659  INFO 4456 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [notify-ok] dataId=common.yml, group=DEFAULT_GROUP, md5=fb9eeb94afa092c088b7714f48c29eff, listener=com.alibaba.cloud.nacos.refresh.NacosContextRefresher$1@728a8b05 
 2022-11-13 13:54:05.659  INFO 4456 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-27ce69b0-bff1-4c03-8f3e-0ea5559a5732] [notify-listener] time cost=2959ms in ClientWorker, dataId=common.yml, group=DEFAULT_GROUP, md5=fb9eeb94afa092c088b7714f48c29eff, listener=com.alibaba.cloud.nacos.refresh.NacosContextRefresher$1@728a8b05 
 2022-11-13 13:55:54.907  INFO 4456 --- [j2CacheRedisMessageListenerContainer-2] n.o.j.c.s.r.SpringRedisMessageListener   : Node-5912564 quit to j2cache
+2022-11-13 13:57:44.849 DEBUG 4456 --- [http-nio-8764-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-13 13:57:44.849 DEBUG 4456 --- [http-nio-8764-exec-10] mao.tools_xss.filter.XssFilter           : has xssfiter path[/resource/list] need XssFilter, go to XssRequestWrapper
+2022-11-13 13:57:44.898 DEBUG 4456 --- [http-nio-8764-exec-10] mao.tools_xss.utils.XssUtils             : raw value before xssClean: Java/1.8.0_332
+2022-11-13 13:57:44.951 DEBUG 4456 --- [http-nio-8764-exec-10] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: Java/1.8.0_332
+2022-11-13 13:57:45.058  WARN 4456 --- [http-nio-8764-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/authority?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 614852
+2022-11-13 13:57:45.060  WARN 4456 --- [http-nio-8764-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/authority?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 614885
+2022-11-13 13:57:45.062  WARN 4456 --- [http-nio-8764-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/authority?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 614910
+2022-11-13 13:57:45.064  WARN 4456 --- [http-nio-8764-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/authority?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 614934
+2022-11-13 13:57:45.066  WARN 4456 --- [http-nio-8764-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/authority?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 614955
+2022-11-13 13:57:45.068  WARN 4456 --- [http-nio-8764-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/authority?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 614978
+2022-11-13 13:57:45.070  WARN 4456 --- [http-nio-8764-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/authority?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 615000
+2022-11-13 13:57:45.071  WARN 4456 --- [http-nio-8764-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/authority?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 615021
+2022-11-13 13:57:45.073  WARN 4456 --- [http-nio-8764-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/authority?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 615043
+2022-11-13 13:57:45.074  WARN 4456 --- [http-nio-8764-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/authority?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 615074
+2022-11-13 13:57:45.095 DEBUG 4456 --- [http-nio-8764-exec-10] m.a.dao.auth.ResourceMapper.selectList   : ==>  Preparing: SELECT id,code,method,create_time,name,menu_id,update_user,update_time,create_user,describe_,url FROM auth_resource 
+2022-11-13 13:57:45.126 DEBUG 4456 --- [http-nio-8764-exec-10] m.a.dao.auth.ResourceMapper.selectList   : ==> Parameters: 
+2022-11-13 13:57:45.179 DEBUG 4456 --- [http-nio-8764-exec-10] m.a.dao.auth.ResourceMapper.selectList   : <==      Total: 48
+2022-11-13 13:57:45.238 DEBUG 4456 --- [task-1] m.a.dao.common.OptLogMapper.insert       : ==>  Preparing: INSERT INTO common_opt_log ( id, finish_time, action_method, description, request_ip, request_uri, ua, params, http_method, user_name, type, result, consuming_time, create_time, class_path, start_time, create_user ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2022-11-13 13:57:45.241 DEBUG 4456 --- [http-nio-8764-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-13 13:57:45.261 DEBUG 4456 --- [task-1] m.a.dao.common.OptLogMapper.insert       : ==> Parameters: 103476014033666081(Long), 2022-11-13T13:57:45.192(LocalDateTime), list(String), 资源-查询所有资源(String), 192.168.202.1(String), /resource/list(String), Java/1.8.0_332(String), [](String), GET(String), (String), OPT(String), {"code":0,"data":["POST/org","POST/role/authority","POST/resource","PUT/resource","DELETE/resource","PUT/org","DELETE/org","GET/org/tree","POST/org","GET/org","POST/station","PUT/station","DELETE/station","GET/station/page","GET/station","POST/station","POST/user","PUT/user","DELETE/user","GET/user/page","POST/user","GET/user","POST/menu","PUT/menu","DELETE/menu","GET/menu/tree","GET/menu","POST/menu","POST/role","PUT/role","DELETE/role","GET/role/page","GET/role","POST/role","POST/role/user","GET/optLog","GET/optLog","DELETE/optLog","DELETE/loginLog","GET/loginLog","POST/file","PUT/file","DELETE/file","GET/file","GET/receiveRecord/page","GET/sendRecord/page","GET/role/authority/*","GET/resource/page"],"isError":false,"isSuccess":true,"msg":"ok","timestamp":1668319065180}(String), 237(Long), 2022-11-13T13:57:45.237(LocalDateTime), mao.auth_server.controller.auth.ResourceController(String), 2022-11-13T13:57:44.955(LocalDateTime), 0(Long)
+2022-11-13 13:57:45.276 DEBUG 4456 --- [task-1] m.a.dao.common.OptLogMapper.insert       : <==    Updates: 1
+2022-11-13 13:57:45.421  INFO 4456 --- [j2CacheRedisMessageListenerContainer-3] n.o.j.c.s.r.SpringRedisMessageListener   : Node-66007 quit to j2cache
+2022-11-13 13:59:50.331 DEBUG 4456 --- [http-nio-8764-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-13 13:59:50.331 DEBUG 4456 --- [http-nio-8764-exec-6] mao.tools_xss.filter.XssFilter           : has xssfiter path[/resource/list] need XssFilter, go to XssRequestWrapper
+2022-11-13 13:59:50.332 DEBUG 4456 --- [http-nio-8764-exec-6] mao.tools_xss.utils.XssUtils             : raw value before xssClean: Java/1.8.0_332
+2022-11-13 13:59:50.333 DEBUG 4456 --- [http-nio-8764-exec-6] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: Java/1.8.0_332
+2022-11-13 13:59:50.335  WARN 4456 --- [http-nio-8764-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/authority?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 125059
+2022-11-13 13:59:50.357 DEBUG 4456 --- [http-nio-8764-exec-6] m.a.dao.auth.ResourceMapper.selectList   : ==>  Preparing: SELECT id,code,method,create_time,name,menu_id,update_user,update_time,create_user,describe_,url FROM auth_resource 
+2022-11-13 13:59:50.357 DEBUG 4456 --- [http-nio-8764-exec-6] m.a.dao.auth.ResourceMapper.selectList   : ==> Parameters: 
+2022-11-13 13:59:50.366 DEBUG 4456 --- [http-nio-8764-exec-6] m.a.dao.auth.ResourceMapper.selectList   : <==      Total: 48
+2022-11-13 13:59:50.369 DEBUG 4456 --- [http-nio-8764-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-13 13:59:50.370 DEBUG 4456 --- [task-2] m.a.dao.common.OptLogMapper.insert       : ==>  Preparing: INSERT INTO common_opt_log ( id, finish_time, action_method, description, request_ip, request_uri, ua, params, http_method, user_name, type, result, consuming_time, create_time, class_path, start_time, create_user ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2022-11-13 13:59:50.372 DEBUG 4456 --- [task-2] m.a.dao.common.OptLogMapper.insert       : ==> Parameters: 103476538875314241(Long), 2022-11-13T13:59:50.366(LocalDateTime), list(String), 资源-查询所有资源(String), 192.168.202.1(String), /resource/list(String), Java/1.8.0_332(String), [](String), GET(String), (String), OPT(String), {"code":0,"data":["POST/org","POST/role/authority","POST/resource","PUT/resource","DELETE/resource","PUT/org","DELETE/org","GET/org/tree","POST/org","GET/org","POST/station","PUT/station","DELETE/station","GET/station/page","GET/station","POST/station","POST/user","PUT/user","DELETE/user","GET/user/page","POST/user","GET/user","POST/menu","PUT/menu","DELETE/menu","GET/menu/tree","GET/menu","POST/menu","POST/role","PUT/role","DELETE/role","GET/role/page","GET/role","POST/role","POST/role/user","GET/optLog","GET/optLog","DELETE/optLog","DELETE/loginLog","GET/loginLog","POST/file","PUT/file","DELETE/file","GET/file","GET/receiveRecord/page","GET/sendRecord/page","GET/role/authority/*","GET/resource/page"],"isError":false,"isSuccess":true,"msg":"ok","timestamp":1668319190366}(String), 33(Long), 2022-11-13T13:59:50.369(LocalDateTime), mao.auth_server.controller.auth.ResourceController(String), 2022-11-13T13:59:50.333(LocalDateTime), 0(Long)
+2022-11-13 13:59:50.376 DEBUG 4456 --- [task-2] m.a.dao.common.OptLogMapper.insert       : <==    Updates: 1
+2022-11-13 13:59:50.556  INFO 4456 --- [j2CacheRedisMessageListenerContainer-4] n.o.j.c.s.r.SpringRedisMessageListener   : Node-4160647 quit to j2cache
+2022-11-13 14:02:11.568 DEBUG 4456 --- [http-nio-8764-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-13 14:02:11.568 DEBUG 4456 --- [http-nio-8764-exec-8] mao.tools_xss.filter.XssFilter           : has xssfiter path[/resource] need XssFilter, go to XssRequestWrapper
+2022-11-13 14:02:11.568 DEBUG 4456 --- [http-nio-8764-exec-8] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 26
+2022-11-13 14:02:11.568 DEBUG 4456 --- [http-nio-8764-exec-8] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 26
+2022-11-13 14:02:11.569 DEBUG 4456 --- [http-nio-8764-exec-8] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 26
+2022-11-13 14:02:11.569 DEBUG 4456 --- [http-nio-8764-exec-8] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 26
+2022-11-13 14:02:11.652  WARN 4456 --- [http-nio-8764-exec-8] m.t.h.DefaultGlobalExceptionHandler      : MethodArgumentNotValidException:
+
+org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public mao.tools_core.base.R<mao.auth_entity.entity.auth.Resource> mao.auth_server.controller.auth.ResourceController.save(mao.auth_entity.dto.auth.ResourceSaveDTO): [Field error in object 'resourceSaveDTO' on field 'name': rejected value [null]; codes [NotEmpty.resourceSaveDTO.name,NotEmpty.name,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [resourceSaveDTO.name,name]; arguments []; default message [name]]; default message [接口名称不能为空]] 
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:139) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:517) [jakarta.servlet-api-4.0.4.jar:4.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:584) [jakarta.servlet-api-4.0.4.jar:4.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) [druid-1.2.8.jar:1.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at mao.tools_xss.filter.XssFilter.doFilter(XssFilter.java:109) [classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) [spring-boot-actuator-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2022-11-13 14:02:11.654 DEBUG 4456 --- [http-nio-8764-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-13 14:02:11.875  INFO 4456 --- [j2CacheRedisMessageListenerContainer-5] n.o.j.c.s.r.SpringRedisMessageListener   : Node-6803780 quit to j2cache
+2022-11-13 14:05:52.214 DEBUG 4456 --- [http-nio-8764-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-13 14:05:52.214 DEBUG 4456 --- [http-nio-8764-exec-9] mao.tools_xss.filter.XssFilter           : has xssfiter path[/resource] need XssFilter, go to XssRequestWrapper
+2022-11-13 14:05:52.214 DEBUG 4456 --- [http-nio-8764-exec-9] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 26
+2022-11-13 14:05:52.214 DEBUG 4456 --- [http-nio-8764-exec-9] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 26
+2022-11-13 14:05:52.214 DEBUG 4456 --- [http-nio-8764-exec-9] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 26
+2022-11-13 14:05:52.215 DEBUG 4456 --- [http-nio-8764-exec-9] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 26
+2022-11-13 14:05:52.216  WARN 4456 --- [http-nio-8764-exec-9] m.t.h.DefaultGlobalExceptionHandler      : MethodArgumentNotValidException:
+
+org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public mao.tools_core.base.R<mao.auth_entity.entity.auth.Resource> mao.auth_server.controller.auth.ResourceController.save(mao.auth_entity.dto.auth.ResourceSaveDTO): [Field error in object 'resourceSaveDTO' on field 'name': rejected value [null]; codes [NotEmpty.resourceSaveDTO.name,NotEmpty.name,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [resourceSaveDTO.name,name]; arguments []; default message [name]]; default message [接口名称不能为空]] 
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:139) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:517) [jakarta.servlet-api-4.0.4.jar:4.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:584) [jakarta.servlet-api-4.0.4.jar:4.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) [druid-1.2.8.jar:1.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at mao.tools_xss.filter.XssFilter.doFilter(XssFilter.java:109) [classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) [spring-boot-actuator-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2022-11-13 14:05:52.218 DEBUG 4456 --- [http-nio-8764-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-13 14:05:52.420  INFO 4456 --- [j2CacheRedisMessageListenerContainer-6] n.o.j.c.s.r.SpringRedisMessageListener   : Node-9281546 quit to j2cache
+2022-11-13 14:08:07.055 DEBUG 4456 --- [http-nio-8764-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-11-13 14:08:07.055 DEBUG 4456 --- [http-nio-8764-exec-5] mao.tools_xss.filter.XssFilter           : has xssfiter path[/resource] need XssFilter, go to XssRequestWrapper
+2022-11-13 14:08:07.055 DEBUG 4456 --- [http-nio-8764-exec-5] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 25
+2022-11-13 14:08:07.056 DEBUG 4456 --- [http-nio-8764-exec-5] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 25
+2022-11-13 14:08:07.056 DEBUG 4456 --- [http-nio-8764-exec-5] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 25
+2022-11-13 14:08:07.056 DEBUG 4456 --- [http-nio-8764-exec-5] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 25
+2022-11-13 14:08:07.057  WARN 4456 --- [http-nio-8764-exec-5] m.t.h.DefaultGlobalExceptionHandler      : MethodArgumentNotValidException:
+
+org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public mao.tools_core.base.R<mao.auth_entity.entity.auth.Resource> mao.auth_server.controller.auth.ResourceController.save(mao.auth_entity.dto.auth.ResourceSaveDTO): [Field error in object 'resourceSaveDTO' on field 'name': rejected value [null]; codes [NotEmpty.resourceSaveDTO.name,NotEmpty.name,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [resourceSaveDTO.name,name]; arguments []; default message [name]]; default message [接口名称不能为空]] 
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:139) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:517) [jakarta.servlet-api-4.0.4.jar:4.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:584) [jakarta.servlet-api-4.0.4.jar:4.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) [druid-1.2.8.jar:1.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at mao.tools_xss.filter.XssFilter.doFilter(XssFilter.java:109) [classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) [spring-boot-actuator-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2022-11-13 14:08:07.059 DEBUG 4456 --- [http-nio-8764-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-11-13 14:08:07.268  INFO 4456 --- [j2CacheRedisMessageListenerContainer-7] n.o.j.c.s.r.SpringRedisMessageListener   : Node-2599359 quit to j2cache
