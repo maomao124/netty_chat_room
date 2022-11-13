@@ -2,9 +2,9 @@ def:
   # docker部署时，需要指定， 表示运行该服务的宿主机IP
   local-ip: ${LOCAL_IP:${spring.cloud.client.ip-address}}
   nacos:
-    ip: ${NACOS_IP:127.0.0.1}
-    port: ${NACOS_PORT:8848}
-    namespace: ${NACOS_ID:27ce69b0-bff1-4c03-8f3e-0ea5559a5732}
+    ip: ${NACOS_IP:@pom.nacos.ip@}
+    port: ${NACOS_PORT:@pom.nacos.port@}
+    namespace: ${NACOS_ID:@pom.nacos.namespace@}
 
 spring:
   main:
@@ -12,7 +12,7 @@ spring:
   application:
     name: gateway #pd-gateway
   profiles:
-    active: dev #dev
+    active: @pom.profile.name@ #dev
   cloud:
     nacos:
       config:
