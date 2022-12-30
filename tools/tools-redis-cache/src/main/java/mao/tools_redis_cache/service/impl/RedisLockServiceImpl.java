@@ -24,13 +24,22 @@ import java.util.concurrent.TimeUnit;
  */
 
 @Slf4j
-@Service
 public class RedisLockServiceImpl implements RedisLockService
 {
 
-    @Resource
+    //@Resource
     private RedissonClient redissonClient;
 
+
+    public RedisLockServiceImpl()
+    {
+
+    }
+
+    public RedisLockServiceImpl(RedissonClient redissonClient)
+    {
+        this.redissonClient = redissonClient;
+    }
 
     @Override
     public LockInfo lock(String key)
