@@ -126,6 +126,9 @@
     <orderEntry type="library" name="Maven: io.lettuce:lettuce-core:5.2.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.51.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-handler:4.1.51.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-resolver:4.1.51.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-buffer:4.1.51.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec:4.1.51.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-transport:4.1.51.Final" level="project" />
     <orderEntry type="library" name="Maven: io.projectreactor:reactor-core:3.3.8.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aspects:5.2.2.RELEASE" level="project" />
@@ -133,21 +136,6 @@
     <orderEntry type="library" name="Maven: org.aspectj:aspectjrt:1.9.6" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.9.6" level="project" />
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
-    <orderEntry type="library" name="Maven: org.redisson:redisson-spring-boot-starter:3.17.0" level="project" />
-    <orderEntry type="library" name="Maven: org.redisson:redisson:3.17.0" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-codec:4.1.51.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-buffer:4.1.51.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-resolver:4.1.51.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-resolver-dns:4.1.51.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-codec-dns:4.1.51.Final" level="project" />
-    <orderEntry type="library" name="Maven: javax.cache:cache-api:1.1.1" level="project" />
-    <orderEntry type="library" name="Maven: io.reactivex.rxjava3:rxjava:3.0.12" level="project" />
-    <orderEntry type="library" name="Maven: org.jboss.marshalling:jboss-marshalling:2.0.11.Final" level="project" />
-    <orderEntry type="library" name="Maven: org.jboss.marshalling:jboss-marshalling-river:2.0.11.Final" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.9.2" level="project" />
-    <orderEntry type="library" name="Maven: org.jodd:jodd-bean:5.1.6" level="project" />
-    <orderEntry type="library" name="Maven: org.jodd:jodd-core:5.1.6" level="project" />
-    <orderEntry type="library" name="Maven: org.redisson:redisson-spring-data-26:3.17.0" level="project" />
     <orderEntry type="module" module-name="tools-swagger2" />
     <orderEntry type="library" name="Maven: com.github.xiaoymin:knife4j-spring-boot-starter:2.0.1" level="project" />
     <orderEntry type="library" name="Maven: com.github.xiaoymin:knife4j-spring-boot-autoconfigure:2.0.1" level="project" />
