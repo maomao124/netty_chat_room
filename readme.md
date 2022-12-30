@@ -307,9 +307,11 @@ authority                    #聚合工程，用于聚合parent、apps、tools�
 	├── tools-core		     # 核心组件：基础实体、返回对象、上下文、异常处理、分布式锁、函数、树
 	├── tools-databases	     # 数据源组件：数据源配置、数据权限、查询条件等
 	├── tools-dozer		     # 对象转换：dozer配置、工具
+	├── tools-redis-cache    # redis分布式缓存工具类和分布式锁服务，缓存工具类解决著名的3个缓存问题
 	├── tools-j2cache	     # 缓存组件：j2cache、redis缓存
 	├── tools-jwt            # JWT组件：配置、属性、工具
 	├── tools-log	         # 日志组件：日志实体、事件、拦截器、工具
+	
 	├── tools-swagger2	     # 文档组件：knife4j文档
 	├── tools-user           # 用户上下文：用户注解、模型和工具，当前登录用户信息注入模块
 	├── tools-validator	     # 表单验证： 后台表单规则验证
@@ -623,6 +625,18 @@ j2cache其实并不是在重复造轮子，而是作资源整合，即将Ehcache
 
 
 ![image-20221113193054800](img/通用权限系统实战学习笔记/image-20221113193054800.png)
+
+
+
+
+
+
+
+## tools-redis-cache
+
+tools-redis-cache模块是2022年12月30日新加上去的，将tools-j2cache模块的的redis缓存工具类移动到此模块中，添加redis分布式锁服务
+
+
 
 
 
