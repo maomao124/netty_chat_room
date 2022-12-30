@@ -17,6 +17,7 @@
       <module fileurl="file://$PROJECT_DIR$/tools/tools-j2cache/tools-j2cache.iml" filepath="$PROJECT_DIR$/tools/tools-j2cache/tools-j2cache.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/tools-jwt/tools-jwt.iml" filepath="$PROJECT_DIR$/tools/tools-jwt/tools-jwt.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/tools-log/tools-log.iml" filepath="$PROJECT_DIR$/tools/tools-log/tools-log.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/tools-redis-cache/tools-redis-cache.iml" filepath="$PROJECT_DIR$/tools/tools-redis-cache/tools-redis-cache.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/tools-swagger2/tools-swagger2.iml" filepath="$PROJECT_DIR$/tools/tools-swagger2/tools-swagger2.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/tools-user/tools-user.iml" filepath="$PROJECT_DIR$/tools/tools-user/tools-user.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/tools-validator/tools-validator.iml" filepath="$PROJECT_DIR$/tools/tools-validator/tools-validator.iml" />
