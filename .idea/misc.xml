@@ -13,6 +13,10 @@
         <option value="$PROJECT_DIR$/apps/auth/auth-server/pom.xml" />
         <option value="$PROJECT_DIR$/apps/gateway/pom.xml" />
         <option value="$PROJECT_DIR$/tools/tools-redis-cache/pom.xml" />
+        <option value="$PROJECT_DIR$/apps/chat-room/pom.xml" />
+        <option value="$PROJECT_DIR$/apps/chat-room/chat-room-netty-server/pom.xml" />
+        <option value="$PROJECT_DIR$/apps/chat-room/chat-room-common/pom.xml" />
+        <option value="$PROJECT_DIR$/apps/chat-room/chat-room-web-server/pom.xml" />
       </list>
     </option>
   </component>
