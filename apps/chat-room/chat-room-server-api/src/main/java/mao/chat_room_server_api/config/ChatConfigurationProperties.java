@@ -24,11 +24,6 @@ import org.springframework.stereotype.Component;
 public class ChatConfigurationProperties
 {
     /**
-     * 服务ip
-     */
-    private String ip = "127.0.0.1";
-
-    /**
      * 服务端口
      */
     private int port = 8080;

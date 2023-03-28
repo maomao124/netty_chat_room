@@ -38,15 +38,6 @@ public class ServerConfig
         return chatConfigurationProperties.getPort();
     }
 
-    /**
-     * 得到服务器ip
-     *
-     * @return int
-     */
-    public String getServerIp()
-    {
-        return chatConfigurationProperties.getIp();
-    }
 
     /**
      * 得到序列化器算法

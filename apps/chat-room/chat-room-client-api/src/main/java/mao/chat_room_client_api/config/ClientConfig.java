@@ -4,6 +4,8 @@ import mao.chat_room_common.protocol.SerializerAlgorithm;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 /**
@@ -71,6 +73,36 @@ public class ClientConfig
         else
         {
             return value;
+        }
+    }
+
+
+    /**
+     * 得到服务器端ip和端口号的列表
+     *
+     * @return int
+     */
+    public static List<String> getServerHostList()
+    {
+        List<String> hosts = new ArrayList<>();
+        int i = 1;
+        while (true)
+        {
+            try
+            {
+                String key = "server.host" + i;
+                String value = properties.getProperty(key);
+                if (value == null || value.equals(""))
+                {
+                    return hosts;
+                }
+                hosts.add(value);
+                i++;
+            }
+            catch (Exception e)
+            {
+                return hosts;
+            }
         }
     }
 
