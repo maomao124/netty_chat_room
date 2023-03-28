@@ -12,6 +12,8 @@
     <file url="file://$PROJECT_DIR$/apps/chat-room/chat-room-console-client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/chat-room/chat-room-netty-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/chat-room/chat-room-netty-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/chat-room/chat-room-server-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/chat-room/chat-room-server-api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/chat-room/chat-room-swing-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/chat-room/chat-room-swing-client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/chat-room/chat-room-web-server/src/main/java" charset="UTF-8" />

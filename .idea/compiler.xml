@@ -25,6 +25,7 @@
         <module name="chat-room-swing-client" />
         <module name="tools-log" />
         <module name="chat-room-console-client" />
+        <module name="chat-room-server-api" />
         <module name="gateway" />
         <module name="tools-swagger2" />
         <module name="tools-redis-cache" />
@@ -41,6 +42,7 @@
       <module name="chat-room-common" target="1.8" />
       <module name="chat-room-console-client" target="1.8" />
       <module name="chat-room-netty-server" target="1.8" />
+      <module name="chat-room-server-api" target="1.8" />
       <module name="chat-room-swing-client" target="1.8" />
       <module name="chat-room-web-server" target="1.8" />
       <module name="gateway" target="1.8" />
@@ -70,6 +72,7 @@
       <module name="chat-room-common" options="-parameters" />
       <module name="chat-room-console-client" options="-parameters" />
       <module name="chat-room-netty-server" options="-parameters" />
+      <module name="chat-room-server-api" options="-parameters" />
       <module name="chat-room-swing-client" options="-parameters" />
       <module name="chat-room-web-server" options="-parameters" />
       <module name="gateway" options="-parameters" />

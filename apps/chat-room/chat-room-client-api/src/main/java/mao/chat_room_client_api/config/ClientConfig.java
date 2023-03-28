@@ -39,7 +39,7 @@ public class ClientConfig
     }
 
     /**
-     * 得到服务器端口號
+     * 得到服务器端口号
      *
      * @return int
      */
@@ -53,6 +53,24 @@ public class ClientConfig
         else
         {
             return Integer.parseInt(value);
+        }
+    }
+
+    /**
+     * 得到服务器端ip
+     *
+     * @return int
+     */
+    public static String getServerIp()
+    {
+        String value = properties.getProperty("server.ip");
+        if (value == null)
+        {
+            return "127.0.0.1";
+        }
+        else
+        {
+            return value;
         }
     }
 
