@@ -29,6 +29,12 @@
             <artifactId>spring-boot-configuration-processor</artifactId>
         </dependency>
 
+        <!--spring-boot mybatis-plus依赖-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>mao</groupId>
             <artifactId>chat-room-common</artifactId>
