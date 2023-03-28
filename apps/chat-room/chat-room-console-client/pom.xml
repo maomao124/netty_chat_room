@@ -17,7 +17,11 @@
     </properties>
 
     <dependencies>
-
+        <!--netty-->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

@@ -108,6 +108,7 @@
         <jackson.version>2.9.2</jackson.version>
         <j2cache.version>2.8.0-release</j2cache.version>
         <redisson.version>3.17.0</redisson.version>
+        <netty.version>4.1.39.Final</netty.version>
 
 
         <hutool.version>5.1.0</hutool.version>
@@ -401,7 +402,13 @@
                 <groupId>org.redisson</groupId>
                 <artifactId>redisson-spring-boot-starter</artifactId>
                 <version>${redisson.version}</version>
+            </dependency>
 
+            <!--netty-->
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty.version}</version>
             </dependency>
 
         </dependencies>
@@ -447,70 +454,70 @@
     </dependencies>
 
 
-        <build>
-            <finalName>${project.artifactId}</finalName>
-            <resources>
-                <resource>
-                    <directory>src/main/resources</directory>
-                    <includes>
-                        <include>**/*</include>
-                    </includes>
-                    <filtering>true</filtering>
-                </resource>
-            </resources>
-            <pluginManagement>
-                <plugins>
-                    <!--                <plugin>-->
-                    <!--                    <groupId>org.springframework.boot</groupId>-->
-                    <!--                    <artifactId>spring-boot-maven-plugin</artifactId>-->
-                    <!--                    <executions>-->
-                    <!--                        <execution>-->
-                    <!--                            <goals>-->
-                    <!--                                <goal>repackage</goal>-->
-                    <!--                                <goal>build-info</goal>-->
-                    <!--                            </goals>-->
-                    <!--                        </execution>-->
-                    <!--                    </executions>-->
-                    <!--                </plugin>-->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-compiler-plugin</artifactId>
-                        <version>${maven.compiler.plugin.version}</version>
-                        <configuration>
-                            <source>${java.version}</source>
-                            <target>${java.version}</target>
-                            <encoding>${project.build.sourceEncoding}</encoding>
-                        </configuration>
-                    </plugin>
-
-                </plugins>
-            </pluginManagement>
-
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <pluginManagement>
             <plugins>
-                <!-- resources资源插件 -->
+                <!--                <plugin>-->
+                <!--                    <groupId>org.springframework.boot</groupId>-->
+                <!--                    <artifactId>spring-boot-maven-plugin</artifactId>-->
+                <!--                    <executions>-->
+                <!--                        <execution>-->
+                <!--                            <goals>-->
+                <!--                                <goal>repackage</goal>-->
+                <!--                                <goal>build-info</goal>-->
+                <!--                            </goals>-->
+                <!--                        </execution>-->
+                <!--                    </executions>-->
+                <!--                </plugin>-->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-resources-plugin</artifactId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.plugin.version}</version>
                     <configuration>
-                        <encoding>UTF-8</encoding>
-                        <!-- 后缀为pem、pfx的证书文件 -->
-                        <nonFilteredFileExtensions>
-                            <nonFilteredFileExtension>pem</nonFilteredFileExtension>
-                            <nonFilteredFileExtension>pfx</nonFilteredFileExtension>
-                            <nonFilteredFileExtension>p12</nonFilteredFileExtension>
-                            <nonFilteredFileExtension>key</nonFilteredFileExtension>
-                        </nonFilteredFileExtensions>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                        <encoding>${project.build.sourceEncoding}</encoding>
                     </configuration>
                 </plugin>
 
-                <!-- java文档插件 -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>3.0.0</version>
-                </plugin>
             </plugins>
-        </build>
+        </pluginManagement>
+
+        <plugins>
+            <!-- resources资源插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <!-- 后缀为pem、pfx的证书文件 -->
+                    <nonFilteredFileExtensions>
+                        <nonFilteredFileExtension>pem</nonFilteredFileExtension>
+                        <nonFilteredFileExtension>pfx</nonFilteredFileExtension>
+                        <nonFilteredFileExtension>p12</nonFilteredFileExtension>
+                        <nonFilteredFileExtension>key</nonFilteredFileExtension>
+                    </nonFilteredFileExtensions>
+                </configuration>
+            </plugin>
+
+            <!-- java文档插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.0.0</version>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>
