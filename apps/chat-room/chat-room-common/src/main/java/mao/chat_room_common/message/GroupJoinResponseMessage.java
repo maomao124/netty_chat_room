@@ -1,8 +1,6 @@
 package mao.chat_room_common.message;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
+import lombok.*;
 
 /**
  * Project name(项目名称)：netty_chat_room

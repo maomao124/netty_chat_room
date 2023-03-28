@@ -44,17 +44,19 @@ public abstract class Message implements Serializable
      *
      * @param sequenceId 序列id
      */
-    public void setSequenceId(int sequenceId)
+    public Message setSequenceId(int sequenceId)
     {
         this.sequenceId = sequenceId;
+        return this;
     }
 
     /**
      * 设置序列id
      */
-    public void setSequenceId()
+    public Message setSequenceId()
     {
         sequenceId = SequenceIdGenerator.nextId();
+        return this;
     }
 
     /**
