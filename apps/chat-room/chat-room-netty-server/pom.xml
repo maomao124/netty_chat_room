@@ -24,10 +24,10 @@
         </dependency>
 
         <!-- nacos 客户端依赖 -->
-        <dependency>
+        <!--<dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
+        </dependency>-->
 
         <!--Nacos配置管理客户端依赖-->
         <dependency>
@@ -43,17 +43,33 @@
         <dependency>
             <groupId>mao</groupId>
             <artifactId>tools-databases</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-boot-starter-web</artifactId>
+                    <groupId>org.springframework.boot</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
             <groupId>mao</groupId>
             <artifactId>tools-common</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-boot-starter-undertow</artifactId>
+                    <groupId>org.springframework.boot</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>undertow-websockets-jsr</artifactId>
+                    <groupId>io.undertow</groupId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-web</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
-        <dependency>
-            <groupId>mao</groupId>
-            <artifactId>tools-core</artifactId>
-        </dependency>
     </dependencies>
 
     <build>
