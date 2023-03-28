@@ -7,9 +7,11 @@
       <module fileurl="file://$PROJECT_DIR$/apps/auth/auth-entity/auth-entity.iml" filepath="$PROJECT_DIR$/apps/auth/auth-entity/auth-entity.iml" />
       <module fileurl="file://$PROJECT_DIR$/apps/auth/auth-server/auth-server.iml" filepath="$PROJECT_DIR$/apps/auth/auth-server/auth-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/apps/chat-room/chat-room.iml" filepath="$PROJECT_DIR$/apps/chat-room/chat-room.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apps/chat-room/chat-room-client-api/chat-room-client-api.iml" filepath="$PROJECT_DIR$/apps/chat-room/chat-room-client-api/chat-room-client-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/apps/chat-room/chat-room-common/chat-room-common.iml" filepath="$PROJECT_DIR$/apps/chat-room/chat-room-common/chat-room-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/apps/chat-room/chat-room-console-client/chat-room-console-client.iml" filepath="$PROJECT_DIR$/apps/chat-room/chat-room-console-client/chat-room-console-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/apps/chat-room/chat-room-netty-server/chat-room-netty-server.iml" filepath="$PROJECT_DIR$/apps/chat-room/chat-room-netty-server/chat-room-netty-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apps/chat-room/chat-room-swing-client/chat-room-swing-client.iml" filepath="$PROJECT_DIR$/apps/chat-room/chat-room-swing-client/chat-room-swing-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/apps/chat-room/chat-room-web-server/chat-room-web-server.iml" filepath="$PROJECT_DIR$/apps/chat-room/chat-room-web-server/chat-room-web-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/apps/gateway/gateway.iml" filepath="$PROJECT_DIR$/apps/gateway/gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/netty_chat_room.iml" filepath="$PROJECT_DIR$/netty_chat_room.iml" />

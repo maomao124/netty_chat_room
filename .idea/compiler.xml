@@ -15,12 +15,14 @@
         <module name="tools-core" />
         <module name="tools-j2cache" />
         <module name="chat-room-netty-server" />
+        <module name="chat-room-client-api" />
         <module name="tools-databases" />
         <module name="chat-room-web-server" />
         <module name="tools-validator" />
         <module name="tools-user" />
         <module name="tools-dozer" />
         <module name="tools-jwt" />
+        <module name="chat-room-swing-client" />
         <module name="tools-log" />
         <module name="chat-room-console-client" />
         <module name="gateway" />
@@ -35,9 +37,11 @@
       <module name="auth-server" target="1.8" />
       <module name="authority" target="1.5" />
       <module name="chat-room" target="1.8" />
+      <module name="chat-room-client-api" target="1.8" />
       <module name="chat-room-common" target="1.8" />
       <module name="chat-room-console-client" target="1.8" />
       <module name="chat-room-netty-server" target="1.8" />
+      <module name="chat-room-swing-client" target="1.8" />
       <module name="chat-room-web-server" target="1.8" />
       <module name="gateway" target="1.8" />
       <module name="netty_chat_room" target="1.5" />
@@ -62,9 +66,11 @@
       <module name="auth-entity" options="-parameters" />
       <module name="auth-server" options="-parameters" />
       <module name="chat-room" options="-parameters" />
+      <module name="chat-room-client-api" options="-parameters" />
       <module name="chat-room-common" options="-parameters" />
       <module name="chat-room-console-client" options="-parameters" />
       <module name="chat-room-netty-server" options="-parameters" />
+      <module name="chat-room-swing-client" options="-parameters" />
       <module name="chat-room-web-server" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="tools-common" options="-parameters" />

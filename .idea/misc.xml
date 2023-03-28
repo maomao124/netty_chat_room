@@ -17,6 +17,8 @@
         <option value="$PROJECT_DIR$/apps/chat-room/chat-room-netty-server/pom.xml" />
         <option value="$PROJECT_DIR$/apps/chat-room/chat-room-common/pom.xml" />
         <option value="$PROJECT_DIR$/apps/chat-room/chat-room-web-server/pom.xml" />
+        <option value="$PROJECT_DIR$/apps/chat-room/chat-room-swing-client/pom.xml" />
+        <option value="$PROJECT_DIR$/apps/chat-room/chat-room-client-api/pom.xml" />
       </list>
     </option>
   </component>

@@ -14,7 +14,10 @@
 
 
     <dependencies>
-
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>chat-room-common</artifactId>
+        </dependency>
     </dependencies>
 
 
