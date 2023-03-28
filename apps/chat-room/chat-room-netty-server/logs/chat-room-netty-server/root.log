@@ -55,3 +55,60 @@
 2023-03-28 22:21:13.195  INFO 31680 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2023-03-28 22:21:13.196  INFO 31680 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
 2023-03-28 22:21:13.204  INFO 31680 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-03-28 22:25:09.831  WARN 6564 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[chat-room-netty-server] & group[DEFAULT_GROUP]
+2023-03-28 22:25:09.836  INFO 6564 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-chat-room-netty-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-chat-room-netty-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-chat-room-netty-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-03-28 22:25:09.867  INFO 6564 --- [main] m.c.service.UserServiceTest              : The following profiles are active: dev
+2023-03-28 22:25:10.233  INFO 6564 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ffa0c78c-56d1-3c00-89e9-499e3bf284b9
+2023-03-28 22:25:10.295  INFO 6564 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-28 22:25:10.315  INFO 6564 --- [main] mao.chat_room_netty_server.NettyServer   : 初始化 NettyServer
+2023-03-28 22:25:10.365  INFO 6564 --- [main] m.c.config.MybatisConfig                 : 初始化 MybatisConfig
+2023-03-28 22:25:10.397  INFO 6564 --- [main] m.c.config.DataBaseConfig                : 初始化 DatabaseConfig
+2023-03-28 22:25:10.674  WARN 6564 --- [main] c.b.m.e.s.MybatisSqlSessionFactoryBean   : Cannot load the 'file [D:\程序\大四下期\netty_chat_room\tools\tools-common\target\classes\mao\tools_common\undertow\UndertowServerFactoryCustomizer.class]'. Cause by java.lang.NoClassDefFoundError: io/undertow/connector/ByteBufferPool
+2023-03-28 22:25:10.913  WARN 6564 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-03-28 22:25:10.913  INFO 6564 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-03-28 22:25:10.916  WARN 6564 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-03-28 22:25:10.917  INFO 6564 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-03-28 22:25:11.032  INFO 6564 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-28 22:25:11.404  INFO 6564 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-03-28 22:25:11.465  INFO 6564 --- [main] m.c.config.ServerConfig                  : 初始化 ServerConfig
+2023-03-28 22:25:11.478  INFO 6564 --- [main] m.c.protocol.ServerMessageCodecSharable  : 初始化 ServerMessageCodecSharable
+2023-03-28 22:25:11.775  INFO 6564 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-03-28 22:25:11.776  INFO 6564 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-03-28 22:25:11.776  INFO 6564 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-03-28 22:25:11.827  INFO 6564 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@chat-room-netty-server@@DEFAULT -> [{"instanceId":"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-netty-server","ip":"192.168.15.1","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-netty-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000}]
+2023-03-28 22:25:11.833  INFO 6564 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@chat-room-netty-server@@DEFAULT -> [{"instanceId":"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-netty-server","ip":"192.168.15.1","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-netty-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000}]
+2023-03-28 22:25:11.839  INFO 6564 --- [main] m.c.service.UserServiceTest              : Started UserServiceTest in 3.053 seconds (JVM running for 3.589)
+2023-03-28 22:25:11.841  INFO 6564 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-netty-server.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-03-28 22:25:11.842  INFO 6564 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-netty-server.yml, group=DEFAULT_GROUP, cnt=1
+2023-03-28 22:25:11.843  INFO 6564 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-netty-server-dev.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-03-28 22:25:11.843  INFO 6564 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-netty-server-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-03-28 22:25:11.844  INFO 6564 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] common.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-03-28 22:25:11.844  INFO 6564 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-03-28 22:25:11.844  INFO 6564 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-netty-server+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-03-28 22:25:11.844  INFO 6564 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-netty-server, group=DEFAULT_GROUP, cnt=1
+2023-03-28 22:25:12.262  INFO 6564 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-03-28 22:25:12.356 DEBUG 6564 --- [main] m.c.mapper.UserMapper.selectList         : ==>  Preparing: SELECT id,last_login_time,password,status,username FROM auth_user 
+2023-03-28 22:25:12.471 DEBUG 6564 --- [main] m.c.mapper.UserMapper.selectList         : ==> Parameters: 
+2023-03-28 22:25:12.487 DEBUG 6564 --- [main] m.c.mapper.UserMapper.selectList         : <==      Total: 0
+2023-03-28 22:25:12.495  WARN 6564 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-03-28 22:25:12.495  WARN 6564 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-03-28 22:25:12.495  WARN 6564 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-03-28 22:25:12.495  WARN 6564 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-03-28 22:25:12.495  INFO 6564 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-03-28 22:25:12.496  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-03-28 22:25:12.496  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-03-28 22:25:12.496  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-03-28 22:25:12.848  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-03-28 22:25:15.858  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-03-28 22:25:15.859  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-03-28 22:25:18.879  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-03-28 22:25:18.879  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-03-28 22:25:18.879  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-03-28 22:25:18.879  WARN 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-03-28 22:25:18.879  WARN 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-03-28 22:25:18.879  INFO 6564 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-03-28 22:25:18.879  INFO 6564 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-03-28 22:25:18.879  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-03-28 22:25:18.880  INFO 6564 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-28 22:25:18.881  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-03-28 22:25:18.884  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
