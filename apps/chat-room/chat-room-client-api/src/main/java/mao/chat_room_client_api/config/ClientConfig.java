@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+import java.util.Random;
 
 /**
  * Project name(项目名称)：Netty_自定义协议
@@ -25,6 +26,15 @@ public class ClientConfig
 {
 
     private static Properties properties;
+
+    public static int getIntRandom(int min, int max)
+    {
+        if (min > max)
+        {
+            min = max;
+        }
+        return min + (int) (Math.random() * (max - min + 1));
+    }
 
     static
     {
@@ -61,7 +71,7 @@ public class ClientConfig
     /**
      * 得到服务器端ip
      *
-     * @return int
+     * @return String
      */
     public static String getServerIp()
     {
@@ -80,7 +90,7 @@ public class ClientConfig
     /**
      * 得到服务器端ip和端口号的列表
      *
-     * @return int
+     * @return String
      */
     public static List<String> getServerHostList()
     {
@@ -104,6 +114,22 @@ public class ClientConfig
                 return hosts;
             }
         }
+    }
+
+    /**
+     * 得到随机的服务器端ip和端口号
+     *
+     * @return String
+     */
+    public static String getServerHost()
+    {
+        List<String> serverHostList = getServerHostList();
+        if (serverHostList.size() == 0)
+        {
+            throw new RuntimeException("请在配置文件中配置服务器列表");
+        }
+        int random = getIntRandom(0, serverHostList.size() - 1);
+        return serverHostList.get(random);
     }
 
     /**
