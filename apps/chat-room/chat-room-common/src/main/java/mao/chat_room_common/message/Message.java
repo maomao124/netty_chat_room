@@ -1,6 +1,7 @@
 package mao.chat_room_common.message;
 
 import lombok.Data;
+import mao.chat_room_common.protocol.SequenceIdGenerator;
 
 import java.io.Serializable;
 import java.util.HashMap;
@@ -37,6 +38,24 @@ public abstract class Message implements Serializable
      * 序列id
      */
     private int sequenceId;
+
+    /**
+     * 设置序列id
+     *
+     * @param sequenceId 序列id
+     */
+    public void setSequenceId(int sequenceId)
+    {
+        this.sequenceId = sequenceId;
+    }
+
+    /**
+     * 设置序列id
+     */
+    public void setSequenceId()
+    {
+        sequenceId = SequenceIdGenerator.nextId();
+    }
 
     /**
      * 消息类型
