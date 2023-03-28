@@ -22,6 +22,11 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>chat-room-server-api</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
