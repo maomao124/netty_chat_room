@@ -17,6 +17,8 @@
         <module>chat-room-netty-server</module>
         <module>chat-room-console-client</module>
         <module>chat-room-web-server</module>
+        <module>chat-room-client-api</module>
+        <module>chat-room-swing-client</module>
     </modules>
 
     <dependencies>

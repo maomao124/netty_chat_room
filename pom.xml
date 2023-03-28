@@ -7,7 +7,7 @@
     <groupId>mao</groupId>
     <artifactId>netty_chat_room</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>authority</name>
+    <name>netty_chat_room</name>
     <description>基于netty实现的在线网络聊天室</description>
     <packaging>pom</packaging>
 
