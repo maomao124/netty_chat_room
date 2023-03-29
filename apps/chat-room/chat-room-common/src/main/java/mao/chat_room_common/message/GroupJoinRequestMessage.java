@@ -36,6 +36,6 @@ public class GroupJoinRequestMessage extends Message
     @Override
     public int getMessageType()
     {
-        return 0;
+        return GroupJoinRequestMessage;
     }
 }

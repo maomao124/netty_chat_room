@@ -41,6 +41,6 @@ public class GroupChatRequestMessage extends Message
     @Override
     public int getMessageType()
     {
-        return 0;
+        return GroupChatRequestMessage;
     }
 }

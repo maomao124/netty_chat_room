@@ -32,7 +32,7 @@ public class GroupJoinResponseMessage extends AbstractResponseMessage
     @Override
     public int getMessageType()
     {
-        return 0;
+        return GroupJoinResponseMessage;
     }
 
     /**

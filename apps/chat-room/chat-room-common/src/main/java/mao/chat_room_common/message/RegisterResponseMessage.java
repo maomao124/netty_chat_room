@@ -26,7 +26,7 @@ public class RegisterResponseMessage extends AbstractResponseMessage
     @Override
     public int getMessageType()
     {
-        return 0;
+        return RegisterResponseMessage;
     }
 
     public RegisterResponseMessage()

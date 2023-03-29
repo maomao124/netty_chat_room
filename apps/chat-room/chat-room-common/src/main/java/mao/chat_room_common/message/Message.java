@@ -75,6 +75,22 @@ public abstract class Message implements Serializable
     public static final int PongMessage = 2;
     public static final int HelloRequestMessage = 3;
     public static final int HelloResponseMessage = 4;
+    public static final int ChatRequestMessage = 5;
+    public static final int ChatResponseMessage = 6;
+    public static final int GroupChatRequestMessage = 7;
+    public static final int GroupChatResponseMessage = 8;
+    public static final int GroupCreateRequestMessage = 9;
+    public static final int GroupCreateResponseMessage = 10;
+    public static final int GroupJoinRequestMessage = 11;
+    public static final int GroupJoinResponseMessage = 12;
+    public static final int GroupMembersRequestMessage = 13;
+    public static final int GroupMembersResponseMessage = 14;
+    public static final int GroupQuitRequestMessage = 15;
+    public static final int GroupQuitResponseMessage = 16;
+    public static final int LoginRequestMessage = 17;
+    public static final int LoginResponseMessage = 18;
+    public static final int RegisterRequestMessage = 19;
+    public static final int RegisterResponseMessage = 20;
 
 
     /**
@@ -98,5 +114,21 @@ public abstract class Message implements Serializable
         messageClasses.put(PongMessage, PongMessage.class);
         messageClasses.put(HelloRequestMessage, HelloRequestMessage.class);
         messageClasses.put(HelloResponseMessage, HelloResponseMessage.class);
+        messageClasses.put(ChatRequestMessage, ChatRequestMessage.class);
+        messageClasses.put(ChatResponseMessage, ChatResponseMessage.class);
+        messageClasses.put(GroupChatRequestMessage, GroupChatRequestMessage.class);
+        messageClasses.put(GroupChatResponseMessage, GroupChatResponseMessage.class);
+        messageClasses.put(GroupCreateRequestMessage, GroupCreateRequestMessage.class);
+        messageClasses.put(GroupCreateResponseMessage, GroupCreateResponseMessage.class);
+        messageClasses.put(GroupJoinRequestMessage, GroupJoinRequestMessage.class);
+        messageClasses.put(GroupJoinResponseMessage, GroupJoinResponseMessage.class);
+        messageClasses.put(GroupMembersRequestMessage, GroupMembersRequestMessage.class);
+        messageClasses.put(GroupMembersResponseMessage, GroupMembersResponseMessage.class);
+        messageClasses.put(GroupQuitRequestMessage, GroupQuitRequestMessage.class);
+        messageClasses.put(GroupQuitResponseMessage, GroupQuitResponseMessage.class);
+        messageClasses.put(LoginRequestMessage, LoginRequestMessage.class);
+        messageClasses.put(LoginResponseMessage, LoginResponseMessage.class);
+        messageClasses.put(RegisterRequestMessage, RegisterRequestMessage.class);
+        messageClasses.put(RegisterResponseMessage, RegisterResponseMessage.class);
     }
 }

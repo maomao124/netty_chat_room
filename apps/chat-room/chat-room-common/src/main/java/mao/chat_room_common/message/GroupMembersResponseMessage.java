@@ -52,7 +52,7 @@ public class GroupMembersResponseMessage extends AbstractResponseMessage
     @Override
     public int getMessageType()
     {
-        return 0;
+        return GroupMembersResponseMessage;
     }
 
     /**
