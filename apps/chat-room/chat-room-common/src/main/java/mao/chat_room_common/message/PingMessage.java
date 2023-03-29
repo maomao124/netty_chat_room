@@ -23,7 +23,7 @@ public class PingMessage extends Message
     /**
      * 时间
      */
-    private long time;
+    private long requestTime;
 
     @Override
     public int getMessageType()

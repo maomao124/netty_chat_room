@@ -1,114 +1,564 @@
-2023-03-28 22:21:04.155  WARN 31680 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[chat-room-netty-server] & group[DEFAULT_GROUP]
-2023-03-28 22:21:04.159  INFO 31680 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-chat-room-netty-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-chat-room-netty-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-chat-room-netty-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
-2023-03-28 22:21:04.188  INFO 31680 --- [main] m.c.mapper.UserMapperTest                : The following profiles are active: dev
-2023-03-28 22:21:04.542  INFO 31680 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c08c97bc-7b0f-36f5-8d02-fe30d2f76272
-2023-03-28 22:21:04.595  INFO 31680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-03-28 22:21:04.617  INFO 31680 --- [main] mao.chat_room_netty_server.NettyServer   : 初始化 NettyServer
-2023-03-28 22:21:04.662  INFO 31680 --- [main] m.c.config.MybatisConfig                 : 初始化 MybatisConfig
-2023-03-28 22:21:04.692  INFO 31680 --- [main] m.c.config.DataBaseConfig                : 初始化 DatabaseConfig
-2023-03-28 22:21:04.947  WARN 31680 --- [main] c.b.m.e.s.MybatisSqlSessionFactoryBean   : Cannot load the 'file [D:\程序\大四下期\netty_chat_room\tools\tools-common\target\classes\mao\tools_common\undertow\UndertowServerFactoryCustomizer.class]'. Cause by java.lang.NoClassDefFoundError: io/undertow/connector/ByteBufferPool
-2023-03-28 22:21:05.154  WARN 31680 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2023-03-28 22:21:05.154  INFO 31680 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2023-03-28 22:21:05.157  WARN 31680 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2023-03-28 22:21:05.157  INFO 31680 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2023-03-28 22:21:05.297  INFO 31680 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2023-03-28 22:21:05.646  INFO 31680 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2023-03-28 22:21:05.692  INFO 31680 --- [main] m.c.config.ServerConfig                  : 初始化 ServerConfig
-2023-03-28 22:21:05.703  INFO 31680 --- [main] m.c.protocol.ServerMessageCodecSharable  : 初始化 ServerMessageCodecSharable
-2023-03-28 22:21:06.070  INFO 31680 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
-2023-03-28 22:21:06.070  INFO 31680 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
-2023-03-28 22:21:06.070  INFO 31680 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
-2023-03-28 22:21:06.128  INFO 31680 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@chat-room-netty-server@@DEFAULT -> [{"instanceId":"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-netty-server","ip":"192.168.15.1","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-netty-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
-2023-03-28 22:21:06.135  INFO 31680 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@chat-room-netty-server@@DEFAULT -> [{"instanceId":"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-netty-server","ip":"192.168.15.1","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-netty-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
-2023-03-28 22:21:06.141  INFO 31680 --- [main] m.c.mapper.UserMapperTest                : Started UserMapperTest in 2.99 seconds (JVM running for 3.8)
-2023-03-28 22:21:06.144  INFO 31680 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-netty-server.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
-2023-03-28 22:21:06.145  INFO 31680 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-netty-server.yml, group=DEFAULT_GROUP, cnt=1
-2023-03-28 22:21:06.145  INFO 31680 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-netty-server-dev.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
-2023-03-28 22:21:06.146  INFO 31680 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-netty-server-dev.yml, group=DEFAULT_GROUP, cnt=1
-2023-03-28 22:21:06.147  INFO 31680 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] common.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
-2023-03-28 22:21:06.147  INFO 31680 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
-2023-03-28 22:21:06.147  INFO 31680 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-netty-server+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
-2023-03-28 22:21:06.147  INFO 31680 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-netty-server, group=DEFAULT_GROUP, cnt=1
-2023-03-28 22:21:06.583  INFO 31680 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-03-28 22:21:06.594 DEBUG 31680 --- [main] m.c.mapper.UserMapper.selectList         : ==>  Preparing: SELECT id,last_login_time,password,status,username FROM auth_user 
-2023-03-28 22:21:06.781 DEBUG 31680 --- [main] m.c.mapper.UserMapper.selectList         : ==> Parameters: 
-2023-03-28 22:21:06.797 DEBUG 31680 --- [main] m.c.mapper.UserMapper.selectList         : <==      Total: 0
-2023-03-28 22:21:06.805  WARN 31680 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-2023-03-28 22:21:06.805  WARN 31680 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-2023-03-28 22:21:06.806  WARN 31680 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-2023-03-28 22:21:06.806  WARN 31680 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-2023-03-28 22:21:06.806  INFO 31680 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2023-03-28 22:21:06.807  INFO 31680 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
-2023-03-28 22:21:06.807  INFO 31680 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
-2023-03-28 22:21:06.807  INFO 31680 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
-2023-03-28 22:21:07.141  INFO 31680 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
-2023-03-28 22:21:10.168  INFO 31680 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
-2023-03-28 22:21:10.168  INFO 31680 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
-2023-03-28 22:21:13.190  INFO 31680 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
-2023-03-28 22:21:13.190  INFO 31680 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
-2023-03-28 22:21:13.190  INFO 31680 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
-2023-03-28 22:21:13.191  WARN 31680 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
-2023-03-28 22:21:13.191  WARN 31680 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
-2023-03-28 22:21:13.191  INFO 31680 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
-2023-03-28 22:21:13.191  INFO 31680 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
-2023-03-28 22:21:13.192  INFO 31680 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
-2023-03-28 22:21:13.195  INFO 31680 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2023-03-28 22:21:13.196  INFO 31680 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-03-28 22:21:13.204  INFO 31680 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2023-03-28 22:25:09.831  WARN 6564 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[chat-room-netty-server] & group[DEFAULT_GROUP]
-2023-03-28 22:25:09.836  INFO 6564 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-chat-room-netty-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-chat-room-netty-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-chat-room-netty-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
-2023-03-28 22:25:09.867  INFO 6564 --- [main] m.c.service.UserServiceTest              : The following profiles are active: dev
-2023-03-28 22:25:10.233  INFO 6564 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ffa0c78c-56d1-3c00-89e9-499e3bf284b9
-2023-03-28 22:25:10.295  INFO 6564 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-03-28 22:25:10.315  INFO 6564 --- [main] mao.chat_room_netty_server.NettyServer   : 初始化 NettyServer
-2023-03-28 22:25:10.365  INFO 6564 --- [main] m.c.config.MybatisConfig                 : 初始化 MybatisConfig
-2023-03-28 22:25:10.397  INFO 6564 --- [main] m.c.config.DataBaseConfig                : 初始化 DatabaseConfig
-2023-03-28 22:25:10.674  WARN 6564 --- [main] c.b.m.e.s.MybatisSqlSessionFactoryBean   : Cannot load the 'file [D:\程序\大四下期\netty_chat_room\tools\tools-common\target\classes\mao\tools_common\undertow\UndertowServerFactoryCustomizer.class]'. Cause by java.lang.NoClassDefFoundError: io/undertow/connector/ByteBufferPool
-2023-03-28 22:25:10.913  WARN 6564 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2023-03-28 22:25:10.913  INFO 6564 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2023-03-28 22:25:10.916  WARN 6564 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2023-03-28 22:25:10.917  INFO 6564 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2023-03-28 22:25:11.032  INFO 6564 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2023-03-28 22:25:11.404  INFO 6564 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2023-03-28 22:25:11.465  INFO 6564 --- [main] m.c.config.ServerConfig                  : 初始化 ServerConfig
-2023-03-28 22:25:11.478  INFO 6564 --- [main] m.c.protocol.ServerMessageCodecSharable  : 初始化 ServerMessageCodecSharable
-2023-03-28 22:25:11.775  INFO 6564 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
-2023-03-28 22:25:11.776  INFO 6564 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
-2023-03-28 22:25:11.776  INFO 6564 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
-2023-03-28 22:25:11.827  INFO 6564 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@chat-room-netty-server@@DEFAULT -> [{"instanceId":"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-netty-server","ip":"192.168.15.1","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-netty-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000}]
-2023-03-28 22:25:11.833  INFO 6564 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@chat-room-netty-server@@DEFAULT -> [{"instanceId":"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-netty-server","ip":"192.168.15.1","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-netty-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000}]
-2023-03-28 22:25:11.839  INFO 6564 --- [main] m.c.service.UserServiceTest              : Started UserServiceTest in 3.053 seconds (JVM running for 3.589)
-2023-03-28 22:25:11.841  INFO 6564 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-netty-server.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
-2023-03-28 22:25:11.842  INFO 6564 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-netty-server.yml, group=DEFAULT_GROUP, cnt=1
-2023-03-28 22:25:11.843  INFO 6564 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-netty-server-dev.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
-2023-03-28 22:25:11.843  INFO 6564 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-netty-server-dev.yml, group=DEFAULT_GROUP, cnt=1
-2023-03-28 22:25:11.844  INFO 6564 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] common.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
-2023-03-28 22:25:11.844  INFO 6564 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
-2023-03-28 22:25:11.844  INFO 6564 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-netty-server+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
-2023-03-28 22:25:11.844  INFO 6564 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-netty-server, group=DEFAULT_GROUP, cnt=1
-2023-03-28 22:25:12.262  INFO 6564 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-03-28 22:25:12.356 DEBUG 6564 --- [main] m.c.mapper.UserMapper.selectList         : ==>  Preparing: SELECT id,last_login_time,password,status,username FROM auth_user 
-2023-03-28 22:25:12.471 DEBUG 6564 --- [main] m.c.mapper.UserMapper.selectList         : ==> Parameters: 
-2023-03-28 22:25:12.487 DEBUG 6564 --- [main] m.c.mapper.UserMapper.selectList         : <==      Total: 0
-2023-03-28 22:25:12.495  WARN 6564 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-2023-03-28 22:25:12.495  WARN 6564 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-2023-03-28 22:25:12.495  WARN 6564 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-2023-03-28 22:25:12.495  WARN 6564 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-2023-03-28 22:25:12.495  INFO 6564 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2023-03-28 22:25:12.496  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
-2023-03-28 22:25:12.496  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
-2023-03-28 22:25:12.496  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
-2023-03-28 22:25:12.848  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
-2023-03-28 22:25:15.858  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
-2023-03-28 22:25:15.859  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
-2023-03-28 22:25:18.879  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
-2023-03-28 22:25:18.879  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
-2023-03-28 22:25:18.879  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
-2023-03-28 22:25:18.879  WARN 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
-2023-03-28 22:25:18.879  WARN 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
-2023-03-28 22:25:18.879  INFO 6564 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
-2023-03-28 22:25:18.879  INFO 6564 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
-2023-03-28 22:25:18.879  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
-2023-03-28 22:25:18.880  INFO 6564 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2023-03-28 22:25:18.881  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-03-28 22:25:18.884  INFO 6564 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-03-29 22:53:24.189  WARN 13092 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[chat-room-netty-server] & group[DEFAULT_GROUP]
+2023-03-29 22:53:30.269  INFO 13092 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-chat-room-netty-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-chat-room-netty-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-chat-room-netty-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-03-29 22:53:30.300  INFO 13092 --- [main] m.c.service.UserServiceTest              : The following profiles are active: dev
+2023-03-29 22:53:30.871  INFO 13092 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=229265fa-47ee-3dec-ba82-be2e31f8ca43
+2023-03-29 22:53:30.945  INFO 13092 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-29 22:53:30.966  INFO 13092 --- [main] mao.chat_room_netty_server.NettyServer   : 初始化 NettyServer
+2023-03-29 22:53:31.034  INFO 13092 --- [main] m.c.config.MybatisConfig                 : 初始化 MybatisConfig
+2023-03-29 22:53:31.064  INFO 13092 --- [main] m.c.config.DataBaseConfig                : 初始化 DatabaseConfig
+2023-03-29 22:53:31.090  INFO 13092 --- [main] m.c.s.impl.BCryptPasswordEncoderService  : 密码加密和验证使用的是: BCrypt 算法
+2023-03-29 22:53:31.674  WARN 13092 --- [main] c.b.m.e.s.MybatisSqlSessionFactoryBean   : Cannot load the 'file [D:\程序\大四下期\netty_chat_room\tools\tools-common\target\classes\mao\tools_common\undertow\UndertowServerFactoryCustomizer.class]'. Cause by java.lang.NoClassDefFoundError: io/undertow/connector/ByteBufferPool
+2023-03-29 22:53:31.959  WARN 13092 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-03-29 22:53:31.959  INFO 13092 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-03-29 22:53:31.965  WARN 13092 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-03-29 22:53:31.965  INFO 13092 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-03-29 22:53:32.136  INFO 13092 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-29 22:53:32.563  INFO 13092 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-03-29 22:53:32.639  INFO 13092 --- [main] m.c.config.ServerConfig                  : 初始化 ServerConfig
+2023-03-29 22:53:32.646  INFO 13092 --- [main] m.c.protocol.ServerMessageCodecSharable  : 初始化 ServerMessageCodecSharable
+2023-03-29 22:53:32.958  INFO 13092 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-03-29 22:53:32.958  INFO 13092 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-03-29 22:53:32.959  INFO 13092 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-03-29 22:53:35.029 ERROR 13092 --- [main] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateServiceNow(HostReactor.java:345) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.getServiceInfo(HostReactor.java:320) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.subscribe(HostReactor.java:139) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.subscribe(NacosNamingService.java:457) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.discovery.NacosWatch.start(NacosWatch.java:131) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:894) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:124) [spring-boot-test-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[na:1.8.0_332]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[na:1.8.0_332]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384) ~[na:1.8.0_332]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482) ~[na:1.8.0_332]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[na:1.8.0_332]
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:313) ~[na:1.8.0_332]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743) ~[na:1.8.0_332]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742) ~[na:1.8.0_332]
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:647) ~[na:1.8.0_332]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_332]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) ~[junit5-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+
+2023-03-29 22:53:37.072 ERROR 13092 --- [main] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateServiceNow(HostReactor.java:345) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.getServiceInfo(HostReactor.java:320) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.subscribe(HostReactor.java:139) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.subscribe(NacosNamingService.java:457) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.discovery.NacosWatch.start(NacosWatch.java:131) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:894) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:124) [spring-boot-test-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[na:1.8.0_332]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[na:1.8.0_332]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384) ~[na:1.8.0_332]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482) ~[na:1.8.0_332]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[na:1.8.0_332]
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:313) ~[na:1.8.0_332]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743) ~[na:1.8.0_332]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742) ~[na:1.8.0_332]
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:647) ~[na:1.8.0_332]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_332]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) ~[junit5-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+
+2023-03-29 22:53:39.096 ERROR 13092 --- [main] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateServiceNow(HostReactor.java:345) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.getServiceInfo(HostReactor.java:320) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.subscribe(HostReactor.java:139) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.subscribe(NacosNamingService.java:457) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.discovery.NacosWatch.start(NacosWatch.java:131) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:894) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:124) [spring-boot-test-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[na:1.8.0_332]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[na:1.8.0_332]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384) ~[na:1.8.0_332]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482) ~[na:1.8.0_332]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[na:1.8.0_332]
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:313) ~[na:1.8.0_332]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743) ~[na:1.8.0_332]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742) ~[na:1.8.0_332]
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:647) ~[na:1.8.0_332]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_332]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) ~[junit5-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+
+2023-03-29 22:53:39.098 ERROR 13092 --- [main] com.alibaba.nacos.client.naming          : request: /nacos/v1/ns/instance/list failed, servers: [127.0.0.1:8848], code: 500, msg: Connection refused: connect
+2023-03-29 22:53:39.098 ERROR 13092 --- [main] com.alibaba.nacos.client.naming          : [NA] failed to update serviceName: DEFAULT_GROUP@@chat-room-netty-server
+
+com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/instance/list after all servers([127.0.0.1:8848]) tried: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:556) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateServiceNow(HostReactor.java:345) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.getServiceInfo(HostReactor.java:320) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.subscribe(HostReactor.java:139) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.subscribe(NacosNamingService.java:457) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.discovery.NacosWatch.start(NacosWatch.java:131) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:894) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:124) [spring-boot-test-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[na:1.8.0_332]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[na:1.8.0_332]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384) ~[na:1.8.0_332]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482) ~[na:1.8.0_332]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[na:1.8.0_332]
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:313) ~[na:1.8.0_332]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743) ~[na:1.8.0_332]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742) ~[na:1.8.0_332]
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:647) ~[na:1.8.0_332]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_332]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) ~[junit5-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+
+2023-03-29 22:53:39.107  INFO 13092 --- [main] m.c.service.UserServiceTest              : Started UserServiceTest in 28.135 seconds (JVM running for 28.939)
+2023-03-29 22:53:39.109  INFO 13092 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-netty-server.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-03-29 22:53:39.111  INFO 13092 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-netty-server.yml, group=DEFAULT_GROUP, cnt=1
+2023-03-29 22:53:39.111  INFO 13092 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-netty-server-dev.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-03-29 22:53:39.111  INFO 13092 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-netty-server-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-03-29 22:53:39.111  INFO 13092 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] common.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-03-29 22:53:39.111  INFO 13092 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-03-29 22:53:39.112  INFO 13092 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-netty-server+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-03-29 22:53:39.112  INFO 13092 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-netty-server, group=DEFAULT_GROUP, cnt=1
+2023-03-29 22:53:39.688  INFO 13092 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-03-29 22:53:39.700 DEBUG 13092 --- [main] m.c.mapper.UserMapper.selectList         : ==>  Preparing: SELECT id,last_login_time,password,register_time,status,username FROM auth_user 
+2023-03-29 22:53:39.901 DEBUG 13092 --- [main] m.c.mapper.UserMapper.selectList         : ==> Parameters: 
+2023-03-29 22:53:39.919 DEBUG 13092 --- [main] m.c.mapper.UserMapper.selectList         : <==      Total: 0
+2023-03-29 22:53:39.928  WARN 13092 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-03-29 22:53:39.927  WARN 13092 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-03-29 22:53:39.928  WARN 13092 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-03-29 22:53:39.929  WARN 13092 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-03-29 22:53:39.929  INFO 13092 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-03-29 22:53:39.930  INFO 13092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-03-29 22:53:39.930  INFO 13092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-03-29 22:53:39.930  INFO 13092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-03-29 22:53:41.141 ERROR 13092 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-03-29 22:53:42.136 ERROR 13092 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:464) [nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-03-29 22:53:42.962  INFO 13092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-03-29 22:53:43.166 ERROR 13092 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-03-29 22:53:44.170 ERROR 13092 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:464) [nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-03-29 22:53:45.201 ERROR 13092 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-03-29 22:53:45.980  INFO 13092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-03-29 22:53:45.980  INFO 13092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-03-29 22:53:45.980  INFO 13092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-03-29 22:53:45.981  INFO 13092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-03-29 22:53:45.981  INFO 13092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-03-29 22:53:45.981  WARN 13092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-03-29 22:53:45.981  WARN 13092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-03-29 22:53:45.981  INFO 13092 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-03-29 22:53:45.981  INFO 13092 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-03-29 22:53:45.981  INFO 13092 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-03-29 22:53:45.981  INFO 13092 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-29 22:53:45.983  INFO 13092 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-03-29 22:53:45.990  INFO 13092 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

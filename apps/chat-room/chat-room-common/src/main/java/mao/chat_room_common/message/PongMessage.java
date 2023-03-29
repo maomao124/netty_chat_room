@@ -25,17 +25,16 @@ public class PongMessage extends Message
     /**
      * 请求时间
      */
-    private long time;
+    private long requestTime;
 
-    public PongMessage(int time)
+    public PongMessage(int requestTime)
     {
-        this.time = time;
-        setSequenceId(SequenceIdGenerator.nextId());
+        this.requestTime = requestTime;
     }
 
     public PongMessage()
     {
-        setSequenceId(SequenceIdGenerator.nextId());
+
     }
 
     @Override
