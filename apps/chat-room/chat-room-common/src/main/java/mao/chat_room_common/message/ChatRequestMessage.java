@@ -1,6 +1,7 @@
 package mao.chat_room_common.message;
 
 import lombok.*;
+import lombok.experimental.Accessors;
 
 /**
  * Project name(项目名称)：netty_chat_room
@@ -17,6 +18,7 @@ import lombok.*;
 
 
 @Data
+@Accessors(chain = true)
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)

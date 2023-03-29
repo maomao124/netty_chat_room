@@ -1,6 +1,7 @@
 package mao.chat_room_common.message;
 
 import lombok.*;
+import lombok.experimental.Accessors;
 
 import java.util.Set;
 
@@ -19,6 +20,7 @@ import java.util.Set;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
+@Accessors(chain = true)
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(callSuper = true)

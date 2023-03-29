@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import lombok.experimental.Accessors;
 
 import java.util.Set;
 
@@ -22,6 +23,7 @@ import java.util.Set;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
+@Accessors(chain = true)
 @NoArgsConstructor
 @ToString(callSuper = true)
 public class GroupMembersResponseMessage extends AbstractResponseMessage

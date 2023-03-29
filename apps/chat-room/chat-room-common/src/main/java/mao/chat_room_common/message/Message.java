@@ -1,9 +1,11 @@
 package mao.chat_room_common.message;
 
 import lombok.Data;
+import lombok.experimental.Accessors;
 import mao.chat_room_common.protocol.SequenceIdGenerator;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,6 +23,7 @@ import java.util.Map;
  */
 
 @Data
+@Accessors(chain = true)
 public abstract class Message implements Serializable
 {
     /**
@@ -34,10 +37,21 @@ public abstract class Message implements Serializable
         return messageClasses.get(messageType);
     }
 
+    public Message()
+    {
+        time = LocalDateTime.now();
+    }
+
     /**
      * 序列id
      */
     private int sequenceId;
+
+
+    /**
+     * 时间
+     */
+    private LocalDateTime time;
 
     /**
      * 设置序列id

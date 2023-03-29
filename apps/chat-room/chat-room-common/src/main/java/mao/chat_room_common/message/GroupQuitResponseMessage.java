@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import lombok.experimental.Accessors;
 
 /**
  * Project name(项目名称)：netty_chat_room
@@ -20,6 +21,7 @@ import lombok.ToString;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
+@Accessors(chain = true)
 @ToString(callSuper = true)
 public class GroupQuitResponseMessage extends AbstractResponseMessage
 {
