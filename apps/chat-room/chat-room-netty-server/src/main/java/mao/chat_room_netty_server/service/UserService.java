@@ -19,5 +19,30 @@ import mao.chat_room_server_api.entity.User;
 
 public interface UserService extends IService<User>
 {
+    /**
+     * 简单登录，不做验证码之类的
+     *
+     * @param username 用户名
+     * @param password 密码
+     * @return {@link User} 会有Biz异常
+     */
+    User login(String username, String password);
 
+    /**
+     * 简单用户注册，不要求邮箱、手机号之类的了
+     *
+     * @param username 用户名
+     * @param password 密码
+     * @return boolean
+     */
+    boolean register(String username, String password);
+
+    /**
+     * 设置用户状态
+     *
+     * @param username 用户名
+     * @param status   状态，false表示禁用，ture表示启用
+     * @return boolean
+     */
+    boolean setUserStatus(String username, boolean status);
 }
