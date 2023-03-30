@@ -1,2 +1,5 @@
 chat:
   port: 9091
+
+server:
+  port: 9092

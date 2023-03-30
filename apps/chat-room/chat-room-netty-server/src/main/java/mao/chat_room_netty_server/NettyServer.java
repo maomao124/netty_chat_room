@@ -1,14 +1,17 @@
 package mao.chat_room_netty_server;
 
+import io.netty.channel.nio.NioEventLoopGroup;
 import lombok.extern.slf4j.Slf4j;
-import mao.chat_room_server_api.utils.ClusterUtils;
+import mao.chat_room_common.protocol.ProcotolFrameDecoder;
+import mao.chat_room_netty_server.handler.*;
+import mao.chat_room_server_api.config.ServerConfig;
+import mao.chat_room_server_api.protocol.ServerMessageCodecSharable;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
-import java.util.List;
+
 
 /**
  * Project name(项目名称)：netty_chat_room
@@ -28,9 +31,47 @@ import java.util.List;
 public class NettyServer implements CommandLineRunner
 {
 
+    @Resource
+    private ServerMessageCodecSharable serverMessageCodecSharable;
+
+    @Resource
+    private ServerConfig serverConfig;
+
+    @Resource
+    private ProcotolFrameDecoder procotolFrameDecoder;
+
+    @Resource
+    private ChatRequestMessageHandler chatRequestMessageHandler;
+
+    @Resource
+    private GroupChatRequestMessageHandler groupChatRequestMessageHandler;
+
+    @Resource
+    private GroupCreateRequestMessageHandler groupCreateRequestMessageHandler;
+
+    @Resource
+    private GroupJoinRequestMessageHandler groupJoinRequestMessageHandler;
+
+    @Resource
+    private GroupMembersRequestMessageHandler groupMembersRequestMessageHandler;
+
+    @Resource
+    private GroupQuitRequestMessageHandler groupQuitRequestMessageHandler;
+
+    @Resource
+    private LoginRequestMessageHandler loginRequestMessageHandler;
+
+    @Resource
+    private RegisterRequestMessageHandler registerRequestMessageHandler;
+
+    @Resource
+    private QuitHandler quitHandler;
+
     @Override
     public void run(String... args) throws Exception
     {
+        NioEventLoopGroup boss = new NioEventLoopGroup();
+        NioEventLoopGroup worker = new NioEventLoopGroup();
 
     }
 
