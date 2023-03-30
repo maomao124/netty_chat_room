@@ -1,10 +1,14 @@
 package mao.chat_room_netty_server;
 
 import lombok.extern.slf4j.Slf4j;
+import mao.chat_room_server_api.utils.ClusterUtils;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Project name(项目名称)：netty_chat_room

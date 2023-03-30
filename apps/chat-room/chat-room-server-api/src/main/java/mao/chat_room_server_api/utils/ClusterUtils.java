@@ -55,7 +55,7 @@ public class ClusterUtils
      *
      * @return {@link List}<{@link ServiceInstance}>
      */
-    private List<ServiceInstance> getServiceInstances()
+    public List<ServiceInstance> getServiceInstances()
     {
         //得到本服务上所有实例列表
         return discoveryClient.getInstances(appName);
@@ -66,7 +66,7 @@ public class ClusterUtils
      *
      * @return {@link ServiceInstance}
      */
-    private ServiceInstance getServiceInstance()
+    public ServiceInstance getServiceInstance()
     {
         return loadBalancerClient.choose(appName);
     }
@@ -78,7 +78,7 @@ public class ClusterUtils
      * @param appName 应用程序名称
      * @return {@link List}<{@link ServiceInstance}>
      */
-    private List<ServiceInstance> getServiceInstances(String appName)
+    public List<ServiceInstance> getServiceInstances(String appName)
     {
         //得到本服务上所有实例列表
         return discoveryClient.getInstances(appName);
@@ -90,7 +90,7 @@ public class ClusterUtils
      * @param appName 应用程序名称
      * @return {@link ServiceInstance}
      */
-    private ServiceInstance getServiceInstance(String appName)
+    public ServiceInstance getServiceInstance(String appName)
     {
         return loadBalancerClient.choose(appName);
     }
