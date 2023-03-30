@@ -2,10 +2,7 @@ package mao.console_client.thread;
 
 import io.netty.channel.Channel;
 import lombok.SneakyThrows;
-import mao.chat_room_common.message.ChatRequestMessage;
-import mao.chat_room_common.message.LoginRequestMessage;
-import mao.chat_room_common.message.PingMessage;
-import mao.chat_room_common.message.RegisterRequestMessage;
+import mao.chat_room_common.message.*;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -45,42 +42,105 @@ public class BizThread extends Thread
     @Override
     public void run()
     {
+        System.out.println("\n\n\n\n");
         Scanner input = new Scanner(System.in);
         super.run();
         while (true)
         {
-            System.out.println("\n\n\n\n");
-            System.out.println("---------------------------------------------");
-            System.out.println("send [username] [content]");
-            System.out.println("gsend [group name] [content]");
-            System.out.println("gcreate [group name] [m1,m2,m3...]");
-            System.out.println("gmembers [group name]");
-            System.out.println("gjoin [group name]");
-            System.out.println("gquit [group name]");
-            System.out.println("help");
-            System.out.println("quit");
-            System.out.println("---------------------------------------------");
-            System.out.print("请输入以上命令：");
-            String command = input.nextLine();
-            String[] s = command.split(" ");
-
-            switch (s[0])
+            try
             {
-                case "send":
-                    channel.writeAndFlush(new ChatRequestMessage()
-                            .setFrom(username)
-                            .setTo(s[1])
-                            .setContent(s[2]));
-                    break;
-                default:
-                    continue;
+                System.out.println("---------------------------------------------");
+                System.out.println("send [username] [content]");
+                System.out.println("gsend [group name] [content]");
+                System.out.println("gcreate [group name] [m1,m2,m3...]");
+                System.out.println("gmembers [group name]");
+                System.out.println("gjoin [group name]");
+                System.out.println("gquit [group name]");
+                System.out.println("ping");
+                System.out.println("help");
+                System.out.println("quit");
+                System.out.println("---------------------------------------------");
+                System.out.print("请输入以上命令：");
+                String command = input.nextLine();
+                String[] s = command.split(" ");
+
+                switch (s[0])
+                {
+                    case "send":
+                        channel.writeAndFlush(new ChatRequestMessage()
+                                .setFrom(username)
+                                .setTo(s[1])
+                                .setContent(s[2])
+                                .setSequenceId());
+                        break;
+                    case "gsend":
+                        channel.writeAndFlush(new GroupChatRequestMessage()
+                                .setFrom(username)
+                                .setGroupName(s[1])
+                                .setContent(s[2])
+                                .setSequenceId());
+                        break;
+                    case "gcreate":
+                        //成员列表
+                        Set<String> set = new HashSet<>(Arrays.asList(s[2].split(",")));
+                        set.add(username);
+                        channel.writeAndFlush(new GroupCreateRequestMessage()
+                                .setGroupName(s[1])
+                                .setMembers(set)
+                                .setSequenceId());
+                        break;
+                    case "gmembers":
+                        channel.writeAndFlush(new GroupMembersRequestMessage()
+                                .setGroupName(s[1])
+                                .setSequenceId());
+                        break;
+                    case "gjoin":
+                        channel.writeAndFlush(new GroupJoinRequestMessage()
+                                .setUsername(username)
+                                .setGroupName(s[1])
+                                .setSequenceId());
+                        break;
+                    case "gquit":
+                        channel.writeAndFlush(new GroupQuitRequestMessage()
+                                .setUsername(username)
+                                .setGroupName(s[1])
+                                .setSequenceId());
+                        break;
+                    case "quit":
+                        channel.close();
+                        return;
+                    case "help":
+                        printHelp();
+                        return;
+                    case "ping":
+                        long start = System.currentTimeMillis();
+                        channel.writeAndFlush(new PingMessage().setRequestTime(start)
+                                .setSequenceId());
+                        return;
+                    default:
+                        continue;
+                }
+
+
+                System.out.println("等待服务器响应...");
+                LockSupport.park();
+                Thread.sleep(100);
+                System.out.println();
             }
-
-
-            System.out.println("等待服务器响应...");
-            LockSupport.park();
-            Thread.sleep(100);
-            System.out.println();
+            catch (Exception e)
+            {
+                e.printStackTrace();
+                Thread.sleep(1000);
+            }
         }
+
+    }
+
+    /**
+     * 打印帮助消息
+     */
+    private static void printHelp()
+    {
+
     }
 }
