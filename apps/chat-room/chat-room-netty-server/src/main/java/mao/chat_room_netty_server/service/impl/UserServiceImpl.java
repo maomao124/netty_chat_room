@@ -47,6 +47,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         {
             throw new BizException("密码不能为空");
         }
+        if (username.length() < 3)
+        {
+            throw new BizException("用户名长度不能小于3位");
+        }
+        if (password.length() < 6)
+        {
+            throw new BizException("密码长度不能小于6位");
+        }
         //查询数据库
         User user = this.getOne(Wraps.<User>lbQ().eq(User::getUsername, username));
         if (user == null)
@@ -87,10 +95,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         }
         //查询数据库
         User user = this.getOne(Wraps.<User>lbQ().eq(User::getUsername, username));
-        //判断用户名是否存在
-        if (user.getUsername().equals(username))
+        //如果为空，就不存在
+        if (user != null)
         {
-            throw new BizException("该用户名\"" + username + "\"已被占用! 换一个用户名吧");
+            //判断用户名是否存在
+            if (user.getUsername().equals(username))
+            {
+                throw new BizException("该用户名\"" + username + "\"已被占用! 换一个用户名吧");
+            }
         }
         User user1 = new User()
                 .setUsername(username)

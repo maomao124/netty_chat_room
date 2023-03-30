@@ -16,9 +16,11 @@ import mao.chat_room_client_api.protocol.ClientMessageCodecSharable;
 import mao.chat_room_common.message.LoginRequestMessage;
 import mao.chat_room_common.message.PingMessage;
 import mao.chat_room_common.message.PongMessage;
+import mao.chat_room_common.message.RegisterRequestMessage;
 import mao.chat_room_common.protocol.ProcotolFrameDecoder;
 import mao.console_client.handler.LoginResponseMessageHandler;
 import mao.console_client.handler.PingResponseMessageHandler;
+import mao.console_client.handler.RegisterResponseMessageHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -75,6 +77,7 @@ public class Client
 
         PingResponseMessageHandler pingResponseMessageHandler = new PingResponseMessageHandler();
         LoginResponseMessageHandler loginResponseMessageHandler = new LoginResponseMessageHandler();
+        RegisterResponseMessageHandler registerResponseMessageHandler = new RegisterResponseMessageHandler();
 
         Bootstrap bootstrap = new Bootstrap();
         ChannelFuture channelFuture = bootstrap.group(group)
@@ -88,7 +91,8 @@ public class Client
                                 .addLast(new ProcotolFrameDecoder())
                                 .addLast(clientMessageCodecSharable)
                                 .addLast(pingResponseMessageHandler)
-                                .addLast(loginResponseMessageHandler);
+                                .addLast(loginResponseMessageHandler)
+                                .addLast(registerResponseMessageHandler);
                     }
                 }).connect(new InetSocketAddress(ClientConfig.getServerIp(), ClientConfig.getServerPort()));
 
@@ -129,6 +133,10 @@ public class Client
                         String username = input.next();
                         System.out.print("请输入密码：");
                         String password = input.next();
+                        channel.writeAndFlush(new RegisterRequestMessage()
+                                .setUsername(username)
+                                .setPassword(password)
+                                .setSequenceId());
                     }
                     else if ("3".equals(next))
                     {
