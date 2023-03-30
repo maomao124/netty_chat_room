@@ -6,6 +6,7 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import mao.chat_room_common.message.LoginResponseMessage;
 import mao.chat_room_common.message.PongMessage;
 import mao.console_client.Client;
+import mao.console_client.thread.BizThread;
 
 import java.awt.*;
 import java.util.concurrent.locks.LockSupport;
@@ -36,6 +37,12 @@ public class LoginResponseMessageHandler extends SimpleChannelInboundHandler<Log
             {
                 //登录成功
                 System.out.println("登录成功");
+                BizThread bizThread = new BizThread(Client.getChannel());
+                //强行结束
+                Client.getThread().stop();
+                Client.setThread(bizThread);
+                //启动业务线程
+                bizThread.start();
             }
             else
             {

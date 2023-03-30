@@ -21,6 +21,7 @@ import mao.chat_room_common.protocol.ProcotolFrameDecoder;
 import mao.console_client.handler.LoginResponseMessageHandler;
 import mao.console_client.handler.PingResponseMessageHandler;
 import mao.console_client.handler.RegisterResponseMessageHandler;
+import mao.console_client.thread.LoginAndRegisterThread;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -98,70 +99,7 @@ public class Client
 
         channel = channelFuture.channel();
 
-        Scanner input = new Scanner(System.in);
-
-        thread = new Thread(new Runnable()
-        {
-            @SneakyThrows
-            @Override
-            public void run()
-            {
-                while (true)
-                {
-                    System.out.println("------------------------------");
-                    System.out.println("1.登录");
-                    System.out.println("2.注册");
-                    System.out.println("3.ping");
-                    System.out.println("4.退出");
-                    System.out.println("------------------------------");
-                    System.out.print("请输入：");
-                    String next = input.next();
-                    if ("1".equals(next))
-                    {
-                        System.out.print("请输入用户名：");
-                        String username = input.next();
-                        System.out.print("请输入密码：");
-                        String password = input.next();
-                        channel.writeAndFlush(new LoginRequestMessage()
-                                .setUsername(username)
-                                .setPassword(password)
-                                .setSequenceId());
-                    }
-                    else if ("2".equals(next))
-                    {
-                        System.out.print("请输入用户名：");
-                        String username = input.next();
-                        System.out.print("请输入密码：");
-                        String password = input.next();
-                        channel.writeAndFlush(new RegisterRequestMessage()
-                                .setUsername(username)
-                                .setPassword(password)
-                                .setSequenceId());
-                    }
-                    else if ("3".equals(next))
-                    {
-                        long start = System.currentTimeMillis();
-                        channel.writeAndFlush(new PingMessage().setRequestTime(start)
-                                .setSequenceId());
-                    }
-                    else if ("4".equals(next))
-                    {
-                        System.out.println("正在关闭...");
-                        channel.close();
-                    }
-                    else
-                    {
-
-                    }
-                    System.out.println("等待服务器响应...");
-                    LockSupport.park();
-                    Thread.sleep(100);
-                    System.out.println();
-                }
-            }
-        }, "login");
-
-        thread.setDaemon(true);
+        thread = new LoginAndRegisterThread(channel);
 
         channelFuture.addListener(new GenericFutureListener<Future<? super Void>>()
         {
