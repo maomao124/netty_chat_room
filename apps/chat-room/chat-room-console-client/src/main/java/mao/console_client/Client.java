@@ -13,9 +13,11 @@ import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import mao.chat_room_client_api.config.ClientConfig;
 import mao.chat_room_client_api.protocol.ClientMessageCodecSharable;
+import mao.chat_room_common.message.LoginRequestMessage;
 import mao.chat_room_common.message.PingMessage;
 import mao.chat_room_common.message.PongMessage;
 import mao.chat_room_common.protocol.ProcotolFrameDecoder;
+import mao.console_client.handler.LoginResponseMessageHandler;
 import mao.console_client.handler.PingResponseMessageHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -72,6 +74,7 @@ public class Client
         ClientMessageCodecSharable clientMessageCodecSharable = new ClientMessageCodecSharable();
 
         PingResponseMessageHandler pingResponseMessageHandler = new PingResponseMessageHandler();
+        LoginResponseMessageHandler loginResponseMessageHandler = new LoginResponseMessageHandler();
 
         Bootstrap bootstrap = new Bootstrap();
         ChannelFuture channelFuture = bootstrap.group(group)
@@ -84,7 +87,8 @@ public class Client
                         ch.pipeline().addLast(LOGGING_HANDLER)
                                 .addLast(new ProcotolFrameDecoder())
                                 .addLast(clientMessageCodecSharable)
-                                .addLast(pingResponseMessageHandler);
+                                .addLast(pingResponseMessageHandler)
+                                .addLast(loginResponseMessageHandler);
                     }
                 }).connect(new InetSocketAddress(ClientConfig.getServerIp(), ClientConfig.getServerPort()));
 
@@ -114,6 +118,10 @@ public class Client
                         String username = input.next();
                         System.out.print("请输入密码：");
                         String password = input.next();
+                        channel.writeAndFlush(new LoginRequestMessage()
+                                .setUsername(username)
+                                .setPassword(password)
+                                .setSequenceId());
                     }
                     else if ("2".equals(next))
                     {
