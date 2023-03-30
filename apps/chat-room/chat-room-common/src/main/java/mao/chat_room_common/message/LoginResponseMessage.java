@@ -24,6 +24,7 @@ import lombok.experimental.Accessors;
 @ToString(callSuper = true)
 public class LoginResponseMessage extends AbstractResponseMessage
 {
+    private String username;
 
     @Override
     public int getMessageType()

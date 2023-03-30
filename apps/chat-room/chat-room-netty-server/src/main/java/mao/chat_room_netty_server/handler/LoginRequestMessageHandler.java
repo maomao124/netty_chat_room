@@ -55,6 +55,7 @@ public class LoginRequestMessageHandler extends SimpleChannelInboundHandler<Logi
             session.bind(ctx.channel(), username);
             //响应
             ctx.writeAndFlush(LoginResponseMessage.success()
+                    .setUsername(username)
                     .setSequenceId(loginRequestMessage.getSequenceId()));
             log.debug("用户" + username + "登录成功");
         }

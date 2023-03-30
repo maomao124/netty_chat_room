@@ -37,7 +37,7 @@ public class LoginResponseMessageHandler extends SimpleChannelInboundHandler<Log
             {
                 //登录成功
                 System.out.println("登录成功");
-                BizThread bizThread = new BizThread(Client.getChannel());
+                BizThread bizThread = new BizThread(Client.getChannel(), loginResponseMessage.getUsername());
                 //强行结束
                 Client.getThread().stop();
                 Client.setThread(bizThread);
