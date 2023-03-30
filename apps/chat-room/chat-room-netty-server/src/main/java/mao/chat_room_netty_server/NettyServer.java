@@ -5,6 +5,7 @@ import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 import io.netty.util.concurrent.Future;
@@ -95,10 +96,10 @@ public class NettyServer implements CommandLineRunner
             ServerBootstrap serverBootstrap = new ServerBootstrap();
             Channel channel = serverBootstrap.group(boss, worker)
                     .channel(NioServerSocketChannel.class)
-                    .childHandler(new ChannelInitializer<NioServerSocketChannel>()
+                    .childHandler(new ChannelInitializer<NioSocketChannel>()
                     {
                         @Override
-                        protected void initChannel(NioServerSocketChannel ch) throws Exception
+                        protected void initChannel(NioSocketChannel ch) throws Exception
                         {
                             ch.pipeline().addLast(LOGGING_HANDLER)
                                     .addLast(procotolFrameDecoder)

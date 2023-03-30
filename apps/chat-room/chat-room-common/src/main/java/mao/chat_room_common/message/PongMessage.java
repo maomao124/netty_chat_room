@@ -2,6 +2,8 @@ package mao.chat_room_common.message;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
+import lombok.experimental.Accessors;
 import mao.chat_room_common.protocol.SequenceIdGenerator;
 
 /**
@@ -19,7 +21,9 @@ import mao.chat_room_common.protocol.SequenceIdGenerator;
 
 
 @Data
+@Accessors(chain = true)
 @EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
 public class PongMessage extends Message
 {
     /**

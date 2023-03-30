@@ -2,6 +2,8 @@ package mao.chat_room_common.message;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
+import lombok.experimental.Accessors;
 
 /**
  * Project name(项目名称)：Netty_自定义协议
@@ -17,7 +19,9 @@ import lombok.EqualsAndHashCode;
  */
 
 @Data
+@Accessors(chain = true)
 @EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
 public class PingMessage extends Message
 {
     /**

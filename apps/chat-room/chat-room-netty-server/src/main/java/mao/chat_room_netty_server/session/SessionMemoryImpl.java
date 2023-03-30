@@ -54,11 +54,32 @@ public class SessionMemoryImpl implements Session
     {
         //得到用户名
         String username = channelUsernameMap.remove(channel);
-        log.debug("用户：" + username + "绑定会话");
+        log.debug("用户：" + username + "解除绑定会话");
         //移除
-        usernameChannelMap.remove(username);
-        channelUsernameMap.remove(channel);
-        channelAttributesMap.remove(channel);
+        try
+        {
+            usernameChannelMap.remove(username);
+        }
+        catch (Exception ignored)
+        {
+
+        }
+        try
+        {
+            channelUsernameMap.remove(channel);
+        }
+        catch (Exception ignored)
+        {
+
+        }
+        try
+        {
+            channelAttributesMap.remove(channel);
+        }
+        catch (Exception ignored)
+        {
+
+        }
     }
 
     @Override

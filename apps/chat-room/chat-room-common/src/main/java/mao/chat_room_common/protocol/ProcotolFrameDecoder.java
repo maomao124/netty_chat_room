@@ -1,5 +1,6 @@
 package mao.chat_room_common.protocol;
 
+import io.netty.channel.ChannelHandler;
 import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 
 /**
