@@ -81,7 +81,7 @@ public class GroupCreateRequestMessageHandler extends SimpleChannelInboundHandle
 
             //创建群聊
             Group group = groupSession.createGroup(groupName, members1);
-            ctx.writeAndFlush(GroupCreateResponseMessage.success(members)
+            ctx.writeAndFlush(GroupCreateResponseMessage.success(members1)
                     .setSequenceId(groupCreateRequestMessage.getSequenceId()));
         }
     }

@@ -1,5 +1,6 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   mao.chat_room_server_api.config.ChatConfigurationProperties,\
   mao.chat_room_server_api.config.ServerConfig,\
-  mao.chat_room_server_api.protocol.ServerMessageCodecSharable
+  mao.chat_room_server_api.protocol.ServerMessageCodecSharable,\
+  mao.chat_room_server_api.utils.ClusterUtils
 
