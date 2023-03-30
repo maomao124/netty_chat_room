@@ -44,6 +44,12 @@ public class GroupSessionMemoryImpl implements GroupSession
 
 
     @Override
+    public boolean hasGroup(String name)
+    {
+        return groupMap.get(name) != null;
+    }
+
+    @Override
     public Group createGroup(String name, Set<String> members)
     {
         log.debug("创建群聊：" + name + "，成员：" + members);

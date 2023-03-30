@@ -20,6 +20,15 @@ import java.util.Set;
 
 public interface GroupSession
 {
+
+    /**
+     * 是否有这个组
+     *
+     * @param name 组名字
+     * @return boolean
+     */
+    boolean hasGroup(String name);
+
     /**
      * 创建一个聊天组, 如果不存在才能创建成功, 否则返回 null
      *

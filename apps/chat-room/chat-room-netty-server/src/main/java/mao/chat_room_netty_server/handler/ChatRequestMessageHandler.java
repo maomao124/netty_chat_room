@@ -23,7 +23,7 @@ import javax.annotation.Resource;
  * Date(创建日期)： 2023/3/29
  * Time(创建时间)： 22:24
  * Version(版本): 1.0
- * Description(描述)： 聊天请求入栈处理器
+ * Description(描述)： 聊天请求入栈消息处理器
  */
 
 @Slf4j
