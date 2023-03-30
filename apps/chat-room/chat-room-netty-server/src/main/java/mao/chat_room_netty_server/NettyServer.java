@@ -47,6 +47,9 @@ public class NettyServer implements CommandLineRunner
     @Resource
     private ServerConfig serverConfig;
 
+    /**
+     * 协议帧解码器，这里不能共用
+     */
     @Resource
     private ProcotolFrameDecoder procotolFrameDecoder;
 
@@ -77,6 +80,9 @@ public class NettyServer implements CommandLineRunner
     @Resource
     private QuitHandler quitHandler;
 
+    @Resource
+    private PingMessageHandler pingMessageHandler;
+
     /**
      * 运行,禁止长时间阻塞此线程
      *
@@ -102,7 +108,7 @@ public class NettyServer implements CommandLineRunner
                         protected void initChannel(NioSocketChannel ch) throws Exception
                         {
                             ch.pipeline().addLast(LOGGING_HANDLER)
-                                    .addLast(procotolFrameDecoder)
+                                    .addLast(new ProcotolFrameDecoder())
                                     .addLast(serverMessageCodecSharable)
                                     .addLast(chatRequestMessageHandler)
                                     .addLast(groupChatRequestMessageHandler)
@@ -112,6 +118,7 @@ public class NettyServer implements CommandLineRunner
                                     .addLast(groupQuitRequestMessageHandler)
                                     .addLast(loginRequestMessageHandler)
                                     .addLast(registerRequestMessageHandler)
+                                    .addLast(pingMessageHandler)
                                     .addLast(quitHandler);
                         }
                     }).bind(serverConfig.getServerPort()).sync().channel();

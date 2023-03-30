@@ -54,7 +54,14 @@ public class SessionMemoryImpl implements Session
     {
         //得到用户名
         String username = channelUsernameMap.remove(channel);
-        log.debug("用户：" + username + "解除绑定会话");
+        if (username == null)
+        {
+            log.debug("未登录用户断开连接");
+        }
+        else
+        {
+            log.debug("用户：" + username + "解除绑定会话");
+        }
         //移除
         try
         {

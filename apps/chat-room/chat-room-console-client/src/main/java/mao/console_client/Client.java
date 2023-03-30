@@ -9,16 +9,21 @@ import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import mao.chat_room_client_api.config.ClientConfig;
 import mao.chat_room_client_api.protocol.ClientMessageCodecSharable;
+import mao.chat_room_common.message.PingMessage;
+import mao.chat_room_common.message.PongMessage;
 import mao.chat_room_common.protocol.ProcotolFrameDecoder;
+import mao.console_client.handler.PingResponseMessageHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.net.InetSocketAddress;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
+import java.util.concurrent.locks.LockSupport;
 
 /**
  * Project name(项目名称)：netty_chat_room
@@ -36,11 +41,37 @@ import java.util.Scanner;
 
 public class Client
 {
+
+    private static Thread thread;
+    private static Channel channel;
+
+    public static Thread getThread()
+    {
+        return thread;
+    }
+
+    public static void setThread(Thread thread)
+    {
+        Client.thread = thread;
+    }
+
+    public static Channel getChannel()
+    {
+        return channel;
+    }
+
+    public static void setChannel(Channel channel)
+    {
+        Client.channel = channel;
+    }
+
     public static void main(String[] args)
     {
         NioEventLoopGroup group = new NioEventLoopGroup();
         LoggingHandler LOGGING_HANDLER = new LoggingHandler(LogLevel.DEBUG);
         ClientMessageCodecSharable clientMessageCodecSharable = new ClientMessageCodecSharable();
+
+        PingResponseMessageHandler pingResponseMessageHandler = new PingResponseMessageHandler();
 
         Bootstrap bootstrap = new Bootstrap();
         ChannelFuture channelFuture = bootstrap.group(group)
@@ -53,48 +84,17 @@ public class Client
                         ch.pipeline().addLast(LOGGING_HANDLER)
                                 .addLast(new ProcotolFrameDecoder())
                                 .addLast(clientMessageCodecSharable)
-                                .addLast(new ChannelInboundHandlerAdapter()
-                                {
-                                    @Override
-                                    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception
-                                    {
-                                        try
-                                        {
-                                            ByteBuf byteBuf = (ByteBuf) msg;
-                                            String json = byteBuf.toString(StandardCharsets.UTF_8);
-                                            System.out.println(json);
-                                        }
-                                        catch (Exception e)
-                                        {
-                                            e.printStackTrace();
-                                        }
-                                        super.channelRead(ctx, msg);
-                                    }
-
-                                    @Override
-                                    public void channelInactive(ChannelHandlerContext ctx) throws Exception
-                                    {
-                                        System.out.println("连接已经断开");
-                                    }
-
-                                    // 在出现异常时触发
-                                    @Override
-                                    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause)
-                                            throws Exception
-                                    {
-                                        System.out.println(cause.getMessage());
-                                        System.out.println("连接已经断开");
-                                    }
-                                });
+                                .addLast(pingResponseMessageHandler);
                     }
                 }).connect(new InetSocketAddress(ClientConfig.getServerIp(), ClientConfig.getServerPort()));
 
-        Channel channel = channelFuture.channel();
+        channel = channelFuture.channel();
 
         Scanner input = new Scanner(System.in);
 
-        Thread thread = new Thread(new Runnable()
+        thread = new Thread(new Runnable()
         {
+            @SneakyThrows
             @Override
             public void run()
             {
@@ -106,7 +106,7 @@ public class Client
                     System.out.println("3.ping");
                     System.out.println("4.退出");
                     System.out.println("------------------------------");
-                    System.out.print("请输入");
+                    System.out.print("请输入：");
                     String next = input.next();
                     if ("1".equals(next))
                     {
@@ -124,6 +124,12 @@ public class Client
                     }
                     else if ("3".equals(next))
                     {
+                        long start = System.currentTimeMillis();
+                        channel.writeAndFlush(new PingMessage().setRequestTime(start)
+                                .setSequenceId());
+                    }
+                    else if ("4".equals(next))
+                    {
                         System.out.println("正在关闭...");
                         channel.close();
                     }
@@ -131,6 +137,9 @@ public class Client
                     {
 
                     }
+                    System.out.println("等待服务器响应...");
+                    LockSupport.park();
+                    Thread.sleep(100);
                     System.out.println();
                 }
             }
