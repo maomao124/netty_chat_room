@@ -6,11 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.stream.Collectors;
 
@@ -47,6 +45,36 @@ public class GroupSessionMemoryImpl implements GroupSession
     public boolean hasGroup(String name)
     {
         return groupMap.get(name) != null;
+    }
+
+    @Override
+    public void unbind(String username)
+    {
+        groupMap.forEach(new BiConsumer<String, Group>()
+        {
+            /**
+             * 遍历群聊
+             *
+             * @param s     群聊名称
+             * @param group 群聊对象
+             */
+            @Override
+            public void accept(String s, Group group)
+            {
+                Iterator<String> iterator = group.getMembers().iterator();
+                while (iterator.hasNext())
+                {
+                    String next = iterator.next();
+                    if (next.equals(username))
+                    {
+                        //移除
+                        log.debug("移除群聊" + s + "的成员：" + username);
+                        iterator.remove();
+                        break;
+                    }
+                }
+            }
+        });
     }
 
     @Override

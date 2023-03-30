@@ -82,4 +82,10 @@ public class SessionMemoryImpl implements Session
         log.debug("根据用户名获取channel：" + username);
         return usernameChannelMap.get(username);
     }
+
+    @Override
+    public String getUsername(Channel channel)
+    {
+        return channelUsernameMap.get(channel);
+    }
 }

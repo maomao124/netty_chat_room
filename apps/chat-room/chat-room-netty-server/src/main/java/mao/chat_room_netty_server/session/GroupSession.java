@@ -30,6 +30,13 @@ public interface GroupSession
     boolean hasGroup(String name);
 
     /**
+     * 遍历删除所有群聊，删除移除这个群成员
+     *
+     * @param username 用户名
+     */
+    void unbind(String username);
+
+    /**
      * 创建一个聊天组, 如果不存在才能创建成功, 否则返回 null
      *
      * @param name    组名
