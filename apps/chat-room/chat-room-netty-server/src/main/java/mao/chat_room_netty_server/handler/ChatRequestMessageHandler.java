@@ -49,6 +49,13 @@ public class ChatRequestMessageHandler extends SimpleChannelInboundHandler<ChatR
         //发给谁
         String to = chatRequestMessage.getTo();
         Channel channel = session.getChannel(to);
+        if (to.equals(chatRequestMessage.getFrom()))
+        {
+            //自己发送给自己
+            ctx.writeAndFlush(ChatResponseMessage.fail("不能发送给自己")
+                    .setSequenceId(chatRequestMessage.getSequenceId()));
+            return;
+        }
         if (channel == null)
         {
             //为空，不在线或者不存在
@@ -60,9 +67,13 @@ public class ChatRequestMessageHandler extends SimpleChannelInboundHandler<ChatR
             //在线
             log.debug(chatRequestMessage.getFrom() + "--->" + chatRequestMessage.getTo());
             //写入到对方客户端
-            ctx.writeAndFlush(ChatResponseMessage
+            channel.writeAndFlush(ChatResponseMessage
                     .success(chatRequestMessage.getFrom(),
                             chatRequestMessage.getContent())
+                    .setSequenceId(chatRequestMessage.getSequenceId()));
+            //写入到自己客户端
+            ctx.writeAndFlush(ChatResponseMessage
+                    .success(chatRequestMessage.getFrom(), null)
                     .setSequenceId(chatRequestMessage.getSequenceId()));
         }
     }

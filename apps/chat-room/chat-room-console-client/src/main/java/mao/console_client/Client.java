@@ -18,6 +18,7 @@ import mao.chat_room_common.message.PingMessage;
 import mao.chat_room_common.message.PongMessage;
 import mao.chat_room_common.message.RegisterRequestMessage;
 import mao.chat_room_common.protocol.ProcotolFrameDecoder;
+import mao.console_client.handler.ChatResponseMessageHandler;
 import mao.console_client.handler.LoginResponseMessageHandler;
 import mao.console_client.handler.PingResponseMessageHandler;
 import mao.console_client.handler.RegisterResponseMessageHandler;
@@ -79,6 +80,7 @@ public class Client
         PingResponseMessageHandler pingResponseMessageHandler = new PingResponseMessageHandler();
         LoginResponseMessageHandler loginResponseMessageHandler = new LoginResponseMessageHandler();
         RegisterResponseMessageHandler registerResponseMessageHandler = new RegisterResponseMessageHandler();
+        ChatResponseMessageHandler chatResponseMessageHandler = new ChatResponseMessageHandler();
 
         Bootstrap bootstrap = new Bootstrap();
         ChannelFuture channelFuture = bootstrap.group(group)
@@ -93,7 +95,8 @@ public class Client
                                 .addLast(clientMessageCodecSharable)
                                 .addLast(pingResponseMessageHandler)
                                 .addLast(loginResponseMessageHandler)
-                                .addLast(registerResponseMessageHandler);
+                                .addLast(registerResponseMessageHandler)
+                                .addLast(chatResponseMessageHandler);
                     }
                 }).connect(new InetSocketAddress(ClientConfig.getServerIp(), ClientConfig.getServerPort()));
 
