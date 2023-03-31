@@ -131,5 +131,29 @@ public class Client
             }
         });
 
+        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                try
+                {
+                    channel.close();
+                }
+                catch (Exception ignored)
+                {
+
+                }
+                try
+                {
+                    group.shutdownGracefully();
+                }
+                catch (Exception ignored)
+                {
+
+                }
+            }
+        }));
+
     }
 }

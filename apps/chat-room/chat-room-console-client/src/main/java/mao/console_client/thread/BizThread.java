@@ -107,6 +107,7 @@ public class BizThread extends Thread
                                 .setSequenceId());
                         break;
                     case "quit":
+                        System.out.println("正在退出...");
                         channel.close();
                         return;
                     case "help":

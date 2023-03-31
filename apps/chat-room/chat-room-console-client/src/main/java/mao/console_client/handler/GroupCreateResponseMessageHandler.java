@@ -50,7 +50,7 @@ public class GroupCreateResponseMessageHandler extends SimpleChannelInboundHandl
             else
             {
                 //失败
-                System.out.println("发送失败！失败原因：" + groupCreateResponseMessage.getReason());
+                System.out.println("群聊创建失败！失败原因：" + groupCreateResponseMessage.getReason());
                 Toolkit.getDefaultToolkit().beep();
             }
         }
