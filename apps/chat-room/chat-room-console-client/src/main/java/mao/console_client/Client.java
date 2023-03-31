@@ -13,15 +13,9 @@ import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import mao.chat_room_client_api.config.ClientConfig;
 import mao.chat_room_client_api.protocol.ClientMessageCodecSharable;
-import mao.chat_room_common.message.LoginRequestMessage;
-import mao.chat_room_common.message.PingMessage;
-import mao.chat_room_common.message.PongMessage;
-import mao.chat_room_common.message.RegisterRequestMessage;
+import mao.chat_room_common.message.*;
 import mao.chat_room_common.protocol.ProcotolFrameDecoder;
-import mao.console_client.handler.ChatResponseMessageHandler;
-import mao.console_client.handler.LoginResponseMessageHandler;
-import mao.console_client.handler.PingResponseMessageHandler;
-import mao.console_client.handler.RegisterResponseMessageHandler;
+import mao.console_client.handler.*;
 import mao.console_client.thread.LoginAndRegisterThread;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -81,6 +75,8 @@ public class Client
         LoginResponseMessageHandler loginResponseMessageHandler = new LoginResponseMessageHandler();
         RegisterResponseMessageHandler registerResponseMessageHandler = new RegisterResponseMessageHandler();
         ChatResponseMessageHandler chatResponseMessageHandler = new ChatResponseMessageHandler();
+        GroupChatResponseMessageHandler groupChatResponseMessageHandler = new GroupChatResponseMessageHandler();
+        GroupCreateResponseMessageHandler groupCreateResponseMessageHandler = new GroupCreateResponseMessageHandler();
 
         Bootstrap bootstrap = new Bootstrap();
         ChannelFuture channelFuture = bootstrap.group(group)
@@ -96,7 +92,9 @@ public class Client
                                 .addLast(pingResponseMessageHandler)
                                 .addLast(loginResponseMessageHandler)
                                 .addLast(registerResponseMessageHandler)
-                                .addLast(chatResponseMessageHandler);
+                                .addLast(chatResponseMessageHandler)
+                                .addLast(groupChatResponseMessageHandler)
+                                .addLast(groupCreateResponseMessageHandler);
                     }
                 }).connect(new InetSocketAddress(ClientConfig.getServerIp(), ClientConfig.getServerPort()));
 
