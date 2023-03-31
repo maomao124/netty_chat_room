@@ -200,10 +200,10 @@ public abstract class BaseConfig
     }
 
 
-    @Bean
+    /*@Bean
     @ConditionalOnClass(Undertow.class)
     public UndertowServerFactoryCustomizer getUndertowServerFactoryCustomizer()
     {
         return new UndertowServerFactoryCustomizer();
-    }
+    }*/
 }
