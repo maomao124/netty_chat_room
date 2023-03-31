@@ -4,6 +4,7 @@ import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import lombok.extern.slf4j.Slf4j;
+import mao.chat_room_common.message.GroupMembersResponseMessage;
 import mao.chat_room_common.message.GroupQuitRequestMessage;
 import mao.chat_room_common.message.GroupQuitResponseMessage;
 import mao.chat_room_netty_server.session.Group;
@@ -41,6 +42,15 @@ public class GroupQuitRequestMessageHandler extends SimpleChannelInboundHandler<
     protected void channelRead0(ChannelHandlerContext ctx,
                                 GroupQuitRequestMessage groupQuitRequestMessage) throws Exception
     {
+        //检查登录状态
+        if (!session.isLogin(ctx.channel()))
+        {
+            //未登录
+            ctx.writeAndFlush(GroupQuitResponseMessage.fail("请登录")
+                    .setSequenceId(groupQuitRequestMessage.getSequenceId()));
+            return;
+        }
+
         String groupName = groupQuitRequestMessage.getGroupName();
         String username = groupQuitRequestMessage.getUsername();
         Group group = groupSession.removeMember(groupName, username);

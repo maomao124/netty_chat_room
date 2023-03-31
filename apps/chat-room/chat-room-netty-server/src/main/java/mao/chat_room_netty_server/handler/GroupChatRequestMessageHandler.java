@@ -5,6 +5,7 @@ import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import lombok.extern.slf4j.Slf4j;
+import mao.chat_room_common.message.ChatResponseMessage;
 import mao.chat_room_common.message.GroupChatRequestMessage;
 import mao.chat_room_common.message.GroupChatResponseMessage;
 import mao.chat_room_netty_server.session.GroupSession;
@@ -43,6 +44,16 @@ public class GroupChatRequestMessageHandler extends SimpleChannelInboundHandler<
     protected void channelRead0(ChannelHandlerContext ctx,
                                 GroupChatRequestMessage groupChatRequestMessage) throws Exception
     {
+
+        //检查登录状态
+        if (!session.isLogin(ctx.channel()))
+        {
+            //未登录
+            ctx.writeAndFlush(GroupChatResponseMessage.fail("请登录")
+                    .setSequenceId(groupChatRequestMessage.getSequenceId()));
+            return;
+        }
+
         String groupName = groupChatRequestMessage.getGroupName();
         String content = groupChatRequestMessage.getContent();
         String from = groupChatRequestMessage.getFrom();
