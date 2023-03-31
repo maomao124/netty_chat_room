@@ -111,12 +111,12 @@ public class BizThread extends Thread
                         return;
                     case "help":
                         printHelp();
-                        return;
+                        break;
                     case "ping":
                         long start = System.currentTimeMillis();
                         channel.writeAndFlush(new PingMessage().setRequestTime(start)
                                 .setSequenceId());
-                        return;
+                        break;
                     default:
                         continue;
                 }

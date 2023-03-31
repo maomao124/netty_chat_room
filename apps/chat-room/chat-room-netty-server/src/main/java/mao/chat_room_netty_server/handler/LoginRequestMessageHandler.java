@@ -4,6 +4,7 @@ import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import lombok.extern.slf4j.Slf4j;
+import mao.chat_room_common.message.GroupChatResponseMessage;
 import mao.chat_room_common.message.LoginRequestMessage;
 import mao.chat_room_common.message.LoginResponseMessage;
 import mao.chat_room_netty_server.service.UserService;
@@ -48,6 +49,15 @@ public class LoginRequestMessageHandler extends SimpleChannelInboundHandler<Logi
     {
         String username = loginRequestMessage.getUsername();
         String password = loginRequestMessage.getPassword();
+
+        //检查登录状态
+        if (session.isLogin(username))
+        {
+            //已登录
+            ctx.writeAndFlush(LoginResponseMessage.fail("禁止在多台设备上同时登录!")
+                    .setSequenceId(loginRequestMessage.getSequenceId()));
+            return;
+        }
         try
         {
             User user = userService.login(username, password);

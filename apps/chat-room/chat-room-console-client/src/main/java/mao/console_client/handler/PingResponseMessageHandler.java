@@ -40,6 +40,7 @@ public class PingResponseMessageHandler extends SimpleChannelInboundHandler<Pong
         }
         finally
         {
+            System.out.println("释放锁：" + Client.getThread().getName());
             LockSupport.unpark(Client.getThread());
         }
     }

@@ -42,8 +42,8 @@ import java.util.concurrent.locks.LockSupport;
 public class Client
 {
 
-    private static Thread thread;
-    private static Channel channel;
+    private static volatile Thread thread;
+    private static volatile Channel channel;
 
     public static Thread getThread()
     {
