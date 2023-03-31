@@ -56,6 +56,21 @@
             </exclusions>
         </dependency>
 
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-swagger2</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-xss</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-redis-cache</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

@@ -38,6 +38,7 @@
       <module name="auth-server" target="1.8" />
       <module name="authority" target="1.5" />
       <module name="chat-room" target="1.8" />
+      <module name="chat-room-android-sdk" target="17" />
       <module name="chat-room-client-api" target="1.8" />
       <module name="chat-room-common" target="1.8" />
       <module name="chat-room-console-client" target="1.8" />
@@ -68,6 +69,7 @@
       <module name="auth-entity" options="-parameters" />
       <module name="auth-server" options="-parameters" />
       <module name="chat-room" options="-parameters" />
+      <module name="chat-room-android-sdk" options="-parameters" />
       <module name="chat-room-client-api" options="-parameters" />
       <module name="chat-room-common" options="-parameters" />
       <module name="chat-room-console-client" options="-parameters" />

@@ -25,6 +25,22 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-common</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-xss</artifactId>
+        </dependency>
+
+
     </dependencies>
 
     <build>
