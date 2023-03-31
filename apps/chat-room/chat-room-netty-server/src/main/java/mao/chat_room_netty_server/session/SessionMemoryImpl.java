@@ -90,6 +90,30 @@ public class SessionMemoryImpl implements Session
     }
 
     @Override
+    public boolean isLogin(String username)
+    {
+        Channel channel = usernameChannelMap.get(username);
+        if (channel == null)
+        {
+            log.debug("用户" + username + "未登录");
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public boolean isLogin(Channel channel)
+    {
+        String username = channelUsernameMap.get(channel);
+        if (username == null)
+        {
+            log.debug("用户" + channel + "未登录");
+            return false;
+        }
+        return true;
+    }
+
+    @Override
     public Object getAttribute(Channel channel, String name)
     {
         log.debug("得到" + name + "的属性值");

@@ -77,6 +77,7 @@ public class Client
         ChatResponseMessageHandler chatResponseMessageHandler = new ChatResponseMessageHandler();
         GroupChatResponseMessageHandler groupChatResponseMessageHandler = new GroupChatResponseMessageHandler();
         GroupCreateResponseMessageHandler groupCreateResponseMessageHandler = new GroupCreateResponseMessageHandler();
+        GroupMembersResponseMessageHandler groupMembersResponseMessageHandler = new GroupMembersResponseMessageHandler();
 
         Bootstrap bootstrap = new Bootstrap();
         ChannelFuture channelFuture = bootstrap.group(group)
@@ -94,7 +95,8 @@ public class Client
                                 .addLast(registerResponseMessageHandler)
                                 .addLast(chatResponseMessageHandler)
                                 .addLast(groupChatResponseMessageHandler)
-                                .addLast(groupCreateResponseMessageHandler);
+                                .addLast(groupCreateResponseMessageHandler)
+                                .addLast(groupMembersResponseMessageHandler);
                     }
                 }).connect(new InetSocketAddress(ClientConfig.getServerIp(), ClientConfig.getServerPort()));
 

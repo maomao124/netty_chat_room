@@ -73,6 +73,10 @@ public class GroupSessionMemoryImpl implements GroupSession
                         break;
                     }
                 }
+                if (group.getMembers().size() == 0)
+                {
+                    removeGroup(s);
+                }
             }
         });
     }
@@ -131,6 +135,7 @@ public class GroupSessionMemoryImpl implements GroupSession
         Set<String> members = groupMap.get(name).getMembers();
         if (members == null)
         {
+            removeGroup(name);
             return Group.EMPTY_GROUP.getMembers();
         }
         log.debug("群成员：" + members);

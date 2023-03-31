@@ -42,7 +42,14 @@ public class GroupMembersRequestMessageHandler extends SimpleChannelInboundHandl
                                 GroupMembersRequestMessage groupMembersRequestMessage) throws Exception
     {
         String groupName = groupMembersRequestMessage.getGroupName();
+        if (!groupSession.hasGroup(groupName))
+        {
+            ctx.writeAndFlush(GroupMembersResponseMessage.fail("群聊\"" + groupName + "\"不存在", groupName)
+                    .setSequenceId(groupMembersRequestMessage.getSequenceId()));
+            return;
+        }
         Set<String> members = groupSession.getMembers(groupName);
+        log.debug(members.toString());
         ctx.writeAndFlush(GroupMembersResponseMessage.success(groupName, members)
                 .setSequenceId(groupMembersRequestMessage.getSequenceId()));
     }

@@ -46,6 +46,15 @@ public class ChatRequestMessageHandler extends SimpleChannelInboundHandler<ChatR
     protected void channelRead0(ChannelHandlerContext ctx,
                                 ChatRequestMessage chatRequestMessage) throws Exception
     {
+        //检查登录状态
+        if (!session.isLogin(ctx.channel()))
+        {
+            //未登录
+            ctx.writeAndFlush(ChatResponseMessage.fail("请登录")
+                    .setSequenceId(chatRequestMessage.getSequenceId()));
+            return;
+        }
+
         //发给谁
         String to = chatRequestMessage.getTo();
         Channel channel = session.getChannel(to);

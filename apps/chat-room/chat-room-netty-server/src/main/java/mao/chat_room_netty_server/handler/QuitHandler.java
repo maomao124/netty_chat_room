@@ -46,6 +46,7 @@ public class QuitHandler extends ChannelInboundHandlerAdapter
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception
     {
+        log.warn("异常：", cause);
         log.debug("{} 已经异常断开 异常是{}", ctx.channel(), cause.getMessage());
         String username = session.getUsername(ctx.channel());
         groupSession.unbind(username);

@@ -33,6 +33,23 @@ public interface Session
     void unbind(Channel channel);
 
     /**
+     * 是否是登录状态
+     *
+     * @param username 用户名
+     * @return boolean
+     */
+    boolean isLogin(String username);
+
+    /**
+     *
+     * 是否是登录状态
+     *
+     * @param channel 通道
+     * @return boolean
+     */
+    boolean isLogin(Channel channel);
+
+    /**
      * 获取属性
      *
      * @param channel 哪个 channel
