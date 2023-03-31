@@ -60,7 +60,7 @@ public class GroupJoinRequestMessageHandler extends SimpleChannelInboundHandler<
         if (group == null)
         {
             //不成功
-            ctx.writeAndFlush(GroupJoinResponseMessage.fail("群聊\"" + groupName + "\"加入失败")
+            ctx.writeAndFlush(GroupJoinResponseMessage.fail("群聊\"" + groupName + "\"加入失败！该群聊不存在")
                     .setSequenceId(groupJoinRequestMessage.getSequenceId()));
         }
         else

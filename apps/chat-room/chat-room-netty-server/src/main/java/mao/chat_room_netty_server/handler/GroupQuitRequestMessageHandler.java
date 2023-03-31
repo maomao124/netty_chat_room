@@ -57,7 +57,7 @@ public class GroupQuitRequestMessageHandler extends SimpleChannelInboundHandler<
         if (group == null)
         {
             //失败
-            ctx.writeAndFlush(GroupQuitResponseMessage.fail("群\"" + groupName + "\"不存在")
+            ctx.writeAndFlush(GroupQuitResponseMessage.fail("群聊\"" + groupName + "\"不存在")
                     .setSequenceId(groupQuitRequestMessage.getSequenceId()));
         }
         else

@@ -23,6 +23,7 @@ import java.util.concurrent.locks.LockSupport;
  * Version(版本): 1.0
  * Description(描述)： 群聊加入响应消息处理器
  */
+
 @ChannelHandler.Sharable
 public class GroupJoinResponseMessageHandler extends SimpleChannelInboundHandler<GroupJoinResponseMessage>
 {

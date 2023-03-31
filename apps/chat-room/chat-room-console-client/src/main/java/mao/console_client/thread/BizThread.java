@@ -119,6 +119,7 @@ public class BizThread extends Thread
                                 .setSequenceId());
                         break;
                     default:
+                        System.out.println("未知命令");
                         continue;
                 }
 
