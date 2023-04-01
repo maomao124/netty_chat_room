@@ -29,9 +29,6 @@ import java.util.List;
 public class ClusterUtils
 {
 
-    public static final String CHAT_ROOM_NETTY_SERVER = "chat-room-netty-server";
-    public static final String CHAT_ROOM_WEB_SERVER = "chat-room-web-server";
-
     /**
      * 应用程序名称
      */
