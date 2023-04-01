@@ -7,6 +7,7 @@ import mao.chat_room_common.entity.Server;
 import mao.chat_room_server_api.constants.ServerConstants;
 import mao.chat_room_server_api.constants.UrlConstants;
 import mao.chat_room_server_api.utils.ClusterUtils;
+import mao.chat_room_web_server.service.NettyService;
 import mao.tools_core.base.BaseController;
 import mao.tools_core.base.R;
 import org.springframework.cloud.client.ServiceInstance;
@@ -34,11 +35,9 @@ import javax.annotation.Resource;
 @RestController
 public class NettyController extends BaseController
 {
-    @Resource
-    private ClusterUtils clusterUtils;
 
     @Resource
-    private RestTemplate restTemplate;
+    private NettyService nettyService;
 
     /**
      * 通过负载均衡方式得到netty服务的一个实例地址
@@ -49,30 +48,7 @@ public class NettyController extends BaseController
     @GetMapping("/serverAddress")
     public R<Server> getServerAddress()
     {
-        try
-        {
-            ServiceInstance serviceInstance = clusterUtils.
-                    getServiceInstance(ServerConstants.CHAT_ROOM_NETTY_SERVER);
-            if (serviceInstance == null)
-            {
-                return fail("无法获取聊天服务器地址！请稍后在试");
-            }
-            String url = UrlConstants.buildGetPortUrl(
-                    serviceInstance.getHost() + ":" + serviceInstance.getPort());
-            log.debug("url ->" + url);
-            R r = restTemplate.getForObject(url, R.class);
-            if (r.getIsError())
-            {
-                return fail("无法获取聊天服务器地址！请稍后在试");
-            }
-            return success(new Server()
-                    .setIp(serviceInstance.getHost())
-                    .setPort(Integer.valueOf(r.getData().toString())));
-        }
-        catch (Exception e)
-        {
-            log.warn("错误：", e);
-            return fail("无法获取聊天服务器地址！请稍后在试");
-        }
+        Server server = nettyService.getNettyServerAddress();
+        return success(server);
     }
 }
