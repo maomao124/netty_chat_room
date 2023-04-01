@@ -90,7 +90,19 @@ public class ClusterChatRequestMessageHandler extends ChatRequestMessageHandler
             //url
             String url = "http://" + host + "/send";
             R r = restTemplate.postForObject(url, chatRequestMessage, R.class);
-
+            if (r.getIsError())
+            {
+                //错误
+                ctx.writeAndFlush(ChatResponseMessage.fail("服务器错误")
+                        .setSequenceId(chatRequestMessage.getSequenceId()));
+            }
+            else
+            {
+                //写入到自己客户端
+                ctx.writeAndFlush(ChatResponseMessage
+                        .success(chatRequestMessage.getFrom(), null)
+                        .setSequenceId(chatRequestMessage.getSequenceId()));
+            }
 
         }
         else

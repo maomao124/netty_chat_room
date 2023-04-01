@@ -21,7 +21,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 
 @Slf4j
-@Service
+//@Service
 public class SessionMemoryImpl implements Session
 {
 
