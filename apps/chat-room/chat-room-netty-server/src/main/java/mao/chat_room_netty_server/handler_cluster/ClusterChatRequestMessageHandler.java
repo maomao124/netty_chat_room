@@ -1,39 +1,47 @@
-package mao.chat_room_netty_server.handler;
+package mao.chat_room_netty_server.handler_cluster;
 
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.SimpleChannelInboundHandler;
 import lombok.extern.slf4j.Slf4j;
 import mao.chat_room_common.message.ChatRequestMessage;
 import mao.chat_room_common.message.ChatResponseMessage;
+import mao.chat_room_netty_server.handler.ChatRequestMessageHandler;
+import mao.chat_room_netty_server.service.RedisService;
 import mao.chat_room_netty_server.session.Session;
-import org.springframework.stereotype.Component;
+import mao.tools_core.base.R;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 
 /**
  * Project name(项目名称)：netty_chat_room
- * Package(包名): mao.chat_room_netty_server.handler
- * Class(类名): ChatRequestMessageHandler
+ * Package(包名): mao.chat_room_netty_server.handler_cluster
+ * Class(类名): ClusterChatRequestMessageHandler
  * Author(作者）: mao
  * Author QQ：1296193245
  * GitHub：https://github.com/maomao124/
- * Date(创建日期)： 2023/3/29
- * Time(创建时间)： 22:24
+ * Date(创建日期)： 2023/4/1
+ * Time(创建时间)： 16:09
  * Version(版本): 1.0
  * Description(描述)： 聊天请求入栈消息处理器
  */
 
 @Slf4j
-//@Service //这里应该添加Service而不是Component
+@Service //这里应该添加Service而不是Component
 @ChannelHandler.Sharable
-public class ChatRequestMessageHandler extends SimpleChannelInboundHandler<ChatRequestMessage>
+public class ClusterChatRequestMessageHandler extends ChatRequestMessageHandler
 {
-
     @Resource
     private Session session;
+
+    @Resource
+    private RedisService redisService;
+
+    @Resource
+    private RestTemplate restTemplate;
 
     /**
      * 通道读事件触发
@@ -67,9 +75,23 @@ public class ChatRequestMessageHandler extends SimpleChannelInboundHandler<ChatR
         }
         if (channel == null)
         {
-            //为空，不在线或者不存在
-            ctx.writeAndFlush(ChatResponseMessage.fail("对方用户\"" + to + "\"不存在或者不在线")
-                    .setSequenceId(chatRequestMessage.getSequenceId()));
+            //为空，本地不在线或者不存在
+            //查询其他实例
+            String host = redisService.getUserHost(to);
+            if (host == null)
+            {
+                //其他实例都不在线
+                ctx.writeAndFlush(ChatResponseMessage.fail("对方用户\"" + to + "\"不存在或者不在线")
+                        .setSequenceId(chatRequestMessage.getSequenceId()));
+                return;
+            }
+            //其他实例在线
+            //发起请求
+            //url
+            String url = "http://" + host + "/send";
+            R r = restTemplate.postForObject(url, chatRequestMessage, R.class);
+
+
         }
         else
         {

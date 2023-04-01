@@ -31,18 +31,17 @@ public class SessionClusterImpl implements Session
 
     private final RedisService redisService;
 
-    /**
-     * 主机地址
-     */
-    private final String hostAddress;
-
 
     private final String host;
 
+    @Autowired
     public SessionClusterImpl(@Value("${server.port}") String port, RedisService redisService)
             throws UnknownHostException
     {
-        hostAddress = InetAddress.getLocalHost().getHostAddress();
+        /**
+         * 主机地址
+         */
+        String hostAddress = InetAddress.getLocalHost().getHostAddress();
         this.redisService = redisService;
         this.host = hostAddress + ":" + port;
 
