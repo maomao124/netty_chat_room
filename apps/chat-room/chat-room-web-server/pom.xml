@@ -35,14 +35,19 @@
             <artifactId>tools-core</artifactId>
         </dependency>
 
-        <dependency>
+        <!--<dependency>
             <groupId>mao</groupId>
             <artifactId>tools-xss</artifactId>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>mao</groupId>
             <artifactId>chat-room-server-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-swagger2</artifactId>
         </dependency>
 
         <!-- nacos 客户端依赖 -->
@@ -55,6 +60,16 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-j2cache</artifactId>
         </dependency>
 
     </dependencies>

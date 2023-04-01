@@ -9,6 +9,7 @@ import mao.chat_room_common.message.ChatResponseMessage;
 import mao.chat_room_netty_server.handler.ChatRequestMessageHandler;
 import mao.chat_room_netty_server.service.RedisService;
 import mao.chat_room_netty_server.session.Session;
+import mao.chat_room_server_api.constants.UrlConstants;
 import mao.tools_core.base.R;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -88,7 +89,7 @@ public class ClusterChatRequestMessageHandler extends ChatRequestMessageHandler
             //其他实例在线
             //发起请求
             //url
-            String url = "http://" + host + "/send";
+            String url = UrlConstants.buildChatRequestMessageUrl(host);
             R r = restTemplate.postForObject(url, chatRequestMessage, R.class);
             if (r.getIsError())
             {
