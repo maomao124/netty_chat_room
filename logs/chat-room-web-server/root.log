@@ -73,3 +73,235 @@
 2023-04-01 14:34:39.797  INFO 16192 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
 2023-04-01 14:34:39.797  WARN 16192 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
 2023-04-01 14:34:39.797  INFO 16192 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-04-01 14:36:08.448  WARN 29300 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[chat-room-web-server] & group[DEFAULT_GROUP]
+2023-04-01 14:36:08.451  WARN 29300 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[chat-room-web-server.yml] & group[DEFAULT_GROUP]
+2023-04-01 14:36:08.453  WARN 29300 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[chat-room-web-server-dev.yml] & group[DEFAULT_GROUP]
+2023-04-01 14:36:08.454  INFO 29300 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-chat-room-web-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-chat-room-web-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-chat-room-web-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-04-01 14:36:08.478  INFO 29300 --- [main] m.c.ChatRoomWebServerApplication         : The following profiles are active: dev
+2023-04-01 14:36:08.796  WARN 29300 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[mao.chat_room_web_server]' package. Please check your configuration.
+2023-04-01 14:36:08.833  INFO 29300 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a83f21ae-7850-34dd-8b85-862cb0d6a7b8
+2023-04-01 14:36:08.856  INFO 29300 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-01 14:36:08.974  INFO 29300 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-01 14:36:08.979  INFO 29300 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-01 14:36:08.979  INFO 29300 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-04-01 14:36:09.076  INFO 29300 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-01 14:36:09.076  INFO 29300 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 592 ms
+2023-04-01 14:36:09.077  INFO 29300 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2023-04-01 14:36:09.130  INFO 29300 --- [main] m.c.config.ExceptionConfig               : 初始化 ExceptionConfig
+2023-04-01 14:36:09.131  INFO 29300 --- [main] m.chat_room_web_server.config.WebConfig  : 初始化 WebConfig
+2023-04-01 14:36:09.178  WARN 29300 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-04-01 14:36:09.178  INFO 29300 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-04-01 14:36:09.182  WARN 29300 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-04-01 14:36:09.182  INFO 29300 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-04-01 14:36:09.328  INFO 29300 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-04-01 14:36:10.617  INFO 29300 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-04-01 14:36:10.620  INFO 29300 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-04-01 14:36:10.637  WARN 29300 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2023-04-01 14:36:10.637  WARN 29300 --- [main] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-04-01 14:36:10.637  INFO 29300 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-04-01 14:36:10.639  INFO 29300 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-01 14:36:10.644  INFO 29300 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-01 14:36:10.646 ERROR 29300 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2023-04-01 14:36:10.646  WARN 29300 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-04-01 14:36:10.647  WARN 29300 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-04-01 14:36:35.956  WARN 13160 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[chat-room-web-server] & group[DEFAULT_GROUP]
+2023-04-01 14:36:35.959  WARN 13160 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[chat-room-web-server.yml] & group[DEFAULT_GROUP]
+2023-04-01 14:36:35.961  WARN 13160 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[chat-room-web-server-dev.yml] & group[DEFAULT_GROUP]
+2023-04-01 14:36:35.962  INFO 13160 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-chat-room-web-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-chat-room-web-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-chat-room-web-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-04-01 14:36:35.990  INFO 13160 --- [main] m.c.ChatRoomWebServerApplication         : The following profiles are active: dev
+2023-04-01 14:36:36.497  WARN 13160 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[mao.chat_room_web_server]' package. Please check your configuration.
+2023-04-01 14:36:36.558  INFO 13160 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a83f21ae-7850-34dd-8b85-862cb0d6a7b8
+2023-04-01 14:36:36.597  INFO 13160 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-01 14:36:36.821  INFO 13160 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-01 14:36:36.829  INFO 13160 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-01 14:36:36.829  INFO 13160 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-04-01 14:36:36.949  INFO 13160 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-01 14:36:36.950  INFO 13160 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 949 ms
+2023-04-01 14:36:36.951  INFO 13160 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2023-04-01 14:36:37.001  INFO 13160 --- [main] m.c.config.ExceptionConfig               : 初始化 ExceptionConfig
+2023-04-01 14:36:37.002  INFO 13160 --- [main] m.chat_room_web_server.config.WebConfig  : 初始化 WebConfig
+2023-04-01 14:36:37.131  WARN 13160 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-04-01 14:36:37.132  INFO 13160 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-04-01 14:36:37.134  WARN 13160 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-04-01 14:36:37.134  INFO 13160 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-04-01 14:36:37.199  INFO 13160 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-04-01 14:36:38.494  INFO 13160 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-04-01 14:36:38.497  INFO 13160 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-04-01 14:36:38.513  WARN 13160 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2023-04-01 14:36:38.513  WARN 13160 --- [main] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-04-01 14:36:38.514  INFO 13160 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-04-01 14:36:38.515  INFO 13160 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-01 14:36:38.520  INFO 13160 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-01 14:36:38.522 ERROR 13160 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2023-04-01 14:36:38.523  WARN 13160 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-04-01 14:36:38.523  WARN 13160 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-04-01 14:40:33.936  WARN 16732 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[chat-room-web-server] & group[DEFAULT_GROUP]
+2023-04-01 14:40:33.938  WARN 16732 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[chat-room-web-server.yml] & group[DEFAULT_GROUP]
+2023-04-01 14:40:33.940  WARN 16732 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[chat-room-web-server-dev.yml] & group[DEFAULT_GROUP]
+2023-04-01 14:40:33.941  INFO 16732 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-chat-room-web-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-chat-room-web-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-chat-room-web-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-04-01 14:40:33.970  INFO 16732 --- [main] m.c.ChatRoomWebServerApplication         : The following profiles are active: dev
+2023-04-01 14:40:34.401  INFO 16732 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=eda46292-0a77-387f-add2-8749d3473b61
+2023-04-01 14:40:34.600  INFO 16732 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-01 14:40:34.608  INFO 16732 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-01 14:40:34.608  INFO 16732 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-04-01 14:40:34.721  INFO 16732 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-01 14:40:34.721  INFO 16732 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 745 ms
+2023-04-01 14:40:34.723  INFO 16732 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2023-04-01 14:40:34.831  INFO 16732 --- [main] m.c.config.ExceptionConfig               : 初始化 ExceptionConfig
+2023-04-01 14:40:34.832  INFO 16732 --- [main] m.chat_room_web_server.config.WebConfig  : 初始化 WebConfig
+2023-04-01 14:40:34.872  WARN 16732 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-04-01 14:40:34.872  INFO 16732 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-04-01 14:40:34.876  WARN 16732 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-04-01 14:40:34.876  INFO 16732 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-04-01 14:40:34.930  INFO 16732 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-04-01 14:40:36.269  INFO 16732 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-04-01 14:40:36.271  INFO 16732 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-04-01 14:40:36.286  INFO 16732 --- [main] m.c.config.ServerConfig                  : 初始化 ServerConfig
+2023-04-01 14:40:36.291  INFO 16732 --- [main] m.c.protocol.ServerMessageCodecSharable  : 初始化 ServerMessageCodecSharable
+2023-04-01 14:40:37.468  INFO 16732 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-04-01 14:40:37.470  INFO 16732 --- [main] m.c.utils.ClusterUtils                   : 应用程序名称：chat-room-web-server
+2023-04-01 14:40:37.470  INFO 16732 --- [main] m.c.utils.ClusterUtils                   : 初始化 ClusterUtils
+2023-04-01 14:40:37.545  INFO 16732 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-04-01 14:40:37.545  INFO 16732 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-04-01 14:40:37.545  INFO 16732 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-04-01 14:40:37.592  INFO 16732 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@chat-room-web-server@@DEFAULT -> [{"instanceId":"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-web-server","ip":"192.168.15.1","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-web-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2023-04-01 14:40:37.598  INFO 16732 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@chat-room-web-server@@DEFAULT -> [{"instanceId":"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-web-server","ip":"192.168.15.1","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-web-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2023-04-01 14:40:37.614  INFO 16732 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-01 14:40:37.617  INFO 16732 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] 2ed0bfb2-2566-4d2c-b50e-3b107d25cd06 registering service DEFAULT_GROUP@@chat-room-web-server with instance: Instance{instanceId='null', ip='192.168.15.1', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=false, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=/actuator}}
+2023-04-01 14:40:37.621  INFO 16732 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP chat-room-web-server 192.168.15.1:8080 register finished
+2023-04-01 14:40:38.635  INFO 16732 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.15.1\",\"port\":8080,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-web-server\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@chat-room-web-server\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@chat-room-web-server\",\"name\":\"DEFAULT_GROUP@@chat-room-web-server\",\"cacheMillis\":10000,\"lastRefTime\":1680331238634,\"checksum\":\"664e13b972530102ee78cc5713b8653a\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":748066999720100} from /58.45.168.116
+2023-04-01 14:40:38.807  INFO 16732 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-04-01 14:40:38.808  INFO 16732 --- [main] m.c.ChatRoomWebServerApplication         : Started ChatRoomWebServerApplication in 7.947 seconds (JVM running for 8.457)
+2023-04-01 14:40:38.810  INFO 16732 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-web-server-dev.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-04-01 14:40:38.810  INFO 16732 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-web-server-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-04-01 14:40:38.810  INFO 16732 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-web-server.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-04-01 14:40:38.810  INFO 16732 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-web-server.yml, group=DEFAULT_GROUP, cnt=1
+2023-04-01 14:40:38.812  INFO 16732 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] common.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-04-01 14:40:38.812  INFO 16732 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-04-01 14:40:38.812  INFO 16732 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-web-server+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-04-01 14:40:38.812  INFO 16732 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-web-server, group=DEFAULT_GROUP, cnt=1
+2023-04-01 14:40:38.813  INFO 16732 --- [main] m.c.ChatRoomWebServerApplication         : 应用chat-room-web-server启动成功!swagger地址：http://58.45.168.116:null/doc.html  或者：http://127.0.0.1:null/doc.html
+2023-04-01 14:40:38.813  INFO 16732 --- [main] m.c.ChatRoomWebServerApplication         : 数据库监控地址：http://58.45.168.116:null/druid  或者：http://127.0.0.1:null/druid
+2023-04-01 14:40:38.813  INFO 16732 --- [main] m.c.ChatRoomWebServerApplication         : 启动耗时：8002ms
+2023-04-01 14:40:51.111  INFO 16732 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.15.1\",\"port\":8080,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-web-server\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@chat-room-web-server\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@chat-room-web-server\",\"name\":\"DEFAULT_GROUP@@chat-room-web-server\",\"cacheMillis\":10000,\"lastRefTime\":1680331251111,\"checksum\":\"664e13b972530102ee78cc5713b8653a\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":748079477311300} from /58.45.168.116
+2023-04-01 14:42:41.987  WARN 16732 --- [Thread-24] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-04-01 14:42:41.987  WARN 16732 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-04-01 14:42:41.987  WARN 16732 --- [Thread-24] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-04-01 14:42:41.988  WARN 16732 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-04-01 14:42:41.988  INFO 16732 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-04-01 14:42:41.990  INFO 16732 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2023-04-01 14:42:41.990  INFO 16732 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@chat-room-web-server:192.168.15.1:8080 from beat map.
+2023-04-01 14:42:41.990  INFO 16732 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 2ed0bfb2-2566-4d2c-b50e-3b107d25cd06 deregistering service DEFAULT_GROUP@@chat-room-web-server with instance: Instance{instanceId='null', ip='192.168.15.1', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-04-01 14:42:41.992  INFO 16732 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2023-04-01 14:42:41.992  INFO 16732 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-04-01 14:42:41.992  INFO 16732 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-04-01 14:42:41.992  INFO 16732 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-04-01 14:42:42.996  INFO 16732 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.15.1\",\"port\":8080,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-web-server\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@chat-room-web-server\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@chat-room-web-server\",\"name\":\"DEFAULT_GROUP@@chat-room-web-server\",\"cacheMillis\":10000,\"lastRefTime\":1680331362993,\"checksum\":\"94cd64f046bc66e9ed557352e88ac7c4\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":748191359309500} from /58.45.168.116
+2023-04-01 14:42:45.012  INFO 16732 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-04-01 14:42:48.037  INFO 16732 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-04-01 14:42:48.038  INFO 16732 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-04-01 14:42:48.039  INFO 16732 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-04-01 14:42:48.039  INFO 16732 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-04-01 14:42:48.039  INFO 16732 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-04-01 14:42:48.039  WARN 16732 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-04-01 14:42:48.039  WARN 16732 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-04-01 14:42:48.039  INFO 16732 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-04-01 14:42:48.040  INFO 16732 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-04-01 14:42:48.040  INFO 16732 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-04-01 14:42:48.041  WARN 16732 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-04-01 14:42:48.041  INFO 16732 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-04-01 14:42:56.505  WARN 16876 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[chat-room-web-server] & group[DEFAULT_GROUP]
+2023-04-01 14:42:56.507  WARN 16876 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[chat-room-web-server.yml] & group[DEFAULT_GROUP]
+2023-04-01 14:42:56.509  WARN 16876 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[chat-room-web-server-dev.yml] & group[DEFAULT_GROUP]
+2023-04-01 14:42:56.510  INFO 16876 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-chat-room-web-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-chat-room-web-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-chat-room-web-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-04-01 14:42:56.538  INFO 16876 --- [main] m.c.ChatRoomWebServerApplication         : The following profiles are active: dev
+2023-04-01 14:42:57.015  INFO 16876 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=eda46292-0a77-387f-add2-8749d3473b61
+2023-04-01 14:42:57.227  INFO 16876 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 19726 (http)
+2023-04-01 14:42:57.235  INFO 16876 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-01 14:42:57.235  INFO 16876 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-04-01 14:42:57.351  INFO 16876 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-01 14:42:57.351  INFO 16876 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 805 ms
+2023-04-01 14:42:57.353  INFO 16876 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2023-04-01 14:42:57.456  INFO 16876 --- [main] m.c.config.ExceptionConfig               : 初始化 ExceptionConfig
+2023-04-01 14:42:57.457  INFO 16876 --- [main] m.chat_room_web_server.config.WebConfig  : 初始化 WebConfig
+2023-04-01 14:42:57.493  WARN 16876 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-04-01 14:42:57.493  INFO 16876 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-04-01 14:42:57.495  WARN 16876 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-04-01 14:42:57.495  INFO 16876 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-04-01 14:42:57.545  INFO 16876 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-04-01 14:42:58.949  INFO 16876 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-04-01 14:42:58.951  INFO 16876 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-04-01 14:42:58.966  INFO 16876 --- [main] m.c.config.ServerConfig                  : 初始化 ServerConfig
+2023-04-01 14:42:58.972  INFO 16876 --- [main] m.c.protocol.ServerMessageCodecSharable  : 初始化 ServerMessageCodecSharable
+2023-04-01 14:43:00.191  INFO 16876 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-04-01 14:43:00.193  INFO 16876 --- [main] m.c.utils.ClusterUtils                   : 应用程序名称：chat-room-web-server
+2023-04-01 14:43:00.193  INFO 16876 --- [main] m.c.utils.ClusterUtils                   : 初始化 ClusterUtils
+2023-04-01 14:43:00.279  INFO 16876 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-04-01 14:43:00.279  INFO 16876 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-04-01 14:43:00.280  INFO 16876 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-04-01 14:43:00.325  INFO 16876 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@chat-room-web-server@@DEFAULT -> [{"instanceId":"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-web-server","ip":"192.168.15.1","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-web-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2023-04-01 14:43:00.330  INFO 16876 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@chat-room-web-server@@DEFAULT -> [{"instanceId":"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-web-server","ip":"192.168.15.1","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-web-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2023-04-01 14:43:00.345  INFO 16876 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 19726 (http) with context path ''
+2023-04-01 14:43:00.347  INFO 16876 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] 2ed0bfb2-2566-4d2c-b50e-3b107d25cd06 registering service DEFAULT_GROUP@@chat-room-web-server with instance: Instance{instanceId='null', ip='192.168.15.1', port=19726, weight=1.0, healthy=true, enabled=true, ephemeral=false, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=/actuator}}
+2023-04-01 14:43:00.350  INFO 16876 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP chat-room-web-server 192.168.15.1:19726 register finished
+2023-04-01 14:43:01.347  INFO 16876 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@chat-room-web-server@@DEFAULT -> [{"instanceId":"192.168.15.1#19726#DEFAULT#DEFAULT_GROUP@@chat-room-web-server","ip":"192.168.15.1","port":19726,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-web-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2023-04-01 14:43:01.347  INFO 16876 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : modified ips(1) service: DEFAULT_GROUP@@chat-room-web-server@@DEFAULT -> [{"instanceId":"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-web-server","ip":"192.168.15.1","port":8080,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-web-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2023-04-01 14:43:01.351  INFO 16876 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(2) service: DEFAULT_GROUP@@chat-room-web-server@@DEFAULT -> [{"instanceId":"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-web-server","ip":"192.168.15.1","port":8080,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-web-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000},{"instanceId":"192.168.15.1#19726#DEFAULT#DEFAULT_GROUP@@chat-room-web-server","ip":"192.168.15.1","port":19726,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-web-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2023-04-01 14:43:01.361  INFO 16876 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.15.1\",\"port\":8080,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-web-server\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@chat-room-web-server\",\"ephemeral\":false},{\"ip\":\"192.168.15.1\",\"port\":19726,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.15.1#19726#DEFAULT#DEFAULT_GROUP@@chat-room-web-server\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@chat-room-web-server\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@chat-room-web-server\",\"name\":\"DEFAULT_GROUP@@chat-room-web-server\",\"cacheMillis\":10000,\"lastRefTime\":1680331381358,\"checksum\":\"eb9838fc0a3f01aaa3f6fec96a467043\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":748209723956800} from /58.45.168.116
+2023-04-01 14:43:01.577  INFO 16876 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-04-01 14:43:01.578  INFO 16876 --- [main] m.c.ChatRoomWebServerApplication         : Started ChatRoomWebServerApplication in 8.143 seconds (JVM running for 8.615)
+2023-04-01 14:43:01.580  INFO 16876 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-web-server-dev.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-04-01 14:43:01.581  INFO 16876 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-web-server-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-04-01 14:43:01.581  INFO 16876 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-web-server.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-04-01 14:43:01.581  INFO 16876 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-web-server.yml, group=DEFAULT_GROUP, cnt=1
+2023-04-01 14:43:01.582  INFO 16876 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] common.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-04-01 14:43:01.582  INFO 16876 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-04-01 14:43:01.582  INFO 16876 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-web-server+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-04-01 14:43:01.582  INFO 16876 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-web-server, group=DEFAULT_GROUP, cnt=1
+2023-04-01 14:43:01.582  INFO 16876 --- [main] m.c.ChatRoomWebServerApplication         : 应用chat-room-web-server启动成功!swagger地址：http://58.45.168.116:19726/doc.html  或者：http://127.0.0.1:19726/doc.html
+2023-04-01 14:43:01.582  INFO 16876 --- [main] m.c.ChatRoomWebServerApplication         : 数据库监控地址：http://58.45.168.116:19726/druid  或者：http://127.0.0.1:19726/druid
+2023-04-01 14:43:01.583  INFO 16876 --- [main] m.c.ChatRoomWebServerApplication         : 启动耗时：8203ms
+2023-04-01 14:43:13.955  INFO 16876 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.15.1\",\"port\":8080,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-web-server\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@chat-room-web-server\",\"ephemeral\":false},{\"ip\":\"192.168.15.1\",\"port\":19726,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.15.1#19726#DEFAULT#DEFAULT_GROUP@@chat-room-web-server\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@chat-room-web-server\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@chat-room-web-server\",\"name\":\"DEFAULT_GROUP@@chat-room-web-server\",\"cacheMillis\":10000,\"lastRefTime\":1680331393955,\"checksum\":\"eb9838fc0a3f01aaa3f6fec96a467043\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":748222321188600} from /58.45.168.116
+2023-04-01 14:43:18.670  INFO 16876 --- [http-nio-19726-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-01 14:43:18.670  INFO 16876 --- [http-nio-19726-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-01 14:43:18.674  INFO 16876 --- [http-nio-19726-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms

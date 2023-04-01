@@ -42,6 +42,18 @@ public class GroupSessionMemoryImpl implements GroupSession
 
 
     @Override
+    public int getSize()
+    {
+        return groupMap.size();
+    }
+
+    @Override
+    public int getTotalSize()
+    {
+        throw new UnsupportedOperationException("无法得到所有实例下的群聊数量总大小");
+    }
+
+    @Override
     public boolean hasGroup(String name)
     {
         return groupMap.get(name) != null;

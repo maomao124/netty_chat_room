@@ -18,6 +18,20 @@ import io.netty.channel.Channel;
 public interface Session
 {
     /**
+     * 得到当前实例下的在线人数大小
+     *
+     * @return int
+     */
+    int getSize();
+
+    /**
+     * 得到所有实例下的在线人数总大小，所有实例在线人数总和
+     *
+     * @return int
+     */
+    int getTotalSize();
+
+    /**
      * 绑定会话
      *
      * @param channel  哪个 channel 要绑定会话
@@ -41,7 +55,6 @@ public interface Session
     boolean isLogin(String username);
 
     /**
-     *
      * 是否是登录状态
      *
      * @param channel 通道

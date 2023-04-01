@@ -22,6 +22,20 @@ public interface GroupSession
 {
 
     /**
+     * 得到当前实例下的群聊数量大小
+     *
+     * @return int
+     */
+    int getSize();
+
+    /**
+     * 得到所有实例下的群聊数量总大小，所有实例群聊数量总和
+     *
+     * @return int
+     */
+    int getTotalSize();
+
+    /**
      * 是否有这个组
      *
      * @param name 组名字

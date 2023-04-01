@@ -2,7 +2,6 @@ package mao.chat_room_netty_server.session;
 
 import io.netty.channel.Channel;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -10,19 +9,18 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * Project name(项目名称)：netty_chat_room
  * Package(包名): mao.chat_room_netty_server.session
- * Class(类名): SessionMemoryImpl
+ * Class(类名): SessionClusterImpl
  * Author(作者）: mao
  * Author QQ：1296193245
  * GitHub：https://github.com/maomao124/
- * Date(创建日期)： 2023/3/29
- * Time(创建时间)： 21:01
+ * Date(创建日期)： 2023/4/1
+ * Time(创建时间)： 14:47
  * Version(版本): 1.0
- * Description(描述)： 会话管理接口实现类
+ * Description(描述)： 集群会话管理接口实现类
  */
 
 @Slf4j
-@Service
-public class SessionMemoryImpl implements Session
+public class SessionClusterImpl implements Session
 {
 
     /**
@@ -40,7 +38,6 @@ public class SessionMemoryImpl implements Session
      */
     private final Map<Channel, Map<String, Object>> channelAttributesMap = new ConcurrentHashMap<>();
 
-
     @Override
     public int getSize()
     {
@@ -50,7 +47,7 @@ public class SessionMemoryImpl implements Session
     @Override
     public int getTotalSize()
     {
-        throw new UnsupportedOperationException("无法得到所有实例下的在线人数总大小");
+        return 0;
     }
 
     @Override
