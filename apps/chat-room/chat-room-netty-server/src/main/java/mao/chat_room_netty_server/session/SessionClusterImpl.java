@@ -2,7 +2,13 @@ package mao.chat_room_netty_server.session;
 
 import io.netty.channel.Channel;
 import lombok.extern.slf4j.Slf4j;
+import mao.chat_room_netty_server.service.RedisService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 
+import javax.annotation.Resource;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -22,6 +28,25 @@ import java.util.concurrent.ConcurrentHashMap;
 @Slf4j
 public class SessionClusterImpl implements Session
 {
+
+    private final RedisService redisService;
+
+    /**
+     * 主机地址
+     */
+    private final String hostAddress;
+
+
+    private final String host;
+
+    public SessionClusterImpl(@Value("${server.port}") String port, RedisService redisService)
+            throws UnknownHostException
+    {
+        hostAddress = InetAddress.getLocalHost().getHostAddress();
+        this.redisService = redisService;
+        this.host = hostAddress + ":" + port;
+
+    }
 
     /**
      * 用户名通道映射
@@ -57,6 +82,8 @@ public class SessionClusterImpl implements Session
         usernameChannelMap.put(username, channel);
         channelUsernameMap.put(channel, username);
         channelAttributesMap.put(channel, new ConcurrentHashMap<>());
+
+        redisService.bindToRedis(username, host);
     }
 
     @Override
@@ -75,6 +102,7 @@ public class SessionClusterImpl implements Session
         //移除
         try
         {
+            redisService.unbind(username);
             usernameChannelMap.remove(username);
         }
         catch (Exception ignored)
@@ -103,12 +131,19 @@ public class SessionClusterImpl implements Session
     public boolean isLogin(String username)
     {
         Channel channel = usernameChannelMap.get(username);
-        if (channel == null)
+        if (channel != null)
         {
-            log.debug("用户" + username + "未登录");
-            return false;
+            return true;
         }
-        return true;
+        //在本地未找到
+        boolean hasLogin = redisService.hasLogin(username);
+        if (hasLogin)
+        {
+            log.debug("用户" + username + "在其它服务实例上登录");
+            return true;
+        }
+        log.debug("用户" + username + "未登录");
+        return false;
     }
 
     @Override
