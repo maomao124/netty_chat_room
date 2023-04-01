@@ -40,6 +40,17 @@
             <artifactId>tools-xss</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>chat-room-server-api</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>mybatis-plus-boot-starter</artifactId>
+                    <groupId>com.baomidou</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
 
     </dependencies>
 
