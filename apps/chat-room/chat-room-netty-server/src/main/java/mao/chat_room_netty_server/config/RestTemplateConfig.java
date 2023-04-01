@@ -46,7 +46,7 @@ public class RestTemplateConfig
     {
         RestTemplate restTemplate = new RestTemplate(new OkHttp3ClientHttpRequestFactory());
         //设置通用的请求头
-        HeaderRequestInterceptor myHeader = new HeaderRequestInterceptor(password, password);
+        HeaderRequestInterceptor myHeader = new HeaderRequestInterceptor("password", password);
         List<ClientHttpRequestInterceptor> interceptors = new ArrayList<>();
         interceptors.add(myHeader);
         restTemplate.setInterceptors(interceptors);

@@ -38,7 +38,7 @@ public class NettyController extends BaseController
      * @param chatRequestMessage 聊天请求消息
      * @return {@link R}<{@link Boolean}>
      */
-    @PostMapping
+    @PostMapping("/send")
     public R<Boolean> send(@RequestBody ChatRequestMessage chatRequestMessage)
     {
         return nettyService.chatRequestMessageSend(chatRequestMessage);
