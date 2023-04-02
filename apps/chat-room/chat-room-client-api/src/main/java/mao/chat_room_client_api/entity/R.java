@@ -1,11 +1,13 @@
 package mao.chat_room_client_api.entity;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.google.common.collect.Maps;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -80,6 +82,40 @@ public class R<T>
         this.code = code;
         this.data = data;
         this.msg = msg;
+    }
+
+    /**
+     * 得到数据
+     *
+     * @return {@link T}
+     */
+    public T getData()
+    {
+        return data;
+    }
+
+    /**
+     * 得到数据
+     *
+     * @param dataClass 数据类
+     * @return {@link D}
+     */
+    public <D> D getData(Class<D> dataClass)
+    {
+        String json = data.toString();
+        return JSON.parseObject(json, dataClass);
+    }
+
+    /**
+     * 得到数据数组
+     *
+     * @param dataClass 数据类
+     * @return {@link List}<{@link D}>
+     */
+    public <D> List<D> getDataArray(Class<D> dataClass)
+    {
+        String json = data.toString();
+        return JSON.parseArray(json, dataClass);
     }
 
     /**

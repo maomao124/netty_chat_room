@@ -109,6 +109,7 @@
         <j2cache.version>2.8.0-release</j2cache.version>
         <redisson.version>3.17.0</redisson.version>
         <netty.version>4.1.39.Final</netty.version>
+        <rocketmq.version>2.2.2</rocketmq.version>
 
 
         <hutool.version>5.1.0</hutool.version>
@@ -409,6 +410,14 @@
                 <groupId>io.netty</groupId>
                 <artifactId>netty-all</artifactId>
                 <version>${netty.version}</version>
+            </dependency>
+
+            <!--RocketMQ spring boot 依赖-->
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-spring-boot-starter</artifactId>
+                <version>${rocketmq.version}</version>
+
             </dependency>
 
         </dependencies>
