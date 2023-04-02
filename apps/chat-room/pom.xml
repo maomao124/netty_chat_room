@@ -20,6 +20,8 @@
         <module>chat-room-client-api</module>
         <module>chat-room-server-api</module>
         <module>chat-room-swing-client</module>
+        <module>chat-room-gateway</module>
+        <module>chat-room-manage</module>
     </modules>
 
     <dependencies>
