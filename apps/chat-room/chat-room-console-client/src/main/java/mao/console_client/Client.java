@@ -12,14 +12,19 @@ import io.netty.util.concurrent.GenericFutureListener;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import mao.chat_room_client_api.config.ClientConfig;
+import mao.chat_room_client_api.entity.R;
+import mao.chat_room_client_api.net.RestfulHTTP;
 import mao.chat_room_client_api.protocol.ClientMessageCodecSharable;
+import mao.chat_room_common.entity.Server;
 import mao.chat_room_common.message.*;
 import mao.chat_room_common.protocol.ProcotolFrameDecoder;
+import mao.console_client.app.MainApplication;
 import mao.console_client.handler.*;
 import mao.console_client.thread.LoginAndRegisterThread;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.awt.*;
 import java.net.InetSocketAddress;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
@@ -67,6 +72,22 @@ public class Client
 
     public static void main(String[] args)
     {
+        RestfulHTTP restfulHTTP = MainApplication.getRestfulHTTP();
+        System.out.println("服务器URL：" + ClientConfig.getServerUrl());
+        System.out.println("正在等待服务器响应...");
+        R<String> r = restfulHTTP.GET(R.class, ClientConfig.getServerUrl(), null, null);
+        if (r.getIsError())
+        {
+            //错误
+            System.out.println("获取netty服务时错误：" + r.getMsg());
+            Toolkit.getDefaultToolkit().beep();
+            return;
+        }
+        Server server = r.getData(Server.class);
+        String ip = server.getIp();
+        Integer port = server.getPort();
+        System.out.println(ip + ":" + port);
+
         NioEventLoopGroup group = new NioEventLoopGroup();
         LoggingHandler LOGGING_HANDLER = new LoggingHandler(LogLevel.DEBUG);
         ClientMessageCodecSharable clientMessageCodecSharable = new ClientMessageCodecSharable();
@@ -102,7 +123,7 @@ public class Client
                                 .addLast(groupJoinResponseMessageHandler)
                                 .addLast(groupQuitResponseMessageHandler);
                     }
-                }).connect(new InetSocketAddress(ClientConfig.getServerIp(), ClientConfig.getServerPort()));
+                }).connect(new InetSocketAddress(ip, port));
 
         channel = channelFuture.channel();
 
@@ -122,6 +143,7 @@ public class Client
                 {
                     String message = future.cause().getMessage();
                     System.out.println("错误：" + message);
+                    Toolkit.getDefaultToolkit().beep();
                 }
             }
         });

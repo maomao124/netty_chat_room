@@ -97,13 +97,13 @@ public class R<T>
     /**
      * 得到数据
      *
-     * @param dataClass 数据类
-     * @return {@link D}
+     * @param clazz clazz
+     * @return {@link E}
      */
-    public <D> D getData(Class<D> dataClass)
+    public <E> E getData(Class<E> clazz)
     {
         String json = data.toString();
-        return JSON.parseObject(json, dataClass);
+        return JSON.parseObject(json, clazz);
     }
 
     /**

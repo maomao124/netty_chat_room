@@ -1,5 +1,8 @@
 package mao.console_client.app;
 
+import mao.chat_room_client_api.net.RestfulHTTP;
+import mao.chat_room_client_api.net.SimpleRestfulHTTPImpl;
+
 /**
  * Project name(项目名称)：netty_chat_room
  * Package(包名): mao.console_client.app
@@ -16,6 +19,15 @@ package mao.console_client.app;
 public class MainApplication
 {
     private static String loginUsername;
+
+    private static final RestfulHTTP restfulHTTP = new SimpleRestfulHTTPImpl();
+
+    static
+    {
+        restfulHTTP.setCharset("utf-8");
+        restfulHTTP.setConnectTimeout(10000);
+        restfulHTTP.setReadTimeout(30000);
+    }
 
     /**
      * 得到登录用户名
@@ -35,5 +47,15 @@ public class MainApplication
     public static void setLoginUsername(String loginUsername)
     {
         MainApplication.loginUsername = loginUsername;
+    }
+
+    /**
+     * 得到RestfulHTTP
+     *
+     * @return {@link RestfulHTTP}
+     */
+    public static RestfulHTTP getRestfulHTTP()
+    {
+        return restfulHTTP;
     }
 }

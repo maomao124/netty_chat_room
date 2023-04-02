@@ -1,5 +1,6 @@
 package mao.chat_room_client_api.config;
 
+import mao.chat_room_common.entity.Server;
 import mao.chat_room_common.protocol.SerializerAlgorithm;
 
 import java.io.IOException;
@@ -148,5 +149,33 @@ public class ClientConfig
         {
             return SerializerAlgorithm.valueOf(value);
         }
+    }
+
+    /**
+     * 得到服务器映射地址
+     *
+     * @return {@link String}
+     */
+    public static String getServerAddressMapping()
+    {
+        String value = properties.getProperty("server.mapping");
+        if (value == null)
+        {
+            return "/serverAddress";
+        }
+        else
+        {
+            return value;
+        }
+    }
+
+    /**
+     * 得到web服务器url
+     *
+     * @return {@link String}
+     */
+    public static String getServerUrl()
+    {
+        return "http://" + getServerIp() + ":" + getServerPort() + getServerAddressMapping();
     }
 }
