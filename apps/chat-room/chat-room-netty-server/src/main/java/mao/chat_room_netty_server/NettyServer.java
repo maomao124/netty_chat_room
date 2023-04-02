@@ -13,6 +13,7 @@ import io.netty.util.concurrent.GenericFutureListener;
 import lombok.extern.slf4j.Slf4j;
 import mao.chat_room_common.protocol.ProcotolFrameDecoder;
 import mao.chat_room_netty_server.handler.*;
+import mao.chat_room_netty_server.producer.ServerProducer;
 import mao.chat_room_server_api.config.ServerConfig;
 import mao.chat_room_server_api.protocol.ServerMessageCodecSharable;
 import org.springframework.boot.CommandLineRunner;
@@ -83,6 +84,9 @@ public class NettyServer implements CommandLineRunner
     @Resource
     private PingMessageHandler pingMessageHandler;
 
+    @Resource
+    private ServerProducer serverProducer;
+
     /**
      * 运行,禁止长时间阻塞此线程
      *
@@ -123,6 +127,7 @@ public class NettyServer implements CommandLineRunner
                         }
                     }).bind(serverConfig.getServerPort()).sync().channel();
             log.info("Netty服务器启动成功");
+            serverProducer.sendNettyServerUpdateMessage();
             channel.closeFuture().addListener(new GenericFutureListener<Future<? super Void>>()
             {
                 @Override
@@ -138,6 +143,7 @@ public class NettyServer implements CommandLineRunner
                 public void run()
                 {
                     log.info("正在关闭服务器...");
+                    serverProducer.sendNettyServerUpdateMessage();
                     close(boss, worker);
                 }
             }));
