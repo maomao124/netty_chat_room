@@ -1,5 +1,6 @@
 package mao.chat_room_netty_server.service;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -63,4 +64,33 @@ public interface RedisService
      * @return boolean
      */
     boolean hasGroup(String name);
+
+    /**
+     * 删除群聊成员
+     *
+     * @param name     群聊名字
+     * @param username 用户名
+     * @param host     实例的host，比如：127.0.0.1:6379
+     * @return boolean
+     */
+    boolean removeGroupMembers(String name, String username, String host);
+
+    /**
+     * 删除群聊
+     *
+     * @param name 群聊名字
+     * @param host 实例的host，比如：127.0.0.1:6379
+     * @return boolean
+     */
+    boolean removeGroup(String name, String host);
+
+    /**
+     * 创建组
+     *
+     * @param name    名字
+     * @param members 成员
+     * @param host    实例的host，比如：127.0.0.1:6379
+     * @return Set<String> 在线成员列表
+     */
+    Set<String> createGroup(String name, Set<String> members, String host);
 }

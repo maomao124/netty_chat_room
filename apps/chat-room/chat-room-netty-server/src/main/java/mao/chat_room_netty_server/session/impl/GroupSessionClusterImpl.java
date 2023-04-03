@@ -7,8 +7,11 @@ import mao.chat_room_netty_server.session.Group;
 import mao.chat_room_netty_server.session.GroupSession;
 import mao.chat_room_netty_server.session.Session;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.BiConsumer;
@@ -37,11 +40,20 @@ public class GroupSessionClusterImpl implements GroupSession
 
     private final RedisService redisService;
 
+    private final String host;
+
     @Autowired
-    public GroupSessionClusterImpl(Session session, RedisService redisService)
+    public GroupSessionClusterImpl(@Value("${server.port}") String port,
+                                   Session session,
+                                   RedisService redisService) throws UnknownHostException
     {
+        /*
+         * 主机地址
+         */
+        String hostAddress = InetAddress.getLocalHost().getHostAddress();
         this.session = session;
         this.redisService = redisService;
+        this.host = hostAddress + ":" + port;
     }
 
 
@@ -99,6 +111,7 @@ public class GroupSessionClusterImpl implements GroupSession
                         //移除
                         log.debug("移除群聊" + s + "的成员：" + username);
                         iterator.remove();
+                        redisService.removeGroupMembers(s, username, host);
                         break;
                     }
                 }
