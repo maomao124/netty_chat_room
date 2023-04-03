@@ -1,39 +1,37 @@
-package mao.chat_room_netty_server.handler;
+package mao.chat_room_netty_server.handler_cluster;
 
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.SimpleChannelInboundHandler;
 import lombok.extern.slf4j.Slf4j;
-import mao.chat_room_common.message.GroupChatResponseMessage;
 import mao.chat_room_common.message.GroupCreateRequestMessage;
 import mao.chat_room_common.message.GroupCreateResponseMessage;
+import mao.chat_room_netty_server.handler.GroupCreateRequestMessageHandler;
 import mao.chat_room_netty_server.session.Group;
 import mao.chat_room_netty_server.session.GroupSession;
 import mao.chat_room_netty_server.session.Session;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Project name(项目名称)：netty_chat_room
- * Package(包名): mao.chat_room_netty_server.handler
- * Class(类名): GroupCreateRequestMessageHandler
+ * Package(包名): mao.chat_room_netty_server.handler_cluster
+ * Class(类名): ClusterGroupCreateRequestMessageHandler
  * Author(作者）: mao
  * Author QQ：1296193245
  * GitHub：https://github.com/maomao124/
- * Date(创建日期)： 2023/3/29
- * Time(创建时间)： 22:54
+ * Date(创建日期)： 2023/4/3
+ * Time(创建时间)： 21:54
  * Version(版本): 1.0
  * Description(描述)： 群聊创建请求入栈消息处理器
  */
 
 @Slf4j
-//@Service
+@Service
 @ChannelHandler.Sharable
-public class GroupCreateRequestMessageHandler extends SimpleChannelInboundHandler<GroupCreateRequestMessage>
+public class ClusterGroupCreateRequestMessageHandler extends GroupCreateRequestMessageHandler
 {
     @Resource
     private GroupSession groupSession;
@@ -69,28 +67,10 @@ public class GroupCreateRequestMessageHandler extends SimpleChannelInboundHandle
         else
         {
             //不存在
-
-            //在线的成员列表
-            Set<String> members1 = new HashSet<>();
-            //通知在线的成员
-            for (String member : members)
-            {
-                Channel channel = session.getChannel(member);
-                //判断该用户是否在线
-                if (channel != null)
-                {
-                    //在线
-                    members1.add(member);
-                    //通知
-                    channel.writeAndFlush(new GroupCreateResponseMessage()
-                            .setSuccess(true)
-                            .setReason("您已被拉入群聊\"" + groupName + "\"!")
-                            .setSequenceId(groupCreateRequestMessage.getSequenceId()));
-                }
-            }
-
             //创建群聊
-            Group group = groupSession.createGroup(groupName, members1);
+            Group group = groupSession.createGroup(groupName, members);
+            //在线的成员列表
+            Set<String> members1 = group.getMembers();
             ctx.writeAndFlush(GroupCreateResponseMessage.success(members1)
                     .setSequenceId(groupCreateRequestMessage.getSequenceId()));
         }

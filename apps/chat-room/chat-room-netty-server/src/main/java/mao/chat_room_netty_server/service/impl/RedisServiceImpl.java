@@ -1,20 +1,23 @@
 package mao.chat_room_netty_server.service.impl;
 
 import cn.hutool.core.collection.ConcurrentHashSet;
+import io.netty.channel.Channel;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import mao.chat_room_common.message.GroupCreateResponseMessage;
+import mao.chat_room_common.message.Message;
 import mao.chat_room_netty_server.service.RedisService;
+import mao.chat_room_netty_server.session.Session;
 import mao.chat_room_server_api.constants.RedisConstants;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.core.RedisOperations;
 import org.springframework.data.redis.core.SessionCallback;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -39,6 +42,12 @@ public class RedisServiceImpl implements RedisService
 {
     @Resource
     private StringRedisTemplate stringRedisTemplate;
+
+    @Resource
+    private Session session;
+
+    @Resource
+    private RestTemplate restTemplate;
 
     private final ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(200,
             400, 3L, TimeUnit.MILLISECONDS,
@@ -131,6 +140,8 @@ public class RedisServiceImpl implements RedisService
         log.debug("创建组：" + members);
         //在线成员列表
         Set<String> members1 = new ConcurrentHashSet<>(members.size());
+        //分桶,key为host，value为GroupCreateResponseMessage列表
+        Map<String, List<GroupCreateResponseMessage>> map = new HashMap<>();
         CountDownLatch countDownLatch = new CountDownLatch(members.size());
         for (String username : members)
         {
@@ -155,6 +166,32 @@ public class RedisServiceImpl implements RedisService
                             stringRedisTemplate.opsForHash().put(key, username, host);
                             log.debug("用户" + username + "在线，位于：" + host);
                             members1.add(username);
+                            //准备通知在线的成员
+                            Channel channel = session.getChannel(username);
+                            //判断该用户是否在本地
+                            if (channel != null)
+                            {
+                                //在本地，直接通知
+                                //通知
+                                channel.writeAndFlush(new GroupCreateResponseMessage()
+                                        .setSuccess(true)
+                                        .setReason("您已被拉入群聊\"" + name + "\"!")
+                                        .setSequenceId());
+                            }
+                            else
+                            {
+                                //不在本地，在其他实例上
+                                map.computeIfAbsent(host, k -> new ArrayList<>());
+                                synchronized (host.intern())
+                                {
+                                    List<GroupCreateResponseMessage> list = map.get(host);
+                                    Message message = new GroupCreateResponseMessage()
+                                            .setSuccess(true)
+                                            .setReason("您已被拉入群聊\"" + name + "\"!")
+                                            .setSequenceId();
+                                    list.add((GroupCreateResponseMessage) message);
+                                }
+                            }
                         }
                     }
                     catch (Exception e)
@@ -171,6 +208,9 @@ public class RedisServiceImpl implements RedisService
         stringRedisTemplate.opsForSet().add(key2, name);
         //等待
         countDownLatch.await();
+        log.debug("在线成员：" + members1);
+        log.debug("分桶结果：" + map);
+        //todo：远程调用其他实例，通知在线的成员
         //返回在线列表
         return members1;
     }

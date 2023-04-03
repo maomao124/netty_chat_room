@@ -127,8 +127,10 @@ public class GroupSessionClusterImpl implements GroupSession
     public Group createGroup(String name, Set<String> members)
     {
         log.debug("创建群聊：" + name + "，成员：" + members);
-        Group group = new Group(name, members);
-        return groupMap.putIfAbsent(name, group);
+        Set<String> members1 = redisService.createGroup(name, members, host);
+        Group group = new Group(name, members1);
+        groupMap.putIfAbsent(name, group);
+        return group;
     }
 
     @Override
