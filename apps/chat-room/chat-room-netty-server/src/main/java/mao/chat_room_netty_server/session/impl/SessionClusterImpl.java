@@ -1,8 +1,9 @@
-package mao.chat_room_netty_server.session;
+package mao.chat_room_netty_server.session.impl;
 
 import io.netty.channel.Channel;
 import lombok.extern.slf4j.Slf4j;
 import mao.chat_room_netty_server.service.RedisService;
+import mao.chat_room_netty_server.session.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

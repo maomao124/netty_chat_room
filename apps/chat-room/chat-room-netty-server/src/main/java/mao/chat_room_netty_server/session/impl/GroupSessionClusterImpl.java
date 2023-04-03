@@ -1,11 +1,14 @@
-package mao.chat_room_netty_server.session;
+package mao.chat_room_netty_server.session.impl;
 
 import io.netty.channel.Channel;
 import lombok.extern.slf4j.Slf4j;
+import mao.chat_room_netty_server.service.RedisService;
+import mao.chat_room_netty_server.session.Group;
+import mao.chat_room_netty_server.session.GroupSession;
+import mao.chat_room_netty_server.session.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.BiConsumer;
@@ -14,32 +17,38 @@ import java.util.stream.Collectors;
 
 /**
  * Project name(项目名称)：netty_chat_room
- * Package(包名): mao.chat_room_netty_server.session
- * Class(类名): GroupSessionMemoryImpl
+ * Package(包名): mao.chat_room_netty_server.session.impl
+ * Class(类名): GroupSessionClusterImpl
  * Author(作者）: mao
  * Author QQ：1296193245
  * GitHub：https://github.com/maomao124/
- * Date(创建日期)： 2023/3/29
- * Time(创建时间)： 21:16
+ * Date(创建日期)： 2023/4/3
+ * Time(创建时间)： 13:54
  * Version(版本): 1.0
- * Description(描述)： 聊天组会话管理接口实现类
+ * Description(描述)： 集群模式聊天组会话管理接口实现类
  */
 
 @Slf4j
 @Service
-public class GroupSessionMemoryImpl implements GroupSession
+public class GroupSessionClusterImpl implements GroupSession
 {
 
     private final Session session;
 
+    private final RedisService redisService;
+
     @Autowired
-    public GroupSessionMemoryImpl(Session session)
+    public GroupSessionClusterImpl(Session session, RedisService redisService)
     {
         this.session = session;
+        this.redisService = redisService;
     }
 
-    private final Map<String, Group> groupMap = new ConcurrentHashMap<>();
 
+    /**
+     * 本地组信息
+     */
+    private final Map<String, Group> groupMap = new ConcurrentHashMap<>();
 
     @Override
     public int getSize()
@@ -50,13 +59,21 @@ public class GroupSessionMemoryImpl implements GroupSession
     @Override
     public int getTotalSize()
     {
-        throw new UnsupportedOperationException("无法得到所有实例下的群聊数量总大小");
+        return 0;
     }
 
     @Override
     public boolean hasGroup(String name)
     {
-        return groupMap.get(name) != null;
+        Group group = groupMap.get(name);
+        if (group != null)
+        {
+            //本地存在
+            return true;
+        }
+        //本地不存在
+        //查询redis
+        return redisService.hasGroup(name);
     }
 
     @Override

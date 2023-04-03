@@ -55,4 +55,12 @@ public interface RedisService
      * @return {@link Set}<{@link String}> 用户名集合
      */
     Set<String> getHostUser(String host);
+
+    /**
+     * 是否存在这个群聊
+     *
+     * @param name 群聊名字
+     * @return boolean
+     */
+    boolean hasGroup(String name);
 }

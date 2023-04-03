@@ -75,4 +75,12 @@ public class RedisServiceImpl implements RedisService
         String key2 = RedisConstants.chat_user_key + host;
         return stringRedisTemplate.opsForSet().members(key2);
     }
+
+    @Override
+    public boolean hasGroup(String name)
+    {
+        String key = RedisConstants.chat_group_key + name;
+        return Boolean.TRUE.equals(stringRedisTemplate.hasKey(key));
+    }
+
 }
