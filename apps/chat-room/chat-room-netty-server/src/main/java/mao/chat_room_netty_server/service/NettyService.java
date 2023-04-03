@@ -1,7 +1,10 @@
 package mao.chat_room_netty_server.service;
 
 import mao.chat_room_common.message.ChatRequestMessage;
+import mao.chat_room_common.message.GroupCreateResponseMessage;
 import mao.tools_core.base.R;
+
+import java.util.List;
 
 /**
  * Project name(项目名称)：netty_chat_room
@@ -25,4 +28,12 @@ public interface NettyService
      * @return {@link R}
      */
     R<Boolean> chatRequestMessageSend(ChatRequestMessage chatRequestMessage);
+
+    /**
+     * 发送群聊创建消息
+     *
+     * @param groupCreateResponseMessages 创建响应消息集合
+     * @return {@link R}<{@link Boolean}>
+     */
+    R<Boolean> sendGroupCreateMessage(List<GroupCreateResponseMessage> groupCreateResponseMessages);
 }

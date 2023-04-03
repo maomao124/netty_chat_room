@@ -4,6 +4,7 @@ import io.netty.channel.Channel;
 import lombok.extern.slf4j.Slf4j;
 import mao.chat_room_common.message.ChatRequestMessage;
 import mao.chat_room_common.message.ChatResponseMessage;
+import mao.chat_room_common.message.GroupCreateResponseMessage;
 import mao.chat_room_netty_server.service.NettyService;
 import mao.chat_room_netty_server.session.GroupSession;
 import mao.chat_room_netty_server.session.Session;
@@ -11,6 +12,7 @@ import mao.tools_core.base.R;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Project name(项目名称)：netty_chat_room
@@ -60,5 +62,18 @@ public class NettyServiceImpl implements NettyService
             //返回成功
             return R.success();
         }
+    }
+
+    @Override
+    public R<Boolean> sendGroupCreateMessage(List<GroupCreateResponseMessage> groupCreateResponseMessages)
+    {
+        for (GroupCreateResponseMessage groupCreateResponseMessage : groupCreateResponseMessages)
+        {
+            //得到用户名
+            String username = groupCreateResponseMessage.getMembers().iterator().next();
+            //todo
+
+        }
+        return null;
     }
 }

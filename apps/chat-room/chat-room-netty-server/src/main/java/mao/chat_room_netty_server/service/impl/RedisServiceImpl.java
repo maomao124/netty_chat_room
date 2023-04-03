@@ -22,6 +22,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
+import java.util.function.BiConsumer;
 
 /**
  * Project name(项目名称)：netty_chat_room
@@ -182,10 +183,14 @@ public class RedisServiceImpl implements RedisService
                             {
                                 //不在本地，在其他实例上
                                 map.computeIfAbsent(host, k -> new ArrayList<>());
+                                //对host加本地进程锁，相当于锁的map的桶下标的表头
                                 synchronized (host.intern())
                                 {
                                     List<GroupCreateResponseMessage> list = map.get(host);
+                                    //发送推送消息时群成员只有一个，就是自己
+                                    Set<String> username = new HashSet<>();
                                     Message message = new GroupCreateResponseMessage()
+                                            .setMembers(username)
                                             .setSuccess(true)
                                             .setReason("您已被拉入群聊\"" + name + "\"!")
                                             .setSequenceId();
@@ -211,6 +216,34 @@ public class RedisServiceImpl implements RedisService
         log.debug("在线成员：" + members1);
         log.debug("分桶结果：" + map);
         //todo：远程调用其他实例，通知在线的成员
+        //判断是否需要发起远程调用
+        if (map.size() > 0)
+        {
+            //大于0，需要发起远程调用
+            log.debug("将发起远程调用");
+            map.forEach(new BiConsumer<String, List<GroupCreateResponseMessage>>()
+            {
+                /**
+                 * forEach
+                 *
+                 * @param host                        主机地址
+                 * @param groupCreateResponseMessages GroupCreateResponseMessage列表
+                 */
+                @Override
+                public void accept(String host, List<GroupCreateResponseMessage> groupCreateResponseMessages)
+                {
+                    log.debug("正在同步的方式推送给" + host);
+                    try
+                    {
+
+                    }
+                    catch (Exception e)
+                    {
+                        log.error("群聊创建消息推送时出现错误:", e);
+                    }
+                }
+            });
+        }
         //返回在线列表
         return members1;
     }
