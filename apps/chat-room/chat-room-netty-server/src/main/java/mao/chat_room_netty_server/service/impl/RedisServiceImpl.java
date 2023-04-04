@@ -284,9 +284,9 @@ public class RedisServiceImpl implements RedisService
         int month = now.getMonthValue();
         int day = now.getDayOfMonth();
         //构建key
-        String dayKey = RedisConstants.register_day_count_key + year + month + day;
+        String dayKey = RedisConstants.register_day_count_key + year + ":" + month + ":" + day;
         log.debug("registerCount dayKey:" + dayKey);
-        String monthKey = RedisConstants.register_month_count_key + year + month;
+        String monthKey = RedisConstants.register_month_count_key + year + ":" + month;
         log.debug("registerCount monthKey:" + monthKey);
         //统计
         stringRedisTemplate.opsForValue().increment(dayKey);
@@ -302,10 +302,10 @@ public class RedisServiceImpl implements RedisService
         int month = now.getMonthValue();
         int day = now.getDayOfMonth();
         //构建key
-        String dayCountKey = RedisConstants.login_day_count_key + year + month + day;
-        String dayUVKey = RedisConstants.login_day_uv_count_key + year + month + day;
-        String monthCountKey = RedisConstants.login_month_count_key + year + month + day;
-        String monthUVKey = RedisConstants.login_month_uv_count_key + year + month + day;
+        String dayCountKey = RedisConstants.login_day_count_key + year + ":" + month + ":" + day;
+        String dayUVKey = RedisConstants.login_day_uv_count_key + year + ":" + month + ":" + day;
+        String monthCountKey = RedisConstants.login_month_count_key + year + ":" + month;
+        String monthUVKey = RedisConstants.login_month_uv_count_key + year + ":" + month;
         log.debug("login dayCountKey:" + dayCountKey);
         log.debug("login dayUVKey:" + dayUVKey);
         log.debug("login monthCountKey:" + monthCountKey);
