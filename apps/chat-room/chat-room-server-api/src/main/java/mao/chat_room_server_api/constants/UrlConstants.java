@@ -15,6 +15,9 @@ package mao.chat_room_server_api.constants;
 
 public class UrlConstants
 {
+    public static final String prefix = "http://";
+
+
     /**
      * 构建聊天请求url
      *
@@ -23,7 +26,7 @@ public class UrlConstants
      */
     public static String buildChatRequestMessageUrl(String host)
     {
-        return "http://" + host + "/send";
+        return prefix + host + "/send";
     }
 
     /**
@@ -34,6 +37,17 @@ public class UrlConstants
      */
     public static String buildGetPortUrl(String host)
     {
-        return "http://" + host + "/port";
+        return prefix + host + "/port";
+    }
+
+    /**
+     * 构建群聊请求url
+     *
+     * @param host 主机地址
+     * @return {@link String}
+     */
+    public static String buildGroupCreateRequestMessageUrl(String host)
+    {
+        return prefix + host + "/sendGroupCreateMessage";
     }
 }

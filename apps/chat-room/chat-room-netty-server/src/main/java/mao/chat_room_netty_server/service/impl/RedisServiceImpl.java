@@ -9,6 +9,8 @@ import mao.chat_room_common.message.Message;
 import mao.chat_room_netty_server.service.RedisService;
 import mao.chat_room_netty_server.session.Session;
 import mao.chat_room_server_api.constants.RedisConstants;
+import mao.chat_room_server_api.constants.UrlConstants;
+import mao.tools_core.base.R;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.core.RedisOperations;
 import org.springframework.data.redis.core.SessionCallback;
@@ -215,12 +217,13 @@ public class RedisServiceImpl implements RedisService
         countDownLatch.await();
         log.debug("在线成员：" + members1);
         log.debug("分桶结果：" + map);
-        //todo：远程调用其他实例，通知在线的成员
+        //远程调用其他实例，通知在线的成员
         //判断是否需要发起远程调用
         if (map.size() > 0)
         {
             //大于0，需要发起远程调用
             log.debug("将发起远程调用");
+            CountDownLatch finalCountDownLatch = new CountDownLatch(map.size());
             map.forEach(new BiConsumer<String, List<GroupCreateResponseMessage>>()
             {
                 /**
@@ -232,17 +235,40 @@ public class RedisServiceImpl implements RedisService
                 @Override
                 public void accept(String host, List<GroupCreateResponseMessage> groupCreateResponseMessages)
                 {
-                    log.debug("正在同步的方式推送给" + host);
-                    try
+                    threadPoolExecutor.submit(() ->
                     {
 
-                    }
-                    catch (Exception e)
-                    {
-                        log.error("群聊创建消息推送时出现错误:", e);
-                    }
+                        try
+                        {
+                            log.debug("正在同步的方式推送给" + host);
+                            String url = UrlConstants.buildGroupCreateRequestMessageUrl(host);
+                            R r = restTemplate.postForObject(url, groupCreateResponseMessages, R.class);
+                            if (r.getIsError())
+                            {
+                                //失败
+                                log.warn("推送给" + host + "时出现错误:" + r.getMsg());
+                            }
+                            else
+                            {
+                                //成功
+                                log.debug("推送给" + host + "成功");
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            log.error("推送给" + host + "时出现错误:", e);
+                        }
+                        finally
+                        {
+                            finalCountDownLatch.countDown();
+                        }
+                    });
                 }
             });
+
+            //等待
+            finalCountDownLatch.await();
+            log.debug("推送完成");
         }
         //返回在线列表
         return members1;

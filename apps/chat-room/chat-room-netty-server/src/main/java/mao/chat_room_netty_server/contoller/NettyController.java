@@ -71,10 +71,11 @@ public class NettyController extends BaseController
      * @param groupCreateResponseMessages 群聊创建响应消息集合
      * @return {@link R}<{@link Boolean}>
      */
+    @ApiOperation("发送群聊创建消息")
+    @PostMapping("/sendGroupCreateMessage")
     public R<Boolean> sendGroupCreateMessage(@RequestBody List<GroupCreateResponseMessage> groupCreateResponseMessages)
     {
-        nettyService.sendGroupCreateMessage(groupCreateResponseMessages);
-        return success();
+        return nettyService.sendGroupCreateMessage(groupCreateResponseMessages);
     }
 
 }

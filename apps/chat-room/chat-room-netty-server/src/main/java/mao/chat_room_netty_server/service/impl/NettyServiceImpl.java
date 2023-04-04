@@ -71,9 +71,17 @@ public class NettyServiceImpl implements NettyService
         {
             //得到用户名
             String username = groupCreateResponseMessage.getMembers().iterator().next();
-            //todo
-
+            Channel channel = session.getChannel(username);
+            if (channel != null)
+            {
+                log.debug("发送群聊创建消息");
+                channel.writeAndFlush(groupCreateResponseMessage);
+            }
+            else
+            {
+                log.info("发送群聊创建消息时，用户名：" + username + "无法发送");
+            }
         }
-        return null;
+        return R.success();
     }
 }
