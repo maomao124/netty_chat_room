@@ -101,11 +101,11 @@ public class GroupSessionClusterImpl implements GroupSession
         /*groupMap.forEach(new BiConsumer<String, Group>()
         {
             *//**
-             * 遍历群聊
-             *
-             * @param s     群聊名称
-             * @param group 群聊对象
-             *//*
+     * 遍历群聊
+     *
+     * @param s     群聊名称
+     * @param group 群聊对象
+     *//*
             @Override
             public void accept(String s, Group group)
             {
@@ -179,7 +179,16 @@ public class GroupSessionClusterImpl implements GroupSession
     public Group joinMember(String name, String member)
     {
         log.debug("成员：" + member + ",加入群聊：" + name);
-        return groupMap.computeIfPresent(name, new BiFunction<String, Group, Group>()
+        //得到群聊地址
+        String host = redisService.getGroupAddress(name);
+        if (host == null)
+        {
+            //群聊不存在
+            return null;
+        }
+        //群聊存在
+        //向本地写
+        groupMap.computeIfPresent(name, new BiFunction<String, Group, Group>()
         {
             @Override
             public Group apply(String s, Group group)
@@ -189,6 +198,9 @@ public class GroupSessionClusterImpl implements GroupSession
                 return group;
             }
         });
+        //向redis里写
+        redisService.joinGroup(name, member, host);
+        return new Group(name, null);
     }
 
     @Override

@@ -135,6 +135,12 @@ public class NettyServiceImpl implements NettyService
             if (isSuccess.get())
             {
                 //请求成功
+                //判断是否有数据
+                if (list.size() == 0)
+                {
+                    //无数据
+                    throw BizException.wrap("netty服务集群暂时都不可用，请稍后再试");
+                }
                 String json = JSON.toJSONString(list);
                 log.debug(json);
                 cacheChannel.set(CacheConstants.chat_server_key, "1", json);

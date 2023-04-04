@@ -351,5 +351,19 @@ public class RedisServiceImpl implements RedisService
         stringRedisTemplate.delete(key);
     }
 
+    @Override
+    public String getGroupAddress(String name)
+    {
+        String key = RedisConstants.chat_group_key + name;
+        return String.valueOf(stringRedisTemplate.opsForHash().get(key, "host"));
+    }
+
+    @Override
+    public void joinGroup(String name, String member, String host)
+    {
+        String key = RedisConstants.chat_group_key + name;
+        stringRedisTemplate.opsForHash().put(key, member, host);
+    }
+
 
 }
