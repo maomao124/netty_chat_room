@@ -93,4 +93,17 @@ public interface RedisService
      * @return Set<String> 在线成员列表
      */
     Set<String> createGroup(String name, Set<String> members, String host);
+
+    /**
+     * 注册计数
+     */
+    void registerCount();
+
+    /**
+     *
+     * 登录计数
+     *
+     * @param username 用户名
+     */
+    void loginCount(String username);
 }

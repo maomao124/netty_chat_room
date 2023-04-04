@@ -19,6 +19,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
+import java.time.LocalDate;
 import java.util.*;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -272,6 +273,49 @@ public class RedisServiceImpl implements RedisService
         }
         //返回在线列表
         return members1;
+    }
+
+    @Override
+    public void registerCount()
+    {
+        //得到当前时间
+        LocalDate now = LocalDate.now();
+        int year = now.getYear();
+        int month = now.getMonthValue();
+        int day = now.getDayOfMonth();
+        //构建key
+        String dayKey = RedisConstants.register_day_count_key + year + month + day;
+        log.debug("registerCount dayKey:" + dayKey);
+        String monthKey = RedisConstants.register_month_count_key + year + month;
+        log.debug("registerCount monthKey:" + monthKey);
+        //统计
+        stringRedisTemplate.opsForValue().increment(dayKey);
+        stringRedisTemplate.opsForValue().increment(monthKey);
+    }
+
+    @Override
+    public void loginCount(String username)
+    {
+        //得到当前时间
+        LocalDate now = LocalDate.now();
+        int year = now.getYear();
+        int month = now.getMonthValue();
+        int day = now.getDayOfMonth();
+        //构建key
+        String dayCountKey = RedisConstants.login_day_count_key + year + month + day;
+        String dayUVKey = RedisConstants.login_day_uv_count_key + year + month + day;
+        String monthCountKey = RedisConstants.login_month_count_key + year + month + day;
+        String monthUVKey = RedisConstants.login_month_uv_count_key + year + month + day;
+        log.debug("login dayCountKey:" + dayCountKey);
+        log.debug("login dayUVKey:" + dayUVKey);
+        log.debug("login monthCountKey:" + monthCountKey);
+        log.debug("login monthUVKey:" + monthUVKey);
+        //统计
+        stringRedisTemplate.opsForValue().increment(dayCountKey);
+        stringRedisTemplate.opsForValue().increment(monthCountKey);
+        //uv统计
+        stringRedisTemplate.opsForHyperLogLog().add(dayUVKey, username);
+        stringRedisTemplate.opsForHyperLogLog().add(monthUVKey, username);
     }
 
 

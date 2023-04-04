@@ -93,6 +93,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         {
             throw new BizException("密码不能为空");
         }
+        //判断是否为保留字段
+        if (username.equals("host"))
+        {
+            throw new BizException("用户名\"host\"为系统保留字段，不能使用");
+        }
         //查询数据库
         User user = this.getOne(Wraps.<User>lbQ().eq(User::getUsername, username));
         //如果为空，就不存在
