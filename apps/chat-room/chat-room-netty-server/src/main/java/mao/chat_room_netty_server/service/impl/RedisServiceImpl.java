@@ -11,6 +11,7 @@ import mao.chat_room_netty_server.session.Session;
 import mao.chat_room_server_api.constants.RedisConstants;
 import mao.chat_room_server_api.constants.UrlConstants;
 import mao.tools_core.base.R;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.core.RedisOperations;
 import org.springframework.data.redis.core.SessionCallback;
@@ -47,7 +48,10 @@ public class RedisServiceImpl implements RedisService
     @Resource
     private StringRedisTemplate stringRedisTemplate;
 
-    @Resource
+
+    /**
+     * 会话，有循环依赖
+     */
     private Session session;
 
     @Resource
@@ -57,6 +61,12 @@ public class RedisServiceImpl implements RedisService
             400, 3L, TimeUnit.MILLISECONDS,
             new LinkedBlockingQueue<Runnable>(200));
 
+
+    @Autowired
+    public void setSession(Session session)
+    {
+        this.session = session;
+    }
 
     @Override
     public void bindToRedis(String username, String host)
@@ -191,9 +201,10 @@ public class RedisServiceImpl implements RedisService
                                 {
                                     List<GroupCreateResponseMessage> list = map.get(host);
                                     //发送推送消息时群成员只有一个，就是自己
-                                    Set<String> username = new HashSet<>();
+                                    Set<String> usernameSet = new HashSet<>();
+                                    usernameSet.add(username);
                                     Message message = new GroupCreateResponseMessage()
-                                            .setMembers(username)
+                                            .setMembers(usernameSet)
                                             .setSuccess(true)
                                             .setReason("您已被拉入群聊\"" + name + "\"!")
                                             .setSequenceId();
@@ -316,6 +327,13 @@ public class RedisServiceImpl implements RedisService
         //uv统计
         stringRedisTemplate.opsForHyperLogLog().add(dayUVKey, username);
         stringRedisTemplate.opsForHyperLogLog().add(monthUVKey, username);
+    }
+
+    @Override
+    public void unbindGroup(String host)
+    {
+        //
+        String key2 = RedisConstants.chat_group_list_key + host;
     }
 
 

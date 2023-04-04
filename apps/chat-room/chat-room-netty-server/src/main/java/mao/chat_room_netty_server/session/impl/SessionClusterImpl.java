@@ -32,22 +32,30 @@ import java.util.concurrent.ConcurrentHashMap;
 public class SessionClusterImpl implements Session
 {
 
-    private final RedisService redisService;
+    /**
+     * RedisService，有循环依赖
+     */
+    private RedisService redisService;
 
 
     private final String host;
 
     @Autowired
-    public SessionClusterImpl(@Value("${server.port}") String port, RedisService redisService)
+    public SessionClusterImpl(@Value("${server.port}") String port)
             throws UnknownHostException
     {
         /*
          * 主机地址
          */
         String hostAddress = InetAddress.getLocalHost().getHostAddress();
-        this.redisService = redisService;
         this.host = hostAddress + ":" + port;
 
+    }
+
+    @Autowired
+    public void setRedisService(RedisService redisService)
+    {
+        this.redisService = redisService;
     }
 
     /**

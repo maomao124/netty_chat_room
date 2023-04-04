@@ -100,10 +100,16 @@ public interface RedisService
     void registerCount();
 
     /**
-     *
      * 登录计数
      *
      * @param username 用户名
      */
     void loginCount(String username);
+
+    /**
+     * 从当前实例上解绑群聊
+     *
+     * @param host 实例的host，比如：127.0.0.1:6379
+     */
+    void unbindGroup(String host);
 }

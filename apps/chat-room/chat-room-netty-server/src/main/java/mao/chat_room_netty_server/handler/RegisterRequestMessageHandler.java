@@ -6,6 +6,7 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import lombok.extern.slf4j.Slf4j;
 import mao.chat_room_common.message.RegisterRequestMessage;
 import mao.chat_room_common.message.RegisterResponseMessage;
+import mao.chat_room_netty_server.service.RedisService;
 import mao.chat_room_netty_server.service.UserService;
 import mao.chat_room_netty_server.session.GroupSession;
 import mao.chat_room_netty_server.session.Session;
@@ -41,6 +42,9 @@ public class RegisterRequestMessageHandler extends SimpleChannelInboundHandler<R
     @Resource
     private GroupSession groupSession;
 
+    @Resource
+    private RedisService redisService;
+
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx,
@@ -58,6 +62,8 @@ public class RegisterRequestMessageHandler extends SimpleChannelInboundHandler<R
                 ctx.writeAndFlush(RegisterResponseMessage.success()
                         .setReason("注册成功！ 请登录")
                         .setSequenceId(registerRequestMessage.getSequenceId()));
+                //统计
+                redisService.registerCount();
             }
             else
             {

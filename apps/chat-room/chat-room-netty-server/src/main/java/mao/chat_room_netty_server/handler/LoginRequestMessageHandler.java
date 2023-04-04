@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import mao.chat_room_common.message.GroupChatResponseMessage;
 import mao.chat_room_common.message.LoginRequestMessage;
 import mao.chat_room_common.message.LoginResponseMessage;
+import mao.chat_room_netty_server.service.RedisService;
 import mao.chat_room_netty_server.service.UserService;
 import mao.chat_room_netty_server.session.GroupSession;
 import mao.chat_room_netty_server.session.Session;
@@ -44,6 +45,9 @@ public class LoginRequestMessageHandler extends SimpleChannelInboundHandler<Logi
     @Resource
     private GroupSession groupSession;
 
+    @Resource
+    private RedisService redisService;
+
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, LoginRequestMessage loginRequestMessage) throws Exception
     {
@@ -68,6 +72,8 @@ public class LoginRequestMessageHandler extends SimpleChannelInboundHandler<Logi
                     .setUsername(username)
                     .setSequenceId(loginRequestMessage.getSequenceId()));
             log.debug("用户" + username + "登录成功");
+            //登录统计
+            redisService.loginCount(username);
         }
         catch (BizException e)
         {
