@@ -10,17 +10,21 @@ import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import mao.chat_room_common.protocol.ProcotolFrameDecoder;
 import mao.chat_room_netty_server.handler.*;
 import mao.chat_room_netty_server.producer.ServerProducer;
+import mao.chat_room_netty_server.service.RedisService;
 import mao.chat_room_server_api.config.ServerConfig;
 import mao.chat_room_server_api.protocol.ServerMessageCodecSharable;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
+import java.net.InetAddress;
 import java.util.concurrent.locks.LockSupport;
 
 
@@ -87,6 +91,12 @@ public class NettyServer implements CommandLineRunner
     @Resource
     private ServerProducer serverProducer;
 
+    @Resource
+    private RedisService redisService;
+
+    @Value("${server.port}")
+    private String port;
+
     /**
      * 运行,禁止长时间阻塞此线程
      *
@@ -139,11 +149,15 @@ public class NettyServer implements CommandLineRunner
             });
             Runtime.getRuntime().addShutdownHook(new Thread(new Runnable()
             {
+                @SneakyThrows
                 @Override
                 public void run()
                 {
                     log.info("正在关闭服务器...");
                     serverProducer.sendNettyServerUpdateMessage();
+                    String hostAddress = InetAddress.getLocalHost().getHostAddress();
+                    String host = hostAddress + ":" + port;
+                    redisService.unbindGroup(host);
                     close(boss, worker);
                 }
             }));

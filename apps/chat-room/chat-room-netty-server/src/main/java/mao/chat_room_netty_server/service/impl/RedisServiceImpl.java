@@ -332,8 +332,21 @@ public class RedisServiceImpl implements RedisService
     @Override
     public void unbindGroup(String host)
     {
-        //
-        String key2 = RedisConstants.chat_group_list_key + host;
+        //查询当前实例上有哪些群聊
+        String key = RedisConstants.chat_group_list_key + host;
+        Set<String> members = stringRedisTemplate.opsForSet().members(key);
+        log.debug("即将解绑群聊");
+        log.debug("key--->" + key);
+        if (members == null)
+        {
+            return;
+        }
+        for (String member : members)
+        {
+            log.debug("即将删除群聊：" + member);
+            key = RedisConstants.chat_group_key + member;
+            stringRedisTemplate.delete(key);
+        }
     }
 
 

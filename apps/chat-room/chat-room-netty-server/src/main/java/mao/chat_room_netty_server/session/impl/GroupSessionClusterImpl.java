@@ -2,6 +2,7 @@ package mao.chat_room_netty_server.session.impl;
 
 import io.netty.channel.Channel;
 import lombok.extern.slf4j.Slf4j;
+import mao.chat_room_netty_server.producer.GroupProducer;
 import mao.chat_room_netty_server.service.RedisService;
 import mao.chat_room_netty_server.session.Group;
 import mao.chat_room_netty_server.session.GroupSession;
@@ -42,10 +43,13 @@ public class GroupSessionClusterImpl implements GroupSession
 
     private final String host;
 
+    private final GroupProducer groupProducer;
+
     @Autowired
     public GroupSessionClusterImpl(@Value("${server.port}") String port,
                                    Session session,
-                                   RedisService redisService) throws UnknownHostException
+                                   RedisService redisService,
+                                   GroupProducer groupProducer) throws UnknownHostException
     {
         /*
          * 主机地址
@@ -54,6 +58,7 @@ public class GroupSessionClusterImpl implements GroupSession
         this.session = session;
         this.redisService = redisService;
         this.host = hostAddress + ":" + port;
+        this.groupProducer = groupProducer;
     }
 
 
@@ -91,6 +96,43 @@ public class GroupSessionClusterImpl implements GroupSession
     @Override
     public void unbind(String username)
     {
+        //发送消息
+        groupProducer.sendGroupUnbindMemberMessage(username);
+        /*groupMap.forEach(new BiConsumer<String, Group>()
+        {
+            *//**
+             * 遍历群聊
+             *
+             * @param s     群聊名称
+             * @param group 群聊对象
+             *//*
+            @Override
+            public void accept(String s, Group group)
+            {
+                Iterator<String> iterator = group.getMembers().iterator();
+                while (iterator.hasNext())
+                {
+                    String next = iterator.next();
+                    if (next.equals(username))
+                    {
+                        //移除
+                        log.debug("移除群聊" + s + "的成员：" + username);
+                        redisService.removeGroupMembers(s, username, host);
+                        iterator.remove();
+                        break;
+                    }
+                }
+                if (group.getMembers().size() == 0)
+                {
+                    removeGroup(s);
+                }
+            }
+        });*/
+    }
+
+    @Override
+    public void unbindFromMQ(String username)
+    {
         groupMap.forEach(new BiConsumer<String, Group>()
         {
             /**
@@ -110,8 +152,8 @@ public class GroupSessionClusterImpl implements GroupSession
                     {
                         //移除
                         log.debug("移除群聊" + s + "的成员：" + username);
-                        iterator.remove();
                         redisService.removeGroupMembers(s, username, host);
+                        iterator.remove();
                         break;
                     }
                 }

@@ -51,6 +51,13 @@ public interface GroupSession
     void unbind(String username);
 
     /**
+     * 遍历删除所有群聊，删除移除这个群成员,此方法供消息队列调用
+     *
+     * @param username 用户名
+     */
+    void unbindFromMQ(String username);
+
+    /**
      * 创建一个聊天组, 如果不存在才能创建成功, 否则返回 null
      *
      * @param name    组名
