@@ -347,6 +347,8 @@ public class RedisServiceImpl implements RedisService
             key = RedisConstants.chat_group_key + member;
             stringRedisTemplate.delete(key);
         }
+        key = RedisConstants.chat_group_list_key + host;
+        stringRedisTemplate.delete(key);
     }
 
 

@@ -31,7 +31,11 @@ public class RocketMQGroupProducerImpl implements GroupProducer
     @Override
     public void sendGroupUnbindMemberMessage(String username)
     {
+        if (username == null)
+        {
+            return;
+        }
         log.info("发送移除群聊成员消息:" + username);
-        rocketMQTemplate.convertAndSend(RocketMQConstants.NETTY_SERVER_UPDATE_MESSAGE_TOPIC, username);
+        rocketMQTemplate.convertAndSend(RocketMQConstants.GROUP_UNBIND_MEMBER_TOPIC, username);
     }
 }

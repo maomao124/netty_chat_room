@@ -97,6 +97,12 @@ public class GroupSessionMemoryImpl implements GroupSession
     }
 
     @Override
+    public void unbindFromMQ(String username)
+    {
+        log.warn("方法不支持");
+    }
+
+    @Override
     public Group createGroup(String name, Set<String> members)
     {
         log.debug("创建群聊：" + name + "，成员：" + members);
