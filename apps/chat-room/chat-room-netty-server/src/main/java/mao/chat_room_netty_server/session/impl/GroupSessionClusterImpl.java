@@ -230,12 +230,7 @@ public class GroupSessionClusterImpl implements GroupSession
     public Set<String> getMembers(String name)
     {
         log.debug("得到群聊：" + name + " 的所有群成员");
-        Set<String> members = groupMap.get(name).getMembers();
-        if (members == null)
-        {
-            removeGroup(name);
-            return Group.EMPTY_GROUP.getMembers();
-        }
+        Set<String> members = redisService.getMembers(name);
         log.debug("群成员：" + members);
         return members;
     }

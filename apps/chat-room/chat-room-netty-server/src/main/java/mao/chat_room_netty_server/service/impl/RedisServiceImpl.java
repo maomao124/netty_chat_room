@@ -365,5 +365,23 @@ public class RedisServiceImpl implements RedisService
         stringRedisTemplate.opsForHash().put(key, member, host);
     }
 
+    @Override
+    public Set<String> getMembers(String name)
+    {
+        String key = RedisConstants.chat_group_key + name;
+        Set<Object> keys = stringRedisTemplate.opsForHash().keys(key);
+        Set<String> members = new HashSet<>(Math.max((keys.size() - 1), 0));
+        for (Object o : keys)
+        {
+            String member = o.toString();
+            if (member.equals("host"))
+            {
+                continue;
+            }
+            members.add(member);
+        }
+        return members;
+    }
+
 
 }

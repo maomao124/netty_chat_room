@@ -129,4 +129,12 @@ public interface RedisService
      * @param host   实例的host，比如：127.0.0.1:6379
      */
     void joinGroup(String name, String member, String host);
+
+    /**
+     * 得到某个群聊的所有成员
+     *
+     * @param name 群聊名字
+     * @return {@link Set}<{@link String}>
+     */
+    Set<String> getMembers(String name);
 }
