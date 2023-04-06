@@ -38,6 +38,11 @@
         </dependency>
 
         <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>mao</groupId>
             <artifactId>tools-core</artifactId>
         </dependency>
@@ -75,6 +80,11 @@
         <dependency>
             <groupId>mao</groupId>
             <artifactId>tools-dozer</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>chat-room-server-api</artifactId>
         </dependency>
 
     </dependencies>
