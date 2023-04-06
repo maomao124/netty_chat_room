@@ -68,6 +68,14 @@ public class StatisticsController extends BaseController
      * @param month 月
      * @return int 某一月用户登录的总次数
      */
+    @ApiOperation("得到某月用户登录的总次数")
+    @ApiImplicitParams(
+            {
+                    @ApiImplicitParam(name = "year", value = "年", type = "int", required = true),
+                    @ApiImplicitParam(name = "month", value = "月", type = "int", required = true),
+            }
+    )
+    @GetMapping("/getLoginMonthCount")
     public R<Integer> getLoginMonthCount(@RequestParam int year,
                                          @RequestParam int month)
     {
@@ -82,6 +90,15 @@ public class StatisticsController extends BaseController
      * @param day   天
      * @return int 某一天用户登录的大致人数
      */
+    @ApiOperation("得到某一天用户登录的大致人数")
+    @ApiImplicitParams(
+            {
+                    @ApiImplicitParam(name = "year", value = "年", type = "int", required = true),
+                    @ApiImplicitParam(name = "month", value = "月", type = "int", required = true),
+                    @ApiImplicitParam(name = "day", value = "日", type = "int", required = true)
+            }
+    )
+    @GetMapping("/getLoginDayUVCount")
     public R<Integer> getLoginDayUVCount(@RequestParam int year,
                                          @RequestParam int month,
                                          @RequestParam int day)
@@ -96,6 +113,14 @@ public class StatisticsController extends BaseController
      * @param month 月
      * @return int 某一月用户登录的大致人数
      */
+    @ApiOperation("得到某一月用户登录的大致人数")
+    @ApiImplicitParams(
+            {
+                    @ApiImplicitParam(name = "year", value = "年", type = "int", required = true),
+                    @ApiImplicitParam(name = "month", value = "月", type = "int", required = true),
+            }
+    )
+    @GetMapping("/getLoginMonthUVCount")
     public R<Integer> getLoginMonthUVCount(@RequestParam int year,
                                            @RequestParam int month)
     {
@@ -110,6 +135,15 @@ public class StatisticsController extends BaseController
      * @param day   天
      * @return int  某一天用户注册的总次数
      */
+    @ApiOperation("得到某一天用户注册的总次数")
+    @ApiImplicitParams(
+            {
+                    @ApiImplicitParam(name = "year", value = "年", type = "int", required = true),
+                    @ApiImplicitParam(name = "month", value = "月", type = "int", required = true),
+                    @ApiImplicitParam(name = "day", value = "日", type = "int", required = true)
+            }
+    )
+    @GetMapping("/getRegisterDayCount")
     public R<Integer> getRegisterDayCount(@RequestParam int year,
                                           @RequestParam int month,
                                           @RequestParam int day)
@@ -124,6 +158,14 @@ public class StatisticsController extends BaseController
      * @param month 月
      * @return int 某一月用户注册的总次数
      */
+    @ApiOperation("得到某一月用户注册的总次数")
+    @ApiImplicitParams(
+            {
+                    @ApiImplicitParam(name = "year", value = "年", type = "int", required = true),
+                    @ApiImplicitParam(name = "month", value = "月", type = "int", required = true),
+            }
+    )
+    @GetMapping("/getRegisterMonthCount")
     public R<Integer> getRegisterMonthCount(@RequestParam int year,
                                             @RequestParam int month)
     {
