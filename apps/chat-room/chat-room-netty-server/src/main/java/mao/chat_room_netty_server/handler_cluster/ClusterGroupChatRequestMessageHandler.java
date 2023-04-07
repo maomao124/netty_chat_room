@@ -1,13 +1,14 @@
-package mao.chat_room_netty_server.handler;
+package mao.chat_room_netty_server.handler_cluster;
 
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import lombok.extern.slf4j.Slf4j;
-import mao.chat_room_common.message.ChatResponseMessage;
 import mao.chat_room_common.message.GroupChatRequestMessage;
 import mao.chat_room_common.message.GroupChatResponseMessage;
+import mao.chat_room_netty_server.handler.GroupChatRequestMessageHandler;
+import mao.chat_room_netty_server.service.RedisService;
 import mao.chat_room_netty_server.session.GroupSession;
 import mao.chat_room_netty_server.session.Session;
 import org.springframework.stereotype.Service;
@@ -18,33 +19,36 @@ import java.util.List;
 
 /**
  * Project name(项目名称)：netty_chat_room
- * Package(包名): mao.chat_room_netty_server.handler
- * Class(类名): GroupChatRequestMessageHandler
+ * Package(包名): mao.chat_room_netty_server.handler_cluster
+ * Class(类名): ClusterGroupChatRequestMessageHandler
  * Author(作者）: mao
  * Author QQ：1296193245
  * GitHub：https://github.com/maomao124/
- * Date(创建日期)： 2023/3/29
- * Time(创建时间)： 22:34
+ * Date(创建日期)： 2023/4/7
+ * Time(创建时间)： 18:16
  * Version(版本): 1.0
- * Description(描述)： 群聊聊天请求入栈消息处理器
+ * Description(描述)： 无
  */
 
 @Slf4j
-//@Service
+@Service
 @ChannelHandler.Sharable
-public class GroupChatRequestMessageHandler extends SimpleChannelInboundHandler<GroupChatRequestMessage>
+public class ClusterGroupChatRequestMessageHandler extends GroupChatRequestMessageHandler
 {
+
     @Resource
     private Session session;
 
     @Resource
     private GroupSession groupSession;
 
+    @Resource
+    private RedisService redisService;
+
     @Override
     protected void channelRead0(ChannelHandlerContext ctx,
                                 GroupChatRequestMessage groupChatRequestMessage) throws Exception
     {
-
         //检查登录状态
         if (!session.isLogin(ctx.channel()))
         {
@@ -57,6 +61,9 @@ public class GroupChatRequestMessageHandler extends SimpleChannelInboundHandler<
         String groupName = groupChatRequestMessage.getGroupName();
         String content = groupChatRequestMessage.getContent();
         String from = groupChatRequestMessage.getFrom();
+
+        //得到群聊的成员和成员位置和群聊位置
+
 
         List<Channel> channelList = groupSession.getMembersChannel(groupName);
         //发给每一位成员的时间要一致

@@ -2,6 +2,7 @@ package mao.chat_room_netty_server.session.impl;
 
 import io.netty.channel.Channel;
 import lombok.extern.slf4j.Slf4j;
+import mao.chat_room_netty_server.entity.ClusterGroup;
 import mao.chat_room_netty_server.producer.GroupProducer;
 import mao.chat_room_netty_server.service.RedisService;
 import mao.chat_room_netty_server.session.Group;
@@ -242,5 +243,11 @@ public class GroupSessionClusterImpl implements GroupSession
                 .map(session::getChannel)
                 .filter(Objects::nonNull)
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public ClusterGroup getMembersAndHost(String name)
+    {
+        return null;
     }
 }

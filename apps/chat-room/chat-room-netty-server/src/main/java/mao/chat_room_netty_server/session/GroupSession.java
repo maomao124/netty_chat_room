@@ -1,8 +1,10 @@
 package mao.chat_room_netty_server.session;
 
 import io.netty.channel.Channel;
+import mao.chat_room_netty_server.entity.ClusterGroup;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -107,4 +109,13 @@ public interface GroupSession
      * @return 成员 channel 集合
      */
     List<Channel> getMembersChannel(String name);
+
+
+    /**
+     * 得到群聊的成员和成员位置和群聊位置
+     *
+     * @param name 群聊名字
+     * @return {@link ClusterGroup}
+     */
+    ClusterGroup getMembersAndHost(String name);
 }

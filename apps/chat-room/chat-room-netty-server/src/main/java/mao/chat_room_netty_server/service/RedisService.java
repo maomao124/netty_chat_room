@@ -1,6 +1,7 @@
 package mao.chat_room_netty_server.service;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -137,4 +138,13 @@ public interface RedisService
      * @return {@link Set}<{@link String}>
      */
     Set<String> getMembers(String name);
+
+
+    /**
+     * 得到redis上群聊的成员和成员位置和群聊位置，群聊位置的key为 host
+     *
+     * @param name 群聊名字
+     * @return {@link Map}<{@link Object}, {@link Object}>
+     */
+    Map<Object, Object> getMembersAndHost(String name);
 }

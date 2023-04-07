@@ -12,9 +12,6 @@ import mao.chat_room_server_api.constants.RedisConstants;
 import mao.chat_room_server_api.constants.UrlConstants;
 import mao.tools_core.base.R;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataAccessException;
-import org.springframework.data.redis.core.RedisOperations;
-import org.springframework.data.redis.core.SessionCallback;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -383,5 +380,12 @@ public class RedisServiceImpl implements RedisService
         return members;
     }
 
-
+    @Override
+    public Map<Object, Object> getMembersAndHost(String name)
+    {
+        String key = RedisConstants.chat_group_key + name;
+        Map<Object, Object> entries = stringRedisTemplate.opsForHash().entries(key);
+        log.debug("获取群聊：" + name + "的所有群成员：" + entries);
+        return entries;
+    }
 }
