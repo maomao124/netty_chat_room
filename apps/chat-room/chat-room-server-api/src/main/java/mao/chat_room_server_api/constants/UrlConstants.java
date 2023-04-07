@@ -41,7 +41,7 @@ public class UrlConstants
     }
 
     /**
-     * 构建群聊请求url
+     * 构建群聊创建请求url
      *
      * @param host 主机地址
      * @return {@link String}
@@ -49,5 +49,17 @@ public class UrlConstants
     public static String buildGroupCreateRequestMessageUrl(String host)
     {
         return prefix + host + "/sendGroupCreateMessage";
+    }
+
+
+    /**
+     * 构建群聊聊天请求url
+     *
+     * @param host 主机地址
+     * @return {@link String}
+     */
+    public static String buildGroupChatRequestMessageUrl(String host)
+    {
+        return prefix + host + "/sendGroupChatMessage";
     }
 }

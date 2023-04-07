@@ -1,10 +1,12 @@
 package mao.chat_room_netty_server.service;
 
 import mao.chat_room_common.message.ChatRequestMessage;
+import mao.chat_room_common.message.GroupChatResponseMessage;
 import mao.chat_room_common.message.GroupCreateResponseMessage;
 import mao.tools_core.base.R;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Project name(项目名称)：netty_chat_room
@@ -36,4 +38,13 @@ public interface NettyService
      * @return {@link R}<{@link Boolean}>
      */
     R<Boolean> sendGroupCreateMessage(List<GroupCreateResponseMessage> groupCreateResponseMessages);
+
+    /**
+     * 发送群聊聊天消息
+     *
+     * @param map {@link Map}<{@link String}, {@link GroupChatResponseMessage}> key为用户名，value为为GroupChatResponseMessage
+     * @return {@link R}<{@link Boolean}>
+     */
+    R<Boolean> sendGroupChatMessage(Map<String, GroupChatResponseMessage> map);
+
 }

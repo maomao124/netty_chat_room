@@ -4,6 +4,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import mao.chat_room_common.message.ChatRequestMessage;
+import mao.chat_room_common.message.GroupChatResponseMessage;
 import mao.chat_room_common.message.GroupCreateResponseMessage;
 import mao.chat_room_netty_server.service.NettyService;
 import mao.chat_room_server_api.config.ServerConfig;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Project name(项目名称)：netty_chat_room
@@ -78,4 +80,17 @@ public class NettyController extends BaseController
         return nettyService.sendGroupCreateMessage(groupCreateResponseMessages);
     }
 
+    /**
+     * 发送群聊聊天消息
+     *
+     * @param map {@link Map}<{@link String}, {@link GroupChatResponseMessage}>
+     *            key为用户名，value为为GroupChatResponseMessage
+     * @return {@link R}<{@link Boolean}>
+     */
+    @ApiOperation("发送群聊聊天消息")
+    @PostMapping("/sendGroupChatMessage")
+    public R<Boolean> sendGroupChatMessage(@RequestBody Map<String, GroupChatResponseMessage> map)
+    {
+        return nettyService.sendGroupChatMessage(map);
+    }
 }
