@@ -248,6 +248,22 @@ public class GroupSessionClusterImpl implements GroupSession
     @Override
     public ClusterGroup getMembersAndHost(String name)
     {
-        return null;
+        Map<Object, Object> membersAndHost = redisService.getMembersAndHost(name);
+        if (membersAndHost == null || membersAndHost.size() == 0)
+        {
+            return null;
+        }
+        String host = membersAndHost.get("host").toString();
+        ClusterGroup clusterGroup = new ClusterGroup();
+        clusterGroup.setGroupHost(host);
+        membersAndHost.remove("host");
+        Map<String, String> groupMembersAndHost = new HashMap<>(membersAndHost.size());
+        membersAndHost.forEach((key, value) ->
+        {
+            String keyString = key.toString();
+            String valueString = membersAndHost.get(key).toString();
+            groupMembersAndHost.put(keyString, valueString);
+        });
+        return clusterGroup.setGroupMembersAndHost(groupMembersAndHost);
     }
 }

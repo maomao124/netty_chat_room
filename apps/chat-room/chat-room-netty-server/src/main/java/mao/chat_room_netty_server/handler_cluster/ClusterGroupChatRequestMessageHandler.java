@@ -7,6 +7,7 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import lombok.extern.slf4j.Slf4j;
 import mao.chat_room_common.message.GroupChatRequestMessage;
 import mao.chat_room_common.message.GroupChatResponseMessage;
+import mao.chat_room_netty_server.entity.ClusterGroup;
 import mao.chat_room_netty_server.handler.GroupChatRequestMessageHandler;
 import mao.chat_room_netty_server.service.RedisService;
 import mao.chat_room_netty_server.session.GroupSession;
@@ -15,7 +16,11 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.function.BiConsumer;
 
 /**
  * Project name(项目名称)：netty_chat_room
@@ -63,17 +68,68 @@ public class ClusterGroupChatRequestMessageHandler extends GroupChatRequestMessa
         String from = groupChatRequestMessage.getFrom();
 
         //得到群聊的成员和成员位置和群聊位置
-
-
-        List<Channel> channelList = groupSession.getMembersChannel(groupName);
+        ClusterGroup clusterGroup = groupSession.getMembersAndHost(groupName);
+        //判断群聊是否存在
+        if (clusterGroup == null)
+        {
+            //不存在
+            ctx.writeAndFlush(GroupChatResponseMessage.fail("群聊已经不存在")
+                    .setSequenceId(groupChatRequestMessage.getSequenceId()));
+            return;
+        }
+        //群聊存在
+        //得到群聊的成员和成员位置
+        Map<String, String> groupMembersAndHost = clusterGroup.getGroupMembersAndHost();
+        //分桶,key为host，value一个map，map里面key为用户名，value为为GroupChatResponseMessage
+        Map<String, Map<String, GroupChatResponseMessage>> map = new HashMap<>();
         //发给每一位成员的时间要一致
         LocalDateTime now = LocalDateTime.now();
-        //遍历发送给每一个群成员
-        for (Channel channel : channelList)
+        //这里并发很大，对于服务器而言，使用异步操作反而会因为线程的上下文切换而影响性能
+        groupMembersAndHost.forEach(new BiConsumer<String, String>()
         {
-            channel.writeAndFlush(GroupChatResponseMessage.success(from, content, groupName)
-                    .setSequenceId(groupChatRequestMessage.getSequenceId())
-                    .setTime(now));
+            /**
+             * 遍历
+             *
+             * @param username 用户名
+             * @param host     用户的位置
+             */
+            @Override
+            public void accept(String username, String host)
+            {
+                //在本实例内取，如果没有取到，证明在其他实例上，或者不存在
+                Channel channel = session.getChannel(username);
+                if (channel != null)
+                {
+                    //在本实例上
+                    channel.writeAndFlush(GroupChatResponseMessage.success(from, content, groupName)
+                            .setSequenceId(groupChatRequestMessage.getSequenceId())
+                            .setTime(now));
+                    log.debug("用户" + username + "在本实例内，直接发送");
+                }
+                else
+                {
+                    //不在本实例上，往桶里添加
+                    //如果没有，就创建一个空的
+                    Map<String, GroupChatResponseMessage> userMap =
+                            map.computeIfAbsent(host, k -> new HashMap<>());
+                    //构建
+                    GroupChatResponseMessage groupChatResponseMessage =
+                            (GroupChatResponseMessage) GroupChatResponseMessage
+                                    .success(from, content, groupName)
+                                    .setSequenceId(groupChatRequestMessage.getSequenceId())
+                                    .setTime(now);
+                    userMap.put(username, groupChatResponseMessage);
+                    log.debug("用户" + username + "添加到分桶");
+                }
+            }
+        });
+        log.debug("分桶结果：" + map);
+        //判断是否需要发起http请求
+        if (map.size() != 0)
+        {
+            log.debug("准备发起请求");
+            //这里并发很大，对于服务器而言，使用异步操作反而会因为线程的上下文切换而影响性能
+            //todo
         }
     }
 }
