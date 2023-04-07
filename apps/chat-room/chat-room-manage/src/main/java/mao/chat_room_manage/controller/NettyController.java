@@ -2,8 +2,11 @@ package mao.chat_room_manage.controller;
 
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
+import mao.chat_room_manage.service.NettyService;
 import mao.tools_core.base.BaseController;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 /**
  * Project name(项目名称)：netty_chat_room
@@ -23,5 +26,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController("/netty")
 public class NettyController extends BaseController
 {
-
+    @Resource
+    private NettyService nettyService;
 }
