@@ -155,6 +155,28 @@ public class NettyServiceImpl implements NettyService
     @Override
     public R<Boolean> removeMember(String name, String member)
     {
-        return null;
+        Map<String, Group> groupMap = groupSession.getGroupMap();
+        AtomicBoolean atomicBoolean = new AtomicBoolean(false);
+        groupMap.computeIfPresent(name, new BiFunction<String, Group, Group>()
+        {
+            @Override
+            public Group apply(String s, Group group)
+            {
+                //移除群成员
+                group.getMembers().remove(member);
+                log.debug("成员：" + member + ",退出群聊：" + name + " 远程调用退出成功");
+                atomicBoolean.set(true);
+                return group;
+            }
+        });
+        if (atomicBoolean.get())
+        {
+            return R.success();
+        }
+        else
+        {
+            log.debug("成员：" + member + ",退出群聊：" + name + " 远程调用退出失败");
+            return R.fail("退出群聊失败");
+        }
     }
 }

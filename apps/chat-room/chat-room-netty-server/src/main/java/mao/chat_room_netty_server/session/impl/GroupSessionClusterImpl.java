@@ -284,10 +284,21 @@ public class GroupSessionClusterImpl implements GroupSession
         else
         {
             //不在本地
+            //构建url
+            String url = UrlConstants.buildRemoveMemberUrl(host, name, member);
+            log.debug("发起远程调用：" + url);
             //发起远程调用
-
+            R r = restTemplate.postForObject(url, null, R.class);
+            if (r.getIsError())
+            {
+                log.debug("成员：" + member + ",退出群聊：" + name + " 时发生错误：" + r.getMsg());
+                return null;
+            }
+            else
+            {
+                return new Group(name, null);
+            }
         }
-        return null;
     }
 
     @Override

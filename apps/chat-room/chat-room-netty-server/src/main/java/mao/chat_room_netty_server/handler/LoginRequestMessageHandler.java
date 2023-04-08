@@ -31,7 +31,7 @@ import javax.annotation.Resource;
  */
 
 @Slf4j
-@Service
+//@Service
 @ChannelHandler.Sharable
 public class LoginRequestMessageHandler extends SimpleChannelInboundHandler<LoginRequestMessage>
 {

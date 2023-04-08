@@ -73,6 +73,21 @@ public class UrlConstants
      */
     public static String buildJoinMemberUrl(String host, String name, String member)
     {
-        return prefix + host + "/sendGroupChatMessage?name=" + name + "&member=" + member;
+        return prefix + host + "/joinMember?name=" + name + "&member=" + member;
     }
+
+    /**
+     * 构建成员退出本地群聊url
+     *
+     * @param host   主机地址
+     * @param name   群聊名字
+     * @param member 群聊成员
+     * @return {@link String} url
+     */
+    public static String buildRemoveMemberUrl(String host, String name, String member)
+    {
+        return prefix + host + "/removeMember?name=" + name + "&member=" + member;
+    }
+
+
 }
