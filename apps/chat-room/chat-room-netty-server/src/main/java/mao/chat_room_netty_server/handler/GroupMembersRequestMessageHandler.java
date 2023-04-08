@@ -28,7 +28,7 @@ import java.util.Set;
  */
 
 @Slf4j
-@Service
+//@Service
 @ChannelHandler.Sharable
 public class GroupMembersRequestMessageHandler extends SimpleChannelInboundHandler<GroupMembersRequestMessage>
 {

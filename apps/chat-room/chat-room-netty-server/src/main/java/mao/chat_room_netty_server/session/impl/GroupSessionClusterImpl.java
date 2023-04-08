@@ -188,17 +188,29 @@ public class GroupSessionClusterImpl implements GroupSession
             return null;
         }
         //群聊存在
-        //向本地写
-        groupMap.computeIfPresent(name, new BiFunction<String, Group, Group>()
+        //判断该群聊是否在本地
+        if (this.host.equals(host))
         {
-            @Override
-            public Group apply(String s, Group group)
+            //在本地
+            //向本地写
+            groupMap.computeIfPresent(name, new BiFunction<String, Group, Group>()
             {
-                //添加
-                group.getMembers().add(member);
-                return group;
-            }
-        });
+                @Override
+                public Group apply(String s, Group group)
+                {
+                    //添加
+                    group.getMembers().add(member);
+                    return group;
+                }
+            });
+        }
+        else
+        {
+            //不在本地
+            //往其他实例上写
+            //todo
+        }
+
         //向redis里写
         redisService.joinGroup(name, member, host);
         return new Group(name, null);

@@ -86,6 +86,14 @@ public class ClusterGroupChatRequestMessageHandler extends GroupChatRequestMessa
         //群聊存在
         //得到群聊的成员和成员位置
         Map<String, String> groupMembersAndHost = clusterGroup.getGroupMembersAndHost();
+        //判断自己是否在里面
+        if (groupMembersAndHost.get(from) == null)
+        {
+            //不在
+            ctx.writeAndFlush(GroupChatResponseMessage.fail("请先加入该群聊")
+                    .setSequenceId(groupChatRequestMessage.getSequenceId()));
+            return;
+        }
         //分桶,key为host，value一个map，map里面key为用户名，value为为GroupChatResponseMessage
         Map<String, Map<String, GroupChatResponseMessage>> map = new HashMap<>();
         //发给每一位成员的时间要一致
