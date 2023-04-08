@@ -47,4 +47,13 @@ public interface NettyService
      */
     R<Boolean> sendGroupChatMessage(Map<String, GroupChatResponseMessage> map);
 
+
+    /**
+     * 成员加入本地群聊
+     *
+     * @param name   群聊名字
+     * @param member 群聊成员
+     * @return {@link R}<{@link Boolean}>
+     */
+    R<Boolean> joinMember(String name, String member);
 }

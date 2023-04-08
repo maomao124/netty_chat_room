@@ -80,6 +80,16 @@ public class GroupSessionClusterImpl implements GroupSession
         return 0;
     }
 
+    /**
+     * 得到本地组信息
+     *
+     * @return {@link Map}<{@link String}, {@link Group}>
+     */
+    public Map<String, Group> getGroupMap()
+    {
+        return groupMap;
+    }
+
     @Override
     public boolean hasGroup(String name)
     {

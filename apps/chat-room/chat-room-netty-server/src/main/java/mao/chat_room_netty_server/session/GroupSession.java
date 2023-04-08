@@ -38,6 +38,13 @@ public interface GroupSession
     int getTotalSize();
 
     /**
+     * 得到本地组信息
+     *
+     * @return {@link Map}<{@link String}, {@link Group}>
+     */
+    Map<String, Group> getGroupMap();
+
+    /**
      * 是否有这个组
      *
      * @param name 组名字

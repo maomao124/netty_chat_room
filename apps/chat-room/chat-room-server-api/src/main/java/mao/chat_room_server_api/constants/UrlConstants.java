@@ -62,4 +62,6 @@ public class UrlConstants
     {
         return prefix + host + "/sendGroupChatMessage";
     }
+
+
 }

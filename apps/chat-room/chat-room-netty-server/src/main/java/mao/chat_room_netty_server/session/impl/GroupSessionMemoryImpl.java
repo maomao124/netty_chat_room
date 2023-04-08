@@ -58,6 +58,12 @@ public class GroupSessionMemoryImpl implements GroupSession
     }
 
     @Override
+    public Map<String, Group> getGroupMap()
+    {
+        return groupMap;
+    }
+
+    @Override
     public boolean hasGroup(String name)
     {
         return groupMap.get(name) != null;

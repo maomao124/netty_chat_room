@@ -7,6 +7,7 @@ import mao.chat_room_common.message.ChatResponseMessage;
 import mao.chat_room_common.message.GroupChatResponseMessage;
 import mao.chat_room_common.message.GroupCreateResponseMessage;
 import mao.chat_room_netty_server.service.NettyService;
+import mao.chat_room_netty_server.session.Group;
 import mao.chat_room_netty_server.session.GroupSession;
 import mao.chat_room_netty_server.session.Session;
 import mao.tools_core.base.R;
@@ -15,7 +16,9 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.BiConsumer;
+import java.util.function.BiFunction;
 
 /**
  * Project name(项目名称)：netty_chat_room
@@ -118,5 +121,34 @@ public class NettyServiceImpl implements NettyService
             }
         });
         return R.success();
+    }
+
+    @Override
+    public R<Boolean> joinMember(String name, String member)
+    {
+        Map<String, Group> groupMap = groupSession.getGroupMap();
+        AtomicBoolean atomicBoolean = new AtomicBoolean(false);
+        //向本地写
+        groupMap.computeIfPresent(name, new BiFunction<String, Group, Group>()
+        {
+            @Override
+            public Group apply(String s, Group group)
+            {
+                //添加
+                group.getMembers().add(member);
+                atomicBoolean.set(true);
+                log.debug("远程调用向本地添加群聊成员：" + name + "--->" + member);
+                return group;
+            }
+        });
+        if (atomicBoolean.get())
+        {
+            return R.success();
+        }
+        else
+        {
+            log.debug("添加失败");
+            return R.fail("添加失败");
+        }
     }
 }

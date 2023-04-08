@@ -93,4 +93,18 @@ public class NettyController extends BaseController
     {
         return nettyService.sendGroupChatMessage(map);
     }
+
+    /**
+     * 成员加入本地群聊
+     *
+     * @param name   群聊名字
+     * @param member 群聊成员
+     * @return {@link R}<{@link Boolean}>
+     */
+    @ApiOperation("成员加入本地群聊")
+    @PostMapping("/joinMember")
+    public R<Boolean> joinMember(@RequestParam String name, @RequestParam String member)
+    {
+        return nettyService.joinMember(name,member);
+    }
 }
