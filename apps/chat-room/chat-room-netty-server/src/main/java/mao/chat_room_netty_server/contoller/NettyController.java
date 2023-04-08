@@ -107,4 +107,18 @@ public class NettyController extends BaseController
     {
         return nettyService.joinMember(name,member);
     }
+
+    /**
+     * 成员退出本地群聊
+     *
+     * @param name   群聊名字
+     * @param member 群聊成员
+     * @return {@link R}<{@link Boolean}>
+     */
+    @ApiOperation("成员退出本地群聊")
+    @PostMapping("/removeMember")
+    public R<Boolean> removeMember(@RequestParam String name, @RequestParam String member)
+    {
+        return nettyService.removeMember(name,member);
+    }
 }

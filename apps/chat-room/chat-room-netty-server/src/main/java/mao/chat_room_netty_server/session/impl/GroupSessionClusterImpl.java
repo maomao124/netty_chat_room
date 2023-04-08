@@ -256,22 +256,44 @@ public class GroupSessionClusterImpl implements GroupSession
     public Group removeMember(String name, String member)
     {
         log.debug("成员：" + member + ",退出群聊：" + name);
-        return groupMap.computeIfPresent(name, new BiFunction<String, Group, Group>()
+        //得到群聊地址
+        String host = redisService.getGroupAddress(name);
+        if (host == null)
         {
-            @Override
-            public Group apply(String s, Group group)
+            //群聊不存在
+            return null;
+        }
+        //判断群聊是否在本地
+        if (this.host.equals(host))
+        {
+            //在本地
+            return groupMap.computeIfPresent(name, new BiFunction<String, Group, Group>()
             {
-                //移除群成员
-                group.getMembers().remove(member);
-                return group;
-            }
-        });
+                @Override
+                public Group apply(String s, Group group)
+                {
+                    //移除群成员
+                    group.getMembers().remove(member);
+                    //向redis里移除
+                    redisService.removeGroupMembers(name, member, host);
+                    log.debug("成员：" + member + ",退出群聊：" + name + " 本地退出成功");
+                    return group;
+                }
+            });
+        }
+        else
+        {
+            //不在本地
+            //发起远程调用
+
+        }
+        return null;
     }
 
     @Override
     public Group removeGroup(String name)
     {
-        log.debug("移除群聊：" + name);
+        log.debug("移除本地群聊：" + name);
         return groupMap.remove(name);
     }
 

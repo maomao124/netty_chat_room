@@ -26,6 +26,7 @@ import javax.annotation.Resource;
  * Version(版本): 1.0
  * Description(描述)： 群聊退出请求入栈消息处理器
  */
+
 @Slf4j
 @Service
 @ChannelHandler.Sharable

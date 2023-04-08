@@ -151,4 +151,10 @@ public class NettyServiceImpl implements NettyService
             return R.fail("添加失败");
         }
     }
+
+    @Override
+    public R<Boolean> removeMember(String name, String member)
+    {
+        return null;
+    }
 }

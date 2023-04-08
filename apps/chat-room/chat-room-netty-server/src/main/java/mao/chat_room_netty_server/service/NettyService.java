@@ -56,4 +56,14 @@ public interface NettyService
      * @return {@link R}<{@link Boolean}>
      */
     R<Boolean> joinMember(String name, String member);
+
+
+    /**
+     * 成员退出本地群聊
+     *
+     * @param name   群聊名字
+     * @param member 群聊成员
+     * @return {@link R}<{@link Boolean}>
+     */
+    R<Boolean> removeMember(String name, String member);
 }

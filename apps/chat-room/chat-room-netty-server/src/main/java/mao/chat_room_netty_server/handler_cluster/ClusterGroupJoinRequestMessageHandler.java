@@ -19,7 +19,7 @@ import javax.annotation.Resource;
  * Date(创建日期)： 2023/4/8
  * Time(创建时间)： 13:37
  * Version(版本): 1.0
- * Description(描述)： 无
+ * Description(描述)： 集群群聊加入请求入栈消息处理器
  */
 
 @Slf4j

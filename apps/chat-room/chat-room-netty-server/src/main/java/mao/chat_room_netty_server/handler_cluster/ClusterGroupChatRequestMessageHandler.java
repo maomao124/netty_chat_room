@@ -35,7 +35,7 @@ import java.util.function.BiConsumer;
  * Date(创建日期)： 2023/4/7
  * Time(创建时间)： 18:16
  * Version(版本): 1.0
- * Description(描述)： 无
+ * Description(描述)： 集群群聊聊天请求入栈消息处理器
  */
 
 @Slf4j
