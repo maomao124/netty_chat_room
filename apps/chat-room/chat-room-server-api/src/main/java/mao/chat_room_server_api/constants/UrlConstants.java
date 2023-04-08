@@ -22,7 +22,7 @@ public class UrlConstants
      * 构建聊天请求url
      *
      * @param host 主机地址
-     * @return {@link String}
+     * @return {@link String} url
      */
     public static String buildChatRequestMessageUrl(String host)
     {
@@ -33,7 +33,7 @@ public class UrlConstants
      * 构建得到netty端口号的url
      *
      * @param host 宿主
-     * @return {@link String}
+     * @return {@link String} url
      */
     public static String buildGetPortUrl(String host)
     {
@@ -44,7 +44,7 @@ public class UrlConstants
      * 构建群聊创建请求url
      *
      * @param host 主机地址
-     * @return {@link String}
+     * @return {@link String} url
      */
     public static String buildGroupCreateRequestMessageUrl(String host)
     {
@@ -56,12 +56,23 @@ public class UrlConstants
      * 构建群聊聊天请求url
      *
      * @param host 主机地址
-     * @return {@link String}
+     * @return {@link String} url
      */
     public static String buildGroupChatRequestMessageUrl(String host)
     {
         return prefix + host + "/sendGroupChatMessage";
     }
 
-
+    /**
+     * 构建成员加入本地群聊url
+     *
+     * @param host   主机地址
+     * @param name   群聊名字
+     * @param member 群聊成员
+     * @return {@link String} url
+     */
+    public static String buildJoinMemberUrl(String host, String name, String member)
+    {
+        return prefix + host + "/sendGroupChatMessage?name=" + name + "&member=" + member;
+    }
 }

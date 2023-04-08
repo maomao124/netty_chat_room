@@ -8,14 +8,18 @@ import mao.chat_room_netty_server.service.RedisService;
 import mao.chat_room_netty_server.session.Group;
 import mao.chat_room_netty_server.session.GroupSession;
 import mao.chat_room_netty_server.session.Session;
+import mao.chat_room_server_api.constants.UrlConstants;
+import mao.tools_core.base.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.stream.Collectors;
@@ -46,11 +50,14 @@ public class GroupSessionClusterImpl implements GroupSession
 
     private final GroupProducer groupProducer;
 
+    private final RestTemplate restTemplate;
+
     @Autowired
     public GroupSessionClusterImpl(@Value("${server.port}") String port,
                                    Session session,
                                    RedisService redisService,
-                                   GroupProducer groupProducer) throws UnknownHostException
+                                   GroupProducer groupProducer,
+                                   RestTemplate restTemplate) throws UnknownHostException
     {
         /*
          * 主机地址
@@ -60,6 +67,7 @@ public class GroupSessionClusterImpl implements GroupSession
         this.redisService = redisService;
         this.host = hostAddress + ":" + port;
         this.groupProducer = groupProducer;
+        this.restTemplate = restTemplate;
     }
 
 
@@ -198,6 +206,7 @@ public class GroupSessionClusterImpl implements GroupSession
             return null;
         }
         //群聊存在
+        AtomicBoolean atomicBoolean = new AtomicBoolean(false);
         //判断该群聊是否在本地
         if (this.host.equals(host))
         {
@@ -210,6 +219,7 @@ public class GroupSessionClusterImpl implements GroupSession
                 {
                     //添加
                     group.getMembers().add(member);
+                    atomicBoolean.set(true);
                     return group;
                 }
             });
@@ -218,12 +228,28 @@ public class GroupSessionClusterImpl implements GroupSession
         {
             //不在本地
             //往其他实例上写
-            //todo
+            String url = UrlConstants.buildJoinMemberUrl(host, name, member);
+            //远程调用
+            log.debug("发起远程调用：" + url);
+            R r = restTemplate.postForObject(url, null, R.class);
+            if (r.getIsError())
+            {
+                atomicBoolean.set(false);
+                log.warn("加入群聊时出现错误：" + r.getMsg());
+            }
+            else
+            {
+                atomicBoolean.set(true);
+            }
         }
-
-        //向redis里写
-        redisService.joinGroup(name, member, host);
-        return new Group(name, null);
+        //判断是否需要向redis里写
+        if (atomicBoolean.get())
+        {
+            //向redis里写
+            redisService.joinGroup(name, member, host);
+            return new Group(name, null);
+        }
+        return null;
     }
 
     @Override
