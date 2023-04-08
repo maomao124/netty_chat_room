@@ -12,7 +12,10 @@ import mao.chat_room_netty_server.handler.GroupChatRequestMessageHandler;
 import mao.chat_room_netty_server.service.RedisService;
 import mao.chat_room_netty_server.session.GroupSession;
 import mao.chat_room_netty_server.session.Session;
+import mao.chat_room_server_api.constants.UrlConstants;
+import mao.tools_core.base.R;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
@@ -49,6 +52,9 @@ public class ClusterGroupChatRequestMessageHandler extends GroupChatRequestMessa
 
     @Resource
     private RedisService redisService;
+
+    @Resource
+    private RestTemplate restTemplate;
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx,
@@ -129,7 +135,35 @@ public class ClusterGroupChatRequestMessageHandler extends GroupChatRequestMessa
         {
             log.debug("准备发起请求");
             //这里并发很大，对于服务器而言，使用异步操作反而会因为线程的上下文切换而影响性能
-            //todo
+            map.forEach(new BiConsumer<String, Map<String, GroupChatResponseMessage>>()
+            {
+
+                /**
+                 * 遍历分桶
+                 *
+                 * @param host                        位置
+                 * @param groupChatResponseMessageMap 群组聊天响应消息映射
+                 */
+                @Override
+                public void accept(String host, Map<String, GroupChatResponseMessage> groupChatResponseMessageMap)
+                {
+                    //远程调用
+                    String url = UrlConstants.buildGroupChatRequestMessageUrl(host);
+                    log.debug("url:" + url);
+                    log.debug("正在发起请求：" + host);
+                    R r = restTemplate.postForObject(url, groupChatResponseMessageMap, R.class);
+                    if (r.getIsError())
+                    {
+                        //错误
+                        log.warn("发送群聊消息时出现错误:" + r.getMsg());
+                    }
+                    else
+                    {
+                        //正确
+                        log.debug(host + "  ：请求完成");
+                    }
+                }
+            });
         }
     }
 }
