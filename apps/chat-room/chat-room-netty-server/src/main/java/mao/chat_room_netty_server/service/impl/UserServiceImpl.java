@@ -93,6 +93,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         {
             throw new BizException("密码不能为空");
         }
+        if (username.length() < 3)
+        {
+            throw new BizException("用户名长度不能小于3位");
+        }
+        if (password.length() < 6)
+        {
+            throw new BizException("密码长度不能小于6位");
+        }
         //判断是否为保留字段
         if (username.equals("host"))
         {

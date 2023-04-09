@@ -1,19 +1,24 @@
 package mao.chat_room_netty_server.service.impl;
 
 import io.netty.channel.Channel;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import mao.chat_room_common.message.ChatRequestMessage;
 import mao.chat_room_common.message.ChatResponseMessage;
 import mao.chat_room_common.message.GroupChatResponseMessage;
 import mao.chat_room_common.message.GroupCreateResponseMessage;
 import mao.chat_room_netty_server.service.NettyService;
+import mao.chat_room_netty_server.service.RedisService;
 import mao.chat_room_netty_server.session.Group;
 import mao.chat_room_netty_server.session.GroupSession;
 import mao.chat_room_netty_server.session.Session;
 import mao.tools_core.base.R;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.net.InetAddress;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -43,6 +48,22 @@ public class NettyServiceImpl implements NettyService
 
     @Resource
     private GroupSession groupSession;
+
+    @Resource
+    private RedisService redisService;
+
+    private String host;
+
+    @SneakyThrows
+    @Autowired
+    public void setHost(@Value("${server.port}") String port)
+    {
+        /*
+         * 主机地址
+         */
+        String hostAddress = InetAddress.getLocalHost().getHostAddress();
+        this.host = hostAddress + ":" + port;
+    }
 
     @Override
     public R<Boolean> chatRequestMessageSend(ChatRequestMessage chatRequestMessage)
@@ -164,6 +185,7 @@ public class NettyServiceImpl implements NettyService
             {
                 //移除群成员
                 group.getMembers().remove(member);
+                redisService.removeGroupMembers(name, member, host);
                 log.debug("成员：" + member + ",退出群聊：" + name + " 远程调用退出成功");
                 atomicBoolean.set(true);
                 return group;
