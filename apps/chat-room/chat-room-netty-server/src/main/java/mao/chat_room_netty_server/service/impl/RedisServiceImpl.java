@@ -12,7 +12,11 @@ import mao.chat_room_server_api.constants.RedisConstants;
 import mao.chat_room_server_api.constants.UrlConstants;
 import mao.tools_core.base.R;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.data.redis.core.RedisOperations;
+import org.springframework.data.redis.core.SessionCallback;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -70,8 +74,18 @@ public class RedisServiceImpl implements RedisService
     {
         String key1 = RedisConstants.chat_user_key + username;
         String key2 = RedisConstants.chat_user_key + host;
-        stringRedisTemplate.opsForValue().set(key1, host);
-        stringRedisTemplate.opsForSet().add(key2, username);
+
+        stringRedisTemplate.executePipelined(new SessionCallback<String>()
+        {
+            @Override
+            @SuppressWarnings("all")
+            public String execute(RedisOperations redisOperations) throws DataAccessException
+            {
+                redisOperations.opsForValue().set(key1, host);
+                redisOperations.opsForSet().add(key2, username);
+                return null;
+            }
+        });
     }
 
 
@@ -93,8 +107,18 @@ public class RedisServiceImpl implements RedisService
         String key1 = RedisConstants.chat_user_key + username;
         String host = stringRedisTemplate.opsForValue().get(key1);
         String key2 = RedisConstants.chat_user_key + host;
-        stringRedisTemplate.opsForSet().remove(key2, username);
-        stringRedisTemplate.delete(key1);
+
+        stringRedisTemplate.executePipelined(new SessionCallback<String>()
+        {
+            @Override
+            @SuppressWarnings("all")
+            public String execute(RedisOperations redisOperations) throws DataAccessException
+            {
+                redisOperations.opsForSet().remove(key2, username);
+                redisOperations.delete(key1);
+                return null;
+            }
+        });
     }
 
     @Override
@@ -136,8 +160,19 @@ public class RedisServiceImpl implements RedisService
     {
         String key = RedisConstants.chat_group_key + name;
         String key2 = RedisConstants.chat_group_list_key + host;
-        stringRedisTemplate.delete(key);
-        stringRedisTemplate.opsForSet().remove(key2, name);
+
+        stringRedisTemplate.executePipelined(new SessionCallback<String>()
+        {
+            @Override
+            @SuppressWarnings("all")
+            public String execute(RedisOperations redisOperations) throws DataAccessException
+            {
+                redisOperations.delete(key);
+                redisOperations.opsForSet().remove(key2, name);
+                return null;
+            }
+        });
+
         return true;
     }
 
@@ -251,7 +286,7 @@ public class RedisServiceImpl implements RedisService
                         {
                             log.debug("正在同步的方式推送给" + host);
                             String url = UrlConstants.buildGroupCreateRequestMessageUrl(host);
-                            R r = restTemplate.postForObject(url, groupCreateResponseMessages, R.class);
+                            R<? extends Object> r = restTemplate.postForObject(url, groupCreateResponseMessages, R.class);
                             if (r.getIsError())
                             {
                                 //失败
@@ -284,6 +319,7 @@ public class RedisServiceImpl implements RedisService
     }
 
     @Override
+    @Async
     public void registerCount()
     {
         //得到当前时间
@@ -297,11 +333,25 @@ public class RedisServiceImpl implements RedisService
         String monthKey = RedisConstants.register_month_count_key + year + ":" + month;
         log.debug("registerCount monthKey:" + monthKey);
         //统计
-        stringRedisTemplate.opsForValue().increment(dayKey);
-        stringRedisTemplate.opsForValue().increment(monthKey);
+        //stringRedisTemplate.opsForValue().increment(dayKey);
+        //stringRedisTemplate.opsForValue().increment(monthKey);
+
+        stringRedisTemplate.executePipelined(new SessionCallback<String>()
+        {
+            @Override
+            @SuppressWarnings("all")
+            public String execute(RedisOperations redisOperations) throws DataAccessException
+            {
+                //统计
+                redisOperations.opsForValue().increment(dayKey);
+                redisOperations.opsForValue().increment(monthKey);
+                return null;
+            }
+        });
     }
 
     @Override
+    @Async
     public void loginCount(String username)
     {
         //得到当前时间
@@ -319,11 +369,27 @@ public class RedisServiceImpl implements RedisService
         log.debug("login monthCountKey:" + monthCountKey);
         log.debug("login monthUVKey:" + monthUVKey);
         //统计
-        stringRedisTemplate.opsForValue().increment(dayCountKey);
-        stringRedisTemplate.opsForValue().increment(monthCountKey);
+        //stringRedisTemplate.opsForValue().increment(dayCountKey);
+        //stringRedisTemplate.opsForValue().increment(monthCountKey);
         //uv统计
-        stringRedisTemplate.opsForHyperLogLog().add(dayUVKey, username);
-        stringRedisTemplate.opsForHyperLogLog().add(monthUVKey, username);
+        //stringRedisTemplate.opsForHyperLogLog().add(dayUVKey, username);
+        //stringRedisTemplate.opsForHyperLogLog().add(monthUVKey, username);
+
+        stringRedisTemplate.executePipelined(new SessionCallback<String>()
+        {
+            @Override
+            @SuppressWarnings("all")
+            public String execute(RedisOperations redisOperations) throws DataAccessException
+            {
+                //统计
+                redisOperations.opsForValue().increment(dayCountKey);
+                redisOperations.opsForValue().increment(monthCountKey);
+                //uv统计
+                redisOperations.opsForHyperLogLog().add(dayUVKey, username);
+                redisOperations.opsForHyperLogLog().add(monthUVKey, username);
+                return null;
+            }
+        });
     }
 
     @Override
@@ -387,5 +453,95 @@ public class RedisServiceImpl implements RedisService
         Map<Object, Object> entries = stringRedisTemplate.opsForHash().entries(key);
         log.debug("获取群聊：" + name + "的所有群成员：" + entries);
         return entries;
+    }
+
+    @Override
+    @Async
+    public void chatCount()
+    {
+        //得到当前时间
+        LocalDate now = LocalDate.now();
+        int year = now.getYear();
+        int month = now.getMonthValue();
+        int day = now.getDayOfMonth();
+        //构建key
+        String dayCountKey = RedisConstants.chat_day_count_key + year + ":" + month + ":" + day;
+        String monthCountKey = RedisConstants.chat_month_count_key + year + ":" + month;
+        //统计
+        //stringRedisTemplate.opsForValue().increment(dayCountKey);
+        //stringRedisTemplate.opsForValue().increment(monthCountKey);
+
+        stringRedisTemplate.executePipelined(new SessionCallback<String>()
+        {
+            @Override
+            @SuppressWarnings("all")
+            public String execute(RedisOperations redisOperations) throws DataAccessException
+            {
+                //统计
+                redisOperations.opsForValue().increment(dayCountKey);
+                redisOperations.opsForValue().increment(monthCountKey);
+                return null;
+            }
+        });
+    }
+
+    @Override
+    @Async
+    public void groupChatCount()
+    {
+        //得到当前时间
+        LocalDate now = LocalDate.now();
+        int year = now.getYear();
+        int month = now.getMonthValue();
+        int day = now.getDayOfMonth();
+        //构建key
+        String dayCountKey = RedisConstants.group_chat_day_count_key + year + ":" + month + ":" + day;
+        String monthCountKey = RedisConstants.group_chat_month_count_key + year + ":" + month;
+        //统计
+        //stringRedisTemplate.opsForValue().increment(dayCountKey);
+        //stringRedisTemplate.opsForValue().increment(monthCountKey);
+
+        stringRedisTemplate.executePipelined(new SessionCallback<String>()
+        {
+            @Override
+            @SuppressWarnings("all")
+            public String execute(RedisOperations redisOperations) throws DataAccessException
+            {
+                //统计
+                redisOperations.opsForValue().increment(dayCountKey);
+                redisOperations.opsForValue().increment(monthCountKey);
+                return null;
+            }
+        });
+    }
+
+    @Override
+    @Async
+    public void groupCreateCount()
+    {
+        //得到当前时间
+        LocalDate now = LocalDate.now();
+        int year = now.getYear();
+        int month = now.getMonthValue();
+        int day = now.getDayOfMonth();
+        //构建key
+        String dayCountKey = RedisConstants.group_create_day_count_key + year + ":" + month + ":" + day;
+        String monthCountKey = RedisConstants.group_create_month_count_key + year + ":" + month;
+        //统计
+        //stringRedisTemplate.opsForValue().increment(dayCountKey);
+        //stringRedisTemplate.opsForValue().increment(monthCountKey);
+
+        stringRedisTemplate.executePipelined(new SessionCallback<String>()
+        {
+            @Override
+            @SuppressWarnings("all")
+            public String execute(RedisOperations redisOperations) throws DataAccessException
+            {
+                //统计
+                redisOperations.opsForValue().increment(dayCountKey);
+                redisOperations.opsForValue().increment(monthCountKey);
+                return null;
+            }
+        });
     }
 }

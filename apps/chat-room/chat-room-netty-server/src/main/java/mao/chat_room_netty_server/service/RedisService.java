@@ -147,4 +147,21 @@ public interface RedisService
      * @return {@link Map}<{@link Object}, {@link Object}>
      */
     Map<Object, Object> getMembersAndHost(String name);
+
+
+    /**
+     * 个人聊天计数
+     */
+    void chatCount();
+
+    /**
+     * 群聊聊天计数
+     */
+    void groupChatCount();
+
+    /**
+     * 群聊创建计数
+     */
+    void groupCreateCount();
+
 }

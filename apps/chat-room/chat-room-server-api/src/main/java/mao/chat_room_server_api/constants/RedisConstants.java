@@ -33,5 +33,16 @@ public class RedisConstants
 
     public static final String login_month_uv_count_key = "chat_room:login:uv:month:";
 
+    public static final String chat_day_count_key = "chat_room:chat:count:day:";
+
+    public static final String group_chat_day_count_key = "chat_room:chat:group:count:day:";
+
+    public static final String group_create_day_count_key = "chat_room:create:group:count:day:";
+
+    public static final String chat_month_count_key = "chat_room:chat:count:month:";
+
+    public static final String group_chat_month_count_key = "chat_room:chat:group:count:month:";
+
+    public static final String group_create_month_count_key = "chat_room:create:group:count:month:";
 
 }
