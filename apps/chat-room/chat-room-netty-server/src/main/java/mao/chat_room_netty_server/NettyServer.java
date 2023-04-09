@@ -138,6 +138,7 @@ public class NettyServer implements CommandLineRunner
                     }).bind(serverConfig.getServerPort()).sync().channel();
             log.info("Netty服务器启动成功");
             serverProducer.sendNettyServerUpdateMessage();
+            serverProducer.sendReBalanceMessage();
             channel.closeFuture().addListener(new GenericFutureListener<Future<? super Void>>()
             {
                 @Override

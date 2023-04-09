@@ -8,12 +8,16 @@ import org.apache.rocketmq.common.message.Message;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.messaging.MessageHeaders;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.nio.charset.StandardCharsets;
+
+import org.springframework.messaging.support.MessageBuilder;
 
 /**
  * Project name(项目名称)：netty_chat_room
@@ -55,5 +59,15 @@ public class RocketMQServerProducerImpl implements ServerProducer
     {
         log.info("发送netty服务变动更新消息");
         rocketMQTemplate.convertAndSend(RocketMQConstants.NETTY_SERVER_UPDATE_MESSAGE_TOPIC, host);
+    }
+
+    @Override
+    public void sendReBalanceMessage()
+    {
+        log.info("发送netty ReBalance消息");
+        rocketMQTemplate.syncSend(RocketMQConstants.NETTY_SERVER_RE_BALANCE_TOPIC,
+                MessageBuilder.withPayload(host).build(),
+                5000 ,
+                2);
     }
 }
