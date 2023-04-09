@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import mao.chat_room_common.message.GroupCreateRequestMessage;
 import mao.chat_room_common.message.GroupCreateResponseMessage;
 import mao.chat_room_netty_server.handler.GroupCreateRequestMessageHandler;
+import mao.chat_room_netty_server.service.RedisService;
 import mao.chat_room_netty_server.session.Group;
 import mao.chat_room_netty_server.session.GroupSession;
 import mao.chat_room_netty_server.session.Session;
@@ -38,6 +39,9 @@ public class ClusterGroupCreateRequestMessageHandler extends GroupCreateRequestM
 
     @Resource
     private Session session;
+
+    @Resource
+    private RedisService redisService;
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx,
@@ -73,6 +77,8 @@ public class ClusterGroupCreateRequestMessageHandler extends GroupCreateRequestM
             Set<String> members1 = group.getMembers();
             ctx.writeAndFlush(GroupCreateResponseMessage.success(members1)
                     .setSequenceId(groupCreateRequestMessage.getSequenceId()));
+            //群聊创建统计
+            redisService.groupCreateCount();
         }
     }
 }

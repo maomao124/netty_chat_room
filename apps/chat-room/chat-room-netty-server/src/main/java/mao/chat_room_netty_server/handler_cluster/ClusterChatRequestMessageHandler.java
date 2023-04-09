@@ -103,6 +103,8 @@ public class ClusterChatRequestMessageHandler extends ChatRequestMessageHandler
                 ctx.writeAndFlush(ChatResponseMessage
                         .success(chatRequestMessage.getFrom(), null)
                         .setSequenceId(chatRequestMessage.getSequenceId()));
+                //聊天统计
+                redisService.chatCount();
             }
 
         }
@@ -119,6 +121,8 @@ public class ClusterChatRequestMessageHandler extends ChatRequestMessageHandler
             ctx.writeAndFlush(ChatResponseMessage
                     .success(chatRequestMessage.getFrom(), null)
                     .setSequenceId(chatRequestMessage.getSequenceId()));
+            //聊天统计
+            redisService.chatCount();
         }
     }
 }

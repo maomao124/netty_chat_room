@@ -173,5 +173,7 @@ public class ClusterGroupChatRequestMessageHandler extends GroupChatRequestMessa
                 }
             });
         }
+        //群聊聊天统计
+        redisService.groupChatCount();
     }
 }
