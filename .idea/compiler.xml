@@ -7,27 +7,28 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="tools-common" />
-        <module name="auth-entity" />
-        <module name="auth-server" />
         <module name="tools-xss" />
         <module name="chat-room-common" />
         <module name="chat-room-gateway" />
         <module name="tools-core" />
-        <module name="tools-j2cache" />
         <module name="chat-room-netty-server" />
         <module name="chat-room-client-api" />
         <module name="chat-room-manage" />
         <module name="tools-databases" />
         <module name="chat-room-web-server" />
-        <module name="tools-validator" />
         <module name="tools-user" />
         <module name="tools-dozer" />
+        <module name="chat-room-console-client" />
+        <module name="chat-room-server-api" />
+        <module name="tools-common" />
+        <module name="auth-entity" />
+        <module name="chat-room-console-test-client" />
+        <module name="auth-server" />
+        <module name="tools-j2cache" />
+        <module name="tools-validator" />
         <module name="tools-jwt" />
         <module name="chat-room-swing-client" />
         <module name="tools-log" />
-        <module name="chat-room-console-client" />
-        <module name="chat-room-server-api" />
         <module name="gateway" />
         <module name="tools-swagger2" />
         <module name="tools-redis-cache" />
@@ -44,6 +45,7 @@
       <module name="chat-room-client-api" target="1.8" />
       <module name="chat-room-common" target="1.8" />
       <module name="chat-room-console-client" target="1.8" />
+      <module name="chat-room-console-test-client" target="1.8" />
       <module name="chat-room-gateway" target="1.8" />
       <module name="chat-room-manage" target="1.8" />
       <module name="chat-room-netty-server" target="1.8" />
@@ -77,6 +79,7 @@
       <module name="chat-room-client-api" options="-parameters" />
       <module name="chat-room-common" options="-parameters" />
       <module name="chat-room-console-client" options="-parameters" />
+      <module name="chat-room-console-test-client" options="-parameters" />
       <module name="chat-room-gateway" options="-parameters" />
       <module name="chat-room-manage" options="-parameters" />
       <module name="chat-room-netty-server" options="-parameters" />

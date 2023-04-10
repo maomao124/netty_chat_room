@@ -22,6 +22,7 @@
         <module>chat-room-swing-client</module>
         <module>chat-room-gateway</module>
         <module>chat-room-manage</module>
+        <module>chat-room-console-test-client</module>
     </modules>
 
     <dependencies>

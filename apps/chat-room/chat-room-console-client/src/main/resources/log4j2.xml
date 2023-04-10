@@ -13,7 +13,7 @@
     <!--然后定义 logger，只有定义了 logger 并引入的 appender，appender 才会生效-->
     <!--root：用于指定项目的根日志，如果没有单独指定 Logger，则会使用 root 作为默认的日志输出-->
     <loggers>
-        <root level="debug">
+        <root level="error">
             <appender-ref ref="Console"/>
         </root>
     </loggers>

@@ -10,6 +10,8 @@
     <file url="file://$PROJECT_DIR$/apps/chat-room/chat-room-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/chat-room/chat-room-console-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/chat-room/chat-room-console-client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/chat-room/chat-room-console-test-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/chat-room/chat-room-console-test-client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/chat-room/chat-room-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/chat-room/chat-room-gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/chat-room/chat-room-manage/src/main/java" charset="UTF-8" />
