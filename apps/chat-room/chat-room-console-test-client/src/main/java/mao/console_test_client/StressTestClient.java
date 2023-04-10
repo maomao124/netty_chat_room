@@ -68,6 +68,7 @@ public class StressTestClient
         RestfulHTTP restfulHTTP = MainApplication.getRestfulHTTP();
         System.out.println("服务器URL：" + ClientConfig.getServerUrl());
         System.out.println("正在等待服务器响应...");
+        //todo:超时重试，错误重试，有限重试
         R<String> r = restfulHTTP.GET(R.class, ClientConfig.getServerUrl(), null, null);
         if (r.getIsError())
         {

@@ -55,7 +55,7 @@
                     <archive>
                         <manifest>
                             <!-- 此处指定main方法入口的class -->
-                            <mainClass>test</mainClass>
+                            <mainClass>mao.console_test_client.StressTestClient</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

@@ -20,7 +20,7 @@ import java.util.concurrent.locks.LockSupport;
  * Date(创建日期)： 2023/4/9
  * Time(创建时间)： 22:36
  * Version(版本): 1.0
- * Description(描述)： 压力测试业务线程
+ * Description(描述)： 压力测试业务线程，可以进程多开
  */
 
 public class StressTestBizThread extends Thread
@@ -28,6 +28,16 @@ public class StressTestBizThread extends Thread
     private final Channel channel;
 
     private final String username;
+
+    private long firstTime;
+
+    private long previousTime;
+
+    private long thisTime;
+
+    private long previousCount;
+
+    private long thisCount;
 
 
     public StressTestBizThread(Channel channel, String username)
@@ -62,7 +72,17 @@ public class StressTestBizThread extends Thread
                 while (true)
                 {
                     Thread.sleep(1000);
-                    System.out.println("统计：" + longAdder.sum());
+                    long sum = longAdder.sum();
+                    thisTime = System.currentTimeMillis();
+                    thisCount = sum;
+                    long time = thisTime - previousTime;
+                    long count = thisCount - previousCount;
+                    previousTime = thisTime;
+                    previousCount = thisCount;
+                    float result = (float) (count / ((double) time / 1000));
+                    float result2 = (float) (thisCount / (((double) thisTime - (double) firstTime) / 1000));
+                    System.out.println("已发送：" + sum + "条，当前串行吞吐量：" +
+                            result + "条/s，平均串行吞吐量：" + result2 + "条/s，计算间隔：" + time + "ms");
                 }
             }
         }, "count");
@@ -76,6 +96,8 @@ public class StressTestBizThread extends Thread
             System.out.print("请输入消息内容：");
             String body = input.next();
             thread.start();
+            firstTime = System.currentTimeMillis();
+            previousTime = firstTime;
             while (true)
             {
                 channel.writeAndFlush(new ChatRequestMessage()
@@ -95,6 +117,8 @@ public class StressTestBizThread extends Thread
             System.out.print("请输入消息内容：");
             String body = input.next();
             thread.start();
+            firstTime = System.currentTimeMillis();
+            previousTime = firstTime;
             while (true)
             {
                 channel.writeAndFlush(new GroupChatRequestMessage()
@@ -110,6 +134,8 @@ public class StressTestBizThread extends Thread
         {
             System.out.println("ping压力测试-单节点");
             thread.start();
+            firstTime = System.currentTimeMillis();
+            previousTime = firstTime;
             while (true)
             {
                 long start = System.currentTimeMillis();
