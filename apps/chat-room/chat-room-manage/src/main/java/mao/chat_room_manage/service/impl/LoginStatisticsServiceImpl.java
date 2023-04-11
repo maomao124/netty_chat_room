@@ -380,7 +380,7 @@ public class LoginStatisticsServiceImpl implements LoginStatisticsService
                 endDate.getMonthValue() + ":" + endDate.getDayOfMonth();
         keys.add(key);
         times.add(endDate.getYear() + "/" + endDate.getMonthValue() + "/" + endDate.getDayOfMonth());
-        for (int i = 1; i < 30; i++)
+        for (int i = 1; i < Math.toIntExact(dayTimeDifference); i++)
         {
             LocalDate localDate = endDate.minusDays(i);
             key = RedisConstants.login_day_uv_count_key + localDate.getYear() + ":" +
@@ -451,7 +451,7 @@ public class LoginStatisticsServiceImpl implements LoginStatisticsService
                 endDate.getMonthValue();
         keys.add(key);
         times.add(endDate.getYear() + "/" + endDate.getMonthValue());
-        for (int i = 1; i < 12; i++)
+        for (int i = 1; i < Math.toIntExact(monthTimeDifference); i++)
         {
             LocalDate localDate = endDate.minusMonths(i);
             key = RedisConstants.login_day_count_key + localDate.getYear() + ":" +

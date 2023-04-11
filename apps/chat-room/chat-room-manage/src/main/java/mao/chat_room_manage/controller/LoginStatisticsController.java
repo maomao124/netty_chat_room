@@ -1,6 +1,8 @@
 package mao.chat_room_manage.controller;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import mao.chat_room_manage.entity.Statistics;
@@ -98,6 +100,23 @@ public class LoginStatisticsController extends BaseController
      */
     @ApiOperation("得到用户某些天用户登录的次数")
     @GetMapping("/getLoginDayCountList")
+    @ApiImplicitParams
+            (
+                    {
+                            @ApiImplicitParam(name = "startYear", value = "起始年",
+                                    dataType = "int", required = true),
+                            @ApiImplicitParam(name = "startMonth", value = "起始月",
+                                    dataType = "int", required = true),
+                            @ApiImplicitParam(name = "startDay", value = "起始天",
+                                    dataType = "int", required = true),
+                            @ApiImplicitParam(name = "endYear", value = "结束年",
+                                    dataType = "int", required = true),
+                            @ApiImplicitParam(name = "endMonth", value = "结束月",
+                                    dataType = "int", required = true),
+                            @ApiImplicitParam(name = "endDay", value = "结束天",
+                                    dataType = "int", required = true)
+                    }
+            )
     public R<List<Statistics>> getLoginDayCountList(@RequestParam int startYear,
                                                     @RequestParam int startMonth,
                                                     @RequestParam int startDay,
@@ -120,8 +139,23 @@ public class LoginStatisticsController extends BaseController
      */
     @ApiOperation("得到用户某些月用户登录的次数")
     @GetMapping("/getLoginMonthCountList")
-    public R<List<Statistics>> getLoginMonthCountList(int startYear, int startMonth,
-                                                      int endYear, int endMonth)
+    @ApiImplicitParams
+            (
+                    {
+                            @ApiImplicitParam(name = "startYear", value = "起始年",
+                                    dataType = "int", required = true),
+                            @ApiImplicitParam(name = "startMonth", value = "起始月",
+                                    dataType = "int", required = true),
+                            @ApiImplicitParam(name = "endYear", value = "结束年",
+                                    dataType = "int", required = true),
+                            @ApiImplicitParam(name = "endMonth", value = "结束月",
+                                    dataType = "int", required = true)
+                    }
+            )
+    public R<List<Statistics>> getLoginMonthCountList(@RequestParam int startYear,
+                                                      @RequestParam int startMonth,
+                                                      @RequestParam int endYear,
+                                                      @RequestParam int endMonth)
     {
         return success(loginStatisticsService.getLoginMonthCountList(startYear, startMonth,
                 endYear, endMonth));
@@ -138,10 +172,34 @@ public class LoginStatisticsController extends BaseController
      * @param endDay     结束天
      * @return {@link List}<{@link Statistics}> Statistics列表
      */
-    public R<List<Statistics>> getLoginDayUVCountList(int startYear, int startMonth, int startDay,
-                                                      int endYear, int endMonth, int endDay)
+    @ApiOperation("得到用户某些天用户登录的大致人数")
+    @GetMapping("/getLoginDayUVCountList")
+    @ApiImplicitParams
+            (
+                    {
+                            @ApiImplicitParam(name = "startYear", value = "起始年",
+                                    dataType = "int", required = true),
+                            @ApiImplicitParam(name = "startMonth", value = "起始月",
+                                    dataType = "int", required = true),
+                            @ApiImplicitParam(name = "startDay", value = "起始天",
+                                    dataType = "int", required = true),
+                            @ApiImplicitParam(name = "endYear", value = "结束年",
+                                    dataType = "int", required = true),
+                            @ApiImplicitParam(name = "endMonth", value = "结束月",
+                                    dataType = "int", required = true),
+                            @ApiImplicitParam(name = "endDay", value = "结束天",
+                                    dataType = "int", required = true)
+                    }
+            )
+    public R<List<Statistics>> getLoginDayUVCountList(@RequestParam int startYear,
+                                                      @RequestParam int startMonth,
+                                                      @RequestParam int startDay,
+                                                      @RequestParam int endYear,
+                                                      @RequestParam int endMonth,
+                                                      @RequestParam int endDay)
     {
-        return null;
+        return success(loginStatisticsService.getLoginDayUVCountList(startYear, startMonth,
+                startDay, endYear, endMonth, endDay));
     }
 
     /**
@@ -153,9 +211,27 @@ public class LoginStatisticsController extends BaseController
      * @param endMonth   结束月
      * @return {@link List}<{@link Statistics}> Statistics列表
      */
-    public R<List<Statistics>> getLoginMonthUVCountList(int startYear, int startMonth,
-                                                        int endYear, int endMonth)
+    @ApiOperation("得到用户某些月用户登录的大致人数")
+    @GetMapping("/getLoginMonthUVCountList")
+    @ApiImplicitParams
+            (
+                    {
+                            @ApiImplicitParam(name = "startYear", value = "起始年",
+                                    dataType = "int", required = true),
+                            @ApiImplicitParam(name = "startMonth", value = "起始月",
+                                    dataType = "int", required = true),
+                            @ApiImplicitParam(name = "endYear", value = "结束年",
+                                    dataType = "int", required = true),
+                            @ApiImplicitParam(name = "endMonth", value = "结束月",
+                                    dataType = "int", required = true),
+                    }
+            )
+    public R<List<Statistics>> getLoginMonthUVCountList(@RequestParam int startYear,
+                                                        @RequestParam int startMonth,
+                                                        @RequestParam int endYear,
+                                                        @RequestParam int endMonth)
     {
-        return null;
+        return success(loginStatisticsService.getLoginMonthUVCountList(startYear, startMonth,
+                endYear, endMonth));
     }
 }
