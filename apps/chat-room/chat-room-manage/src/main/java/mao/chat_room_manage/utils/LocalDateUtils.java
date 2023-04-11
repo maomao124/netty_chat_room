@@ -63,6 +63,19 @@ public class LocalDateUtils
     }
 
     /**
+     * 判断当前时间是否晚于现在时间
+     *
+     * @param localDate 当地日期
+     */
+    public static void isAfterNow(LocalDate localDate)
+    {
+        if (localDate.isAfter(LocalDate.now()))
+        {
+            throw BizException.wrap("输入的时间不能晚于现在时间");
+        }
+    }
+
+    /**
      * 处理年信息
      *
      * @param year 年

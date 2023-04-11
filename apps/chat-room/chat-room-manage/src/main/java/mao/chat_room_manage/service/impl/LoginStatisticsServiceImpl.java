@@ -234,6 +234,8 @@ public class LoginStatisticsServiceImpl implements LoginStatisticsService
         //构建时间
         LocalDate startDate = LocalDate.of(startYear, startMonth, startDay);
         LocalDate endDate = LocalDate.of(endYear, endMonth, endDay);
+        //不能晚于现在时间
+        LocalDateUtils.isAfterNow(endDate);
         //得到天数差值
         long dayTimeDifference = LocalDateUtils.getDayTimeDifference(startDate, endDate);
         //防止时间间隔太长
@@ -243,6 +245,8 @@ public class LoginStatisticsServiceImpl implements LoginStatisticsService
         }
         log.debug("开始日期：" + startDate + ", 结束日期：" + endDate);
         log.debug("天数差值：" + dayTimeDifference);
+
+        dayTimeDifference++;
 
         List<Statistics> statisticsList = new ArrayList<>(Math.toIntExact(dayTimeDifference));
         List<String> keys = new ArrayList<>(Math.toIntExact(dayTimeDifference));
@@ -290,6 +294,8 @@ public class LoginStatisticsServiceImpl implements LoginStatisticsService
         //构建时间
         LocalDate startDate = LocalDate.of(startYear, startMonth, 1);
         LocalDate endDate = LocalDate.of(endYear, endMonth, 1);
+        //不能晚于现在时间
+        LocalDateUtils.isAfterNow(endDate);
         //得到月数差值
         long monthTimeDifference = LocalDateUtils.getMonthTimeDifference(startDate, endDate);
         //防止时间间隔太长
@@ -299,6 +305,8 @@ public class LoginStatisticsServiceImpl implements LoginStatisticsService
         }
         log.debug("开始日期：" + startDate + ", 结束日期：" + endDate);
         log.debug("月数差值：" + monthTimeDifference);
+
+        monthTimeDifference++;
 
         List<Statistics> statisticsList = new ArrayList<>(Math.toIntExact(monthTimeDifference));
         List<String> keys = new ArrayList<>(Math.toIntExact(monthTimeDifference));
@@ -340,13 +348,143 @@ public class LoginStatisticsServiceImpl implements LoginStatisticsService
     public List<Statistics> getLoginDayUVCountList(int startYear, int startMonth, int startDay,
                                                    int endYear, int endMonth, int endDay)
     {
-        return null;
+
+        LocalDateUtils.handlerYear(startYear);
+        LocalDateUtils.handlerMonth(startMonth);
+        LocalDateUtils.handlerDay(startDay);
+        LocalDateUtils.handlerYear(endYear);
+        LocalDateUtils.handlerMonth(endMonth);
+        LocalDateUtils.handlerDay(endDay);
+        //构建时间
+        LocalDate startDate = LocalDate.of(startYear, startMonth, startDay);
+        LocalDate endDate = LocalDate.of(endYear, endMonth, endDay);
+        //不能晚于现在时间
+        LocalDateUtils.isAfterNow(endDate);
+        //得到天数差值
+        long dayTimeDifference = LocalDateUtils.getDayTimeDifference(startDate, endDate);
+        //防止时间间隔太长
+        if (dayTimeDifference > 1000)
+        {
+            throw BizException.wrap("时间间隔太长");
+        }
+        log.debug("开始日期：" + startDate + ", 结束日期：" + endDate);
+        log.debug("天数差值：" + dayTimeDifference);
+
+        dayTimeDifference++;
+
+        List<Statistics> statisticsList = new ArrayList<>(Math.toIntExact(dayTimeDifference));
+        List<String> keys = new ArrayList<>(Math.toIntExact(dayTimeDifference));
+        List<String> times = new ArrayList<>(Math.toIntExact(dayTimeDifference));
+        //当天
+        String key = RedisConstants.login_day_uv_count_key + endDate.getYear() + ":" +
+                endDate.getMonthValue() + ":" + endDate.getDayOfMonth();
+        keys.add(key);
+        times.add(endDate.getYear() + "/" + endDate.getMonthValue() + "/" + endDate.getDayOfMonth());
+        for (int i = 1; i < 30; i++)
+        {
+            LocalDate localDate = endDate.minusDays(i);
+            key = RedisConstants.login_day_uv_count_key + localDate.getYear() + ":" +
+                    localDate.getMonthValue() + ":" + localDate.getDayOfMonth();
+            keys.add(key);
+            times.add(localDate.getYear() + "/" + localDate.getMonthValue() + "/" + localDate.getDayOfMonth());
+        }
+
+        List<Object> valueList = stringRedisTemplate.executePipelined(new SessionCallback<String>()
+        {
+            @Override
+            @SuppressWarnings("all")
+            public String execute(RedisOperations redisOperations) throws DataAccessException
+            {
+                keys.forEach(s ->
+                {
+                    redisOperations.opsForHyperLogLog().size(s);
+                });
+                return null;
+            }
+        });
+        Iterator<String> iterator = times.iterator();
+        for (Object value : valueList)
+        {
+            if (value == null)
+            {
+                statisticsList.add(new Statistics().setTime(iterator.next()).setCount(0L));
+            }
+            else
+            {
+                statisticsList.add(new Statistics().setTime(iterator.next()).setCount(Long.valueOf(value.toString())));
+            }
+        }
+        return statisticsList;
     }
 
     @Override
     public List<Statistics> getLoginMonthUVCountList(int startYear, int startMonth,
                                                      int endYear, int endMonth)
     {
-        return null;
+        LocalDateUtils.handlerYear(startYear);
+        LocalDateUtils.handlerMonth(startMonth);
+        LocalDateUtils.handlerYear(endYear);
+        LocalDateUtils.handlerMonth(endMonth);
+        //构建时间
+        LocalDate startDate = LocalDate.of(startYear, startMonth, 1);
+        LocalDate endDate = LocalDate.of(endYear, endMonth, 1);
+        //不能晚于现在时间
+        LocalDateUtils.isAfterNow(endDate);
+        //得到月数差值
+        long monthTimeDifference = LocalDateUtils.getMonthTimeDifference(startDate, endDate);
+        //防止时间间隔太长
+        if (monthTimeDifference > 240)
+        {
+            throw BizException.wrap("时间间隔太长");
+        }
+        log.debug("开始日期：" + startDate + ", 结束日期：" + endDate);
+        log.debug("月数差值：" + monthTimeDifference);
+
+        monthTimeDifference++;
+
+
+        List<Statistics> statisticsList = new ArrayList<>(Math.toIntExact(monthTimeDifference));
+        List<String> keys = new ArrayList<>(Math.toIntExact(monthTimeDifference));
+        List<String> times = new ArrayList<>(Math.toIntExact(monthTimeDifference));
+        //当天
+        String key = RedisConstants.login_month_uv_count_key + endDate.getYear() + ":" +
+                endDate.getMonthValue();
+        keys.add(key);
+        times.add(endDate.getYear() + "/" + endDate.getMonthValue());
+        for (int i = 1; i < 12; i++)
+        {
+            LocalDate localDate = endDate.minusMonths(i);
+            key = RedisConstants.login_day_count_key + localDate.getYear() + ":" +
+                    localDate.getMonthValue();
+            keys.add(key);
+            times.add(localDate.getYear() + "/" + localDate.getMonthValue());
+        }
+
+        List<Object> valueList = stringRedisTemplate.executePipelined(new SessionCallback<String>()
+        {
+            @Override
+            @SuppressWarnings("all")
+            public String execute(RedisOperations redisOperations) throws DataAccessException
+            {
+                keys.forEach(s ->
+                {
+                    redisOperations.opsForHyperLogLog().size(s);
+                });
+                return null;
+            }
+        });
+        Iterator<String> iterator = times.iterator();
+        for (Object value : valueList)
+        {
+            if (value == null)
+            {
+                statisticsList.add(new Statistics().setTime(iterator.next()).setCount(0L));
+            }
+            else
+            {
+                statisticsList.add(new Statistics().setTime(iterator.next()).setCount(Long.valueOf(value.toString())));
+            }
+        }
+        return statisticsList;
     }
 }
