@@ -24,7 +24,7 @@ import javax.annotation.Resource;
  * Date(创建日期)： 2023/4/5
  * Time(创建时间)： 14:39
  * Version(版本): 1.0
- * Description(描述)： 无
+ * Description(描述)： 统计
  */
 
 @Slf4j
@@ -43,7 +43,7 @@ public class StatisticsController extends BaseController
      * @param year  年
      * @param month 月
      * @param day   天
-     * @return int 某一天用户登录的总次数
+     * @return {@link R}<{@link Integer}> 某一天用户登录的总次数
      */
     @ApiOperation("得到某一天用户登录的总次数")
     @ApiImplicitParams(
@@ -66,7 +66,7 @@ public class StatisticsController extends BaseController
      *
      * @param year  年
      * @param month 月
-     * @return int 某一月用户登录的总次数
+     * @return {@link R}<{@link Integer}> 某一月用户登录的总次数
      */
     @ApiOperation("得到某月用户登录的总次数")
     @ApiImplicitParams(
@@ -88,7 +88,7 @@ public class StatisticsController extends BaseController
      * @param year  年
      * @param month 月
      * @param day   天
-     * @return int 某一天用户登录的大致人数
+     * @return {@link R}<{@link Integer}> 某一天用户登录的大致人数
      */
     @ApiOperation("得到某一天用户登录的大致人数")
     @ApiImplicitParams(
@@ -111,7 +111,7 @@ public class StatisticsController extends BaseController
      *
      * @param year  年
      * @param month 月
-     * @return int 某一月用户登录的大致人数
+     * @return {@link R}<{@link Integer}> 某一月用户登录的大致人数
      */
     @ApiOperation("得到某一月用户登录的大致人数")
     @ApiImplicitParams(
@@ -133,7 +133,7 @@ public class StatisticsController extends BaseController
      * @param year  年
      * @param month 月
      * @param day   天
-     * @return int  某一天用户注册的总次数
+     * @return {@link R}<{@link Integer}>  某一天用户注册的总次数
      */
     @ApiOperation("得到某一天用户注册的总次数")
     @ApiImplicitParams(
@@ -170,5 +170,142 @@ public class StatisticsController extends BaseController
                                             @RequestParam int month)
     {
         return success(statisticsService.getRegisterMonthCount(year, month));
+    }
+
+
+    /**
+     * 得到某一天聊天发送的条数（一个人可能发送多次聊天）
+     *
+     * @param year  年
+     * @param month 月
+     * @param day   天
+     * @return {@link R}<{@link Long}> 某一天聊天发送的条数
+     */
+    @ApiOperation("得到某一天聊天发送的条数")
+    @ApiImplicitParams(
+            {
+                    @ApiImplicitParam(name = "year", value = "年", dataType = "int", required = true),
+                    @ApiImplicitParam(name = "month", value = "月", dataType = "int", required = true),
+                    @ApiImplicitParam(name = "day", value = "日", dataType = "int", required = true)
+            }
+    )
+    @GetMapping("/getChatDayCount")
+    public R<Long> getChatDayCount(@RequestParam int year,
+                                   @RequestParam int month,
+                                   @RequestParam int day)
+    {
+        return success(statisticsService.getChatDayCount(year, month, day));
+    }
+
+    /**
+     * 得到某一月聊天发送的条数（一个人可能发送多次聊天）
+     *
+     * @param year  年
+     * @param month 月
+     * @return {@link R}<{@link Long}> 某一月聊天发送的条数
+     */
+    @ApiOperation("得到某一月聊天发送的条数")
+    @ApiImplicitParams(
+            {
+                    @ApiImplicitParam(name = "year", value = "年", dataType = "int", required = true),
+                    @ApiImplicitParam(name = "month", value = "月", dataType = "int", required = true)
+            }
+    )
+    @GetMapping("/getChatMonthCount")
+    public R<Long> getChatMonthCount(@RequestParam int year,
+                                     @RequestParam int month)
+    {
+        return success(statisticsService.getChatMonthCount(year, month));
+
+    }
+
+    /**
+     * 得到某一天群聊聊天发送的条数
+     *
+     * @param year  年
+     * @param month 月
+     * @param day   天
+     * @return {@link R}<{@link Long}> 某一天群聊聊天消息发送的条数
+     */
+    @ApiOperation("得到某一天群聊聊天发送的条数")
+    @ApiImplicitParams(
+            {
+                    @ApiImplicitParam(name = "year", value = "年", dataType = "int", required = true),
+                    @ApiImplicitParam(name = "month", value = "月", dataType = "int", required = true),
+                    @ApiImplicitParam(name = "day", value = "日", dataType = "int", required = true)
+            }
+    )
+    @GetMapping("/getGroupChatDayCount")
+    public R<Long> getGroupChatDayCount(@RequestParam int year,
+                                        @RequestParam int month,
+                                        @RequestParam int day)
+    {
+        return success(statisticsService.getGroupChatDayCount(year, month, day));
+    }
+
+    /**
+     * 得到某一月群聊聊天发送的条数
+     *
+     * @param year  年
+     * @param month 月
+     * @return {@link R}<{@link Long}> 某一月群聊聊天消息发送的条数
+     */
+    @ApiOperation("得到某一月群聊聊天发送的条数")
+    @ApiImplicitParams(
+            {
+                    @ApiImplicitParam(name = "year", value = "年", dataType = "int", required = true),
+                    @ApiImplicitParam(name = "month", value = "月", dataType = "int", required = true)
+            }
+    )
+    @GetMapping("/getGroupChatMonthCount")
+    public R<Long> getGroupChatMonthCount(@RequestParam int year,
+                                          @RequestParam int month)
+    {
+        return success(statisticsService.getGroupChatMonthCount(year, month));
+    }
+
+    /**
+     * 得到某一天群聊创建的次数
+     *
+     * @param year  年
+     * @param month 月
+     * @param day   天
+     * @return {@link R}<{@link Long}> 某一天群聊创建的次数
+     */
+    @ApiOperation("得到某一天群聊创建的次数")
+    @ApiImplicitParams(
+            {
+                    @ApiImplicitParam(name = "year", value = "年", dataType = "int", required = true),
+                    @ApiImplicitParam(name = "month", value = "月", dataType = "int", required = true),
+                    @ApiImplicitParam(name = "day", value = "日", dataType = "int", required = true)
+            }
+    )
+    @GetMapping("/getGroupCreateDayCount")
+    public R<Long> getGroupCreateDayCount(@RequestParam int year,
+                                          @RequestParam int month,
+                                          @RequestParam int day)
+    {
+        return success(statisticsService.getGroupCreateDayCount(year, month, day));
+    }
+
+    /**
+     * 得到某一月群聊创建的次数
+     *
+     * @param year  年
+     * @param month 月
+     * @return {@link R}<{@link Long}> 某一月群聊创建的次数
+     */
+    @ApiOperation("得到某一月群聊创建的次数")
+    @ApiImplicitParams(
+            {
+                    @ApiImplicitParam(name = "year", value = "年", dataType = "int", required = true),
+                    @ApiImplicitParam(name = "month", value = "月", dataType = "int", required = true)
+            }
+    )
+    @GetMapping("/getGroupCreateMonthCount")
+    public R<Long> getGroupCreateMonthCount(@RequestParam int year,
+                                            @RequestParam int month)
+    {
+        return success(statisticsService.getGroupCreateMonthCount(year, month));
     }
 }
