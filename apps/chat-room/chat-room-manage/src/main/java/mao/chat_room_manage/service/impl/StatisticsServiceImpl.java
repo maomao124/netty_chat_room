@@ -4,10 +4,15 @@ import lombok.extern.slf4j.Slf4j;
 import mao.chat_room_manage.service.StatisticsService;
 import mao.chat_room_server_api.constants.RedisConstants;
 import mao.tools_core.exception.BizException;
+import org.springframework.dao.DataAccessException;
+import org.springframework.data.redis.core.RedisOperations;
+import org.springframework.data.redis.core.SessionCallback;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.time.LocalDate;
+import java.util.*;
 
 /**
  * Project name(项目名称)：netty_chat_room
@@ -194,6 +199,47 @@ public class StatisticsServiceImpl implements StatisticsService
             return 0L;
         }
         return Long.parseLong(count);
+    }
+
+    @Override
+    public Map<String, Integer> getRecentMonthLoginDayCount()
+    {
+        //得到当前时间
+        LocalDate now = LocalDate.now();
+        Map<String, Integer> map = new TreeMap<>();
+        List<String> keys = new ArrayList<>(30);
+        List<String> times = new ArrayList<>(30);
+        //当天
+        String key = RedisConstants.login_day_count_key + now.getYear() + ":" +
+                now.getMonthValue() + ":" + now.getDayOfMonth();
+        keys.add(key);
+        times.add(now.getYear() + "/" + now.getMonthValue() + "/" + now.getDayOfMonth());
+        for (int i = 1; i < 30; i++)
+        {
+            LocalDate localDate = now.minusDays(i);
+            key = RedisConstants.login_day_count_key + localDate.getYear() + ":" +
+                    localDate.getMonthValue() + ":" + localDate.getDayOfMonth();
+            keys.add(key);
+            times.add(localDate.getYear() + "/" + localDate.getMonthValue() + "/" + localDate.getDayOfMonth());
+        }
+        List<String> valueList = stringRedisTemplate.opsForValue().multiGet(keys);
+        if (valueList == null)
+        {
+            return null;
+        }
+        Iterator<String> iterator = times.iterator();
+        for (String value : valueList)
+        {
+            if (value == null)
+            {
+                map.put(iterator.next(), 0);
+            }
+            else
+            {
+                map.put(iterator.next(), Integer.valueOf(value));
+            }
+        }
+        return map;
     }
 
     /**

@@ -517,3 +517,746 @@ docket：{chat_room_web_server=DocketInfo{title='管理服务', group='', descri
 2023-04-11 13:18:15.004 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 管理服务
 2023-04-11 13:18:15.023 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 管理服务
 2023-04-11 13:18:15.073 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:18:19.230 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:18:19.230 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/druid] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:18:19.231 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:19:10.859 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:19:10.859 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getChatDayCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:19:10.860 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:19:10.861 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:19:10.861 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:19:10.861 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:19:10.861 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 11
+2023-04-11 13:19:10.861 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 11
+2023-04-11 13:19:10.878 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:19:17.611 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:19:17.611 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getChatDayCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:19:17.613 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:19:17.613 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:19:17.613 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:19:17.613 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:19:17.613 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 10
+2023-04-11 13:19:17.613 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 10
+2023-04-11 13:19:17.616 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:19:28.912 DEBUG 7916 --- [http-nio-13546-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:19:28.912 DEBUG 7916 --- [http-nio-13546-exec-4] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getChatDayCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:19:28.913 DEBUG 7916 --- [http-nio-13546-exec-4] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:19:28.913 DEBUG 7916 --- [http-nio-13546-exec-4] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:19:28.913 DEBUG 7916 --- [http-nio-13546-exec-4] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:19:28.913 DEBUG 7916 --- [http-nio-13546-exec-4] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:19:28.913 DEBUG 7916 --- [http-nio-13546-exec-4] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 9
+2023-04-11 13:19:28.913 DEBUG 7916 --- [http-nio-13546-exec-4] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 9
+2023-04-11 13:19:28.914 DEBUG 7916 --- [http-nio-13546-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:19:32.575 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:19:32.576 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getChatDayCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:19:32.576 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:19:32.576 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:19:32.576 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:19:32.577 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:19:32.577 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:19:32.577 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:19:32.578 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:19:35.456 DEBUG 7916 --- [http-nio-13546-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:19:35.456 DEBUG 7916 --- [http-nio-13546-exec-8] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getChatDayCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:19:35.457 DEBUG 7916 --- [http-nio-13546-exec-8] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:19:35.457 DEBUG 7916 --- [http-nio-13546-exec-8] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:19:35.457 DEBUG 7916 --- [http-nio-13546-exec-8] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:19:35.457 DEBUG 7916 --- [http-nio-13546-exec-8] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:19:35.457 DEBUG 7916 --- [http-nio-13546-exec-8] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 9
+2023-04-11 13:19:35.457 DEBUG 7916 --- [http-nio-13546-exec-8] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 9
+2023-04-11 13:19:35.458 DEBUG 7916 --- [http-nio-13546-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:19:38.669 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:19:38.669 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getChatDayCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:19:38.671 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:19:38.671 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:19:38.671 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:19:38.671 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:19:38.671 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 9
+2023-04-11 13:19:38.671 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 9
+2023-04-11 13:19:38.673 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:19:40.010 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:19:40.010 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getChatDayCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:19:40.011 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:19:40.012 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:19:40.012 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:19:40.012 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:19:40.012 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 9
+2023-04-11 13:19:40.012 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 9
+2023-04-11 13:19:40.013 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:19:47.612 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:19:47.613 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getChatMonthCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:19:47.613 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:19:47.613 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:19:47.613 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:19:47.613 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:19:47.615 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:19:57.204 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:19:57.204 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getChatDayCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:19:57.208  WARN 7916 --- [http-nio-13546-exec-2] m.t.h.DefaultGlobalExceptionHandler      : MissingServletRequestParameterException:
+
+org.springframework.web.bind.MissingServletRequestParameterException: Required int parameter 'year' is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at mao.tools_xss.filter.XssFilter.doFilter(XssFilter.java:109) [classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) [spring-boot-actuator-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:747) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-04-11 13:19:57.214 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:19:57.752 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:19:57.752 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getChatDayCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:19:57.753  WARN 7916 --- [http-nio-13546-exec-6] m.t.h.DefaultGlobalExceptionHandler      : MissingServletRequestParameterException:
+
+org.springframework.web.bind.MissingServletRequestParameterException: Required int parameter 'year' is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at mao.tools_xss.filter.XssFilter.doFilter(XssFilter.java:109) [classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) [spring-boot-actuator-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:747) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-04-11 13:19:57.753 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:20:01.393 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:20:01.394 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getChatDayCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:20:01.394 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:20:01.394 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:20:01.394 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:20:01.394 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:20:01.394 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 8
+2023-04-11 13:20:01.395 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 8
+2023-04-11 13:20:01.396 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:20:03.794 DEBUG 7916 --- [http-nio-13546-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:20:03.794 DEBUG 7916 --- [http-nio-13546-exec-4] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/doc.html] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:20:03.795 DEBUG 7916 --- [http-nio-13546-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:20:04.018 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:20:04.018 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/swagger-resources/configuration/ui] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:20:04.019 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:20:04.019 DEBUG 7916 --- [http-nio-13546-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:20:04.019 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/swagger-resources] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:20:04.019 DEBUG 7916 --- [http-nio-13546-exec-8] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/favicon.ico] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:20:04.019 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:20:04.020 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:20:04.020 DEBUG 7916 --- [http-nio-13546-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:20:04.029 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:20:04.029 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/v2/api-docs] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:20:04.029 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 管理服务
+2023-04-11 13:20:04.029 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 管理服务
+2023-04-11 13:20:04.035 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:20:06.618 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:20:06.618 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getChatDayCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:20:06.618 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:20:06.618 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:20:06.618 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:20:06.619 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:20:06.619 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 9
+2023-04-11 13:20:06.619 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 9
+2023-04-11 13:20:06.620 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:20:10.607 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:20:10.607 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getChatDayCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:20:10.608 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:20:10.608 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:20:10.608 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:20:10.608 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:20:10.608 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 10
+2023-04-11 13:20:10.608 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 10
+2023-04-11 13:20:10.609 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:20:11.186 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:20:11.186 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getChatDayCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:20:11.187 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:20:11.187 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:20:11.187 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:20:11.187 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:20:11.187 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 10
+2023-04-11 13:20:11.187 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 10
+2023-04-11 13:20:11.189 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:20:11.699 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:20:11.700 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getChatDayCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:20:11.700 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:20:11.700 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:20:11.700 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:20:11.700 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:20:11.700 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 10
+2023-04-11 13:20:11.700 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 10
+2023-04-11 13:20:11.702 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:20:13.364 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:20:13.365 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getChatDayCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:20:13.365 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:20:13.365 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:20:13.365 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:20:13.365 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:20:13.365 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 10
+2023-04-11 13:20:13.365 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 10
+2023-04-11 13:20:13.367 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:20:23.045 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:20:23.045 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getGroupChatDayCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:20:23.046 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:20:23.046 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:20:23.046 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:20:23.046 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:20:23.046 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 9
+2023-04-11 13:20:23.046 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 9
+2023-04-11 13:20:23.048 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:20:28.845 DEBUG 7916 --- [http-nio-13546-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:20:28.845 DEBUG 7916 --- [http-nio-13546-exec-5] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getGroupChatDayCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:20:28.846 DEBUG 7916 --- [http-nio-13546-exec-5] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:20:28.846 DEBUG 7916 --- [http-nio-13546-exec-5] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:20:28.846 DEBUG 7916 --- [http-nio-13546-exec-5] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:20:28.846 DEBUG 7916 --- [http-nio-13546-exec-5] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:20:28.846 DEBUG 7916 --- [http-nio-13546-exec-5] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 10
+2023-04-11 13:20:28.846 DEBUG 7916 --- [http-nio-13546-exec-5] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 10
+2023-04-11 13:20:28.847 DEBUG 7916 --- [http-nio-13546-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:20:44.613 DEBUG 7916 --- [http-nio-13546-exec-3] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:20:44.613 DEBUG 7916 --- [http-nio-13546-exec-3] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getGroupChatMonthCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:20:44.613 DEBUG 7916 --- [http-nio-13546-exec-3] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:20:44.613 DEBUG 7916 --- [http-nio-13546-exec-3] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:20:44.613 DEBUG 7916 --- [http-nio-13546-exec-3] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 13
+2023-04-11 13:20:44.613 DEBUG 7916 --- [http-nio-13546-exec-3] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 13
+2023-04-11 13:20:44.614  WARN 7916 --- [http-nio-13546-exec-3] m.t.h.DefaultGlobalExceptionHandler      : BizException:
+
+mao.tools_core.exception.BizException: 输入的月份必须在1到12之间
+	at mao.tools_core.exception.BizException.wrap(BizException.java:42) ~[classes/:na]
+	at mao.chat_room_manage.service.impl.StatisticsServiceImpl.handlerMonth(StatisticsServiceImpl.java:225) ~[classes/:na]
+	at mao.chat_room_manage.service.impl.StatisticsServiceImpl.getGroupChatMonthCount(StatisticsServiceImpl.java:160) ~[classes/:na]
+	at mao.chat_room_manage.controller.StatisticsController.getGroupChatMonthCount(StatisticsController.java:264) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at mao.tools_xss.filter.XssFilter.doFilter(XssFilter.java:109) [classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) [spring-boot-actuator-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:747) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-04-11 13:20:44.615 DEBUG 7916 --- [http-nio-13546-exec-3] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:20:54.527 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:20:54.527 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getGroupChatMonthCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:20:54.527 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:20:54.527 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:20:54.527 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 12
+2023-04-11 13:20:54.527 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 12
+2023-04-11 13:20:54.528 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:21:02.488 DEBUG 7916 --- [http-nio-13546-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:21:02.488 DEBUG 7916 --- [http-nio-13546-exec-8] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getGroupChatMonthCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:21:02.488 DEBUG 7916 --- [http-nio-13546-exec-8] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:21:02.488 DEBUG 7916 --- [http-nio-13546-exec-8] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:21:02.488 DEBUG 7916 --- [http-nio-13546-exec-8] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:21:02.488 DEBUG 7916 --- [http-nio-13546-exec-8] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:21:02.490 DEBUG 7916 --- [http-nio-13546-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:21:15.048 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:21:15.048 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getGroupCreateMonthCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:21:15.049 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:21:15.049 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:21:15.049 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:21:15.049 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:21:15.051 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:21:20.455 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:21:20.455 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getLoginDayCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:21:20.455 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:21:20.455 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:21:20.455 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:21:20.455 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:21:20.456 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:21:20.456 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:21:20.457 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:21:24.873 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:21:24.874 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getLoginDayCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:21:24.874 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:21:24.874 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:21:24.874 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:21:24.874 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:21:24.874 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 9
+2023-04-11 13:21:24.874 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 9
+2023-04-11 13:21:24.875 DEBUG 7916 --- [http-nio-13546-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:21:29.938 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:21:29.938 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getLoginDayCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:21:29.938 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:21:29.938 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:21:29.939 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:21:29.939 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:21:29.939 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 10
+2023-04-11 13:21:29.939 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 10
+2023-04-11 13:21:29.939 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:21:48.265 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:21:48.265 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getLoginDayUVCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:21:48.266 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:21:48.266 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:21:48.266 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:21:48.266 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:21:48.266 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:21:48.266 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:21:48.267 DEBUG 7916 --- [http-nio-13546-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:21:52.508 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:21:52.508 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getLoginDayUVCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:21:52.509 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:21:52.509 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:21:52.509 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:21:52.509 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:21:52.509 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 9
+2023-04-11 13:21:52.509 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 9
+2023-04-11 13:21:52.510 DEBUG 7916 --- [http-nio-13546-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:21:55.802 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:21:55.802 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getLoginDayUVCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:21:55.802 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:21:55.803 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:21:55.803 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:21:55.803 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:21:55.803 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 10
+2023-04-11 13:21:55.803 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 10
+2023-04-11 13:21:55.804 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:21:57.698 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:21:57.699 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getLoginDayUVCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:21:57.699 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:21:57.699 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:21:57.699 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:21:57.699 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:21:57.699 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 10
+2023-04-11 13:21:57.699 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 10
+2023-04-11 13:21:57.700 DEBUG 7916 --- [http-nio-13546-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:22:05.627 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:22:05.627 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getLoginMonthCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:22:05.627 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:22:05.627 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:22:05.627 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:22:05.627 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:22:05.629 DEBUG 7916 --- [http-nio-13546-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:22:29.313 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:22:29.313 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getLoginMonthUVCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:22:29.313 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:22:29.313 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:22:29.313 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:22:29.313 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:22:29.314 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:22:40.701 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:22:40.701 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getRegisterMonthCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:22:40.701 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 2023
+2023-04-11 13:22:40.701 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 2023
+2023-04-11 13:22:40.701 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 4
+2023-04-11 13:22:40.701 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 4
+2023-04-11 13:22:40.702 DEBUG 7916 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:22:48.638 DEBUG 7916 --- [http-nio-13546-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:22:48.638 DEBUG 7916 --- [http-nio-13546-exec-5] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/nettyServer] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:22:48.643  INFO 7916 --- [http-nio-13546-exec-5] com.alibaba.nacos.client.naming          : new ips(6) service: DEFAULT_GROUP@@chat-room-netty-server -> [{"instanceId":"192.168.15.1#9692#DEFAULT#DEFAULT_GROUP@@chat-room-netty-server","ip":"192.168.15.1","port":9692,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-netty-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000},{"instanceId":"192.168.15.1#9292#DEFAULT#DEFAULT_GROUP@@chat-room-netty-server","ip":"192.168.15.1","port":9292,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-netty-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000},{"instanceId":"192.168.15.1#9392#DEFAULT#DEFAULT_GROUP@@chat-room-netty-server","ip":"192.168.15.1","port":9392,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-netty-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000},{"instanceId":"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-netty-server","ip":"192.168.15.1","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-netty-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000},{"instanceId":"192.168.15.1#9092#DEFAULT#DEFAULT_GROUP@@chat-room-netty-server","ip":"192.168.15.1","port":9092,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-netty-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000},{"instanceId":"192.168.15.1#9192#DEFAULT#DEFAULT_GROUP@@chat-room-netty-server","ip":"192.168.15.1","port":9192,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-netty-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2023-04-11 13:22:48.648  INFO 7916 --- [http-nio-13546-exec-5] com.alibaba.nacos.client.naming          : current ips:(6) service: DEFAULT_GROUP@@chat-room-netty-server -> [{"instanceId":"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-netty-server","ip":"192.168.15.1","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-netty-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000},{"instanceId":"192.168.15.1#9192#DEFAULT#DEFAULT_GROUP@@chat-room-netty-server","ip":"192.168.15.1","port":9192,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-netty-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000},{"instanceId":"192.168.15.1#9092#DEFAULT#DEFAULT_GROUP@@chat-room-netty-server","ip":"192.168.15.1","port":9092,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-netty-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000},{"instanceId":"192.168.15.1#9692#DEFAULT#DEFAULT_GROUP@@chat-room-netty-server","ip":"192.168.15.1","port":9692,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-netty-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000},{"instanceId":"192.168.15.1#9292#DEFAULT#DEFAULT_GROUP@@chat-room-netty-server","ip":"192.168.15.1","port":9292,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-netty-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000},{"instanceId":"192.168.15.1#9392#DEFAULT#DEFAULT_GROUP@@chat-room-netty-server","ip":"192.168.15.1","port":9392,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-netty-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2023-04-11 13:22:48.651 DEBUG 7916 --- [http-nio-13546-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:47:55.519  WARN 7916 --- [Thread-20] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-04-11 13:47:55.519  WARN 7916 --- [Thread-20] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-04-11 13:47:55.519  WARN 7916 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-04-11 13:47:55.520  WARN 7916 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-04-11 13:47:55.521  INFO 7916 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-04-11 13:47:55.530  INFO 7916 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2023-04-11 13:47:55.530  INFO 7916 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@chat-room-manage:192.168.15.1:13546 from beat map.
+2023-04-11 13:47:55.530  INFO 7916 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 2ed0bfb2-2566-4d2c-b50e-3b107d25cd06 deregistering service DEFAULT_GROUP@@chat-room-manage with instance: Instance{instanceId='null', ip='192.168.15.1', port=13546, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-04-11 13:47:55.535  INFO 7916 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2023-04-11 13:47:55.535  INFO 7916 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-04-11 13:47:55.535  INFO 7916 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-04-11 13:47:55.535  INFO 7916 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-04-11 13:47:56.545  INFO 7916 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.15.1\",\"port\":8080,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-manage\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@chat-room-manage\",\"ephemeral\":false},{\"ip\":\"192.168.15.1\",\"port\":13546,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.15.1#13546#DEFAULT#DEFAULT_GROUP@@chat-room-manage\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/manage/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@chat-room-manage\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@chat-room-manage\",\"name\":\"DEFAULT_GROUP@@chat-room-manage\",\"cacheMillis\":10000,\"lastRefTime\":1681192076545,\"checksum\":\"8065dd6471de467f3ab2e044af20a0a6\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":77206997366700} from /58.45.168.206
+2023-04-11 13:47:58.567  INFO 7916 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-04-11 13:48:01.602  INFO 7916 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-04-11 13:48:01.602  INFO 7916 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-04-11 13:48:01.602  INFO 7916 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-04-11 13:48:01.602  INFO 7916 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-04-11 13:48:01.602  INFO 7916 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-04-11 13:48:01.602  WARN 7916 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-04-11 13:48:01.602  WARN 7916 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-04-11 13:48:01.602  INFO 7916 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-04-11 13:48:01.603  INFO 7916 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-04-11 13:48:01.603  INFO 7916 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-04-11 13:48:01.603  INFO 7916 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-04-11 13:48:01.604  WARN 7916 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-04-11 13:48:01.778 DEBUG 7916 --- [SpringContextShutdownHook] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] destroy
+2023-04-11 13:48:07.568  WARN 19424 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[chat-room-manage] & group[DEFAULT_GROUP]
+2023-04-11 13:48:07.573  INFO 19424 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-chat-room-manage-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-chat-room-manage.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-chat-room-manage,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-04-11 13:48:07.592  INFO 19424 --- [main] m.c.ChatRoomManageApplication            : The following profiles are active: dev
+2023-04-11 13:48:08.082  INFO 19424 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-04-11 13:48:08.083  INFO 19424 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-04-11 13:48:08.097  INFO 19424 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2023-04-11 13:48:08.121  WARN 19424 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-04-11 13:48:08.194  INFO 19424 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=263abfb4-dafe-3bda-8ec0-7000efb1c23a
+2023-04-11 13:48:08.388  INFO 19424 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 13546 (http)
+2023-04-11 13:48:08.392  INFO 19424 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-11 13:48:08.393  INFO 19424 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-04-11 13:48:08.454  INFO 19424 --- [main] o.a.c.c.C.[.[localhost].[/manage]        : Initializing Spring embedded WebApplicationContext
+2023-04-11 13:48:08.454  INFO 19424 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 856 ms
+2023-04-11 13:48:08.456  INFO 19424 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2023-04-11 13:48:08.526 DEBUG 19424 --- [main] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] init start ...
+2023-04-11 13:48:08.549 DEBUG 19424 --- [main] mao.tools_xss.filter.XssFilter           : ignorePathList=null
+2023-04-11 13:48:08.552 DEBUG 19424 --- [main] mao.tools_xss.filter.XssFilter           : ignoreParamValueList=["samlp:LogoutRequest"]
+2023-04-11 13:48:08.552 DEBUG 19424 --- [main] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] init end
+2023-04-11 13:48:08.558  INFO 19424 --- [main] m.c.config.ExceptionConfig               : 初始化 ExceptionConfig
+2023-04-11 13:48:09.039  INFO 19424 --- [main] m.c.utils.ClusterUtils                   : 应用程序名称：chat-room-manage
+2023-04-11 13:48:09.039  INFO 19424 --- [main] m.c.utils.ClusterUtils                   : 初始化 ClusterUtils
+2023-04-11 13:48:09.047  INFO 19424 --- [main] m.t.config.RedissonConfig                : 初始化 RedissonConfig
+2023-04-11 13:48:09.048  INFO 19424 --- [main] m.t.config.RedissonConfig                : 单机模式redis:127.0.0.1:6379
+2023-04-11 13:48:09.211  INFO 19424 --- [main] org.redisson.Version                     : Redisson 3.17.0
+2023-04-11 13:48:09.781  INFO 19424 --- [redisson-netty-2-17] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-04-11 13:48:09.786  INFO 19424 --- [redisson-netty-2-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-04-11 13:48:10.028  INFO 19424 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-04-11 13:48:10.028  INFO 19424 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-04-11 13:48:10.029  INFO 19424 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-04-11 13:48:10.086  INFO 19424 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoint(s) beneath base path '/actuator'
+2023-04-11 13:48:10.113  WARN 19424 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-04-11 13:48:10.113  INFO 19424 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-04-11 13:48:10.114  WARN 19424 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-04-11 13:48:10.114  INFO 19424 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-04-11 13:48:10.169  INFO 19424 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-04-11 13:48:10.215  INFO 19424 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-04-11 13:48:10.224  INFO 19424 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2023-04-11 13:48:10.224  INFO 19424 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2023-04-11 13:48:10.227  INFO 19424 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2023-04-11 13:48:10.229  INFO 19424 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2023-04-11 13:48:10.232  INFO 19424 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2023-04-11 13:48:10.244  INFO 19424 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/D:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8b%e6%9c%9f/netty_chat_room/apps/chat-room/chat-room-manage/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2023-04-11 13:48:10.372  INFO 19424 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-04-11 13:48:10.373  INFO 19424 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-04-11 13:48:10.393  INFO 19424 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-04-11 13:48:10.393  INFO 19424 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/D:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8b%e6%9c%9f/netty_chat_room/apps/chat-room/chat-room-manage/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2023-04-11 13:48:10.394  INFO 19424 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-04-11 13:48:10.394  INFO 19424 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-04-11 13:48:10.397  INFO 19424 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-04-11 13:48:10.406  INFO 19424 --- [main] m.c.config.RestTemplateConfig            : 初始化 RestTemplateConfig
+2023-04-11 13:48:10.465  INFO 19424 --- [main] m.c.config.ServerConfig                  : 初始化 ServerConfig
+2023-04-11 13:48:10.467  INFO 19424 --- [main] m.c.protocol.ServerMessageCodecSharable  : 初始化 ServerMessageCodecSharable
+2023-04-11 13:48:10.467  INFO 19424 --- [main] m.t.config.RedisLockServiceConfig        : 初始化 RedisLockServiceConfig
+2023-04-11 13:48:10.469  INFO 19424 --- [main] m.t.config.RedisUtilsConfig              : 初始化 RedisUtilsConfig
+2023-04-11 13:48:10.489  INFO 19424 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2023-04-11 13:48:10.496  INFO 19424 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-04-11 13:48:10.500  INFO 19424 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-04-11 13:48:10.500  INFO 19424 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{chat_room_web_server=DocketInfo{title='管理服务', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.chat_room_manage', basePath=[], excludePath=[]}}
+
+2023-04-11 13:48:10.803  INFO 19424 --- [main] com.alibaba.nacos.client.naming          : new ips(2) service: DEFAULT_GROUP@@chat-room-manage@@DEFAULT -> [{"instanceId":"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-manage","ip":"192.168.15.1","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-manage","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000},{"instanceId":"192.168.15.1#13546#DEFAULT#DEFAULT_GROUP@@chat-room-manage","ip":"192.168.15.1","port":13546,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-manage","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/manage/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-04-11 13:48:10.809  INFO 19424 --- [main] com.alibaba.nacos.client.naming          : current ips:(2) service: DEFAULT_GROUP@@chat-room-manage@@DEFAULT -> [{"instanceId":"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-manage","ip":"192.168.15.1","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-manage","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000},{"instanceId":"192.168.15.1#13546#DEFAULT#DEFAULT_GROUP@@chat-room-manage","ip":"192.168.15.1","port":13546,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-manage","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/manage/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-04-11 13:48:10.810  INFO 19424 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-04-11 13:48:10.824  INFO 19424 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-04-11 13:48:10.843  INFO 19424 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-04-11 13:48:10.924  INFO 19424 --- [main] m.c.config.FeignRequestInterceptor       : 初始化 FeignRequestInterceptor
+2023-04-11 13:48:10.938  INFO 19424 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 13546 (http) with context path '/manage'
+2023-04-11 13:48:11.162  INFO 19424 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] 2ed0bfb2-2566-4d2c-b50e-3b107d25cd06 registering service DEFAULT_GROUP@@chat-room-manage with instance: Instance{instanceId='null', ip='192.168.15.1', port=13546, weight=1.0, healthy=true, enabled=true, ephemeral=false, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=/manage/actuator}}
+2023-04-11 13:48:11.165  INFO 19424 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP chat-room-manage 192.168.15.1:13546 register finished
+2023-04-11 13:48:11.167  INFO 19424 --- [main] m.c.ChatRoomManageApplication            : Started ChatRoomManageApplication in 4.543 seconds (JVM running for 5.098)
+2023-04-11 13:48:11.170  INFO 19424 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-manage.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-04-11 13:48:11.171  INFO 19424 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-manage.yml, group=DEFAULT_GROUP, cnt=1
+2023-04-11 13:48:11.173  INFO 19424 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-manage-dev.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-04-11 13:48:11.173  INFO 19424 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-manage-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-04-11 13:48:11.173  INFO 19424 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] common.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-04-11 13:48:11.173  INFO 19424 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-04-11 13:48:11.173  INFO 19424 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-manage+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-04-11 13:48:11.174  INFO 19424 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-manage, group=DEFAULT_GROUP, cnt=1
+2023-04-11 13:48:11.174  INFO 19424 --- [main] m.c.ChatRoomManageApplication            : 应用chat-room-manage启动成功!swagger地址：http://58.45.168.206:13546/manage/doc.html  或者：http://127.0.0.1:13546/manage/doc.html
+2023-04-11 13:48:11.174  INFO 19424 --- [main] m.c.ChatRoomManageApplication            : 数据库监控地址：http://58.45.168.206:13546/manage/druid  或者：http://127.0.0.1:13546/manage/druid
+2023-04-11 13:48:11.174  INFO 19424 --- [main] m.c.ChatRoomManageApplication            : 启动耗时：4618ms
+2023-04-11 13:48:11.364  INFO 19424 --- [RMI TCP Connection(4)-58.45.168.206] o.a.c.c.C.[.[localhost].[/manage]        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-11 13:48:11.364  INFO 19424 --- [RMI TCP Connection(4)-58.45.168.206] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-11 13:48:11.367  INFO 19424 --- [RMI TCP Connection(4)-58.45.168.206] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-04-11 13:48:12.179  INFO 19424 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.15.1\",\"port\":8080,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-manage\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@chat-room-manage\",\"ephemeral\":false},{\"ip\":\"192.168.15.1\",\"port\":13546,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.15.1#13546#DEFAULT#DEFAULT_GROUP@@chat-room-manage\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/manage/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@chat-room-manage\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@chat-room-manage\",\"name\":\"DEFAULT_GROUP@@chat-room-manage\",\"cacheMillis\":10000,\"lastRefTime\":1681192092178,\"checksum\":\"f255a44b7b75aee52f2d3d148dbb02ff\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":77222630260800} from /58.45.168.206
+2023-04-11 13:48:18.945 DEBUG 19424 --- [http-nio-13546-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:48:18.945 DEBUG 19424 --- [http-nio-13546-exec-3] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:48:18.945 DEBUG 19424 --- [http-nio-13546-exec-4] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/swagger-resources] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:48:18.945 DEBUG 19424 --- [http-nio-13546-exec-3] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/swagger-resources/configuration/ui] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:48:18.966 DEBUG 19424 --- [http-nio-13546-exec-3] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:48:18.966 DEBUG 19424 --- [http-nio-13546-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:48:18.979 DEBUG 19424 --- [http-nio-13546-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:48:18.979 DEBUG 19424 --- [http-nio-13546-exec-5] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/v2/api-docs] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:48:18.982 DEBUG 19424 --- [http-nio-13546-exec-5] mao.tools_xss.utils.XssUtils             :  start read XSS configfile [antisamy-slashdot-1.4.4.xml]
+2023-04-11 13:48:18.987 DEBUG 19424 --- [http-nio-13546-exec-5] mao.tools_xss.utils.XssUtils             : read XSS configfile [antisamy-slashdot-1.4.4.xml] success
+2023-04-11 13:48:18.988 DEBUG 19424 --- [http-nio-13546-exec-5] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 管理服务
+2023-04-11 13:48:19.008 DEBUG 19424 --- [http-nio-13546-exec-5] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 管理服务
+2023-04-11 13:48:19.062 DEBUG 19424 --- [http-nio-13546-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:48:22.365  INFO 19424 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.15.1\",\"port\":8080,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-manage\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@chat-room-manage\",\"ephemeral\":false},{\"ip\":\"192.168.15.1\",\"port\":13546,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.15.1#13546#DEFAULT#DEFAULT_GROUP@@chat-room-manage\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/manage/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@chat-room-manage\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@chat-room-manage\",\"name\":\"DEFAULT_GROUP@@chat-room-manage\",\"cacheMillis\":10000,\"lastRefTime\":1681192102364,\"checksum\":\"f255a44b7b75aee52f2d3d148dbb02ff\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":77232816129500} from /58.45.168.206
+2023-04-11 13:48:22.365  INFO 19424 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : modified ips(1) service: DEFAULT_GROUP@@chat-room-manage@@DEFAULT -> [{"instanceId":"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-manage","ip":"192.168.15.1","port":8080,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-manage","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-04-11 13:48:22.370  INFO 19424 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : current ips:(2) service: DEFAULT_GROUP@@chat-room-manage@@DEFAULT -> [{"instanceId":"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-manage","ip":"192.168.15.1","port":8080,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-manage","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000},{"instanceId":"192.168.15.1#13546#DEFAULT#DEFAULT_GROUP@@chat-room-manage","ip":"192.168.15.1","port":13546,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-manage","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/manage/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-04-11 13:48:25.726 DEBUG 19424 --- [http-nio-13546-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:48:25.727 DEBUG 19424 --- [http-nio-13546-exec-7] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getRecentMonthLoginDayCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:48:25.761 DEBUG 19424 --- [http-nio-13546-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:50:17.970  WARN 19424 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-04-11 13:50:17.970  WARN 19424 --- [Thread-19] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-04-11 13:50:17.970  WARN 19424 --- [Thread-19] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-04-11 13:50:17.970  WARN 19424 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-04-11 13:50:17.971  INFO 19424 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-04-11 13:50:17.977  INFO 19424 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2023-04-11 13:50:17.978  INFO 19424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@chat-room-manage:192.168.15.1:13546 from beat map.
+2023-04-11 13:50:17.978  INFO 19424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 2ed0bfb2-2566-4d2c-b50e-3b107d25cd06 deregistering service DEFAULT_GROUP@@chat-room-manage with instance: Instance{instanceId='null', ip='192.168.15.1', port=13546, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-04-11 13:50:17.980  INFO 19424 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2023-04-11 13:50:17.980  INFO 19424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-04-11 13:50:17.980  INFO 19424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-04-11 13:50:17.980  INFO 19424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-04-11 13:50:18.986  INFO 19424 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.15.1\",\"port\":8080,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-manage\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@chat-room-manage\",\"ephemeral\":false},{\"ip\":\"192.168.15.1\",\"port\":13546,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.15.1#13546#DEFAULT#DEFAULT_GROUP@@chat-room-manage\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/manage/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@chat-room-manage\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@chat-room-manage\",\"name\":\"DEFAULT_GROUP@@chat-room-manage\",\"cacheMillis\":10000,\"lastRefTime\":1681192218985,\"checksum\":\"8065dd6471de467f3ab2e044af20a0a6\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":77349437676600} from /58.45.168.206
+2023-04-11 13:50:21.010  INFO 19424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-04-11 13:50:24.048  INFO 19424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-04-11 13:50:24.048  INFO 19424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-04-11 13:50:24.049  INFO 19424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-04-11 13:50:24.049  INFO 19424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-04-11 13:50:24.049  INFO 19424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-04-11 13:50:24.049  WARN 19424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-04-11 13:50:24.049  WARN 19424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-04-11 13:50:24.049  INFO 19424 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-04-11 13:50:24.049  INFO 19424 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-04-11 13:50:24.049  INFO 19424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-04-11 13:50:24.051  INFO 19424 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-04-11 13:50:24.052  WARN 19424 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-04-11 13:50:24.234 DEBUG 19424 --- [SpringContextShutdownHook] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] destroy
+2023-04-11 13:50:29.135  WARN 18668 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[chat-room-manage] & group[DEFAULT_GROUP]
+2023-04-11 13:50:29.139  INFO 18668 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-chat-room-manage-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-chat-room-manage.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-chat-room-manage,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-04-11 13:50:29.160  INFO 18668 --- [main] m.c.ChatRoomManageApplication            : The following profiles are active: dev
+2023-04-11 13:50:29.640  INFO 18668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-04-11 13:50:29.641  INFO 18668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-04-11 13:50:29.654  INFO 18668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2023-04-11 13:50:29.677  WARN 18668 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-04-11 13:50:29.751  INFO 18668 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=263abfb4-dafe-3bda-8ec0-7000efb1c23a
+2023-04-11 13:50:29.949  INFO 18668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 13546 (http)
+2023-04-11 13:50:29.954  INFO 18668 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-11 13:50:29.954  INFO 18668 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-04-11 13:50:30.010  INFO 18668 --- [main] o.a.c.c.C.[.[localhost].[/manage]        : Initializing Spring embedded WebApplicationContext
+2023-04-11 13:50:30.010  INFO 18668 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 843 ms
+2023-04-11 13:50:30.011  INFO 18668 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2023-04-11 13:50:30.085 DEBUG 18668 --- [main] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] init start ...
+2023-04-11 13:50:30.109 DEBUG 18668 --- [main] mao.tools_xss.filter.XssFilter           : ignorePathList=null
+2023-04-11 13:50:30.111 DEBUG 18668 --- [main] mao.tools_xss.filter.XssFilter           : ignoreParamValueList=["samlp:LogoutRequest"]
+2023-04-11 13:50:30.111 DEBUG 18668 --- [main] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] init end
+2023-04-11 13:50:30.116  INFO 18668 --- [main] m.c.config.ExceptionConfig               : 初始化 ExceptionConfig
+2023-04-11 13:50:30.705  INFO 18668 --- [main] m.c.utils.ClusterUtils                   : 应用程序名称：chat-room-manage
+2023-04-11 13:50:30.705  INFO 18668 --- [main] m.c.utils.ClusterUtils                   : 初始化 ClusterUtils
+2023-04-11 13:50:30.713  INFO 18668 --- [main] m.t.config.RedissonConfig                : 初始化 RedissonConfig
+2023-04-11 13:50:30.716  INFO 18668 --- [main] m.t.config.RedissonConfig                : 单机模式redis:127.0.0.1:6379
+2023-04-11 13:50:30.888  INFO 18668 --- [main] org.redisson.Version                     : Redisson 3.17.0
+2023-04-11 13:50:31.467  INFO 18668 --- [redisson-netty-2-15] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-04-11 13:50:31.472  INFO 18668 --- [redisson-netty-2-18] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-04-11 13:50:31.700  INFO 18668 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-04-11 13:50:31.701  INFO 18668 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-04-11 13:50:31.701  INFO 18668 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-04-11 13:50:31.759  INFO 18668 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoint(s) beneath base path '/actuator'
+2023-04-11 13:50:31.787  WARN 18668 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-04-11 13:50:31.787  INFO 18668 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-04-11 13:50:31.789  WARN 18668 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-04-11 13:50:31.790  INFO 18668 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-04-11 13:50:31.849  INFO 18668 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-04-11 13:50:31.898  INFO 18668 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-04-11 13:50:31.906  INFO 18668 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2023-04-11 13:50:31.907  INFO 18668 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2023-04-11 13:50:31.911  INFO 18668 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2023-04-11 13:50:31.913  INFO 18668 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2023-04-11 13:50:31.916  INFO 18668 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2023-04-11 13:50:31.927  INFO 18668 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/D:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8b%e6%9c%9f/netty_chat_room/apps/chat-room/chat-room-manage/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2023-04-11 13:50:32.071  INFO 18668 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-04-11 13:50:32.071  INFO 18668 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-04-11 13:50:32.090  INFO 18668 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-04-11 13:50:32.092  INFO 18668 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/D:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8b%e6%9c%9f/netty_chat_room/apps/chat-room/chat-room-manage/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2023-04-11 13:50:32.093  INFO 18668 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-04-11 13:50:32.094  INFO 18668 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-04-11 13:50:32.097  INFO 18668 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-04-11 13:50:32.107  INFO 18668 --- [main] m.c.config.RestTemplateConfig            : 初始化 RestTemplateConfig
+2023-04-11 13:50:32.165  INFO 18668 --- [main] m.c.config.ServerConfig                  : 初始化 ServerConfig
+2023-04-11 13:50:32.167  INFO 18668 --- [main] m.c.protocol.ServerMessageCodecSharable  : 初始化 ServerMessageCodecSharable
+2023-04-11 13:50:32.167  INFO 18668 --- [main] m.t.config.RedisLockServiceConfig        : 初始化 RedisLockServiceConfig
+2023-04-11 13:50:32.169  INFO 18668 --- [main] m.t.config.RedisUtilsConfig              : 初始化 RedisUtilsConfig
+2023-04-11 13:50:32.189  INFO 18668 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2023-04-11 13:50:32.197  INFO 18668 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-04-11 13:50:32.201  INFO 18668 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-04-11 13:50:32.201  INFO 18668 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{chat_room_web_server=DocketInfo{title='管理服务', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.chat_room_manage', basePath=[], excludePath=[]}}
+
+2023-04-11 13:50:32.493  INFO 18668 --- [main] com.alibaba.nacos.client.naming          : new ips(2) service: DEFAULT_GROUP@@chat-room-manage@@DEFAULT -> [{"instanceId":"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-manage","ip":"192.168.15.1","port":8080,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-manage","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000},{"instanceId":"192.168.15.1#13546#DEFAULT#DEFAULT_GROUP@@chat-room-manage","ip":"192.168.15.1","port":13546,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-manage","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/manage/actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2023-04-11 13:50:32.498  INFO 18668 --- [main] com.alibaba.nacos.client.naming          : current ips:(2) service: DEFAULT_GROUP@@chat-room-manage@@DEFAULT -> [{"instanceId":"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-manage","ip":"192.168.15.1","port":8080,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-manage","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000},{"instanceId":"192.168.15.1#13546#DEFAULT#DEFAULT_GROUP@@chat-room-manage","ip":"192.168.15.1","port":13546,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@chat-room-manage","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/manage/actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2023-04-11 13:50:32.500  INFO 18668 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-04-11 13:50:32.511  INFO 18668 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-04-11 13:50:32.529  INFO 18668 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-04-11 13:50:32.611  INFO 18668 --- [main] m.c.config.FeignRequestInterceptor       : 初始化 FeignRequestInterceptor
+2023-04-11 13:50:32.624  INFO 18668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 13546 (http) with context path '/manage'
+2023-04-11 13:50:32.852  INFO 18668 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] 2ed0bfb2-2566-4d2c-b50e-3b107d25cd06 registering service DEFAULT_GROUP@@chat-room-manage with instance: Instance{instanceId='null', ip='192.168.15.1', port=13546, weight=1.0, healthy=true, enabled=true, ephemeral=false, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=/manage/actuator}}
+2023-04-11 13:50:32.855  INFO 18668 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP chat-room-manage 192.168.15.1:13546 register finished
+2023-04-11 13:50:32.857  INFO 18668 --- [main] m.c.ChatRoomManageApplication            : Started ChatRoomManageApplication in 4.731 seconds (JVM running for 5.281)
+2023-04-11 13:50:32.861  INFO 18668 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-manage.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-04-11 13:50:32.861  INFO 18668 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-manage.yml, group=DEFAULT_GROUP, cnt=1
+2023-04-11 13:50:32.864  INFO 18668 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-manage-dev.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-04-11 13:50:32.864  INFO 18668 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-manage-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-04-11 13:50:32.865  INFO 18668 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] common.yml+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-04-11 13:50:32.865  INFO 18668 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-04-11 13:50:32.865  INFO 18668 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [subscribe] chat-room-manage+DEFAULT_GROUP+2ed0bfb2-2566-4d2c-b50e-3b107d25cd06
+2023-04-11 13:50:32.865  INFO 18668 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2ed0bfb2-2566-4d2c-b50e-3b107d25cd06] [add-listener] ok, tenant=2ed0bfb2-2566-4d2c-b50e-3b107d25cd06, dataId=chat-room-manage, group=DEFAULT_GROUP, cnt=1
+2023-04-11 13:50:32.865  INFO 18668 --- [main] m.c.ChatRoomManageApplication            : 应用chat-room-manage启动成功!swagger地址：http://58.45.168.206:13546/manage/doc.html  或者：http://127.0.0.1:13546/manage/doc.html
+2023-04-11 13:50:32.865  INFO 18668 --- [main] m.c.ChatRoomManageApplication            : 数据库监控地址：http://58.45.168.206:13546/manage/druid  或者：http://127.0.0.1:13546/manage/druid
+2023-04-11 13:50:32.865  INFO 18668 --- [main] m.c.ChatRoomManageApplication            : 启动耗时：4795ms
+2023-04-11 13:50:33.481  INFO 18668 --- [RMI TCP Connection(4)-58.45.168.206] o.a.c.c.C.[.[localhost].[/manage]        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-11 13:50:33.481  INFO 18668 --- [RMI TCP Connection(4)-58.45.168.206] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-11 13:50:33.485  INFO 18668 --- [RMI TCP Connection(4)-58.45.168.206] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-04-11 13:50:33.858  INFO 18668 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.15.1\",\"port\":8080,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-manage\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@chat-room-manage\",\"ephemeral\":false},{\"ip\":\"192.168.15.1\",\"port\":13546,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.15.1#13546#DEFAULT#DEFAULT_GROUP@@chat-room-manage\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/manage/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@chat-room-manage\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@chat-room-manage\",\"name\":\"DEFAULT_GROUP@@chat-room-manage\",\"cacheMillis\":10000,\"lastRefTime\":1681192233857,\"checksum\":\"8065dd6471de467f3ab2e044af20a0a6\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":77364309808000} from /58.45.168.206
+2023-04-11 13:50:38.978 DEBUG 18668 --- [http-nio-13546-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:50:38.978 DEBUG 18668 --- [http-nio-13546-exec-2] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/doc.html] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:50:38.987 DEBUG 18668 --- [http-nio-13546-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:50:39.186 DEBUG 18668 --- [http-nio-13546-exec-3] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:50:39.186 DEBUG 18668 --- [http-nio-13546-exec-3] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/swagger-resources/configuration/ui] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:50:39.188 DEBUG 18668 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:50:39.189 DEBUG 18668 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/swagger-resources] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:50:39.204 DEBUG 18668 --- [http-nio-13546-exec-3] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:50:39.204 DEBUG 18668 --- [http-nio-13546-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:50:39.215 DEBUG 18668 --- [http-nio-13546-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:50:39.215 DEBUG 18668 --- [http-nio-13546-exec-7] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/v2/api-docs] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:50:39.217 DEBUG 18668 --- [http-nio-13546-exec-7] mao.tools_xss.utils.XssUtils             :  start read XSS configfile [antisamy-slashdot-1.4.4.xml]
+2023-04-11 13:50:39.222 DEBUG 18668 --- [http-nio-13546-exec-7] mao.tools_xss.utils.XssUtils             : read XSS configfile [antisamy-slashdot-1.4.4.xml] success
+2023-04-11 13:50:39.223 DEBUG 18668 --- [http-nio-13546-exec-7] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 管理服务
+2023-04-11 13:50:39.239 DEBUG 18668 --- [http-nio-13546-exec-7] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 管理服务
+2023-04-11 13:50:39.289 DEBUG 18668 --- [http-nio-13546-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:50:41.535 DEBUG 18668 --- [http-nio-13546-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-04-11 13:50:41.535 DEBUG 18668 --- [http-nio-13546-exec-4] mao.tools_xss.filter.XssFilter           : has xssfiter path[/manage/getRecentMonthLoginDayCount] need XssFilter, go to XssRequestWrapper
+2023-04-11 13:50:41.556 DEBUG 18668 --- [http-nio-13546-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-04-11 13:50:48.175  INFO 18668 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.15.1\",\"port\":8080,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"192.168.15.1#8080#DEFAULT#DEFAULT_GROUP@@chat-room-manage\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@chat-room-manage\",\"ephemeral\":false},{\"ip\":\"192.168.15.1\",\"port\":13546,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.15.1#13546#DEFAULT#DEFAULT_GROUP@@chat-room-manage\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/manage/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@chat-room-manage\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@chat-room-manage\",\"name\":\"DEFAULT_GROUP@@chat-room-manage\",\"cacheMillis\":10000,\"lastRefTime\":1681192248175,\"checksum\":\"8065dd6471de467f3ab2e044af20a0a6\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":77378627638000} from /58.45.168.206

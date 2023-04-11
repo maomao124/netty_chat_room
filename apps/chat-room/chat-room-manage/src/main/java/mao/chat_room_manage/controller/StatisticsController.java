@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.Map;
 
 /**
  * Project name(项目名称)：netty_chat_room
@@ -307,5 +308,17 @@ public class StatisticsController extends BaseController
                                             @RequestParam int month)
     {
         return success(statisticsService.getGroupCreateMonthCount(year, month));
+    }
+
+    /**
+     * 得到最近一个月用户每天登录的次数
+     *
+     * @return {@link Map}<{@link String}, {@link Integer}> map集合，key为时间，value为某个时间用户登录的总次数
+     */
+    @ApiOperation("得到最近一个月用户每天登录的次数")
+    @GetMapping("/getRecentMonthLoginDayCount")
+    R<Map<String, Integer>> getRecentMonthLoginDayCount()
+    {
+        return success(statisticsService.getRecentMonthLoginDayCount());
     }
 }

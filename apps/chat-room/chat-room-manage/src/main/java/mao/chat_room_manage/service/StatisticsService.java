@@ -1,5 +1,7 @@
 package mao.chat_room_manage.service;
 
+import java.util.Map;
+
 /**
  * Project name(项目名称)：netty_chat_room
  * Package(包名): mao.chat_room_manage.service
@@ -128,4 +130,11 @@ public interface StatisticsService
      * @return long 某一月群聊创建的次数
      */
     long getGroupCreateMonthCount(int year, int month);
+
+    /**
+     * 得到最近一个月用户每天登录的次数
+     *
+     * @return {@link Map}<{@link String}, {@link Integer}> map集合，key为时间，value为某个时间用户登录的总次数
+     */
+    Map<String, Integer> getRecentMonthLoginDayCount();
 }
