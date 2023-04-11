@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.time.LocalDate;
 import java.util.*;
+import java.util.function.Consumer;
 
 /**
  * Project name(项目名称)：netty_chat_room
@@ -226,7 +227,7 @@ public class StatisticsServiceImpl implements StatisticsService
         List<String> valueList = stringRedisTemplate.opsForValue().multiGet(keys);
         if (valueList == null)
         {
-            return null;
+            return statisticsList;
         }
         Iterator<String> iterator = times.iterator();
         for (String value : valueList)
@@ -238,6 +239,147 @@ public class StatisticsServiceImpl implements StatisticsService
             else
             {
                 statisticsList.add(new Statistics().setTime(iterator.next()).setCount(Long.valueOf(value)));
+            }
+        }
+        return statisticsList;
+    }
+
+    @Override
+    public List<Statistics> getRecentYearLoginMonthCount()
+    {
+        //得到当前时间
+        LocalDate now = LocalDate.now();
+        List<Statistics> statisticsList = new ArrayList<>(12);
+        List<String> keys = new ArrayList<>(12);
+        List<String> times = new ArrayList<>(12);
+        //当天
+        String key = RedisConstants.login_month_count_key + now.getYear() + ":" +
+                now.getMonthValue();
+        keys.add(key);
+        times.add(now.getYear() + "/" + now.getMonthValue());
+        for (int i = 1; i < 12; i++)
+        {
+            LocalDate localDate = now.minusMonths(i);
+            key = RedisConstants.login_month_count_key + localDate.getYear() + ":" +
+                    localDate.getMonthValue();
+            keys.add(key);
+            times.add(localDate.getYear() + "/" + localDate.getMonthValue());
+        }
+        List<String> valueList = stringRedisTemplate.opsForValue().multiGet(keys);
+        if (valueList == null)
+        {
+            return statisticsList;
+        }
+        Iterator<String> iterator = times.iterator();
+        for (String value : valueList)
+        {
+            if (value == null)
+            {
+                statisticsList.add(new Statistics().setTime(iterator.next()).setCount(0L));
+            }
+            else
+            {
+                statisticsList.add(new Statistics().setTime(iterator.next()).setCount(Long.valueOf(value)));
+            }
+        }
+        return statisticsList;
+    }
+
+    @Override
+    public List<Statistics> getRecentMonthLoginDayUVCount()
+    {
+        //得到当前时间
+        LocalDate now = LocalDate.now();
+        List<Statistics> statisticsList = new ArrayList<>(30);
+        List<String> keys = new ArrayList<>(30);
+        List<String> times = new ArrayList<>(30);
+        //当天
+        String key = RedisConstants.login_day_uv_count_key + now.getYear() + ":" +
+                now.getMonthValue() + ":" + now.getDayOfMonth();
+        keys.add(key);
+        times.add(now.getYear() + "/" + now.getMonthValue() + "/" + now.getDayOfMonth());
+        for (int i = 1; i < 30; i++)
+        {
+            LocalDate localDate = now.minusDays(i);
+            key = RedisConstants.login_day_count_key + localDate.getYear() + ":" +
+                    localDate.getMonthValue() + ":" + localDate.getDayOfMonth();
+            keys.add(key);
+            times.add(localDate.getYear() + "/" + localDate.getMonthValue() + "/" + localDate.getDayOfMonth());
+        }
+
+        List<Object> valueList = stringRedisTemplate.executePipelined(new SessionCallback<String>()
+        {
+            @Override
+            @SuppressWarnings("all")
+            public String execute(RedisOperations redisOperations) throws DataAccessException
+            {
+                keys.forEach(s ->
+                {
+                    redisOperations.opsForHyperLogLog().size(s);
+                });
+                return null;
+            }
+        });
+        Iterator<String> iterator = times.iterator();
+        for (Object value : valueList)
+        {
+            if (value == null)
+            {
+                statisticsList.add(new Statistics().setTime(iterator.next()).setCount(0L));
+            }
+            else
+            {
+                statisticsList.add(new Statistics().setTime(iterator.next()).setCount(Long.valueOf(value.toString())));
+            }
+        }
+        return statisticsList;
+    }
+
+    @Override
+    public List<Statistics> getRecentYearLoginMonthUVCount()
+    {
+        //得到当前时间
+        LocalDate now = LocalDate.now();
+        List<Statistics> statisticsList = new ArrayList<>(12);
+        List<String> keys = new ArrayList<>(12);
+        List<String> times = new ArrayList<>(12);
+        //当天
+        String key = RedisConstants.login_month_uv_count_key + now.getYear() + ":" +
+                now.getMonthValue();
+        keys.add(key);
+        times.add(now.getYear() + "/" + now.getMonthValue());
+        for (int i = 1; i < 12; i++)
+        {
+            LocalDate localDate = now.minusDays(i);
+            key = RedisConstants.login_day_count_key + localDate.getYear() + ":" +
+                    localDate.getMonthValue();
+            keys.add(key);
+            times.add(localDate.getYear() + "/" + localDate.getMonthValue());
+        }
+
+        List<Object> valueList = stringRedisTemplate.executePipelined(new SessionCallback<String>()
+        {
+            @Override
+            @SuppressWarnings("all")
+            public String execute(RedisOperations redisOperations) throws DataAccessException
+            {
+                keys.forEach(s ->
+                {
+                    redisOperations.opsForHyperLogLog().size(s);
+                });
+                return null;
+            }
+        });
+        Iterator<String> iterator = times.iterator();
+        for (Object value : valueList)
+        {
+            if (value == null)
+            {
+                statisticsList.add(new Statistics().setTime(iterator.next()).setCount(0L));
+            }
+            else
+            {
+                statisticsList.add(new Statistics().setTime(iterator.next()).setCount(Long.valueOf(value.toString())));
             }
         }
         return statisticsList;

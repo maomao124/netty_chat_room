@@ -135,10 +135,32 @@ public interface StatisticsService
     long getGroupCreateMonthCount(int year, int month);
 
     /**
-     *
      * 得到最近一个月用户每天登录的次数
      *
      * @return {@link List}<{@link Statistics}> Statistics列表
      */
     List<Statistics> getRecentMonthLoginDayCount();
+
+    /**
+     * 得到最近一年每个月用户登录的次数
+     *
+     * @return {@link List}<{@link Statistics}> Statistics列表
+     */
+    List<Statistics> getRecentYearLoginMonthCount();
+
+    /**
+     * 得到最近一个月用户每天登录的大致人数 （一个人可能登录多次，但是只记录一次）
+     *
+     * @return {@link List}<{@link Statistics}> Statistics列表
+     */
+    List<Statistics> getRecentMonthLoginDayUVCount();
+
+    /**
+     * 得到最近一年每个月用户登录的大致人数 （一个人可能登录多次，但是只记录一次）
+     *
+     * @return {@link List}<{@link Statistics}> Statistics列表
+     */
+    List<Statistics> getRecentYearLoginMonthUVCount();
+
+
 }
