@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
+import mao.chat_room_manage.entity.Statistics;
 import mao.chat_room_manage.service.StatisticsService;
 import mao.tools_core.base.BaseController;
 import mao.tools_core.base.R;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -311,13 +313,14 @@ public class StatisticsController extends BaseController
     }
 
     /**
+     *
      * 得到最近一个月用户每天登录的次数
      *
-     * @return {@link Map}<{@link String}, {@link Integer}> map集合，key为时间，value为某个时间用户登录的总次数
+     * @return {@link R}<{@link List}<{@link Statistics}>> Statistics列表
      */
     @ApiOperation("得到最近一个月用户每天登录的次数")
     @GetMapping("/getRecentMonthLoginDayCount")
-    R<Map<String, Integer>> getRecentMonthLoginDayCount()
+    R<List<Statistics>> getRecentMonthLoginDayCount()
     {
         return success(statisticsService.getRecentMonthLoginDayCount());
     }

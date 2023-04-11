@@ -1,6 +1,7 @@
 package mao.chat_room_manage.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
+import mao.chat_room_manage.entity.Statistics;
 import mao.chat_room_manage.service.StatisticsService;
 import mao.chat_room_server_api.constants.RedisConstants;
 import mao.tools_core.exception.BizException;
@@ -202,11 +203,11 @@ public class StatisticsServiceImpl implements StatisticsService
     }
 
     @Override
-    public Map<String, Integer> getRecentMonthLoginDayCount()
+    public List<Statistics> getRecentMonthLoginDayCount()
     {
         //得到当前时间
         LocalDate now = LocalDate.now();
-        Map<String, Integer> map = new TreeMap<>();
+        List<Statistics> statisticsList = new ArrayList<>(30);
         List<String> keys = new ArrayList<>(30);
         List<String> times = new ArrayList<>(30);
         //当天
@@ -232,14 +233,14 @@ public class StatisticsServiceImpl implements StatisticsService
         {
             if (value == null)
             {
-                map.put(iterator.next(), 0);
+                statisticsList.add(new Statistics().setTime(iterator.next()).setCount(0L));
             }
             else
             {
-                map.put(iterator.next(), Integer.valueOf(value));
+                statisticsList.add(new Statistics().setTime(iterator.next()).setCount(Long.valueOf(value)));
             }
         }
-        return map;
+        return statisticsList;
     }
 
     /**

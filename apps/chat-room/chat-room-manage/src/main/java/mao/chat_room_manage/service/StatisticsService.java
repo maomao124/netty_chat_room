@@ -1,5 +1,8 @@
 package mao.chat_room_manage.service;
 
+import mao.chat_room_manage.entity.Statistics;
+
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -132,9 +135,10 @@ public interface StatisticsService
     long getGroupCreateMonthCount(int year, int month);
 
     /**
+     *
      * 得到最近一个月用户每天登录的次数
      *
-     * @return {@link Map}<{@link String}, {@link Integer}> map集合，key为时间，value为某个时间用户登录的总次数
+     * @return {@link List}<{@link Statistics}> Statistics列表
      */
-    Map<String, Integer> getRecentMonthLoginDayCount();
+    List<Statistics> getRecentMonthLoginDayCount();
 }
