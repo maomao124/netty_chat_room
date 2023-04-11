@@ -14,7 +14,7 @@ import java.util.List;
  * Date(创建日期)： 2023/4/11
  * Time(创建时间)： 14:33
  * Version(版本): 1.0
- * Description(描述)： 无
+ * Description(描述)： 登录统计
  */
 
 public interface LoginStatisticsService
@@ -46,4 +46,60 @@ public interface LoginStatisticsService
      * @return {@link List}<{@link Statistics}> Statistics列表
      */
     List<Statistics> getRecentYearLoginMonthUVCount();
+
+    /**
+     * 得到用户某些天用户登录的次数
+     *
+     * @param startYear  起始年
+     * @param startMonth 起始月
+     * @param startDay   起始天
+     * @param endYear    结束年
+     * @param endMonth   结束月
+     * @param endDay     结束天
+     * @return {@link List}<{@link Statistics}> Statistics列表
+     */
+    List<Statistics> getLoginDayCountList(int startYear, int startMonth, int startDay,
+                                          int endYear, int endMonth, int endDay);
+
+    /**
+     * 得到用户某些月用户登录的次数
+     *
+     * @param startYear  起始年
+     * @param startMonth 起始月
+     * @param startDay   起始天
+     * @param endYear    结束年
+     * @param endMonth   结束月
+     * @param endDay     结束天
+     * @return {@link List}<{@link Statistics}> Statistics列表
+     */
+    List<Statistics> getLoginMonthCountList(int startYear, int startMonth, int startDay,
+                                          int endYear, int endMonth, int endDay);
+
+    /**
+     * 得到用户某些天用户登录的大致人数
+     *
+     * @param startYear  起始年
+     * @param startMonth 起始月
+     * @param startDay   起始天
+     * @param endYear    结束年
+     * @param endMonth   结束月
+     * @param endDay     结束天
+     * @return {@link List}<{@link Statistics}> Statistics列表
+     */
+    List<Statistics> getLoginDayUVCountList(int startYear, int startMonth, int startDay,
+                                          int endYear, int endMonth, int endDay);
+
+    /**
+     * 得到用户某些月用户登录的大致人数
+     *
+     * @param startYear  起始年
+     * @param startMonth 起始月
+     * @param startDay   起始天
+     * @param endYear    结束年
+     * @param endMonth   结束月
+     * @param endDay     结束天
+     * @return {@link List}<{@link Statistics}> Statistics列表
+     */
+    List<Statistics> getLoginMonthUVCountList(int startYear, int startMonth, int startDay,
+                                          int endYear, int endMonth, int endDay);
 }

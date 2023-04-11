@@ -218,4 +218,28 @@ public class LoginStatisticsServiceImpl implements LoginStatisticsService
         }
         return statisticsList;
     }
+
+    @Override
+    public List<Statistics> getLoginDayCountList(int startYear, int startMonth, int startDay, int endYear, int endMonth, int endDay)
+    {
+        return null;
+    }
+
+    @Override
+    public List<Statistics> getLoginMonthCountList(int startYear, int startMonth, int startDay, int endYear, int endMonth, int endDay)
+    {
+        return null;
+    }
+
+    @Override
+    public List<Statistics> getLoginDayUVCountList(int startYear, int startMonth, int startDay, int endYear, int endMonth, int endDay)
+    {
+        return null;
+    }
+
+    @Override
+    public List<Statistics> getLoginMonthUVCountList(int startYear, int startMonth, int startDay, int endYear, int endMonth, int endDay)
+    {
+        return null;
+    }
 }
