@@ -301,7 +301,7 @@ public class StatisticsServiceImpl implements StatisticsService
         for (int i = 1; i < 30; i++)
         {
             LocalDate localDate = now.minusDays(i);
-            key = RedisConstants.login_day_count_key + localDate.getYear() + ":" +
+            key = RedisConstants.login_day_uv_count_key + localDate.getYear() + ":" +
                     localDate.getMonthValue() + ":" + localDate.getDayOfMonth();
             keys.add(key);
             times.add(localDate.getYear() + "/" + localDate.getMonthValue() + "/" + localDate.getDayOfMonth());
@@ -350,7 +350,7 @@ public class StatisticsServiceImpl implements StatisticsService
         times.add(now.getYear() + "/" + now.getMonthValue());
         for (int i = 1; i < 12; i++)
         {
-            LocalDate localDate = now.minusDays(i);
+            LocalDate localDate = now.minusMonths(i);
             key = RedisConstants.login_day_count_key + localDate.getYear() + ":" +
                     localDate.getMonthValue();
             keys.add(key);
