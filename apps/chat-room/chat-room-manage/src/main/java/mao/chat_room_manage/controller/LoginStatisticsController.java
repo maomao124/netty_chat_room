@@ -8,6 +8,7 @@ import mao.chat_room_manage.service.LoginStatisticsService;
 import mao.tools_core.base.BaseController;
 import mao.tools_core.base.R;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -41,7 +42,7 @@ public class LoginStatisticsController extends BaseController
      */
     @ApiOperation("得到最近一个月用户每天登录的次数")
     @GetMapping("/getRecentMonthLoginDayCount")
-    R<List<Statistics>> getRecentMonthLoginDayCount()
+    public R<List<Statistics>> getRecentMonthLoginDayCount()
     {
         return success(loginStatisticsService.getRecentMonthLoginDayCount());
     }
@@ -54,7 +55,7 @@ public class LoginStatisticsController extends BaseController
      */
     @ApiOperation("得到最近一年每个月用户登录的次数")
     @GetMapping("/getRecentYearLoginMonthCount")
-    R<List<Statistics>> getRecentYearLoginMonthCount()
+    public R<List<Statistics>> getRecentYearLoginMonthCount()
     {
         return success(loginStatisticsService.getRecentYearLoginMonthCount());
     }
@@ -66,7 +67,7 @@ public class LoginStatisticsController extends BaseController
      */
     @ApiOperation("得到最近一个月用户每天登录的大致人数")
     @GetMapping("/getRecentMonthLoginDayUVCount")
-    R<List<Statistics>> getRecentMonthLoginDayUVCount()
+    public R<List<Statistics>> getRecentMonthLoginDayUVCount()
     {
         return success(loginStatisticsService.getRecentMonthLoginDayUVCount());
     }
@@ -78,8 +79,83 @@ public class LoginStatisticsController extends BaseController
      */
     @ApiOperation("得到最近一年每个月用户登录的大致人数")
     @GetMapping("/getRecentYearLoginMonthUVCount")
-    R<List<Statistics>> getRecentYearLoginMonthUVCount()
+    public R<List<Statistics>> getRecentYearLoginMonthUVCount()
     {
         return success(loginStatisticsService.getRecentYearLoginMonthUVCount());
+    }
+
+
+    /**
+     * 得到用户某些天用户登录的次数
+     *
+     * @param startYear  起始年
+     * @param startMonth 起始月
+     * @param startDay   起始天
+     * @param endYear    结束年
+     * @param endMonth   结束月
+     * @param endDay     结束天
+     * @return {@link List}<{@link Statistics}> Statistics列表
+     */
+    @ApiOperation("得到用户某些天用户登录的次数")
+    @GetMapping("/getLoginDayCountList")
+    public R<List<Statistics>> getLoginDayCountList(@RequestParam int startYear,
+                                                    @RequestParam int startMonth,
+                                                    @RequestParam int startDay,
+                                                    @RequestParam int endYear,
+                                                    @RequestParam int endMonth,
+                                                    @RequestParam int endDay)
+    {
+        return success(loginStatisticsService.getLoginDayCountList(startYear, startMonth,
+                startDay, endYear, endMonth, endDay));
+    }
+
+    /**
+     * 得到用户某些月用户登录的次数
+     *
+     * @param startYear  起始年
+     * @param startMonth 起始月
+     * @param endYear    结束年
+     * @param endMonth   结束月
+     * @return {@link List}<{@link Statistics}> Statistics列表
+     */
+    @ApiOperation("得到用户某些月用户登录的次数")
+    @GetMapping("/getLoginMonthCountList")
+    public R<List<Statistics>> getLoginMonthCountList(int startYear, int startMonth,
+                                                      int endYear, int endMonth)
+    {
+        return success(loginStatisticsService.getLoginMonthCountList(startYear, startMonth,
+                endYear, endMonth));
+    }
+
+    /**
+     * 得到用户某些天用户登录的大致人数
+     *
+     * @param startYear  起始年
+     * @param startMonth 起始月
+     * @param startDay   起始天
+     * @param endYear    结束年
+     * @param endMonth   结束月
+     * @param endDay     结束天
+     * @return {@link List}<{@link Statistics}> Statistics列表
+     */
+    public R<List<Statistics>> getLoginDayUVCountList(int startYear, int startMonth, int startDay,
+                                                      int endYear, int endMonth, int endDay)
+    {
+        return null;
+    }
+
+    /**
+     * 得到用户某些月用户登录的大致人数
+     *
+     * @param startYear  起始年
+     * @param startMonth 起始月
+     * @param endYear    结束年
+     * @param endMonth   结束月
+     * @return {@link List}<{@link Statistics}> Statistics列表
+     */
+    public R<List<Statistics>> getLoginMonthUVCountList(int startYear, int startMonth,
+                                                        int endYear, int endMonth)
+    {
+        return null;
     }
 }

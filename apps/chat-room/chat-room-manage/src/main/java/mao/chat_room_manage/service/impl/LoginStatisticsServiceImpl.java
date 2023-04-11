@@ -3,7 +3,9 @@ package mao.chat_room_manage.service.impl;
 import lombok.extern.slf4j.Slf4j;
 import mao.chat_room_manage.entity.Statistics;
 import mao.chat_room_manage.service.LoginStatisticsService;
+import mao.chat_room_manage.utils.LocalDateUtils;
 import mao.chat_room_server_api.constants.RedisConstants;
+import mao.tools_core.exception.BizException;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.core.RedisOperations;
 import org.springframework.data.redis.core.SessionCallback;
@@ -220,25 +222,130 @@ public class LoginStatisticsServiceImpl implements LoginStatisticsService
     }
 
     @Override
-    public List<Statistics> getLoginDayCountList(int startYear, int startMonth, int startDay, int endYear, int endMonth, int endDay)
+    public List<Statistics> getLoginDayCountList(int startYear, int startMonth, int startDay,
+                                                 int endYear, int endMonth, int endDay)
+    {
+        LocalDateUtils.handlerYear(startYear);
+        LocalDateUtils.handlerMonth(startMonth);
+        LocalDateUtils.handlerDay(startDay);
+        LocalDateUtils.handlerYear(endYear);
+        LocalDateUtils.handlerMonth(endMonth);
+        LocalDateUtils.handlerDay(endDay);
+        //构建时间
+        LocalDate startDate = LocalDate.of(startYear, startMonth, startDay);
+        LocalDate endDate = LocalDate.of(endYear, endMonth, endDay);
+        //得到天数差值
+        long dayTimeDifference = LocalDateUtils.getDayTimeDifference(startDate, endDate);
+        //防止时间间隔太长
+        if (dayTimeDifference > 1000)
+        {
+            throw BizException.wrap("时间间隔太长");
+        }
+        log.debug("开始日期：" + startDate + ", 结束日期：" + endDate);
+        log.debug("天数差值：" + dayTimeDifference);
+
+        List<Statistics> statisticsList = new ArrayList<>(Math.toIntExact(dayTimeDifference));
+        List<String> keys = new ArrayList<>(Math.toIntExact(dayTimeDifference));
+        List<String> times = new ArrayList<>(Math.toIntExact(dayTimeDifference));
+        String key = RedisConstants.login_day_count_key + endDate.getYear() + ":" +
+                endDate.getMonthValue() + ":" + endDate.getDayOfMonth();
+        keys.add(key);
+        times.add(endDate.getYear() + "/" + endDate.getMonthValue() + "/" + endDate.getDayOfMonth());
+        for (int i = 1; i < dayTimeDifference; i++)
+        {
+            LocalDate localDate = endDate.minusDays(i);
+            key = RedisConstants.login_day_count_key + localDate.getYear() + ":" +
+                    localDate.getMonthValue() + ":" + localDate.getDayOfMonth();
+            keys.add(key);
+            times.add(localDate.getYear() + "/" + localDate.getMonthValue() + "/" + localDate.getDayOfMonth());
+        }
+        List<String> valueList = stringRedisTemplate.opsForValue().multiGet(keys);
+        if (valueList == null)
+        {
+            return statisticsList;
+        }
+        Iterator<String> iterator = times.iterator();
+        for (String value : valueList)
+        {
+            if (value == null)
+            {
+                statisticsList.add(new Statistics().setTime(iterator.next()).setCount(0L));
+            }
+            else
+            {
+                statisticsList.add(new Statistics().setTime(iterator.next()).setCount(Long.valueOf(value)));
+            }
+        }
+        return statisticsList;
+    }
+
+    @Override
+    public List<Statistics> getLoginMonthCountList(int startYear, int startMonth,
+                                                   int endYear, int endMonth)
+    {
+        LocalDateUtils.handlerYear(startYear);
+        LocalDateUtils.handlerMonth(startMonth);
+        LocalDateUtils.handlerYear(endYear);
+        LocalDateUtils.handlerMonth(endMonth);
+        //构建时间
+        LocalDate startDate = LocalDate.of(startYear, startMonth, 1);
+        LocalDate endDate = LocalDate.of(endYear, endMonth, 1);
+        //得到月数差值
+        long monthTimeDifference = LocalDateUtils.getMonthTimeDifference(startDate, endDate);
+        //防止时间间隔太长
+        if (monthTimeDifference > 240)
+        {
+            throw BizException.wrap("时间间隔太长");
+        }
+        log.debug("开始日期：" + startDate + ", 结束日期：" + endDate);
+        log.debug("月数差值：" + monthTimeDifference);
+
+        List<Statistics> statisticsList = new ArrayList<>(Math.toIntExact(monthTimeDifference));
+        List<String> keys = new ArrayList<>(Math.toIntExact(monthTimeDifference));
+        List<String> times = new ArrayList<>(Math.toIntExact(monthTimeDifference));
+        //当天
+        String key = RedisConstants.login_month_count_key + endDate.getYear() + ":" +
+                endDate.getMonthValue();
+        keys.add(key);
+        times.add(endDate.getYear() + "/" + endDate.getMonthValue());
+        for (int i = 1; i < Math.toIntExact(monthTimeDifference); i++)
+        {
+            LocalDate localDate = endDate.minusMonths(i);
+            key = RedisConstants.login_month_count_key + localDate.getYear() + ":" +
+                    localDate.getMonthValue();
+            keys.add(key);
+            times.add(localDate.getYear() + "/" + localDate.getMonthValue());
+        }
+        List<String> valueList = stringRedisTemplate.opsForValue().multiGet(keys);
+        if (valueList == null)
+        {
+            return statisticsList;
+        }
+        Iterator<String> iterator = times.iterator();
+        for (String value : valueList)
+        {
+            if (value == null)
+            {
+                statisticsList.add(new Statistics().setTime(iterator.next()).setCount(0L));
+            }
+            else
+            {
+                statisticsList.add(new Statistics().setTime(iterator.next()).setCount(Long.valueOf(value)));
+            }
+        }
+        return statisticsList;
+    }
+
+    @Override
+    public List<Statistics> getLoginDayUVCountList(int startYear, int startMonth, int startDay,
+                                                   int endYear, int endMonth, int endDay)
     {
         return null;
     }
 
     @Override
-    public List<Statistics> getLoginMonthCountList(int startYear, int startMonth, int startDay, int endYear, int endMonth, int endDay)
-    {
-        return null;
-    }
-
-    @Override
-    public List<Statistics> getLoginDayUVCountList(int startYear, int startMonth, int startDay, int endYear, int endMonth, int endDay)
-    {
-        return null;
-    }
-
-    @Override
-    public List<Statistics> getLoginMonthUVCountList(int startYear, int startMonth, int startDay, int endYear, int endMonth, int endDay)
+    public List<Statistics> getLoginMonthUVCountList(int startYear, int startMonth,
+                                                     int endYear, int endMonth)
     {
         return null;
     }
