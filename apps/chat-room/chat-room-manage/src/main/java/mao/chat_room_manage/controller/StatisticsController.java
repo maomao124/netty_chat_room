@@ -48,9 +48,9 @@ public class StatisticsController extends BaseController
     @ApiOperation("得到某一天用户登录的总次数")
     @ApiImplicitParams(
             {
-                    @ApiImplicitParam(name = "year", value = "年", type = "int", required = true),
-                    @ApiImplicitParam(name = "month", value = "月", type = "int", required = true),
-                    @ApiImplicitParam(name = "day", value = "日", type = "int", required = true)
+                    @ApiImplicitParam(name = "year", value = "年", dataType = "int", required = true),
+                    @ApiImplicitParam(name = "month", value = "月", dataType = "int", required = true),
+                    @ApiImplicitParam(name = "day", value = "日", dataType = "int", required = true)
             }
     )
     @GetMapping("/getLoginDayCount")
@@ -71,8 +71,8 @@ public class StatisticsController extends BaseController
     @ApiOperation("得到某月用户登录的总次数")
     @ApiImplicitParams(
             {
-                    @ApiImplicitParam(name = "year", value = "年", type = "int", required = true),
-                    @ApiImplicitParam(name = "month", value = "月", type = "int", required = true),
+                    @ApiImplicitParam(name = "year", value = "年", dataType = "int", required = true),
+                    @ApiImplicitParam(name = "month", value = "月", dataType = "int", required = true),
             }
     )
     @GetMapping("/getLoginMonthCount")
@@ -93,9 +93,9 @@ public class StatisticsController extends BaseController
     @ApiOperation("得到某一天用户登录的大致人数")
     @ApiImplicitParams(
             {
-                    @ApiImplicitParam(name = "year", value = "年", type = "int", required = true),
-                    @ApiImplicitParam(name = "month", value = "月", type = "int", required = true),
-                    @ApiImplicitParam(name = "day", value = "日", type = "int", required = true)
+                    @ApiImplicitParam(name = "year", value = "年", dataType = "int", required = true),
+                    @ApiImplicitParam(name = "month", value = "月", dataType = "int", required = true),
+                    @ApiImplicitParam(name = "day", value = "日", dataType = "int", required = true)
             }
     )
     @GetMapping("/getLoginDayUVCount")
@@ -116,8 +116,8 @@ public class StatisticsController extends BaseController
     @ApiOperation("得到某一月用户登录的大致人数")
     @ApiImplicitParams(
             {
-                    @ApiImplicitParam(name = "year", value = "年", type = "int", required = true),
-                    @ApiImplicitParam(name = "month", value = "月", type = "int", required = true),
+                    @ApiImplicitParam(name = "year", value = "年", dataType = "int", required = true),
+                    @ApiImplicitParam(name = "month", value = "月", dataType = "int", required = true),
             }
     )
     @GetMapping("/getLoginMonthUVCount")
@@ -138,9 +138,9 @@ public class StatisticsController extends BaseController
     @ApiOperation("得到某一天用户注册的总次数")
     @ApiImplicitParams(
             {
-                    @ApiImplicitParam(name = "year", value = "年", type = "int", required = true),
-                    @ApiImplicitParam(name = "month", value = "月", type = "int", required = true),
-                    @ApiImplicitParam(name = "day", value = "日", type = "int", required = true)
+                    @ApiImplicitParam(name = "year", value = "年", dataType = "int", required = true),
+                    @ApiImplicitParam(name = "month", value = "月", dataType = "int", required = true),
+                    @ApiImplicitParam(name = "day", value = "日", dataType = "int", required = true)
             }
     )
     @GetMapping("/getRegisterDayCount")
@@ -161,8 +161,8 @@ public class StatisticsController extends BaseController
     @ApiOperation("得到某一月用户注册的总次数")
     @ApiImplicitParams(
             {
-                    @ApiImplicitParam(name = "year", value = "年", type = "int", required = true),
-                    @ApiImplicitParam(name = "month", value = "月", type = "int", required = true),
+                    @ApiImplicitParam(name = "year", value = "年", dataType = "int", required = true),
+                    @ApiImplicitParam(name = "month", value = "月", dataType = "int", required = true),
             }
     )
     @GetMapping("/getRegisterMonthCount")

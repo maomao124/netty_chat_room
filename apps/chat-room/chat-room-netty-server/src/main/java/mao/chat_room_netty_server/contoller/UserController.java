@@ -25,12 +25,12 @@ import javax.annotation.Resource;
  * Date(创建日期)： 2023/4/10
  * Time(创建时间)： 23:57
  * Version(版本): 1.0
- * Description(描述)： 无
+ * Description(描述)： 用户相关
  */
 
 @Slf4j
 @Api(tags = "用户相关", value = "用户相关")
-@RestController
+@RestController("/user")
 public class UserController extends BaseController
 {
     @Resource

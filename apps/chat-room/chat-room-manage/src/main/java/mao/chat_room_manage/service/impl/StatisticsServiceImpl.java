@@ -109,6 +109,93 @@ public class StatisticsServiceImpl implements StatisticsService
         return Integer.parseInt(count);
     }
 
+    @Override
+    public long getChatDayCount(int year, int month, int day)
+    {
+        handlerYear(year);
+        handlerMonth(month);
+        handlerDay(day);
+        String key = RedisConstants.chat_day_count_key + year + ":" + month + ":" + day;
+        String count = stringRedisTemplate.opsForValue().get(key);
+        if (count == null)
+        {
+            return 0L;
+        }
+        return Long.parseLong(count);
+    }
+
+    @Override
+    public long getChatMonthCount(int year, int month)
+    {
+        handlerYear(year);
+        handlerMonth(month);
+        String key = RedisConstants.chat_month_count_key + year + ":" + month;
+        String count = stringRedisTemplate.opsForValue().get(key);
+        if (count == null)
+        {
+            return 0L;
+        }
+        return Long.parseLong(count);
+    }
+
+    @Override
+    public long getGroupChatDayCount(int year, int month, int day)
+    {
+        handlerYear(year);
+        handlerMonth(month);
+        handlerDay(day);
+        String key = RedisConstants.group_chat_day_count_key + year + ":" + month + ":" + day;
+        String count = stringRedisTemplate.opsForValue().get(key);
+        if (count == null)
+        {
+            return 0L;
+        }
+        return Long.parseLong(count);
+    }
+
+    @Override
+    public long getGroupChatMonthCount(int year, int month)
+    {
+        handlerYear(year);
+        handlerMonth(month);
+        String key = RedisConstants.group_chat_month_count_key + year + ":" + month;
+        String count = stringRedisTemplate.opsForValue().get(key);
+        if (count == null)
+        {
+            return 0L;
+        }
+        return Long.parseLong(count);
+    }
+
+    @Override
+    public long getGroupCreateDayCount(int year, int month, int day)
+    {
+        handlerYear(year);
+        handlerMonth(month);
+        handlerDay(day);
+        String key = RedisConstants.group_create_day_count_key + year + ":" + month + ":" + day;
+        String count = stringRedisTemplate.opsForValue().get(key);
+        if (count == null)
+        {
+            return 0L;
+        }
+        return Long.parseLong(count);
+    }
+
+    @Override
+    public long getGroupCreateMonthCount(int year, int month)
+    {
+        handlerYear(year);
+        handlerMonth(month);
+        String key = RedisConstants.group_create_month_count_key + year + ":" + month;
+        String count = stringRedisTemplate.opsForValue().get(key);
+        if (count == null)
+        {
+            return 0L;
+        }
+        return Long.parseLong(count);
+    }
+
     /**
      * 处理年信息
      *
