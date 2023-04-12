@@ -46,7 +46,7 @@ public interface GroupChatStatisticsService
      * @return {@link List}<{@link Statistics}> Statistics列表
      */
     List<Statistics> getChatDayGroupCountList(int startYear, int startMonth, int startDay,
-                                         int endYear, int endMonth, int endDay);
+                                              int endYear, int endMonth, int endDay);
 
     /**
      * 得到用户某些月发送群聊聊天消息的总数
@@ -58,5 +58,5 @@ public interface GroupChatStatisticsService
      * @return {@link List}<{@link Statistics}> Statistics列表
      */
     List<Statistics> getChatMonthGroupCountList(int startYear, int startMonth,
-                                           int endYear, int endMonth);
+                                                int endYear, int endMonth);
 }

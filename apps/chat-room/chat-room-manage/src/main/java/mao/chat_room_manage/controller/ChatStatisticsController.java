@@ -94,11 +94,11 @@ public class ChatStatisticsController extends BaseController
                     }
             )
     public R<List<Statistics>> getChatDayCountList(@RequestParam int startYear,
-                                                       @RequestParam int startMonth,
-                                                       @RequestParam int startDay,
-                                                       @RequestParam int endYear,
-                                                       @RequestParam int endMonth,
-                                                       @RequestParam int endDay)
+                                                   @RequestParam int startMonth,
+                                                   @RequestParam int startDay,
+                                                   @RequestParam int endYear,
+                                                   @RequestParam int endMonth,
+                                                   @RequestParam int endDay)
     {
         return success(chatStatisticsService.getChatDayCountList(startYear, startMonth,
                 startDay, endYear, endMonth, endDay));
@@ -129,9 +129,9 @@ public class ChatStatisticsController extends BaseController
                     }
             )
     public R<List<Statistics>> getChatMonthCountList(@RequestParam int startYear,
-                                                         @RequestParam int startMonth,
-                                                         @RequestParam int endYear,
-                                                         @RequestParam int endMonth)
+                                                     @RequestParam int startMonth,
+                                                     @RequestParam int endYear,
+                                                     @RequestParam int endMonth)
     {
         return success(chatStatisticsService.getChatMonthCountList(startYear, startMonth,
                 endYear, endMonth));

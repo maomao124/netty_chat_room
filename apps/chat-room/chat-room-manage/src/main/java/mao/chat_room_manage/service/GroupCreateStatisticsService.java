@@ -24,14 +24,14 @@ public interface GroupCreateStatisticsService
      *
      * @return {@link List}<{@link Statistics}> Statistics列表
      */
-    List<Statistics> getRecentMonthGroupChatDayCount();
+    List<Statistics> getRecentMonthGroupCreateDayCount();
 
     /**
      * 得到最近一年每个月群聊创建的次数
      *
      * @return {@link List}<{@link Statistics}> Statistics列表
      */
-    List<Statistics> getRecentYearGroupChatMonthCount();
+    List<Statistics> getRecentYearGroupCreateMonthCount();
 
 
     /**
@@ -45,8 +45,8 @@ public interface GroupCreateStatisticsService
      * @param endDay     结束天
      * @return {@link List}<{@link Statistics}> Statistics列表
      */
-    List<Statistics> getChatDayGroupCountList(int startYear, int startMonth, int startDay,
-                                              int endYear, int endMonth, int endDay);
+    List<Statistics> getCreateDayGroupCountList(int startYear, int startMonth, int startDay,
+                                                int endYear, int endMonth, int endDay);
 
     /**
      * 得到用户某些月群聊创建的次数
@@ -57,6 +57,6 @@ public interface GroupCreateStatisticsService
      * @param endMonth   结束月
      * @return {@link List}<{@link Statistics}> Statistics列表
      */
-    List<Statistics> getChatMonthGroupCountList(int startYear, int startMonth,
-                                                int endYear, int endMonth);
+    List<Statistics> getCreateMonthGroupCountList(int startYear, int startMonth,
+                                                  int endYear, int endMonth);
 }

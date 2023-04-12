@@ -37,7 +37,7 @@ public class GroupCreateStatisticsServiceImpl implements GroupCreateStatisticsSe
     StringRedisTemplate stringRedisTemplate;
 
     @Override
-    public List<Statistics> getRecentMonthGroupChatDayCount()
+    public List<Statistics> getRecentMonthGroupCreateDayCount()
     {
         //得到当前时间
         LocalDate now = LocalDate.now();
@@ -78,7 +78,7 @@ public class GroupCreateStatisticsServiceImpl implements GroupCreateStatisticsSe
     }
 
     @Override
-    public List<Statistics> getRecentYearGroupChatMonthCount()
+    public List<Statistics> getRecentYearGroupCreateMonthCount()
     {
         //得到当前时间
         LocalDate now = LocalDate.now();
@@ -119,7 +119,7 @@ public class GroupCreateStatisticsServiceImpl implements GroupCreateStatisticsSe
     }
 
     @Override
-    public List<Statistics> getChatDayGroupCountList(int startYear, int startMonth, int startDay, int endYear, int endMonth, int endDay)
+    public List<Statistics> getCreateDayGroupCountList(int startYear, int startMonth, int startDay, int endYear, int endMonth, int endDay)
     {
         LocalDateUtils.handlerYear(startYear);
         LocalDateUtils.handlerMonth(startMonth);
@@ -180,7 +180,7 @@ public class GroupCreateStatisticsServiceImpl implements GroupCreateStatisticsSe
     }
 
     @Override
-    public List<Statistics> getChatMonthGroupCountList(int startYear, int startMonth, int endYear, int endMonth)
+    public List<Statistics> getCreateMonthGroupCountList(int startYear, int startMonth, int endYear, int endMonth)
     {
         LocalDateUtils.handlerYear(startYear);
         LocalDateUtils.handlerMonth(startMonth);

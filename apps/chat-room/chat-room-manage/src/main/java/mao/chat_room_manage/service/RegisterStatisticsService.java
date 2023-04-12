@@ -46,7 +46,7 @@ public interface RegisterStatisticsService
      * @return {@link List}<{@link Statistics}> Statistics列表
      */
     List<Statistics> getRegisterDayCountList(int startYear, int startMonth, int startDay,
-                                          int endYear, int endMonth, int endDay);
+                                             int endYear, int endMonth, int endDay);
 
     /**
      * 得到用户某些月用户注册的次数
@@ -58,5 +58,5 @@ public interface RegisterStatisticsService
      * @return {@link List}<{@link Statistics}> Statistics列表
      */
     List<Statistics> getRegisterMonthCountList(int startYear, int startMonth,
-                                            int endYear, int endMonth);
+                                               int endYear, int endMonth);
 }
