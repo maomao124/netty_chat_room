@@ -18,6 +18,8 @@ import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -91,6 +93,23 @@ public class NettyServiceImpl implements NettyService
                 Long count = instance.getCount();
                 totalCount = totalCount + count;
             }
+            //排序，因为多线程异步添加不能保证顺序
+            //可以写成instanceList.sort(Comparator.comparing(Instance::getHost));
+            instanceList.sort(new Comparator<Instance>()
+            {
+                /**
+                 * 比较
+                 *
+                 * @param o1 Instance1
+                 * @param o2 Instance2
+                 * @return int 1、0或者-1
+                 */
+                @Override
+                public int compare(Instance o1, Instance o2)
+                {
+                    return o1.getHost().compareTo(o2.getHost());
+                }
+            });
             //返回
             return new OnlineUserCount()
                     .setInstanceList(instanceList)

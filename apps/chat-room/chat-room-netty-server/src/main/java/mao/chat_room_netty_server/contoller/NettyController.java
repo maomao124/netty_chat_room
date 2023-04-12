@@ -8,6 +8,7 @@ import mao.chat_room_common.message.GroupChatResponseMessage;
 import mao.chat_room_common.message.GroupCreateResponseMessage;
 import mao.chat_room_netty_server.service.NettyService;
 import mao.chat_room_netty_server.session.GroupSession;
+import mao.chat_room_netty_server.session.Session;
 import mao.chat_room_server_api.config.ServerConfig;
 import mao.tools_core.base.BaseController;
 import mao.tools_core.base.R;
@@ -43,7 +44,7 @@ public class NettyController extends BaseController
     private ServerConfig serverConfig;
 
     @Resource
-    private GroupSession groupSession;
+    private Session session;
 
     /**
      * 发送聊天消息
@@ -135,7 +136,7 @@ public class NettyController extends BaseController
     @GetMapping("/getOnlineUserCount")
     public R<Integer> getOnlineUserCount()
     {
-        int size = groupSession.getSize();
+        int size = session.getSize();
         log.debug("得到当前实例在线用户数量:" + size);
         return success(size);
     }
