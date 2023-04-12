@@ -2,8 +2,10 @@ package mao.chat_room_manage.controller;
 
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
+import mao.chat_room_manage.entity.OnlineUserCount;
 import mao.chat_room_manage.service.NettyService;
 import mao.tools_core.base.BaseController;
+import mao.tools_core.base.R;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -28,4 +30,14 @@ public class NettyController extends BaseController
 {
     @Resource
     private NettyService nettyService;
+
+    /**
+     * 得到各实例以及总在线用户数量
+     *
+     * @return {@link R}
+     */
+    public R<OnlineUserCount> getOnlineUserCount()
+    {
+        return success(null);
+    }
 }
