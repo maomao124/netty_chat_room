@@ -7,6 +7,7 @@ import mao.chat_room_common.message.ChatRequestMessage;
 import mao.chat_room_common.message.GroupChatResponseMessage;
 import mao.chat_room_common.message.GroupCreateResponseMessage;
 import mao.chat_room_netty_server.service.NettyService;
+import mao.chat_room_netty_server.session.GroupSession;
 import mao.chat_room_server_api.config.ServerConfig;
 import mao.tools_core.base.BaseController;
 import mao.tools_core.base.R;
@@ -40,6 +41,9 @@ public class NettyController extends BaseController
 
     @Resource
     private ServerConfig serverConfig;
+
+    @Resource
+    private GroupSession groupSession;
 
     /**
      * 发送聊天消息
@@ -105,7 +109,7 @@ public class NettyController extends BaseController
     @PostMapping("/joinMember")
     public R<Boolean> joinMember(@RequestParam String name, @RequestParam String member)
     {
-        return nettyService.joinMember(name,member);
+        return nettyService.joinMember(name, member);
     }
 
     /**
@@ -119,6 +123,20 @@ public class NettyController extends BaseController
     @PostMapping("/removeMember")
     public R<Boolean> removeMember(@RequestParam String name, @RequestParam String member)
     {
-        return nettyService.removeMember(name,member);
+        return nettyService.removeMember(name, member);
+    }
+
+    /**
+     * 得到当前实例在线用户数量，不包括未登录但是已经连接上的
+     *
+     * @return {@link R}<{@link Integer}> 此实例在线人数的数量
+     */
+    @ApiOperation("得到当前实例在线用户数量")
+    @GetMapping("/getOnlineUserCount")
+    public R<Integer> getOnlineUserCount()
+    {
+        int size = groupSession.getSize();
+        log.debug("得到当前实例在线用户数量:" + size);
+        return success(size);
     }
 }

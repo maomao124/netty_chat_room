@@ -89,5 +89,14 @@ public class UrlConstants
         return prefix + host + "/removeMember?name=" + name + "&member=" + member;
     }
 
-
+    /**
+     * 构建得到当前实例在线用户数量Url
+     *
+     * @param host 宿主
+     * @return {@link String} url
+     */
+    public static String buildGetOnlineUserCountUrl(String host)
+    {
+        return prefix + host + "/getOnlineUserCount";
+    }
 }

@@ -28,5 +28,20 @@ public class ServerConstants
     /**
      * 聊天室网关服务
      */
-    public static final String CHAT_ROOM_GATEWAY = "";
+    public static final String CHAT_ROOM_GATEWAY = "chat-room-gateway";
+
+    /**
+     * 聊天室管理服务
+     */
+    public static final String CHAT_ROOM_MANAGE_SERVER = "chat-room-manage";
+
+    /**
+     * 管理网关服务
+     */
+    public static final String MANAGE_GATEWAY_SERVER = "gateway";
+
+    /**
+     * 认证服务
+     */
+    public static final String AUTH_SERVER = "auth-server";
 }
