@@ -9,7 +9,13 @@ import mao.chat_room_server_api.entity.User;
 import mao.tools_core.exception.BizException;
 import mao.tools_databases.mybatis.conditions.Wraps;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.interceptor.TransactionInterceptor;
+import org.springframework.transaction.support.TransactionCallback;
+import org.springframework.transaction.support.TransactionCallbackWithoutResult;
+import org.springframework.transaction.support.TransactionTemplate;
 
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
@@ -35,8 +41,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Resource
     private PasswordEncoderService passwordEncoderService;
 
+    @Resource
+    private TransactionTemplate transactionTemplate;
+
+    @Resource
+    private PlatformTransactionManager platformTransactionManager;
+
     @Override
-    @Transactional
+    @Transactional(noRollbackFor = {BizException.class})
     public User login(String username, String password)
     {
         if (username == null || username.equals(""))
@@ -61,10 +73,32 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         {
             throw new BizException("用户名不存在");
         }
+        //判断密码错误次数是否大于3次
+        if (user.getPasswordErrorNum() > 3)
+        {
+            //判断密码输入间隔是否小于10分钟
+            LocalDateTime passwordErrorLastTime = user.getPasswordErrorLastTime();
+            LocalDateTime now = LocalDateTime.now();
+            //加10分钟,是否晚于现在时间，如果是，证明10分钟内尝试过
+            if (passwordErrorLastTime.plusMinutes(10).isAfter(now))
+            {
+                //第四次输入可能会跳过
+                throw new BizException("密码错误次数过多，请10分钟后再试！");
+            }
+        }
+
         //验证密码是否正确
         boolean verification = passwordEncoderService.verification(password, user.getPassword());
         if (!verification)
         {
+            //密码错误
+            this.update(Wraps.<User>lbU()
+                    .eq(User::getUsername, username)
+                    //密码错误时间
+                    .set(User::getPasswordErrorLastTime, LocalDateTime.now())
+                    //密码错误次数
+                    .set(User::getPasswordErrorNum, user.getPasswordErrorNum() + 1));
+            //提交事务
             throw new BizException("密码错误");
         }
         //密码正确,判断启用状态
@@ -76,7 +110,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         //更新登录时间
         this.update(Wraps.<User>lbU()
                 .eq(User::getUsername, username)
-                .set(User::getLastLoginTime, LocalDateTime.now()));
+                .set(User::getLastLoginTime, LocalDateTime.now())
+                //将密码错误次数更改成0
+                .set(User::getPasswordErrorNum, 0));
         //密码设空并返回
         return user.setPassword(null);
     }
