@@ -99,4 +99,18 @@ public class UrlConstants
     {
         return prefix + host + "/getOnlineUserCount";
     }
+
+    /**
+     * 构建url重新平衡
+     *
+     * @param host            宿主
+     * @param host2           host2
+     * @param reBalanceNumber 重新平衡数量
+     * @return {@link String}
+     */
+    public static String buildReBalanceUrl(String host, String host2, int reBalanceNumber)
+    {
+        return prefix + host + "/reBalance/handler?host=" + host2 + "&reBalanceNumber=" + reBalanceNumber;
+
+    }
 }

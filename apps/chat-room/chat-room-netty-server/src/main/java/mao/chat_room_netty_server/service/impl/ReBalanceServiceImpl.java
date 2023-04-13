@@ -32,6 +32,6 @@ public class ReBalanceServiceImpl implements ReBalanceService
     public void handler(String host, int reBalanceNumber)
     {
         log.debug("触发ReBalance，数量：" + reBalanceNumber + ", 位置：" + host);
-
+        //todo
     }
 }
