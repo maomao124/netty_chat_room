@@ -51,5 +51,6 @@ public class QuitHandler extends ChannelInboundHandlerAdapter
         String username = session.getUsername(ctx.channel());
         groupSession.unbind(username);
         session.unbind(ctx.channel());
+        ctx.channel().close();
     }
 }

@@ -7,6 +7,9 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
+import io.netty.handler.timeout.IdleState;
+import io.netty.handler.timeout.IdleStateEvent;
+import io.netty.handler.timeout.IdleStateHandler;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
 import lombok.SneakyThrows;
@@ -122,6 +125,11 @@ public class Client
                                 .addLast(groupMembersResponseMessageHandler)
                                 .addLast(groupJoinResponseMessageHandler)
                                 .addLast(groupQuitResponseMessageHandler);
+                        //30s内如果没有向服务器写数据，会触发一个IdleState#WRITER_IDLE事件
+                        ch.pipeline().addLast(new IdleStateHandler(0,
+                                30, 0));
+                        //ChannelDuplexHandler可以同时作为入站和出站处理器
+                        ch.pipeline().addLast(new DuplexHandler());
                     }
                 }).connect(new InetSocketAddress(ip, port));
 

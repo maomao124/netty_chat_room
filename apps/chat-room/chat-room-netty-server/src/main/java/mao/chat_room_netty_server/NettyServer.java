@@ -8,6 +8,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
+import io.netty.handler.timeout.IdleStateHandler;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
 import lombok.SneakyThrows;
@@ -123,6 +124,8 @@ public class NettyServer implements CommandLineRunner
                         {
                             ch.pipeline().addLast(LOGGING_HANDLER)
                                     .addLast(new ProcotolFrameDecoder())
+                                    .addLast(new IdleStateHandler(70, 0, 0))
+                                    .addLast(new ServerDuplexHandler())
                                     .addLast(serverMessageCodecSharable)
                                     .addLast(chatRequestMessageHandler)
                                     .addLast(groupChatRequestMessageHandler)
@@ -134,6 +137,7 @@ public class NettyServer implements CommandLineRunner
                                     .addLast(registerRequestMessageHandler)
                                     .addLast(pingMessageHandler)
                                     .addLast(quitHandler);
+
                         }
                     }).bind(serverConfig.getServerPort()).sync().channel();
             log.info("Netty服务器启动成功");
