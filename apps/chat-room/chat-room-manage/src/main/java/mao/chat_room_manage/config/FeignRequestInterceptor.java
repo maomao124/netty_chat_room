@@ -23,7 +23,6 @@ import javax.annotation.PostConstruct;
  */
 
 @Slf4j
-@RefreshScope
 @Configuration
 public class FeignRequestInterceptor implements RequestInterceptor
 {

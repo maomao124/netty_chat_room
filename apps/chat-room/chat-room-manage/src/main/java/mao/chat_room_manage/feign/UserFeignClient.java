@@ -1,42 +1,35 @@
-package mao.chat_room_manage.controller;
+package mao.chat_room_manage.feign;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
-import lombok.extern.slf4j.Slf4j;
-import mao.chat_room_manage.feign.UserFeignClient;
+import mao.chat_room_manage.config.FeignRequestInterceptor;
+import mao.chat_room_server_api.constants.ServerConstants;
 import mao.chat_room_server_api.dto.UserDTO;
 import mao.chat_room_server_api.entity.User;
-import mao.tools_core.base.BaseController;
 import mao.tools_core.base.R;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
-
-import javax.annotation.Resource;
 
 /**
  * Project name(项目名称)：netty_chat_room
- * Package(包名): mao.chat_room_manage.controller
- * Class(类名): UserController
+ * Package(包名): mao.chat_room_manage.feign
+ * Interface(接口名): UserFeignClient
  * Author(作者）: mao
  * Author QQ：1296193245
  * GitHub：https://github.com/maomao124/
- * Date(创建日期)： 2023/4/8
- * Time(创建时间)： 15:01
+ * Date(创建日期)： 2023/4/13
+ * Time(创建时间)： 15:14
  * Version(版本): 1.0
- * Description(描述)： 用户Controller
+ * Description(描述)： 无
  */
 
-@Slf4j
-@RestController
-@Api(value = "用户相关",tags = "用户相关")
-@RequestMapping("/user")
-public class UserController extends BaseController
+@FeignClient(value = ServerConstants.CHAT_ROOM_NETTY_SERVER,
+        path = "user",
+        configuration = FeignRequestInterceptor.class)
+public interface UserFeignClient
 {
-    @Resource
-    private UserFeignClient userFeignClient;
-
     /**
      * 设置用户状态
      *
@@ -53,10 +46,7 @@ public class UserController extends BaseController
             }
     )
     @PutMapping("/setUserStatus/{username}/{status}")
-    String setUserStatus(@PathVariable String username, @PathVariable boolean status)
-    {
-        return userFeignClient.setUserStatus(username, status);
-    }
+    String setUserStatus(@PathVariable String username, @PathVariable boolean status);
 
 
     /**
@@ -65,12 +55,9 @@ public class UserController extends BaseController
      * @param username 用户名
      * @return {@link R}<{@link UserDTO}>
      */
-    @GetMapping("/{username}")
     @ApiOperation("通过用户名得到用户信息")
-    public String getUserByUsername(@PathVariable String username)
-    {
-        return userFeignClient.getUserByUsername(username);
-    }
+    @GetMapping("/{username}")
+    String getUserByUsername(@PathVariable String username);
 
     /**
      * 分页查询角色
@@ -86,10 +73,7 @@ public class UserController extends BaseController
             @ApiImplicitParam(name = "size", value = "每页显示几条", dataType = "long", paramType = "query", defaultValue = "10"),
     })
     @PostMapping("/page")
-    public String page(@RequestBody UserDTO param,
-                       @RequestParam int current,
-                       @RequestParam int size)
-    {
-        return userFeignClient.page(param, current, size);
-    }
+    String page(@RequestBody UserDTO param,
+                @RequestParam int current,
+                @RequestParam int size);
 }

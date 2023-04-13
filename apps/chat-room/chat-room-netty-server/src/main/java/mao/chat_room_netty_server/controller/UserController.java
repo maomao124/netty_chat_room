@@ -38,9 +38,6 @@ public class UserController extends BaseController
     @Resource
     private UserService userService;
 
-    @Resource
-    private DozerUtils dozerUtils;
-
 
     /**
      * 设置用户状态
@@ -71,6 +68,7 @@ public class UserController extends BaseController
      * @return {@link R}<{@link UserDTO}>
      */
     @GetMapping("/{username}")
+    @ApiOperation("通过用户名得到用户信息")
     public R<UserDTO> getUserByUsername(@PathVariable String username)
     {
         return success(userService.getUserByUsername(username));
