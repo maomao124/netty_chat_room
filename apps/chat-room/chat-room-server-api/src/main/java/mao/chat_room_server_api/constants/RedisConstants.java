@@ -45,4 +45,9 @@ public class RedisConstants
 
     public static final String group_create_month_count_key = "chat_room:create:group:count:month:";
 
+    public static final String re_balance_lock_key = "chat_room:re_balance:lock";
+
+    public static final String re_balance_time_key = "chat_room:re_balance:time";
+
+
 }
