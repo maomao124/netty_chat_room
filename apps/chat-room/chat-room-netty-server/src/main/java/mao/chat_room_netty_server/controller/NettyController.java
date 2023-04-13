@@ -1,4 +1,4 @@
-package mao.chat_room_netty_server.contoller;
+package mao.chat_room_netty_server.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -7,7 +7,6 @@ import mao.chat_room_common.message.ChatRequestMessage;
 import mao.chat_room_common.message.GroupChatResponseMessage;
 import mao.chat_room_common.message.GroupCreateResponseMessage;
 import mao.chat_room_netty_server.service.NettyService;
-import mao.chat_room_netty_server.session.GroupSession;
 import mao.chat_room_netty_server.session.Session;
 import mao.chat_room_server_api.config.ServerConfig;
 import mao.tools_core.base.BaseController;
@@ -20,7 +19,7 @@ import java.util.Map;
 
 /**
  * Project name(项目名称)：netty_chat_room
- * Package(包名): mao.chat_room_netty_server.contoller
+ * Package(包名): mao.chat_room_netty_server.controller
  * Class(类名): NettyController
  * Author(作者）: mao
  * Author QQ：1296193245

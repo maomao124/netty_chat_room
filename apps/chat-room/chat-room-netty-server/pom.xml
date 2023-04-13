@@ -81,6 +81,11 @@
             <artifactId>tools-redis-cache</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-dozer</artifactId>
+        </dependency>
+
         <!--spring boot redis 依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -10,6 +10,7 @@ import mao.chat_room_manage.service.LoginStatisticsService;
 import mao.tools_core.base.BaseController;
 import mao.tools_core.base.R;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -31,7 +32,8 @@ import java.util.List;
 
 @Slf4j
 @Api(tags = "登录统计", value = "登录统计")
-@RestController("/statistics/login")
+@RestController
+@RequestMapping("/statistics/login")
 public class LoginStatisticsController extends BaseController
 {
     @Resource

@@ -2,6 +2,7 @@ package mao.chat_room_manage.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import mao.tools_core.base.BaseController;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
+@RequestMapping("/user")
 public class UserController extends BaseController
 {
 

@@ -10,6 +10,7 @@ import mao.chat_room_manage.service.StatisticsService;
 import mao.tools_core.base.BaseController;
 import mao.tools_core.base.R;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -32,7 +33,8 @@ import java.util.Map;
 
 @Slf4j
 @Api(tags = "统计", value = "统计")
-@RestController("/statistics")
+@RestController
+@RequestMapping("/statistics")
 public class StatisticsController extends BaseController
 {
 

@@ -11,6 +11,7 @@ import mao.tools_core.base.BaseController;
 import mao.tools_core.base.R;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -31,7 +32,8 @@ import java.util.List;
 
 @Slf4j
 @Api(tags = "服务实例相关", value = "服务实例相关")
-@RestController("/server")
+@RestController
+@RequestMapping("/server")
 public class ServerController extends BaseController
 {
 

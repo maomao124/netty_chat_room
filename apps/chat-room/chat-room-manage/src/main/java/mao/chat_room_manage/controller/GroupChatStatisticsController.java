@@ -10,6 +10,7 @@ import mao.chat_room_manage.service.GroupChatStatisticsService;
 import mao.tools_core.base.BaseController;
 import mao.tools_core.base.R;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -31,7 +32,8 @@ import java.util.List;
 
 @Slf4j
 @Api(tags = "群聊聊天消息统计", value = "群聊聊天消息统计")
-@RestController("/statistics/group/chat")
+@RestController
+@RequestMapping("/statistics/group/chat")
 public class GroupChatStatisticsController extends BaseController
 {
 

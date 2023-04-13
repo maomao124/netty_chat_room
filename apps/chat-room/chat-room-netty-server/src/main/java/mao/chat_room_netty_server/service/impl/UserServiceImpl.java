@@ -1,13 +1,20 @@
 package mao.chat_room_netty_server.service.impl;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import mao.chat_room_netty_server.mapper.UserMapper;
 import mao.chat_room_netty_server.service.PasswordEncoderService;
 import mao.chat_room_netty_server.service.UserService;
+import mao.chat_room_server_api.dto.UserDTO;
 import mao.chat_room_server_api.entity.User;
+import mao.tools_core.base.R;
 import mao.tools_core.exception.BizException;
 import mao.tools_databases.mybatis.conditions.Wraps;
+import mao.tools_databases.mybatis.conditions.query.LbqWrapper;
+import mao.toolsdozer.utils.DozerUtils;
+import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionStatus;
@@ -19,6 +26,7 @@ import org.springframework.transaction.support.TransactionTemplate;
 
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * Project name(项目名称)：netty_chat_room
@@ -46,6 +54,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     @Resource
     private PlatformTransactionManager platformTransactionManager;
+
+    @Resource
+    private DozerUtils dozerUtils;
 
     @Override
     @Transactional(noRollbackFor = {BizException.class})
@@ -169,5 +180,32 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         return this.update(Wraps.<User>lbU()
                 .eq(User::getUsername, username)
                 .set(User::getStatus, status));
+    }
+
+    @Override
+    public UserDTO getUserByUsername(String username)
+    {
+        //查询数据库
+        User user = this.getOne(Wraps.<User>lbQ().eq(User::getUsername, username));
+        if (user == null)
+        {
+            return null;
+        }
+        //转换并返回
+        return dozerUtils.map(user, UserDTO.class);
+    }
+
+    @Override
+    public IPage<UserDTO> page(IPage<User> page, UserDTO param)
+    {
+        User user = dozerUtils.map(param, User.class);
+        IPage<User> userIPage = this.page(page, Wraps.lbQ(user)
+                .orderByDesc(User::getRegisterTime));
+        IPage<UserDTO> userDTOIPage = new Page<>();
+        List<User> records = userIPage.getRecords();
+        userDTOIPage.setRecords(null);
+        dozerUtils.map(userIPage, userDTOIPage);
+        userDTOIPage.setRecords(dozerUtils.mapList(records, UserDTO.class));
+        return userDTOIPage;
     }
 }

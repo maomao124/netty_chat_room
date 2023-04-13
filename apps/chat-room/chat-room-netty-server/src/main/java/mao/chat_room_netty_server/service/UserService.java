@@ -1,7 +1,10 @@
 package mao.chat_room_netty_server.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
+import mao.chat_room_server_api.dto.UserDTO;
 import mao.chat_room_server_api.entity.User;
+import mao.tools_core.base.R;
 
 /**
  * Project name(项目名称)：netty_chat_room
@@ -45,4 +48,21 @@ public interface UserService extends IService<User>
      * @return boolean
      */
     boolean setUserStatus(String username, boolean status);
+
+    /**
+     * 通过用户名得到用户信息
+     *
+     * @param username 用户名
+     * @return {@link UserDTO}
+     */
+    UserDTO getUserByUsername(String username);
+
+    /**
+     * 分页查询
+     *
+     * @param param 参数
+     * @param page  分页查询对象
+     * @return {@link IPage}<{@link UserDTO}>
+     */
+    IPage<UserDTO> page(IPage<User> page, UserDTO param);
 }

@@ -8,6 +8,7 @@ import mao.chat_room_manage.service.NettyService;
 import mao.tools_core.base.BaseController;
 import mao.tools_core.base.R;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -27,7 +28,8 @@ import javax.annotation.Resource;
 
 @Slf4j
 @Api(tags = "netty相关", value = "netty相关")
-@RestController("/netty")
+@RestController
+@RequestMapping("/netty")
 public class NettyController extends BaseController
 {
     @Resource
