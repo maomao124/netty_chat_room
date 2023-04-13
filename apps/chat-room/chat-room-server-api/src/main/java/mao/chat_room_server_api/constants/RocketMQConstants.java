@@ -19,7 +19,7 @@ public class RocketMQConstants
 
     public static final String GROUP_UNBIND_MEMBER_TOPIC = "netty_group_unbind_member";
 
-    public static final String NETTY_SERVER_RE_BALANCE_TOPIC = "netty_server_update";
+    public static final String NETTY_SERVER_RE_BALANCE_TOPIC = "netty_server_re_balance";
 
     public static final String GROUP = "chat_room_group";
 }
