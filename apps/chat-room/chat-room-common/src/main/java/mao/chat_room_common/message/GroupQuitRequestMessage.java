@@ -40,4 +40,5 @@ public class GroupQuitRequestMessage extends Message
     {
         return GroupQuitRequestMessage;
     }
+
 }

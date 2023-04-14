@@ -6,10 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import mao.chat_room_netty_server.service.ReBalanceService;
 import mao.tools_core.base.BaseController;
 import mao.tools_core.base.R;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -45,7 +42,7 @@ public class ReBalanceController extends BaseController
      * @param reBalanceNumber 重新平衡的数量
      * @return {@link R}<{@link Boolean}>
      */
-    @PutMapping("/handler")
+    @PostMapping("/handler")
     @ApiOperation("ReBalance处理")
     public R<Boolean> handler(@RequestParam String host,
                               @RequestParam int reBalanceNumber)

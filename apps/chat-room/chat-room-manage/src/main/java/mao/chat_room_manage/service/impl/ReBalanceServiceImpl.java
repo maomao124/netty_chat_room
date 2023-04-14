@@ -6,6 +6,8 @@ import mao.chat_room_manage.entity.OnlineUserCount;
 import mao.chat_room_manage.service.NettyService;
 import mao.chat_room_manage.service.ReBalanceService;
 import mao.chat_room_server_api.constants.RedisConstants;
+import mao.chat_room_server_api.constants.UrlConstants;
+import mao.tools_core.base.R;
 import mao.tools_redis_cache.entity.LockInfo;
 import mao.tools_redis_cache.service.RedisLockService;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -141,8 +143,20 @@ public class ReBalanceServiceImpl implements ReBalanceService
                         highInstance.setCount(highInstance.getCount() - to);
 
                         log.debug("发起请求：" + highInstance.getHost() + ", 数量：" + to);
-                        //todo
 
+                        String url = UrlConstants.buildReBalanceUrl(highInstance.getHost(),
+                                lowInstance.getHost(),
+                                Math.toIntExact(to));
+                        log.debug("url:" + url);
+                        R r = restTemplate.postForObject(url, null, R.class);
+                        if (r.getIsError())
+                        {
+                            log.warn("请求失败：" + r.getMsg());
+                        }
+                        else
+                        {
+                            log.debug("请求成功");
+                        }
                         //删除
                         lowInstanceList.remove(lowInstance);
                         resultInstanceList.add(lowInstance);
@@ -161,7 +175,20 @@ public class ReBalanceServiceImpl implements ReBalanceService
                         highInstance.setCount(highInstance.getCount() - to);
 
                         log.debug("发起请求：" + highInstance.getHost() + ", 数量：" + to);
-                        //todo
+
+                        String url = UrlConstants.buildReBalanceUrl(highInstance.getHost(),
+                                lowInstance.getHost(),
+                                Math.toIntExact(to));
+                        log.debug("url:" + url);
+                        R r = restTemplate.postForObject(url, null, R.class);
+                        if (r.getIsError())
+                        {
+                            log.warn("请求失败：" + r.getMsg());
+                        }
+                        else
+                        {
+                            log.debug("请求成功");
+                        }
 
                         //删除
                         highInstanceList.remove(highInstance);
@@ -181,7 +208,20 @@ public class ReBalanceServiceImpl implements ReBalanceService
                         highInstance.setCount(highInstance.getCount() - to);
 
                         log.debug("发起请求：" + highInstance.getHost() + ", 数量：" + to);
-                        //todo
+
+                        String url = UrlConstants.buildReBalanceUrl(highInstance.getHost(),
+                                lowInstance.getHost(),
+                                Math.toIntExact(to));
+                        log.debug("url:" + url);
+                        R r = restTemplate.postForObject(url, null, R.class);
+                        if (r.getIsError())
+                        {
+                            log.warn("请求失败：" + r.getMsg());
+                        }
+                        else
+                        {
+                            log.debug("请求成功");
+                        }
 
                         //删除
                         highInstanceList.remove(highInstance);

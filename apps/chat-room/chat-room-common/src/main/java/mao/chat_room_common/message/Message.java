@@ -105,6 +105,7 @@ public abstract class Message implements Serializable
     public static final int LoginResponseMessage = 18;
     public static final int RegisterRequestMessage = 19;
     public static final int RegisterResponseMessage = 20;
+    public static final int ReBalanceResponseMessage = 21;
 
 
     /**
@@ -144,5 +145,6 @@ public abstract class Message implements Serializable
         messageClasses.put(LoginResponseMessage, LoginResponseMessage.class);
         messageClasses.put(RegisterRequestMessage, RegisterRequestMessage.class);
         messageClasses.put(RegisterResponseMessage, RegisterResponseMessage.class);
+        messageClasses.put(ReBalanceResponseMessage, ReBalanceResponseMessage.class);
     }
 }
