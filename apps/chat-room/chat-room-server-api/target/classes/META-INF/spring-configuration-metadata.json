@@ -11,13 +11,15 @@
       "name": "chat.port",
       "type": "java.lang.Integer",
       "description": "服务端口",
-      "sourceType": "mao.chat_room_server_api.config.ChatConfigurationProperties"
+      "sourceType": "mao.chat_room_server_api.config.ChatConfigurationProperties",
+      "defaultValue": 8080
     },
     {
       "name": "chat.serializer",
       "type": "java.lang.String",
       "description": "序列化算法",
-      "sourceType": "mao.chat_room_server_api.config.ChatConfigurationProperties"
+      "sourceType": "mao.chat_room_server_api.config.ChatConfigurationProperties",
+      "defaultValue": "Java"
     }
   ],
   "hints": []
