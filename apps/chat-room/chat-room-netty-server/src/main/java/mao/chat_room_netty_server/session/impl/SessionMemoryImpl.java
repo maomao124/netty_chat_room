@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import mao.chat_room_netty_server.session.Session;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -153,5 +154,11 @@ public class SessionMemoryImpl implements Session
     public String getUsername(Channel channel)
     {
         return channelUsernameMap.get(channel);
+    }
+
+    @Override
+    public List<Channel> reBalance(int reBalanceNumber)
+    {
+        throw new UnsupportedOperationException("不支持的方法");
     }
 }

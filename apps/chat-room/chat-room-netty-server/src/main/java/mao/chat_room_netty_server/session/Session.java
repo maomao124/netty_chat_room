@@ -2,6 +2,8 @@ package mao.chat_room_netty_server.session;
 
 import io.netty.channel.Channel;
 
+import java.util.List;
+
 /**
  * Project name(项目名称)：netty_chat_room
  * Package(包名): mao.chat_room_netty_server.session
@@ -95,4 +97,13 @@ public interface Session
      * @return 用户名
      */
     String getUsername(Channel channel);
+
+
+    /**
+     * 重新平衡
+     *
+     * @param reBalanceNumber 重新平衡数量
+     * @return {@link List}<{@link Channel}>
+     */
+    List<Channel> reBalance(int reBalanceNumber);
 }

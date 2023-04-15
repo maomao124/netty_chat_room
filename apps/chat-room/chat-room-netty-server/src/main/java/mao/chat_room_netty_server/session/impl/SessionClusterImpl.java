@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -194,5 +194,23 @@ public class SessionClusterImpl implements Session
     public String getUsername(Channel channel)
     {
         return channelUsernameMap.get(channel);
+    }
+
+    @Override
+    public List<Channel> reBalance(int reBalanceNumber)
+    {
+        List<Channel> list = new ArrayList<>();
+        Set<Channel> channels = channelUsernameMap.keySet();
+        if (reBalanceNumber >= channels.size())
+        {
+            return list;
+        }
+        int index = 1;
+        Iterator<Channel> iterator = channels.iterator();
+        for (int i = 0; i < reBalanceNumber; i++)
+        {
+            list.add(iterator.next());
+        }
+        return list;
     }
 }
