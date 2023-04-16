@@ -98,3 +98,5 @@ hystrix:
 
 id-generator:
   machine-code: 1  # id生成器机器掩码
+
+password: "321546"
