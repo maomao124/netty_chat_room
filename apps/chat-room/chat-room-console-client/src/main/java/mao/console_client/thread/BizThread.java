@@ -4,6 +4,8 @@ import io.netty.channel.Channel;
 import lombok.SneakyThrows;
 import mao.chat_room_common.message.*;
 
+import java.awt.*;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Scanner;
@@ -67,18 +69,34 @@ public class BizThread extends Thread
                 switch (s[0])
                 {
                     case "send":
-                        channel.writeAndFlush(new ChatRequestMessage()
-                                .setFrom(username)
-                                .setTo(s[1])
-                                .setContent(s[2])
-                                .setSequenceId());
+                        if (s[2].getBytes(StandardCharsets.UTF_8).length > 19000)
+                        {
+                            Toolkit.getDefaultToolkit().beep();
+                            System.out.println("消息长度太长！");
+                        }
+                        else
+                        {
+                            channel.writeAndFlush(new ChatRequestMessage()
+                                    .setFrom(username)
+                                    .setTo(s[1])
+                                    .setContent(s[2])
+                                    .setSequenceId());
+                        }
                         break;
                     case "gsend":
-                        channel.writeAndFlush(new GroupChatRequestMessage()
-                                .setFrom(username)
-                                .setGroupName(s[1])
-                                .setContent(s[2])
-                                .setSequenceId());
+                        if (s[2].getBytes(StandardCharsets.UTF_8).length > 19000)
+                        {
+                            Toolkit.getDefaultToolkit().beep();
+                            System.out.println("消息长度太长！");
+                        }
+                        else
+                        {
+                            channel.writeAndFlush(new GroupChatRequestMessage()
+                                    .setFrom(username)
+                                    .setGroupName(s[1])
+                                    .setContent(s[2])
+                                    .setSequenceId());
+                        }
                         break;
                     case "gcreate":
                         //成员列表

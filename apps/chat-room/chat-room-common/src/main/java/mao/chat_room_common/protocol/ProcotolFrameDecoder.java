@@ -23,7 +23,7 @@ public class ProcotolFrameDecoder extends LengthFieldBasedFrameDecoder
      */
     public ProcotolFrameDecoder()
     {
-        this(4096, 12, 4, 0, 0);
+        this(20480, 12, 4, 0, 0);
     }
 
     /**
