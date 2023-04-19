@@ -64,10 +64,35 @@ public class ClusterChatRequestMessageHandler extends ChatRequestMessageHandler
             return;
         }
 
+        //谁发的
+        String from = chatRequestMessage.getFrom();
         //发给谁
         String to = chatRequestMessage.getTo();
+
+        //判断from是否为空
+        if (from == null || from.equals(""))
+        {
+            ctx.writeAndFlush(ChatResponseMessage.fail("缺失必要参数")
+                    .setSequenceId(chatRequestMessage.getSequenceId()));
+            return;
+        }
+        //判断to是否为空
+        if (to == null || to.equals(""))
+        {
+            ctx.writeAndFlush(ChatResponseMessage.fail("缺失必要参数")
+                    .setSequenceId(chatRequestMessage.getSequenceId()));
+            return;
+        }
+        //校验身份
+        if (!session.getUsername(ctx.channel()).equals(from))
+        {
+            ctx.writeAndFlush(ChatResponseMessage.fail("身份验证失败！")
+                    .setSequenceId(chatRequestMessage.getSequenceId()));
+            return;
+        }
+
         Channel channel = session.getChannel(to);
-        if (to.equals(chatRequestMessage.getFrom()))
+        if (to.equals(from))
         {
             //自己发送给自己
             ctx.writeAndFlush(ChatResponseMessage.fail("不能发送给自己")
@@ -101,7 +126,7 @@ public class ClusterChatRequestMessageHandler extends ChatRequestMessageHandler
             {
                 //写入到自己客户端
                 ctx.writeAndFlush(ChatResponseMessage
-                        .success(chatRequestMessage.getFrom(), null)
+                        .success(from, null)
                         .setSequenceId(chatRequestMessage.getSequenceId()));
                 //聊天统计
                 redisService.chatCount();
@@ -111,15 +136,15 @@ public class ClusterChatRequestMessageHandler extends ChatRequestMessageHandler
         else
         {
             //在线
-            log.debug(chatRequestMessage.getFrom() + "--->" + chatRequestMessage.getTo());
+            log.debug(from + "--->" + chatRequestMessage.getTo());
             //写入到对方客户端
             channel.writeAndFlush(ChatResponseMessage
-                    .success(chatRequestMessage.getFrom(),
+                    .success(from,
                             chatRequestMessage.getContent())
                     .setSequenceId(chatRequestMessage.getSequenceId()));
             //写入到自己客户端
             ctx.writeAndFlush(ChatResponseMessage
-                    .success(chatRequestMessage.getFrom(), null)
+                    .success(from, null)
                     .setSequenceId(chatRequestMessage.getSequenceId()));
             //聊天统计
             redisService.chatCount();

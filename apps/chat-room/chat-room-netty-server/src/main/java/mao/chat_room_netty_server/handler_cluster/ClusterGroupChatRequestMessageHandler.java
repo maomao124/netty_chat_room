@@ -5,6 +5,7 @@ import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import lombok.extern.slf4j.Slf4j;
+import mao.chat_room_common.message.ChatResponseMessage;
 import mao.chat_room_common.message.GroupChatRequestMessage;
 import mao.chat_room_common.message.GroupChatResponseMessage;
 import mao.chat_room_netty_server.entity.ClusterGroup;
@@ -72,6 +73,22 @@ public class ClusterGroupChatRequestMessageHandler extends GroupChatRequestMessa
         String groupName = groupChatRequestMessage.getGroupName();
         String content = groupChatRequestMessage.getContent();
         String from = groupChatRequestMessage.getFrom();
+
+        //判断from是否为空
+        if (from == null || from.equals(""))
+        {
+            ctx.writeAndFlush(ChatResponseMessage.fail("缺失必要参数")
+                    .setSequenceId(groupChatRequestMessage.getSequenceId()));
+            return;
+        }
+
+        //校验身份
+        if (!session.getUsername(ctx.channel()).equals(from))
+        {
+            ctx.writeAndFlush(ChatResponseMessage.fail("身份验证失败！")
+                    .setSequenceId(groupChatRequestMessage.getSequenceId()));
+            return;
+        }
 
         //得到群聊的成员和成员位置和群聊位置
         ClusterGroup clusterGroup = groupSession.getMembersAndHost(groupName);
