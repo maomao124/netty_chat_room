@@ -68,6 +68,6 @@ public class RocketMQServerProducerImpl implements ServerProducer
         rocketMQTemplate.syncSend(RocketMQConstants.NETTY_SERVER_RE_BALANCE_TOPIC,
                 MessageBuilder.withPayload(host).build(),
                 5000 ,
-                2);
+                4);
     }
 }

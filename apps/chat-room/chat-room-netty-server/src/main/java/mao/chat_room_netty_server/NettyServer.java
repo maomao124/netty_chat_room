@@ -145,6 +145,12 @@ public class NettyServer implements CommandLineRunner
             serverProducer.sendReBalanceMessage();
             channel.closeFuture().addListener(new GenericFutureListener<Future<? super Void>>()
             {
+                /**
+                 * 操作完成（这里是关闭）
+                 *
+                 * @param future netty Future对象
+                 * @throws Exception 异常
+                 */
                 @Override
                 public void operationComplete(Future<? super Void> future) throws Exception
                 {

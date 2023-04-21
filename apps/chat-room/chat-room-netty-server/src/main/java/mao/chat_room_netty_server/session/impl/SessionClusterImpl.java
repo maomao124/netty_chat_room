@@ -205,7 +205,6 @@ public class SessionClusterImpl implements Session
         {
             return list;
         }
-        int index = 1;
         Iterator<Channel> iterator = channels.iterator();
         for (int i = 0; i < reBalanceNumber; i++)
         {
